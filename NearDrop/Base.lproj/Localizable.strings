@@ -1,4 +1,4 @@
-﻿/* No comment provided by engineer. */
+/* No comment provided by engineer. */
 "Accept" = "Accept";
 
 /* No comment provided by engineer. */
@@ -40,3 +40,14 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "Visible to everyone";
 
+"WelcomeToNearDrop" = "Welcome to NearDrop";
+
+"Acknowledgements" = "Acknowledgements";
+
+"UserManualDescription" = "When NearDrop is running, it will appear in the menu bar at the top of your screen. Click the NearDrop icon if you would like to stop receiving files.
+            
+To send files from your Android device to your Mac, just select \"Share\" or tap the Share Icon for a file you want to transfer, and select \"Quick Share\". Your Mac will be listed as an available device.
+            
+After that, you will see a notification on your Mac. Hover over the notification to accept or decline the file transfer.
+            
+Important: Your Android device and your Mac need to be on the same network to transfer files. If you are promted to allow incoming connections, please allow them.";
