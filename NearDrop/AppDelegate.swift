@@ -62,7 +62,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         NearbyConnectionManager.shared.mainAppDelegate=self
         NearbyConnectionManager.shared.becomeVisible()
         
-        openWelcomeScreen()
+        if !UserDefaults.standard.bool(forKey: "ShowedWelcomeScreen"){
+            openWelcomeScreen()
+            UserDefaults.standard.set(true, forKey: "ShowedWelcomeScreen")
+        }
     }
     
     
@@ -81,6 +84,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         window?.isReleasedWhenClosed = false
         window?.setFrameAutosaveName("WelcomeScreen")
         window?.contentView = NSHostingView(rootView: welcomeView)
+        
+        // Ensure the window is always on top
+        window?.level = .floating
+        
         window?.makeKeyAndOrderFront(nil)
     }
     
