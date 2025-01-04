@@ -143,6 +143,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         completionHandler()
     }
     
+    public func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .banner])
+    }
+    
     func obtainUserConsent(for transfer: TransferMetadata, from device: RemoteDeviceInfo) {
         let fileStr:String
         if let textTitle=transfer.textDescription{
