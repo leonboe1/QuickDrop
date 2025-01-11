@@ -1,4 +1,4 @@
-**NearDrop** is a partial implementation of [Google's Nearby Share](https://blog.google/products/android/nearby-share/)/Quick Share for macOS. This fork reflects the App Store version of NearDrop available [here]([https://blog.google/products/android/nearby-share/](https://apps.apple.com/de/app/neardrop-quickshare-client/id6740147178?l=en-GB&mt=12 )). 
+**NearDrop** is a partial implementation of [Google's Nearby Share](https://blog.google/products/android/nearby-share/) for macOS. This fork reflects the App Store version of NearDrop available [here](https://apps.apple.com/de/app/neardrop-quickshare-client/id6740147178?l=en-GB&mt=12). 
 
 [Protocol documentation](/PROTOCOL.md) is available separately.
 
