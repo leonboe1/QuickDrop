@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "699DEBA02AB0573200115D22"
-               BuildableName = "ShareExtension.appex"
-               BlueprintName = "ShareExtension"
+               BuildableName = "NearDropShareExtension.appex"
+               BlueprintName = "NearDropShareExtension"
                ReferencedContainer = "container:NearDrop.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

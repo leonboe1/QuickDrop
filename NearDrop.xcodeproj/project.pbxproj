@@ -18,7 +18,7 @@
 		699B03452AB5FBA300E0D718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699B03442AB5FBA300E0D718 /* Assets.xcassets */; };
 		699DEBA62AB0573200115D22 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699DEBA52AB0573200115D22 /* ShareViewController.swift */; };
 		699DEBA92AB0573200115D22 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 699DEBA72AB0573200115D22 /* ShareViewController.xib */; };
-		699DEBAE2AB0573200115D22 /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 699DEBA12AB0573200115D22 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		699DEBAE2AB0573200115D22 /* NearDropShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 699DEBA12AB0573200115D22 /* NearDropShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		69D2C32D29E77F2200EC7E30 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69D2C32B29E77F2200EC7E30 /* Localizable.strings */; };
 		69D2C32F29E7898C00EC7E30 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D2C32E29E7898C00EC7E30 /* MainMenu.xib */; };
 		69D2C33829E78DF400EC7E30 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 69D2C33629E78DF400EC7E30 /* Localizable.stringsdict */; };
@@ -74,7 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				699DEBAE2AB0573200115D22 /* ShareExtension.appex in Embed Foundation Extensions */,
+				699DEBAE2AB0573200115D22 /* NearDropShareExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +154,7 @@
 		698DFB0129E362140064F247 /* NDNotificationCenterHackery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDNotificationCenterHackery.h; sourceTree = "<group>"; };
 		698DFB0229E362140064F247 /* NDNotificationCenterHackery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDNotificationCenterHackery.m; sourceTree = "<group>"; };
 		699B03442AB5FBA300E0D718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		699DEBA12AB0573200115D22 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		699DEBA12AB0573200115D22 /* NearDropShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NearDropShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		699DEBA52AB0573200115D22 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		699DEBA82AB0573200115D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
 		699DEBAA2AB0573200115D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				69DA9A0E29E0BF5100A442DA /* NearDrop.app */,
-				699DEBA12AB0573200115D22 /* ShareExtension.appex */,
+				699DEBA12AB0573200115D22 /* NearDropShareExtension.appex */,
 				69DCF4812AB70D0600CBE2CC /* libNearbyShare.dylib */,
 			);
 			name = Products;
@@ -347,9 +347,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		699DEBA02AB0573200115D22 /* ShareExtension */ = {
+		699DEBA02AB0573200115D22 /* NearDropShareExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 699DEBB12AB0573200115D22 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildConfigurationList = 699DEBB12AB0573200115D22 /* Build configuration list for PBXNativeTarget "NearDropShareExtension" */;
 			buildPhases = (
 				699DEB9D2AB0573200115D22 /* Sources */,
 				699DEB9E2AB0573200115D22 /* Frameworks */,
@@ -361,9 +361,9 @@
 			dependencies = (
 				69DCF4A02AB8C9A500CBE2CC /* PBXTargetDependency */,
 			);
-			name = ShareExtension;
+			name = NearDropShareExtension;
 			productName = ShareExtension;
-			productReference = 699DEBA12AB0573200115D22 /* ShareExtension.appex */;
+			productReference = 699DEBA12AB0573200115D22 /* NearDropShareExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		69DA9A0D29E0BF5100A442DA /* NearDrop */ = {
@@ -467,7 +467,7 @@
 			projectRoot = "";
 			targets = (
 				69DA9A0D29E0BF5100A442DA /* NearDrop */,
-				699DEBA02AB0573200115D22 /* ShareExtension */,
+				699DEBA02AB0573200115D22 /* NearDropShareExtension */,
 				69DCF4802AB70D0600CBE2CC /* NearbyShare */,
 			);
 		};
@@ -544,7 +544,7 @@
 /* Begin PBXTargetDependency section */
 		699DEBAD2AB0573200115D22 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 699DEBA02AB0573200115D22 /* ShareExtension */;
+			target = 699DEBA02AB0573200115D22 /* NearDropShareExtension */;
 			targetProxy = 699DEBAC2AB0573200115D22 /* PBXContainerItemProxy */;
 		};
 		69DCF4972AB8BF7B00CBE2CC /* PBXTargetDependency */ = {
@@ -699,7 +699,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonboettger.neardrop.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -728,7 +728,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonboettger.neardrop.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -884,7 +884,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonboettger.neardrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -920,7 +920,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonboettger.neardrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -966,7 +966,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		699DEBB12AB0573200115D22 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+		699DEBB12AB0573200115D22 /* Build configuration list for PBXNativeTarget "NearDropShareExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				699DEBAF2AB0573200115D22 /* Debug */,
