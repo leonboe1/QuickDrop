@@ -1,12 +1,13 @@
 {
+  "originHash" : "5bbb4a57a61db67d6ce8adc203fbc456a84ce246fff6c01807617c5de6a47adc",
   "pins" : [
     {
       "identity" : "asn1",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/leif-ibsen/ASN1",
       "state" : {
-        "revision" : "555922e06f1835863d4c0143eb00d0097bcfc707",
-        "version" : "2.0.3"
+        "revision" : "e38d1b8b43d8b53ffadde9836f34289176bb7a0c",
+        "version" : "2.7.0"
       }
     },
     {
@@ -14,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/leif-ibsen/BigInt",
       "state" : {
-        "revision" : "47903c6b2dd2cb3b4484d4524676a2ca8723a871",
-        "version" : "1.9.0"
+        "revision" : "afb70a0038bfbba845271b60fa9a58d5840f8017",
+        "version" : "1.21.0"
       }
     },
     {
@@ -23,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",
       "state" : {
-        "revision" : "0af9125c4eae12a4973fb66574c53a54962a9e1e",
-        "version" : "1.21.0"
+        "revision" : "ebc7251dd5b37f627c93698e4374084d98409633",
+        "version" : "1.28.2"
       }
     },
     {
@@ -32,10 +33,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/leif-ibsen/SwiftECC",
       "state" : {
-        "revision" : "55493f0609f07b24bf6cd52b90898ed1cefb268e",
-        "version" : "3.5.3"
+        "revision" : "2b672501e3a9361316898aa2d5b0e684c992e01e",
+        "version" : "3.9.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
