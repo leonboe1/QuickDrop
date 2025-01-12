@@ -9,6 +9,7 @@ import Cocoa
 import UserNotifications
 import NearbyShare
 import SwiftUI
+import StoreKit
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate, MainAppDelegate{
@@ -199,6 +200,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         }
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["transfer_"+id])
         self.activeIncomingTransfers.removeValue(forKey: id)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            SKStoreReviewController.requestReview()
+        }
     }
 }
 

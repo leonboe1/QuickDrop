@@ -62,6 +62,7 @@ struct WelcomeScreen: View {
         window.isReleasedWhenClosed = false
         window.title = NSLocalizedString("Acknowledgements", value: "Acknowledgements", comment: "")
         window.contentView = NSHostingView(rootView: LicensePage())
+        window.level = .floating
         window.makeKeyAndOrderFront(nil)
         
         // Retain the window to prevent deallocation

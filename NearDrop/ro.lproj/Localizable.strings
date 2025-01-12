@@ -1,4 +1,4 @@
-﻿/* No comment provided by engineer. */
+/* No comment provided by engineer. */
 "Accept" = "Acceptă";
 
 /* No comment provided by engineer. */
@@ -39,3 +39,15 @@
 
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "Vizibil pentru toată lumea";
+
+"WelcomeToNearDrop" = "Bine ai venit la NearDrop";
+
+"Acknowledgements" = "Mulțumiri";
+
+"UserManualDescription" = "Când NearDrop este în funcțiune, va apărea în bara de meniu din partea de sus a ecranului. Fă clic pe iconița NearDrop dacă dorești să oprești primirea fișierelor.
+
+Important: Dispozitivul tău Android și Mac-ul tău trebuie să fie conectate la aceeași rețea Wi-Fi pentru a transfera fișiere. Dacă ți se solicită să permiți conexiunile intrante, te rugăm să le permiți.
+
+Pentru a trimite fișiere de pe dispozitivul tău Android pe Mac, apasă pe iconița de partajare de pe telefon și selectează „Partajare rapidă” sau „Nearby Share”. Mac-ul tău va apărea ca dispozitiv disponibil.
+
+După aceea, vei vedea o notificare pe Mac. Plasează cursorul peste notificare pentru a accepta sau a respinge transferul fișierelor.";

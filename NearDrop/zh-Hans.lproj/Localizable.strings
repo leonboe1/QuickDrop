@@ -40,3 +40,14 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "对所有人可见";
 
+"WelcomeToNearDrop" = "欢迎使用 NearDrop";
+
+"Acknowledgements" = "致谢";
+
+"UserManualDescription" = "当 NearDrop 运行时，它会出现在屏幕顶部的菜单栏中。如果您想停止接收文件，请点击 NearDrop 图标。
+
+重要提示：您的 Android 设备和 Mac 需要连接到同一个 WiFi 网络才能传输文件。如果系统提示允许传入连接，请选择允许。
+
+要将文件从 Android 设备发送到 Mac，请点击手机上的分享图标，然后选择“快速分享”或“附近分享”。您的 Mac 将显示为可用设备。
+
+之后，您将在 Mac 上看到一条通知。将鼠标悬停在通知上以接受或拒绝文件传输。";

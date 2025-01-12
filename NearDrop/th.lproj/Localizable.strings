@@ -1,4 +1,4 @@
-﻿/* No comment provided by engineer. */
+/* No comment provided by engineer. */
 "Accept" = "ยอมรับ";
 
 /* No comment provided by engineer. */
@@ -40,3 +40,14 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "เปิดเผยต่อทุกคน";
 
+"WelcomeToNearDrop" = "ยินดีต้อนรับสู่ NearDrop";
+
+"Acknowledgements" = "คำขอบคุณ";
+
+"UserManualDescription" = "เมื่อ NearDrop กำลังทำงานอยู่ ไอคอนจะปรากฏในแถบเมนูที่ด้านบนของหน้าจอของคุณ คลิกที่ไอคอน NearDrop หากคุณต้องการหยุดรับไฟล์
+
+สำคัญ: อุปกรณ์ Android และ Mac ของคุณจะต้องเชื่อมต่อกับเครือข่าย WiFi เดียวกันเพื่อถ่ายโอนไฟล์ หากมีการแจ้งเตือนให้อนุญาตการเชื่อมต่อขาเข้า โปรดอนุญาต
+
+ในการส่งไฟล์จากอุปกรณ์ Android ของคุณไปยัง Mac ให้แตะที่ไอคอนแชร์บนโทรศัพท์ของคุณ และเลือก \"Quick Share\" หรือ \"Nearby Share\" Mac ของคุณจะแสดงในรายการอุปกรณ์ที่พร้อมใช้งาน
+
+หลังจากนั้น คุณจะเห็นการแจ้งเตือนบน Mac ของคุณ วางเคอร์เซอร์เหนือการแจ้งเตือนเพื่อยอมรับหรือปฏิเสธการถ่ายโอนไฟล์";

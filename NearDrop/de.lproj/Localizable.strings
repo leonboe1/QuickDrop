@@ -44,10 +44,10 @@
 
 "Acknowledgements" = "Danksagungen";
 
-"UserManualDescription" = "Wenn NearDrop ausgeführt wird, erscheint es in der Menüleiste am oberen Rand Ihres Bildschirms. Klicken Sie auf das NearDrop-Symbol, wenn Sie den Empfang von Dateien beenden möchten.
+"UserManualDescription" = "Wenn NearDrop ausgeführt wird, wird es in der Menüleiste am oberen Rand des Bildschirms angezeigt. Klicke auf das NearDrop-Symbol, um den Empfang von Dateien zu beenden.
+
+Wichtig: Dein Android-Gerät und dein Mac müssen sich im selben Netzwerk befinden, um Dateien zu übertragen. Wenn du aufgefordert wirst, eingehende Verbindungen zuzulassen, lasse sie bitte zu.
             
-Um Dateien von Ihrem Android-Gerät an Ihren Mac zu senden, wählen Sie einfach „Teilen“ oder tippen Sie auf das Freigabesymbol für eine Datei, die Sie übertragen möchten, und wählen Sie „Quick Share“ oder „Nearby Share“. Ihr Mac wird als verfügbares Gerät aufgelistet.
+Um Dateien von deinem Android-Gerät an deinen Mac zu senden, tippe auf deinem Handy auf das Teilen-Symbol und wähle „Quick Share“ oder „Nearby Share“. Dein Mac wird als verfügbares Gerät aufgelistet.
             
-Daraufhin wird eine Benachrichtigung auf Ihrem Mac angezeigt. Bewegen Sie den Mauszeiger über die Benachrichtigung, um die Dateiübertragung zu akzeptieren oder abzulehnen.
-            
-Wichtig: Ihr Android-Gerät und Ihr Mac müssen sich im selben Netzwerk befinden, um Dateien zu übertragen. Wenn Sie aufgefordert werden, eingehende Verbindungen zuzulassen, lassen Sie sie bitte zu";
+Daraufhin wird eine Benachrichtigung auf deinem Mac angezeigt. Bewege den Mauszeiger über die Benachrichtigung, um die Dateiübertragung zu akzeptieren oder abzulehnen.";
