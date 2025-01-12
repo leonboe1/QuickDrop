@@ -40,6 +40,12 @@
 /* No comment provided by engineer. */
 "NotificationsDenied.Title" = "Требуется доступ к уведомлениям";
 
+"RecommendedApps" = "Рекомендуемые приложения";
+
+"PrivacyPolicy" = "Политика конфиденциальности";
+
+"UserManual" = "Руководство пользователя";
+
 "WelcomeToNearDrop" = "Добро пожаловать в NearDrop";
 
 "Acknowledgements" = "Благодарности";

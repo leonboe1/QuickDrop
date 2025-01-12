@@ -40,6 +40,10 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "เปิดเผยต่อทุกคน";
 
+"RecommendedApps" = "แอปแนะนำ";
+"PrivacyPolicy" = "นโยบายความเป็นส่วนตัว";
+"UserManual" = "คู่มือการใช้งาน";
+
 "WelcomeToNearDrop" = "ยินดีต้อนรับสู่ NearDrop";
 
 "Acknowledgements" = "คำขอบคุณ";

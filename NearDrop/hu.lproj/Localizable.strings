@@ -40,6 +40,10 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "Mindenki számára felfedezhető";
 
+"RecommendedApps" = "Ajánlott alkalmazások";
+"PrivacyPolicy" = "Adatvédelmi irányelvek";
+"UserManual" = "Felhasználói kézikönyv";
+
 "WelcomeToNearDrop" = "Üdvözlünk a NearDropban";
 
 "Acknowledgements" = "Köszönetnyilvánítás";

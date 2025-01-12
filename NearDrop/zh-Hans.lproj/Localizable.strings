@@ -40,6 +40,10 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "对所有人可见";
 
+"RecommendedApps" = "推荐应用";
+"PrivacyPolicy" = "隐私政策";
+"UserManual" = "用户手册";
+
 "WelcomeToNearDrop" = "欢迎使用 NearDrop";
 
 "Acknowledgements" = "致谢";

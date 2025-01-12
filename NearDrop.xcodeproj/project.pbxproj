@@ -209,6 +209,7 @@
 		E9C8C6D42CFF66650053474D /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9C8C6D52CFF66650053474D /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ro; path = ro.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		E9C8C6D62CFF66650053474D /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB4ACE3C2D345A0800A0AF4C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EBD2A2162D2860BE00BCB8E2 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		EBD2A2182D28619200BCB8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -590,6 +591,7 @@
 				E94E45DC2BBD6464009804EF /* pt-PT */,
 				69FE60232C03778C0082D326 /* ar */,
 				E9C8C6D62CFF66650053474D /* ro */,
+				EB4ACE3C2D345A0800A0AF4C /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -685,7 +687,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 92SDAWLN76;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -714,7 +716,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 92SDAWLN76;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -867,7 +869,7 @@
 				CODE_SIGN_ENTITLEMENTS = NearDrop/NearDrop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 92SDAWLN76;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -903,7 +905,7 @@
 				CODE_SIGN_ENTITLEMENTS = NearDrop/NearDrop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 92SDAWLN76;
 				ENABLE_HARDENED_RUNTIME = YES;

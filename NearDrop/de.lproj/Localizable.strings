@@ -20,25 +20,31 @@
 "NFiles" = "%d Dateien";
 
 /* No comment provided by engineer. */
-"NotificationsDenied.Message" = "NearDrop benötigt die Erlaubnis Mitteilungen für eingehende Datenransfers anzuzeigen. Bitte erlaube Mitteilungen in den Systemeinstellungen.";
+"NotificationsDenied.Message" = "NearDrop benötigt die Erlaubnis, Mitteilungen für eingehende Übertragungen anzuzeigen. Bitte erlaube Mitteilungen in den Systemeinstellungen.";
 
 /* No comment provided by engineer. */
 "NotificationsDenied.OpenSettings" = "Einstellungen öffnen";
 
 /* No comment provided by engineer. */
-"NotificationsDenied.Title" = "Mitteilungsberechtigungen sind notwendig";
+"NotificationsDenied.Title" = "Mitteilungsberechtigungen notwendig";
 
 /* No comment provided by engineer. */
 "PinCode" = "PIN: %@";
 
 /* No comment provided by engineer. */
-"Quit" = "NearDrop Beenden";
+"Quit" = "NearDrop beenden";
 
 /* No comment provided by engineer. */
 "TransferError" = "Die Daten von %@ konnten nicht empfangen werden";
 
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "Für alle sichtbar";
+
+"RecommendedApps" = "Empfohlene Apps";
+
+"PrivacyPolicy" = "Datenschutzerklärung";
+
+"UserManual" = "Benutzerhandbuch";
 
 "WelcomeToNearDrop" = "Willkommen bei NearDrop";
 

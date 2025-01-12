@@ -40,6 +40,10 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "すべてのユーザーに公開";
 
+"RecommendedApps" = "おすすめアプリ";
+"PrivacyPolicy" = "プライバシーポリシー";
+"UserManual" = "ユーザーマニュアル";
+
 "WelcomeToNearDrop" = "NearDropへようこそ";
 
 "Acknowledgements" = "謝辞";

@@ -40,6 +40,10 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "Vizibil pentru toată lumea";
 
+"RecommendedApps" = "Aplicații recomandate";
+"PrivacyPolicy" = "Politica de confidențialitate";
+"UserManual" = "Manualul utilizatorului";
+
 "WelcomeToNearDrop" = "Bine ai venit la NearDrop";
 
 "Acknowledgements" = "Mulțumiri";

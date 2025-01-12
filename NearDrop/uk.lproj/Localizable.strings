@@ -40,6 +40,11 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "Видимість: для всіх";
 
+"RecommendedApps" = "Рекомендовані додатки";
+"PrivacyPolicy" = "Політика конфіденційності";
+"UserManual" = "Посібник користувача";
+
+
 "WelcomeToNearDrop" = "Ласкаво просимо до NearDrop";
 
 "Acknowledgements" = "Подяки";

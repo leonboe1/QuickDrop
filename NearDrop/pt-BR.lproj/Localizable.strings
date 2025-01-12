@@ -40,6 +40,10 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "Visível para todos";
 
+"RecommendedApps" = "Apps recomendados";
+"PrivacyPolicy" = "Política de Privacidade";
+"UserManual" = "Manual do Usuário";
+
 "WelcomeToNearDrop" = "Bem-vindo ao NearDrop";
 
 "Acknowledgements" = "Agradecimentos";

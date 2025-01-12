@@ -40,6 +40,12 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "Zichtbaar voor iedereen";
 
+"RecommendedApps" = "Aanbevolen apps";
+
+"PrivacyPolicy" = "Privacybeleid";
+
+"UserManual" = "Gebruikershandleiding";
+
 "WelcomeToNearDrop" = "Welkom bij NearDrop";
 
 "Acknowledgements" = "Erkenningen";

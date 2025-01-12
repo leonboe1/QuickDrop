@@ -40,6 +40,10 @@
 /* No comment provided by engineer. */
 "VisibleToEveryone" = "모든 사용자에게 공개";
 
+"RecommendedApps" = "추천 앱";
+"PrivacyPolicy" = "개인정보 처리방침";
+"UserManual" = "사용자 매뉴얼";
+
 "WelcomeToNearDrop" = "NearDrop에 오신 것을 환영합니다";
 
 "Acknowledgements" = "감사의 말";
