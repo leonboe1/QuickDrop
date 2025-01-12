@@ -1,4 +1,4 @@
-**NearDrop** is a partial implementation of [Google's Nearby Share](https://blog.google/products/android/nearby-share/)/Quick Share for macOS.
+**NearDrop** is a partial implementation of [Google's Nearby Share](https://blog.google/products/android/nearby-share/) for macOS. This fork reflects the App Store version of NearDrop available [here](https://apps.apple.com/de/app/neardrop-quickshare-client/id6740147178?l=en-GB&mt=12). 
 
 [Protocol documentation](/PROTOCOL.md) is available separately.
 
@@ -9,27 +9,11 @@ The app lives in your menu bar and saves files to your downloads folder. It's th
 * **Wi-Fi LAN only**. Your Android device and your Mac need to be on the same network for this app to work. Google's implementation supports multiple mediums, including Wi-Fi Direct, Wi-Fi hotspot, Bluetooth, some kind of 5G peer-to-peer connection, and even a WebRTC-based protocol that goes over the internet through Google servers. Wi-Fi direct isn't supported on macOS (Apple has their own, incompatible, AWDL thing, used in AirDrop). Bluetooth needs further reverse engineering.
 * **Visible to everyone on your network at all times** while the app is running. Limited visibility (contacts etc) requires talking to Google servers, and becoming temporarily visible requires listening for whatever triggers the "device nearby is sharing" notification.
 
-## Installation
-
-Download the latest build from the releases section, unzip, move to your applications folder. When running for the first time, right-click the app and select "Open", then confirm running an app from unidentified developer.
-
-If you want the app to start on boot, [follow these steps to add NearDrop as a login item.](https://support.apple.com/guide/mac-help/open-items-automatically-when-you-log-in-mh15189/mac)
-
-#### Installation with Homebrew
-
-```
-brew install --no-quarantine grishka/grishka/neardrop
-```
-
 ## Contributing
 
 Pull requests that change the readme will not be accepted.
 
 ## FAQ
-
-#### The app would not open because "Apple cannot check it for malicious software", you gotta fix your shit
-
-Right-click the app in Finder and select "Open". Or, open System Settings -> Privacy and security, scroll down and allow the app to run.
 
 #### My Android device doesn't see my Mac
 
@@ -70,14 +54,6 @@ Yes. Drag the icon off the menu bar while holding cmd. To bring it back, launch 
 #### I'm sending something to my Mac, the Android device displays a PIN code, but nothing happens on the Mac
 
 Make sure you have "do not disturb" off. The notification may also sometimes (rarely) end up in the notification center without being shown as a popup first — I'm not sure why this happens.
-
-#### Why is the app not notarized?
-
-Because I don't want to pay Apple $99 a year for the privilege of developing macOS apps and I oppose their idea of security. The slightly less scary security warning isn't worth $99/year IMO.
-
-#### Why is this not on the app store?
-
-Because I don't want to pay Apple $99 a year for the privilege of developing macOS apps. I also don't want to have to go through the review process.
 
 #### Why not the other way around, i.e. AirDrop on Android?
 
