@@ -201,9 +201,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["transfer_"+id])
         self.activeIncomingTransfers.removeValue(forKey: id)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            SKStoreReviewController.requestReview()
+        let currentCount = UserDefaults.standard.integer(forKey: "reviewRequestCountKey")
+       
+        if currentCount % 20 == 0 {   
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                SKStoreReviewController.requestReview()
+            }
         }
+        
+        UserDefaults.standard.set(currentCount + 1, forKey: "reviewRequestCountKey")
     }
 }
 
