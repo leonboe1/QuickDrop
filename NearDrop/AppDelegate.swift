@@ -55,8 +55,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         }
         nc.delegate=self
         let incomingTransfersCategory=UNNotificationCategory(identifier: "INCOMING_TRANSFERS", actions: [
-            UNNotificationAction(identifier: "ACCEPT", title: NSLocalizedString("Accept", comment: ""), options: UNNotificationActionOptions.authenticationRequired),
-            UNNotificationAction(identifier: "DECLINE", title: NSLocalizedString("Decline", comment: ""))
+            UNNotificationAction(identifier: "ACCEPT", title: NSLocalizedString("Accept", comment: ""), options: UNNotificationActionOptions.authenticationRequired)
         ], intentIdentifiers: [])
         let errorsCategory=UNNotificationCategory(identifier: "ERRORS", actions: [], intentIdentifiers: [])
         nc.setNotificationCategories([incomingTransfersCategory, errorsCategory])
