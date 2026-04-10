@@ -484,6 +484,9 @@ class NearbyConnection {
                 // Older peers can omit the keepAlive payload; default to ACK reply.
                 sendKeepAlive(ack: true)
             }
+        } else if offlineFrame.hasV1, offlineFrame.v1.hasType, case .disconnection = offlineFrame.v1.type {
+            log("[NearbyConnection \(self.id)] Received disconnection frame.")
+            disconnect()
         } else {
             
             if offlineFrame.hasV1, offlineFrame.v1.hasType, offlineFrame.v1.type == .bandwidthUpgradeRetry {
