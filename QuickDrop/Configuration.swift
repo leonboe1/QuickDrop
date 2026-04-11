@@ -25,7 +25,7 @@ let configuration = LUIConfiguration(
     
     hasRoundedFont: false,
     
-    switchedToIAPafterBundleVersion: AppVersionBundle(appVersion: "1.2", buildVersion: 0, legacyUserDefaultsKey: Settings.UserDefaultsKeys.plusVersionLegacy.rawValue),
+    switchedToInAppPurchaseWithBundleVersion: AppVersionBundle(appVersion: "1.2", buildVersion: 0, legacyUserDefaultsKey: Settings.UserDefaultsKeys.plusVersionLegacy.rawValue),
     
     copyrightInformation: licenseText,
     
@@ -47,5 +47,12 @@ let configuration = LUIConfiguration(
     
     supportsPortraitSplitView: false,
     
-    supportsDarkModeShadow: true
+    supportsDarkModeShadow: true,
+    
+    privacyPolicyURL: .privacyPolicyURL
 )
+
+
+extension String {
+    static let privacyPolicyURL = "https://leonboettger.com/quickdrop-privacy"
+}

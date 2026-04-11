@@ -52,7 +52,7 @@
       "location" : "https://github.com/leonboe1/LUI.git",
       "state" : {
         "branch" : "main",
-        "revision" : "3582f59e758c39a849ab691f3fe26f7d0f618a94"
+        "revision" : "7554164b073a5d603e2e7fe92a55159658c67c8e"
       }
     },
     {
@@ -124,7 +124,7 @@
       "location" : "https://github.com/siteline/swiftui-introspect",
       "state" : {
         "branch" : "main",
-        "revision" : "26986a57e31c813f98262ddb62d4b07d40008535"
+        "revision" : "b789ee16f0000b35860a46a0bebca7074546d0d0"
       }
     },
     {
