@@ -46,7 +46,7 @@ class NearbyConnection {
     private var dataTransferInactivityTimer: DispatchSourceTimer?
     
     private let ackInterval: TimeInterval = 5
-    private let ackTimeoutInterval: TimeInterval = 30
+    private let ackTimeoutInterval: TimeInterval = 60
     private var lastKeepAliveFrameSent = Date()
     
     // UKEY2-related state
@@ -424,14 +424,29 @@ class NearbyConnection {
             let chunk = payloadTransfer.payloadChunk
             
             guard header.hasType, header.hasID else { throw NearbyError.requiredFieldMissing("payloadHeader.type|id") }
-            guard payloadTransfer.hasPayloadChunk, chunk.hasOffset, chunk.hasFlags else {
-                
-                if payloadTransfer.controlMessage.event == .payloadCanceled {
+
+            if payloadTransfer.hasPayloadChunk {
+                guard chunk.hasOffset, chunk.hasFlags else {
+                    log("[NearbyConnection \(self.id)] Payload transfer chunk is missing offset or flags. Frame is \(payloadTransfer.debugDescription)")
+                    throw NearbyError.requiredFieldMissing("payloadChunk.offset|flags")
+                }
+            } else if payloadTransfer.hasControlMessage || payloadTransfer.packetType == .control {
+                switch payloadTransfer.controlMessage.event {
+                case .payloadCanceled:
                     log("[NearbyConnection \(self.id)] Cancel control frame received.")
                     throw NearbyError.canceled(reason: .userCanceled)
+                case .payloadReceivedAck:
+                    // Legacy peers can send ACKs as control events instead of packetType=.payloadAck.
+                    return
+                case .payloadError:
+                    throw NearbyError.protocolError("Peer reported payload error")
+                case .unknownEventType:
+                    return
                 }
-                
-                log("[NearbyConnection \(self.id)] Payload transfer chunk is missing offset or flags. Frame is \(payloadTransfer.debugDescription)")
+            } else if payloadTransfer.packetType == .payloadAck {
+                return
+            } else {
+                log("[NearbyConnection \(self.id)] Payload transfer frame missing supported payload content. Frame is \(payloadTransfer.debugDescription)")
                 throw NearbyError.requiredFieldMissing("payloadChunk.offset|flags")
             }
             
