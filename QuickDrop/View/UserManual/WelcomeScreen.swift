@@ -44,7 +44,7 @@ struct WelcomeScreen: View {
                 Divider()
                 
                 ExternalLinkLabel(label: "GetSupport", icon: "questionmark.circle") {
-                    SupportMail.sendSupportMail()
+                    LogExportPresenter.showUploadLogsAlert(openSupportMailWhenNotUploading: true)
                 }
                 
                 ExternalLinkLabel(label: "PrivacyPolicy", icon: "hand.raised") {
