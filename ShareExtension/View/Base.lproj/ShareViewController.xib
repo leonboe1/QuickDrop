@@ -177,17 +177,17 @@ Gw
                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="rb3-78-PXe"/>
                         </imageView>
                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BEO-kU-a2Q">
-                            <rect key="frame" x="24" y="-8" width="32" height="32"/>
+                            <rect key="frame" x="16.800000000000001" y="16.800000000000001" width="14.4" height="14.4"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="32" id="05I-Ef-84Z"/>
-                                <constraint firstAttribute="width" constant="32" id="V0g-Fz-HWH"/>
+                                <constraint firstAttribute="height" constant="14.4" id="05I-Ef-84Z"/>
+                                <constraint firstAttribute="width" constant="14.4" id="V0g-Fz-HWH"/>
                             </constraints>
-                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSCaution" id="k1c-Xl-fTQ"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="k1c-Xl-fTQ"/>
                         </imageView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="BEO-kU-a2Q" secondAttribute="trailing" constant="-8" id="59U-Zi-ESa"/>
-                        <constraint firstAttribute="bottom" secondItem="BEO-kU-a2Q" secondAttribute="bottom" constant="-8" id="8ty-pq-miR"/>
+                        <constraint firstItem="BEO-kU-a2Q" firstAttribute="centerX" secondItem="84U-lB-SRB" secondAttribute="centerX" id="59U-Zi-ESa"/>
+                        <constraint firstItem="BEO-kU-a2Q" firstAttribute="centerY" secondItem="84U-lB-SRB" secondAttribute="centerY" id="8ty-pq-miR"/>
                         <constraint firstItem="84U-lB-SRB" firstAttribute="top" secondItem="jBg-Ih-Gac" secondAttribute="top" id="MB9-UI-2mb"/>
                         <constraint firstItem="84U-lB-SRB" firstAttribute="leading" secondItem="jBg-Ih-Gac" secondAttribute="leading" id="b23-hJ-aWT"/>
                         <constraint firstAttribute="trailing" secondItem="84U-lB-SRB" secondAttribute="trailing" id="eKl-3V-K49"/>

@@ -95,6 +95,9 @@ class ShareViewController: NSViewController, OutboundAppDelegate {
         
         progressDeviceIconWrap!.wantsLayer = true
         progressDeviceIconWrap!.layer!.masksToBounds = false
+        progressDeviceSecondaryIcon?.image = NSImage(named: "MenuBarIcon")
+        progressDeviceSecondaryIcon?.image?.isTemplate = true
+        progressDeviceSecondaryIcon?.contentTintColor = .white
     }
     
     
@@ -250,6 +253,7 @@ class ShareViewController: NSViewController, OutboundAppDelegate {
         progressView?.animator().isHidden = false
         progressDeviceName?.stringValue = getDeviceName(device: device)
         progressDeviceIcon?.image = imageForDeviceType(type: device.type)
+        progressDeviceSecondaryIcon?.isHidden = !device.isQuickDropPeer
         progressProgressBar?.startAnimation(nil)
         progressState?.stringValue = "Preparing".localized()
         chosenDevice = device
@@ -383,8 +387,11 @@ extension ShareViewController: NSCollectionViewDataSource {
         
         let device = foundDevices[indexPath[1]]
         
-        collectionViewItem.textField?.stringValue = getDeviceName(device: device)
-        collectionViewItem.imageView?.image = imageForDeviceType(type: device.type)
+        collectionViewItem.configure(
+            deviceName: getDeviceName(device: device),
+            deviceImage: imageForDeviceType(type: device.type),
+            showsQuickDropPeerMarker: device.isQuickDropPeer && device.type == .phone
+        )
         collectionViewItem.clickHandler = {
             self.selectDevice(device: device)
         }

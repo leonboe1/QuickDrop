@@ -62,20 +62,52 @@ public struct RemoteDeviceInfo: Codable, Identifiable, Equatable {
     public let name: String?
     public let type: DeviceType
     public let qrCodeData: Data?
+    public let isQuickDropPeer: Bool
     public var id: String?
 
-    init(name: String?, type: DeviceType?, id: String? = nil) {
+    init(name: String?, type: DeviceType?, id: String? = nil, isQuickDropPeer: Bool = false) {
         self.name = name
         self.type = type ?? .phone
         self.id = id
         self.qrCodeData = nil
+        self.isQuickDropPeer = isQuickDropPeer
     }
 
-    init(info: EndpointInfo, id: String? = nil) {
+    init(info: EndpointInfo, id: String? = nil, isQuickDropPeer: Bool = false) {
         self.name = info.name
         self.type = info.deviceType
         self.qrCodeData = info.qrCodeData
         self.id = id
+        self.isQuickDropPeer = isQuickDropPeer
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case type
+        case qrCodeData
+        case isQuickDropPeer
+        case isVerifiedQuickDropPeer
+        case id
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = try container.decodeIfPresent(String.self, forKey: .name)
+        type = try container.decode(DeviceType.self, forKey: .type)
+        qrCodeData = try container.decodeIfPresent(Data.self, forKey: .qrCodeData)
+        isQuickDropPeer = try container.decodeIfPresent(Bool.self, forKey: .isQuickDropPeer)
+            ?? container.decodeIfPresent(Bool.self, forKey: .isVerifiedQuickDropPeer)
+            ?? false
+        id = try container.decodeIfPresent(String.self, forKey: .id)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(name, forKey: .name)
+        try container.encode(type, forKey: .type)
+        try container.encodeIfPresent(qrCodeData, forKey: .qrCodeData)
+        try container.encode(isQuickDropPeer, forKey: .isQuickDropPeer)
+        try container.encodeIfPresent(id, forKey: .id)
     }
 
     

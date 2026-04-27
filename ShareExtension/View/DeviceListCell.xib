@@ -36,10 +36,20 @@
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="QGU-rR-rJQ"/>
                 </imageView>
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="89K-DQ-f8g">
+                    <rect key="frame" x="95.799999999999997" y="58.799999999999997" width="14.4" height="14.4"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14.4" id="Lfh-Ha-Njl"/>
+                        <constraint firstAttribute="height" constant="14.4" id="Wm1-YW-85X"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="0fp-y5-fj9"/>
+                </imageView>
             </subviews>
             <constraints>
+                <constraint firstItem="89K-DQ-f8g" firstAttribute="centerX" secondItem="O1J-am-CoK" secondAttribute="centerX" id="Bja-VK-UQf"/>
                 <constraint firstItem="O1J-am-CoK" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="R76-2L-pXb"/>
                 <constraint firstAttribute="bottom" secondItem="QPM-sE-maP" secondAttribute="bottom" id="Ryn-nY-yZp"/>
+                <constraint firstItem="89K-DQ-f8g" firstAttribute="centerY" secondItem="O1J-am-CoK" secondAttribute="centerY" id="Yeh-mY-trP"/>
                 <constraint firstItem="O1J-am-CoK" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ZFA-S9-fpT"/>
                 <constraint firstAttribute="trailing" secondItem="QPM-sE-maP" secondAttribute="trailing" id="eOl-Va-HXq"/>
                 <constraint firstItem="QPM-sE-maP" firstAttribute="top" secondItem="O1J-am-CoK" secondAttribute="bottom" constant="10" id="leg-nD-mHB"/>
@@ -53,6 +63,7 @@
         <collectionViewItem id="1Lb-iJ-Nar" customClass="DeviceListCell" customModule="QuickDropShareExtension" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="O1J-am-CoK" id="zQn-mV-bRy"/>
+                <outlet property="peerMarkerView" destination="89K-DQ-f8g" id="iWY-ru-o1h"/>
                 <outlet property="textField" destination="QPM-sE-maP" id="s0j-Qq-7iA"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="gZn-20-o77"/>
             </connections>

@@ -36,6 +36,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     private var startedDeviceDiscovery = false
     private var startedAdvertising = false { didSet { informAboutStatus() }}
     private var browsers: [NWBrowser] = []
+    private let deviceNameResolver = NearbyDeviceNameResolver()
     private let serviceTypes = ["_FC9F5ED42C8A._tcp."]
     private var qrCodePrivateKey: ECPrivateKey?
     private var qrCodeAdvertisingToken: Data?
@@ -315,11 +316,11 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
             var txtRecord: [String: Data] = [
                 txtKeyEndpointInfo: deviceInfo.serialize().urlSafeBase64EncodedString().data(using: .utf8)!,
             ]
-            #if os(macOS)
-            txtRecord[txtQuickDropCapabilities] = Data(notificationSyncCapabilityToken.utf8)
             if let keyFingerprint = notificationSyncKeyFingerprintHex() {
                 txtRecord[txtQuickDropDeviceKeyFingerprint] = Data(keyFingerprint.utf8)
             }
+            #if os(macOS)
+            txtRecord[txtQuickDropCapabilities] = Data(notificationSyncCapabilityToken.utf8)
             #endif
             service.setTXTRecord(NetService.data(fromTXTRecord: txtRecord))
             service.publish()
@@ -473,7 +474,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
             
             browsers.removeAll()
             startedDeviceDiscovery = false
-            
+            deviceNameResolver.cancelAll()
             
             for delegate in outboundAppDelegates {
                 
@@ -552,14 +553,40 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
         guard case let NWBrowser.Result.Metadata.bonjour(txtRecord) = service.metadata else { return }
         guard let endpointInfoEncoded = txtRecord.dictionary[txtKeyEndpointInfo] else { return }
         guard let endpointInfoData = Data.dataFromUrlSafeBase64(endpointInfoEncoded) else { return }
-        var endpointInfo = EndpointInfo(data: endpointInfoData)
+        let parsedEndpointInfo = EndpointInfo(data: endpointInfoData)
+        var endpointInfo = parsedEndpointInfo
             ?? EndpointInfo(name: unnamedAndroidFallbackDeviceName, deviceType: .unknown)
-
-        let cleanedName = endpointInfo.name?.trimmingCharacters(in: .whitespacesAndNewlines)
-        if cleanedName?.isEmpty != false {
+        let isQuickDropPeer = txtRecord.dictionary[txtQuickDropDeviceKeyFingerprint] != nil
+        let needsDeviceNameLookup = deviceNameResolver.needsLookup(for: parsedEndpointInfo)
+        if needsDeviceNameLookup {
             endpointInfo.name = unnamedAndroidFallbackDeviceName
         }
-        let deviceInfo = addFoundDevice(foundService: &foundService, endpointInfo: endpointInfo, endpointID: endpointID)
+        let deviceInfo = addFoundDevice(
+            foundService: &foundService,
+            endpointInfo: endpointInfo,
+            endpointID: endpointID,
+            isQuickDropPeer: isQuickDropPeer
+        )
+
+        if needsDeviceNameLookup {
+            deviceNameResolver.resolveName(for: service, endpointID: endpointID) { [weak self] deviceName in
+                guard let self else { return }
+                guard self.foundServices[endpointID]?.device?.name == self.unnamedAndroidFallbackDeviceName else { return }
+
+                var resolvedEndpointInfo = endpointInfo
+                resolvedEndpointInfo.name = deviceName
+                var resolvedFoundService = FoundServiceInfo(service: service)
+                _ = self.addFoundDevice(
+                    foundService: &resolvedFoundService,
+                    endpointInfo: resolvedEndpointInfo,
+                    endpointID: endpointID,
+                    isQuickDropPeer: isQuickDropPeer
+                )
+            }
+        }
+        else {
+            deviceNameResolver.cancelLookup(for: endpointID)
+        }
         
         if let qrData = endpointInfo.qrCodeData, let qrCodeAdvertisingToken = qrCodeAdvertisingToken, let qrCodeNameEncryptionKey = qrCodeNameEncryptionKey {
             
@@ -576,7 +603,12 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
                     let decryptedName = try AES.GCM.open(box, using: qrCodeNameEncryptionKey, authenticating: qrCodeAdvertisingToken)
                     guard let name = String.init(data: decryptedName, encoding: .utf8) else { return }
                     endpointInfo.name = name
-                    let deviceInfo = addFoundDevice(foundService: &foundService, endpointInfo: endpointInfo, endpointID: endpointID)
+                    let deviceInfo = addFoundDevice(
+                        foundService: &foundService,
+                        endpointInfo: endpointInfo,
+                        endpointID: endpointID,
+                        isQuickDropPeer: isQuickDropPeer
+                    )
                     for delegate in outboundAppDelegates {
                         delegate.startTransferWithQrCode(device: deviceInfo)
                     }
@@ -588,9 +620,18 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     }
     
     
-    private func addFoundDevice(foundService: inout FoundServiceInfo, endpointInfo: EndpointInfo, endpointID: String) -> RemoteDeviceInfo {
+    private func addFoundDevice(
+        foundService: inout FoundServiceInfo,
+        endpointInfo: EndpointInfo,
+        endpointID: String,
+        isQuickDropPeer: Bool = false
+    ) -> RemoteDeviceInfo {
         let hadPreviousDevice = foundServices[endpointID]?.device != nil
-        let deviceInfo = RemoteDeviceInfo(info: endpointInfo, id: endpointID)
+        let deviceInfo = RemoteDeviceInfo(
+            info: endpointInfo,
+            id: endpointID,
+            isQuickDropPeer: isQuickDropPeer
+        )
         foundService.device = deviceInfo
         foundServices[endpointID] = foundService
         
@@ -610,6 +651,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     
     private func removeFoundDevice(service: NWBrowser.Result) {
         guard let endpointID = endpointID(for: service) else { return }
+        deviceNameResolver.cancelLookup(for: endpointID)
         guard let _ = foundServices.removeValue(forKey: endpointID) else { return }
         for delegate in outboundAppDelegates {
             delegate.removeDevice(id: endpointID)

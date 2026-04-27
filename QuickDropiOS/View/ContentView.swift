@@ -289,9 +289,21 @@ struct DeviceButtonLabel: View {
             }
             
             VStack(alignment: .leading, spacing: 5) {
-                Text(name)
-                    .fontWeight(.medium)
-                    .foregroundColor(Color.primary)
+                HStack(spacing: 5) {
+                    Text(name)
+                        .fontWeight(.medium)
+                        .foregroundColor(Color.primary)
+
+                    if device.isQuickDropPeer {
+                        Image(.menuBarIcon)
+                            .renderingMode(.template)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 14, height: 14)
+                            .foregroundColor(Color.primary)
+                            .opacity(0.5)
+                    }
+                }
                 
                 Text(isSelected ? progress ?? "..." : "Available".localized())
                     .font(.system(size: 12))
