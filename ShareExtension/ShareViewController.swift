@@ -259,37 +259,43 @@ class ShareViewController: NSViewController, OutboundAppDelegate {
         chosenDevice = device
         
         runAfter(seconds: 0.3) {
-            NearbyConnectionManager.shared.startOutgoingTransfer(deviceID: device.id!, delegate: self, urls: self.urls, textToSend: self.textToSend)
-            
-            self.progressState?.stringValue = "Connecting".localized()
-            
-            let timeoutAlert = DispatchWorkItem {
-                if !self.connectionEstablished {
-                    AudioManager.playErrorSound()
-                    let alert = NSAlert()
-                    alert.alertStyle = .critical
+            NearbyConnectionManager.shared.startOutgoingTransfer(
+                deviceID: device.id!,
+                delegate: self,
+                urls: self.urls,
+                textToSend: self.textToSend,
+                preparationFinished: {
+                    self.progressState?.stringValue = "Connecting".localized()
                     
-                    alert.messageText = "TimeoutTitle".localized()
-                    
-                    if #available(macOS 15.0, *) {
-                        alert.informativeText = "TimeoutDescription".localized()
-                        alert.addButton(withTitle: "TimeoutButton".localized())
-                        alert.addButton(withTitle: "CloseAlert".localized())
-                    } else {
-                        alert.informativeText = "TimeoutDescriptionLegacy".localized()
-                        alert.addButton(withTitle: "TimeoutButtonLegacy".localized())
-                    }
-                    
-                    alert.beginSheetModal(for: self.view.window!) { response in
-                        if #available(macOS 15.0, *), response == .alertFirstButtonReturn {
-                            openPrivacyAndSecuritySettings()
+                    let timeoutAlert = DispatchWorkItem {
+                        if !self.connectionEstablished {
+                            AudioManager.playErrorSound()
+                            let alert = NSAlert()
+                            alert.alertStyle = .critical
+                            
+                            alert.messageText = "TimeoutTitle".localized()
+                            
+                            if #available(macOS 15.0, *) {
+                                alert.informativeText = "TimeoutDescription".localized()
+                                alert.addButton(withTitle: "TimeoutButton".localized())
+                                alert.addButton(withTitle: "CloseAlert".localized())
+                            } else {
+                                alert.informativeText = "TimeoutDescriptionLegacy".localized()
+                                alert.addButton(withTitle: "TimeoutButtonLegacy".localized())
+                            }
+                            
+                            alert.beginSheetModal(for: self.view.window!) { response in
+                                if #available(macOS 15.0, *), response == .alertFirstButtonReturn {
+                                    openPrivacyAndSecuritySettings()
+                                }
+                            }
                         }
                     }
+                    
+                    self.timeoutDispatchWorkItem = timeoutAlert
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: timeoutAlert)
                 }
-            }
-            
-            self.timeoutDispatchWorkItem = timeoutAlert
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: timeoutAlert) 
+            )
         }
     }
     

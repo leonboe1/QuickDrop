@@ -33,6 +33,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     private var outboundAppDelegates: [OutboundAppDelegate] = []
     private var inboundAppDelegates: [InboundAppDelegate] = []
     private var outgoingTransfers: [String: OutgoingTransferInfo] = [:]
+    private var pendingOutgoingTransferPreparations: [String: UUID] = [:]
     private var startedDeviceDiscovery = false
     private var startedAdvertising = false { didSet { informAboutStatus() }}
     private var browsers: [NWBrowser] = []
@@ -515,6 +516,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
         if let transfer = incomingConnections[id] {
             transfer.cancel()
         }
+        pendingOutgoingTransferPreparations.removeValue(forKey: id)
         if let info = outgoingTransfers[id] {
             info.connection.cancel()
         }
@@ -699,28 +701,60 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     }
     
     
-    public func startOutgoingTransfer(deviceID: String, delegate: OutboundAppDelegate, urls: [URL], textToSend: String?) {
+    public func startOutgoingTransfer(
+        deviceID: String,
+        delegate: OutboundAppDelegate,
+        urls: [URL],
+        textToSend: String?,
+        preparationFinished: (() -> Void)? = nil
+    ) {
         log("Starting outgoing transfer to \(deviceID)")
-        guard let info = foundServices[deviceID] else { return }
-        
-        do {
-            let localUrls = try saveFilesToTemp(urls: urls)
-            
-            let tcp = NWProtocolTCP.Options()
-            tcp.noDelay = true
-            let nwconn = NWConnection(to: info.service.endpoint, using: NWParameters(tls: .none, tcp: tcp))
-            
-            let conn = OutboundNearbyConnection(connection: nwconn, id: deviceID, urlsToSend: localUrls, textToSend: textToSend)
-            conn.delegate = self
-            conn.qrCodePrivateKey = qrCodePrivateKey
-            
-            let transfer = OutgoingTransferInfo(service: info.service, device: info.device!, connection: conn, delegate: delegate)
-            outgoingTransfers[deviceID] = transfer
-            conn.start()
-        } catch {
-            log("[NearbyConnectionManager] Error storing URLs: \(error)")
-            outboundAppDelegates.forEach { delegate in
-                delegate.connectionFailed(error: error)
+        guard foundServices[deviceID] != nil else { return }
+
+        let preparationID = UUID()
+        pendingOutgoingTransferPreparations[deviceID] = preparationID
+
+        DispatchQueue.global(qos: .userInitiated).async { [weak self, weak delegate] in
+            guard let self else { return }
+
+            do {
+                let localUrls = try self.saveFilesToTemp(urls: urls)
+
+                DispatchQueue.main.async {
+                    guard let info = self.foundServices[deviceID],
+                          self.pendingOutgoingTransferPreparations[deviceID] == preparationID else {
+                        return
+                    }
+
+                    self.pendingOutgoingTransferPreparations.removeValue(forKey: deviceID)
+                    guard let delegate else { return }
+
+                    preparationFinished?()
+
+                    let tcp = NWProtocolTCP.Options()
+                    tcp.noDelay = true
+                    let nwconn = NWConnection(to: info.service.endpoint, using: NWParameters(tls: .none, tcp: tcp))
+
+                    let conn = OutboundNearbyConnection(connection: nwconn, id: deviceID, urlsToSend: localUrls, textToSend: textToSend)
+                    conn.delegate = self
+                    conn.qrCodePrivateKey = self.qrCodePrivateKey
+
+                    let transfer = OutgoingTransferInfo(service: info.service, device: info.device!, connection: conn, delegate: delegate)
+                    self.outgoingTransfers[deviceID] = transfer
+                    conn.start()
+                }
+            } catch {
+                log("[NearbyConnectionManager] Error storing URLs: \(error)")
+                DispatchQueue.main.async {
+                    guard self.pendingOutgoingTransferPreparations[deviceID] == preparationID else {
+                        return
+                    }
+
+                    self.pendingOutgoingTransferPreparations.removeValue(forKey: deviceID)
+                    self.outboundAppDelegates.forEach { delegate in
+                        delegate.connectionFailed(error: error)
+                    }
+                }
             }
         }
     }
