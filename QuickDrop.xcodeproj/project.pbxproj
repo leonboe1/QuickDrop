@@ -79,8 +79,8 @@
 		EB3B9F162EF7150400D6704E /* OutboundNearbyConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F53BD2ABF03820089FD92 /* OutboundNearbyConnection.swift */; };
 		EB3B9F172EF7150400D6704E /* InboundNearbyConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA9A2229E17F0400A442DA /* InboundNearbyConnection.swift */; };
 		EB3B9F182EF7150400D6704E /* NearbyConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA9A1E29E0C0B300A442DA /* NearbyConnectionManager.swift */; };
-		EB3B9F192EF7150400D6704F /* NearbyDeviceNameResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3B9F192EF7150400D67050 /* NearbyDeviceNameResolver.swift */; };
 		EB3B9F192EF7150400D6704E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB979F8D2E50CA23008B8C5C /* Configuration.swift */; };
+		EB3B9F192EF7150400D6704F /* NearbyDeviceNameResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3B9F192EF7150400D67050 /* NearbyDeviceNameResolver.swift */; };
 		EB3B9F1A2EF7150400D6704E /* AttachmentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB950B762E521712002D68FA /* AttachmentDetails.swift */; };
 		EB3B9F1B2EF7150400D6704E /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB886E512E4E19390052B7D9 /* HKDF.swift */; };
 		EB3B9F1C2EF7150400D6704E /* SmallSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96ED8A2D7F7CF4004B3FF1 /* SmallSheetView.swift */; };
@@ -148,8 +148,8 @@
 		EB3B9F6C2EF7151900D6704E /* NearbyConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698DFAE529E2F91A0064F247 /* NearbyConnection.swift */; };
 		EB3B9F6D2EF7151900D6704E /* InboundNearbyConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA9A2229E17F0400A442DA /* InboundNearbyConnection.swift */; };
 		EB3B9F6E2EF7151900D6704E /* NearbyConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA9A1E29E0C0B300A442DA /* NearbyConnectionManager.swift */; };
-		EB3B9F6F2EF7151900D6704F /* NearbyDeviceNameResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3B9F192EF7150400D67050 /* NearbyDeviceNameResolver.swift */; };
 		EB3B9F6F2EF7151900D6704E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F9BFA2DA04B67004010A2 /* Helpers.swift */; };
+		EB3B9F6F2EF7151900D6704F /* NearbyDeviceNameResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3B9F192EF7150400D67050 /* NearbyDeviceNameResolver.swift */; };
 		EB3B9F702EF7151900D6704E /* ApIsolationTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1325E92E7025D900FD749C /* ApIsolationTester.swift */; };
 		EB3B9F712EF7151900D6704E /* ActiveNetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1325E72E7025D900FD749C /* ActiveNetworkInterface.swift */; };
 		EB3B9F722EF7151900D6704E /* ApIsolation6Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1325E82E7025D900FD749C /* ApIsolation6Tester.swift */; };
@@ -501,7 +501,6 @@
 		69DA9A1329E0BF5200A442DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69DA9A1829E0BF5200A442DA /* QuickDrop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickDrop.entitlements; sourceTree = "<group>"; };
 		69DA9A1E29E0C0B300A442DA /* NearbyConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyConnectionManager.swift; sourceTree = "<group>"; };
-		EB3B9F192EF7150400D67050 /* NearbyDeviceNameResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDeviceNameResolver.swift; sourceTree = "<group>"; };
 		69DA9A2229E17F0400A442DA /* InboundNearbyConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboundNearbyConnection.swift; sourceTree = "<group>"; };
 		69DA9A2829E18CB500A442DA /* ukey.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ukey.pb.swift; sourceTree = "<group>"; };
 		69DA9A2929E18CB500A442DA /* wire_format.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wire_format.pb.swift; sourceTree = "<group>"; };
@@ -525,6 +524,7 @@
 		EB2B41E32DC63AC80070FC39 /* SleepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepManager.swift; sourceTree = "<group>"; };
 		EB2F9BFA2DA04B67004010A2 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		EB36435F2D73A29F009CDFF8 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		EB3B9F192EF7150400D67050 /* NearbyDeviceNameResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDeviceNameResolver.swift; sourceTree = "<group>"; };
 		EB3B9F482EF7150400D6704E /* QuickDropGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickDropGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3B9F492EF7150400D6704E /* QuickDrop copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "QuickDrop copy-Info.plist"; path = "/Users/leonboettger/QuickDrop Backup with git/QuickDrop copy-Info.plist"; sourceTree = "<absolute>"; };
 		EB3B9F892EF7151900D6704E /* QuickDropShareExtensionGitHub.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickDropShareExtensionGitHub.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1787,8 +1787,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SHARED_BUILD = 142;
-				SHARED_VERSION = 3.0.3;
+				SHARED_BUILD = 143;
+				SHARED_VERSION = 3.1;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1850,8 +1850,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
-				SHARED_BUILD = 142;
-				SHARED_VERSION = 3.0.3;
+				SHARED_BUILD = 143;
+				SHARED_VERSION = 3.1;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
