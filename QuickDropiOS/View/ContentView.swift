@@ -65,7 +65,7 @@ struct DeviceListView: View {
         
         let showsLoadingIndicator = nearbyConnectionManager.hasLocalNetworkPermission && nearbyConnectionManager.isConnectedToLocalNetwork
         
-        BottomBarView(header: "QuickDrop", navigationBarLayout: isShareExtension() ? .SmallOnlyAlways : .Default, bottomViewHeight: 30) {
+        BottomBarView(header: "QuickDrop", ignoresKeyboard: true, navigationBarLayout: isShareExtension() ? .SmallOnlyAlways : .Default, bottomViewHeight: 30) {
             VStack {
                 
                 let attachments = nearbyConnectionManager.attachments
@@ -288,11 +288,10 @@ struct DeviceButtonLabel: View {
                     .fontWeight(.bold)
             }
             
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: 5) {
                     Text(name)
-                        .fontWeight(.medium)
-                        .foregroundColor(Color.primary)
+                        .foregroundColor(.mainColor)
 
                     if device.isQuickDropPeer {
                         Image(.menuBarIcon)
@@ -306,8 +305,8 @@ struct DeviceButtonLabel: View {
                 }
                 
                 Text(isSelected ? progress ?? "..." : "Available".localized())
-                    .font(.system(size: 12))
-                    .foregroundColor(Color.primary.opacity(0.6))
+                    .foregroundColor(.mainColor.opacity(0.6))
+                    .monospacedDigit()
             }
             
             Spacer()
