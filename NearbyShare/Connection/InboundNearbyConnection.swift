@@ -30,11 +30,13 @@ class InboundNearbyConnection: NearbyConnection {
     private var textPayloadID: Int64 = 0
     private var bytesToBeTransferred: Int64 = 0
     private var isAuthenticated = false
+    private var receiverAuthenticationAccepted = false
     private var peerCertificate: Sharing_Nearby_PublicCertificate? = nil
     private var mirroredNotificationMetadata: Sharing_Nearby_MirroredNotificationMetadata?
     private var pairingMetadata: Sharing_Nearby_PairingMetadata?
     private var isPairingSetupRequest = false
     var isPlainTextTransfer = false
+    var isClipboardSyncTransfer = false
     var isControlTransfer = false
     
     var wasUserRejected = false
@@ -287,6 +289,14 @@ class InboundNearbyConnection: NearbyConnection {
                     let pasteboard = NSPasteboard.general
                     pasteboard.clearContents()
                     pasteboard.setString(urlStr, forType: .string)
+                    #if !EXTENSION
+                    if isClipboardSyncTransfer {
+                        ClipboardSyncNotificationPresenter.shared.present(
+                            clipboardText: urlStr,
+                            senderDeviceName: remoteDeviceInfo?.name
+                        )
+                    }
+                    #endif
                     #elseif os(iOS)
                     // iOS clipboard
                     UIPasteboard.general.string = urlStr
@@ -570,6 +580,7 @@ class InboundNearbyConnection: NearbyConnection {
     
     private func processPairedKeyResultFrame(_ frame: Sharing_Nearby_Frame) throws {
         guard frame.hasV1, frame.v1.hasPairedKeyResult else { throw NearbyError.requiredFieldMissing("shareNearbyFrame.v1.pairedKeyResult") }
+        receiverAuthenticationAccepted = frame.v1.pairedKeyResult.status == .success
         currentState = .receivedPairedKeyResult
     }
     
@@ -727,8 +738,17 @@ class InboundNearbyConnection: NearbyConnection {
         if let textMetadata = frame.v1.introduction.textMetadata.first {
             let isURL = textMetadata.type == .url
             textPayloadID = textMetadata.payloadID
+            isClipboardSyncTransfer = !isURL && isAuthenticated && receiverAuthenticationAccepted
 
-            let metadata = TransferMetadata(files: [], id: id, pinCode: pinCode, textDescription: textMetadata.textTitle, transferType: isURL ? .url : .text, allowsToBeAddedAsTrustedDevice: self.peerCertificate != nil)
+            let metadata = TransferMetadata(
+                files: [],
+                id: id,
+                pinCode: pinCode,
+                textDescription: textMetadata.textTitle,
+                transferType: isURL ? .url : .text,
+                allowsToBeAddedAsTrustedDevice: self.peerCertificate != nil,
+                isClipboardSync: isClipboardSyncTransfer
+            )
 
             if !isURL {
                 isPlainTextTransfer = true

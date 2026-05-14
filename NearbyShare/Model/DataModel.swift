@@ -48,7 +48,7 @@ public enum ReceiverAuthenticationPolicy: Equatable {
 public protocol InboundAppDelegate: AnyObject {
     func obtainUserConsent(transfer: TransferMetadata, device: RemoteDeviceInfo)
     func obtainedUserConsentAutomatically(transfer: TransferMetadata, device: RemoteDeviceInfo)
-    func connectionWasTerminated(connectionID: String, from device: RemoteDeviceInfo?, savedFiles: [URL], wasPlainTextTransfer: Bool, error: Error?)
+    func connectionWasTerminated(connectionID: String, from device: RemoteDeviceInfo?, savedFiles: [URL], wasPlainTextTransfer: Bool, wasClipboardSync: Bool, error: Error?)
     func transferProgress(connectionID: String, progress: Double)
     func showPlusScreen()
     func notificationSyncSetupConfirmed()
@@ -217,14 +217,16 @@ public struct TransferMetadata {
     public let textDescription: String?
     public let type: TransferType
     public let allowsToBeAddedAsTrustedDevice: Bool
+    public let isClipboardSync: Bool
 
-    init(files: [FileMetadata], id: String, pinCode: String?, textDescription: String? = nil, transferType: TransferType = .file, allowsToBeAddedAsTrustedDevice: Bool) {
+    init(files: [FileMetadata], id: String, pinCode: String?, textDescription: String? = nil, transferType: TransferType = .file, allowsToBeAddedAsTrustedDevice: Bool, isClipboardSync: Bool = false) {
         self.files = files
         self.id = id
         self.pinCode = pinCode
         self.textDescription = textDescription
         self.type = transferType
         self.allowsToBeAddedAsTrustedDevice = allowsToBeAddedAsTrustedDevice
+        self.isClipboardSync = isClipboardSync
     }
     
     public enum TransferType {

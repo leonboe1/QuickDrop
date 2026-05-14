@@ -16,6 +16,8 @@
 		69DA9A1429E0BF5200A442DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69DA9A1329E0BF5200A442DA /* Assets.xcassets */; };
 		A1C0DE112F4C000100ABC001 /* ClipboardSyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE102F4C000100ABC001 /* ClipboardSyncCoordinator.swift */; };
 		A1C0DE122F4C000100ABC001 /* ClipboardSyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE102F4C000100ABC001 /* ClipboardSyncCoordinator.swift */; };
+		A1C0DE132F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE152F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift */; };
+		A1C0DE142F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE152F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift */; };
 		A1B2C3D42F33AA0100ABC001 /* MirroredNotificationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3DA2F33AA0100ABC001 /* MirroredNotificationSupport.swift */; };
 		A1B2C3D52F33AA0100ABC001 /* MirroredNotificationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3DA2F33AA0100ABC001 /* MirroredNotificationSupport.swift */; };
 		A1B2C3D62F33AA0100ABC001 /* MirroredNotificationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3DA2F33AA0100ABC001 /* MirroredNotificationSupport.swift */; };
@@ -511,6 +513,7 @@
 		69DA9A2C29E18CB500A442DA /* securegcm.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = securegcm.pb.swift; sourceTree = "<group>"; };
 		69DA9A2D29E18CB500A442DA /* securemessage.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = securemessage.pb.swift; sourceTree = "<group>"; };
 		A1C0DE102F4C000100ABC001 /* ClipboardSyncCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardSyncCoordinator.swift; sourceTree = "<group>"; };
+		A1C0DE152F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardSyncNotificationPresenter.swift; sourceTree = "<group>"; };
 		A1B2C3DA2F33AA0100ABC001 /* MirroredNotificationSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirroredNotificationSupport.swift; sourceTree = "<group>"; };
 		A1F5B3D82F3A1A0100A1B2C3 /* NotificationSyncPairingToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSyncPairingToken.swift; sourceTree = "<group>"; };
 		A1F5B3D92F3A1A0100A1B2C4 /* NotificationSyncQrSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSyncQrSheetManager.swift; sourceTree = "<group>"; };
@@ -934,6 +937,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C0DE102F4C000100ABC001 /* ClipboardSyncCoordinator.swift */,
+				A1C0DE152F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift */,
 				EB1325F72E70287C00FD749C /* SendToExtension.swift */,
 				EB5C383E2E38C49D0052EFD7 /* LaunchAtLogin.swift */,
 				EB886E662E4F2F7C0052B7D9 /* License.swift */,
@@ -1366,6 +1370,7 @@
 				EB5C37CD2E377A7F0052EFD7 /* OutboundNearbyConnection.swift in Sources */,
 				EB5C37CE2E377A7F0052EFD7 /* InboundNearbyConnection.swift in Sources */,
 				A1B2C3D52F33AA0100ABC001 /* MirroredNotificationSupport.swift in Sources */,
+				A1C0DE132F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift in Sources */,
 				EB5C37CF2E377A7F0052EFD7 /* NearbyConnectionManager.swift in Sources */,
 				EB5C37CF2E377A7F0052EFD8 /* NearbyDeviceNameResolver.swift in Sources */,
 				EBE5FF422EDB6F6F0019B380 /* Configuration.swift in Sources */,
@@ -1425,6 +1430,7 @@
 				EB3B9F162EF7150400D6704E /* OutboundNearbyConnection.swift in Sources */,
 				EB3B9F172EF7150400D6704E /* InboundNearbyConnection.swift in Sources */,
 				A1B2C3D62F33AA0100ABC001 /* MirroredNotificationSupport.swift in Sources */,
+				A1C0DE142F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift in Sources */,
 				EB3B9F182EF7150400D6704E /* NearbyConnectionManager.swift in Sources */,
 				EB3B9F192EF7150400D6704F /* NearbyDeviceNameResolver.swift in Sources */,
 				EB3B9F192EF7150400D6704E /* Configuration.swift in Sources */,

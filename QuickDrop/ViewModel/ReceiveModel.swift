@@ -185,6 +185,11 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
     
     
     func obtainedUserConsentAutomatically(transfer: TransferMetadata, device: RemoteDeviceInfo) {
+        #if os(macOS)
+        if transfer.isClipboardSync {
+            return
+        }
+        #endif
         
         let mainMessage = transfer.getDescription(deviceName: device.name ?? "AndroidDevice".localized())
         
@@ -244,7 +249,7 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
     }
     
     
-    func connectionWasTerminated(connectionID: String, from device: RemoteDeviceInfo?, savedFiles: [URL], wasPlainTextTransfer: Bool, error: (any Error)?) {
+    func connectionWasTerminated(connectionID: String, from device: RemoteDeviceInfo?, savedFiles: [URL], wasPlainTextTransfer: Bool, wasClipboardSync: Bool, error: (any Error)?) {
         
         processes.removeValue(forKey: connectionID)
         
@@ -386,6 +391,9 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
         #if os(macOS)
         func finishMacTermination(device: RemoteDeviceInfo?, savedFiles: [URL], error: (any Error)?, wasPendingConsent: Bool) {
             if wasPendingConsent {
+                return
+            }
+            if wasClipboardSync && error == nil {
                 return
             }
 

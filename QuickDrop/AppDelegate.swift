@@ -169,8 +169,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     
 
     public func userNotificationCenter(_: UNUserNotificationCenter,
-                                       willPresent _: UNNotification,
+                                       willPresent notification: UNNotification,
                                        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if notification.request.identifier == ClipboardSyncNotificationPresenter.notificationIdentifier {
+            completionHandler([.banner])
+            return
+        }
         completionHandler([.sound, .banner])
     }
     

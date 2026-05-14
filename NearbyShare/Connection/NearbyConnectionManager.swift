@@ -379,7 +379,14 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
 
         if !connection.wasUserRejected {
             inboundAppDelegates.forEach { delegate in
-                delegate.connectionWasTerminated(connectionID: connection.id, from: connection.remoteDeviceInfo, savedFiles: savedFiles, wasPlainTextTransfer: connection.isPlainTextTransfer, error: error)
+                delegate.connectionWasTerminated(
+                    connectionID: connection.id,
+                    from: connection.remoteDeviceInfo,
+                    savedFiles: savedFiles,
+                    wasPlainTextTransfer: connection.isPlainTextTransfer,
+                    wasClipboardSync: connection.isClipboardSyncTransfer,
+                    error: error
+                )
             }
         }
     }
