@@ -294,7 +294,8 @@ class ShareViewController: NSViewController, OutboundAppDelegate {
                     
                     self.timeoutDispatchWorkItem = timeoutAlert
                     DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: timeoutAlert)
-                }
+                },
+                receiverAuthenticationPolicy: .none
             )
         }
     }

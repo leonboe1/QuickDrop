@@ -279,6 +279,9 @@ class InboundNearbyConnection: NearbyConnection {
             if let urlStr = String(data: payload, encoding: .utf8) {
                 
                 if isPlainTextTransfer {
+                    #if os(macOS) && !EXTENSION
+                    ClipboardSyncCoordinator.shared.suppressNextClipboardSync(for: urlStr)
+                    #endif
                     #if os(macOS)
                     // macOS clipboard
                     let pasteboard = NSPasteboard.general

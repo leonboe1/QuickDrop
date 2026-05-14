@@ -34,6 +34,8 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     private var inboundAppDelegates: [InboundAppDelegate] = []
     private var outgoingTransfers: [String: OutgoingTransferInfo] = [:]
     private var pendingOutgoingTransferPreparations: [String: UUID] = [:]
+    private let pendingNotificationSyncTrustQueue = DispatchQueue(label: "NearbyConnectionManager.pendingNotificationSyncTrust")
+    private var pendingNotificationSyncTrust: [String: PendingReceiverTrust] = [:]
     private var startedDeviceDiscovery = false
     private var startedAdvertising = false { didSet { informAboutStatus() }}
     private var browsers: [NWBrowser] = []
@@ -51,6 +53,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     private let txtQuickDropCapabilities = "qd_caps"
     private let txtQuickDropDeviceKeyFingerprint = "qd_kid"
     private let notificationSyncCapabilityToken = "nsync1"
+    private let clipboardReceiveCapabilityToken = "cliprecv1"
     private let unnamedAndroidFallbackDeviceName = "AndroidDevice".localized()
     
     
@@ -321,7 +324,11 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
                 txtRecord[txtQuickDropDeviceKeyFingerprint] = Data(keyFingerprint.utf8)
             }
             #if os(macOS)
-            txtRecord[txtQuickDropCapabilities] = Data(notificationSyncCapabilityToken.utf8)
+            let capabilityTokens = [
+                notificationSyncCapabilityToken,
+                clipboardReceiveCapabilityToken,
+            ]
+            txtRecord[txtQuickDropCapabilities] = Data(capabilityTokens.joined(separator: ",").utf8)
             #endif
             service.setTXTRecord(NetService.data(fromTXTRecord: txtRecord))
             service.publish()
@@ -486,6 +493,16 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
             }
         }
     }
+
+
+    var isDeviceDiscoveryActive: Bool {
+        startedDeviceDiscovery
+    }
+
+
+    func discoveredDevices() -> [RemoteDeviceInfo] {
+        foundServices.values.compactMap(\.device)
+    }
     
     
     public func addOutboundAppDelegate(_ delegate: OutboundAppDelegate) {
@@ -556,9 +573,20 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
         guard let endpointInfoEncoded = txtRecord.dictionary[txtKeyEndpointInfo] else { return }
         guard let endpointInfoData = Data.dataFromUrlSafeBase64(endpointInfoEncoded) else { return }
         let parsedEndpointInfo = EndpointInfo(data: endpointInfoData)
+        let keyFingerprint = normalizedKeyFingerprint(
+            txtRecord.dictionary[txtQuickDropDeviceKeyFingerprint]
+        )
+        let capabilityTokens = Set(
+            txtRecord.dictionary[txtQuickDropCapabilities]?
+                .split(separator: ",")
+                .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                .filter { !$0.isEmpty } ?? []
+        )
+        let supportsNotificationSync = capabilityTokens.contains(notificationSyncCapabilityToken)
+        let supportsClipboardReceive = capabilityTokens.contains(clipboardReceiveCapabilityToken)
         var endpointInfo = parsedEndpointInfo
             ?? EndpointInfo(name: unnamedAndroidFallbackDeviceName, deviceType: .unknown)
-        let isQuickDropPeer = txtRecord.dictionary[txtQuickDropDeviceKeyFingerprint] != nil
+        let isQuickDropPeer = keyFingerprint != nil
         let needsDeviceNameLookup = deviceNameResolver.needsLookup(for: parsedEndpointInfo)
         if needsDeviceNameLookup {
             endpointInfo.name = unnamedAndroidFallbackDeviceName
@@ -567,7 +595,10 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
             foundService: &foundService,
             endpointInfo: endpointInfo,
             endpointID: endpointID,
-            isQuickDropPeer: isQuickDropPeer
+            isQuickDropPeer: isQuickDropPeer,
+            keyFingerprint: keyFingerprint,
+            supportsNotificationSync: supportsNotificationSync,
+            supportsClipboardReceive: supportsClipboardReceive
         )
 
         if needsDeviceNameLookup {
@@ -582,7 +613,10 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
                     foundService: &resolvedFoundService,
                     endpointInfo: resolvedEndpointInfo,
                     endpointID: endpointID,
-                    isQuickDropPeer: isQuickDropPeer
+                    isQuickDropPeer: isQuickDropPeer,
+                    keyFingerprint: keyFingerprint,
+                    supportsNotificationSync: supportsNotificationSync,
+                    supportsClipboardReceive: supportsClipboardReceive
                 )
             }
         }
@@ -609,7 +643,10 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
                         foundService: &foundService,
                         endpointInfo: endpointInfo,
                         endpointID: endpointID,
-                        isQuickDropPeer: isQuickDropPeer
+                        isQuickDropPeer: isQuickDropPeer,
+                        keyFingerprint: keyFingerprint,
+                        supportsNotificationSync: supportsNotificationSync,
+                        supportsClipboardReceive: supportsClipboardReceive
                     )
                     for delegate in outboundAppDelegates {
                         delegate.startTransferWithQrCode(device: deviceInfo)
@@ -626,13 +663,19 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
         foundService: inout FoundServiceInfo,
         endpointInfo: EndpointInfo,
         endpointID: String,
-        isQuickDropPeer: Bool = false
+        isQuickDropPeer: Bool = false,
+        keyFingerprint: String? = nil,
+        supportsNotificationSync: Bool = false,
+        supportsClipboardReceive: Bool = false
     ) -> RemoteDeviceInfo {
         let hadPreviousDevice = foundServices[endpointID]?.device != nil
         let deviceInfo = RemoteDeviceInfo(
             info: endpointInfo,
             id: endpointID,
-            isQuickDropPeer: isQuickDropPeer
+            isQuickDropPeer: isQuickDropPeer,
+            keyFingerprint: keyFingerprint,
+            supportsNotificationSync: supportsNotificationSync,
+            supportsClipboardReceive: supportsClipboardReceive
         )
         foundService.device = deviceInfo
         foundServices[endpointID] = foundService
@@ -648,6 +691,18 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
         }
         
         return deviceInfo
+    }
+
+
+    public func resolveDiscoveredDeviceIdForKeyFingerprint(_ keyFingerprint: String) -> String? {
+        guard let normalizedFingerprint = normalizedKeyFingerprint(keyFingerprint) else {
+            return nil
+        }
+
+        return foundServices.values
+            .first(where: { $0.device?.keyFingerprint == normalizedFingerprint })?
+            .device?
+            .id
     }
     
     
@@ -701,15 +756,21 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     }
     
     
+    @discardableResult
     public func startOutgoingTransfer(
         deviceID: String,
         delegate: OutboundAppDelegate,
         urls: [URL],
         textToSend: String?,
-        preparationFinished: (() -> Void)? = nil
-    ) {
+        preparationFinished: (() -> Void)? = nil,
+        receiverAuthenticationPolicy: ReceiverAuthenticationPolicy
+    ) -> Bool {
         log("Starting outgoing transfer to \(deviceID)")
-        guard foundServices[deviceID] != nil else { return }
+        guard foundServices[deviceID] != nil else {
+            let error = NearbyError.protocolError("TargetDeviceNoLongerNearby".localized())
+            delegate.connectionFailed(error: error)
+            return false
+        }
 
         let preparationID = UUID()
         pendingOutgoingTransferPreparations[deviceID] = preparationID
@@ -735,7 +796,14 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
                     tcp.noDelay = true
                     let nwconn = NWConnection(to: info.service.endpoint, using: NWParameters(tls: .none, tcp: tcp))
 
-                    let conn = OutboundNearbyConnection(connection: nwconn, id: deviceID, urlsToSend: localUrls, textToSend: textToSend)
+                    let conn = OutboundNearbyConnection(
+                        connection: nwconn,
+                        id: deviceID,
+                        urlsToSend: localUrls,
+                        textToSend: textToSend,
+                        receiverAuthenticationPolicy: receiverAuthenticationPolicy
+                    )
+                    conn.remoteDeviceInfo = info.device
                     conn.delegate = self
                     conn.qrCodePrivateKey = self.qrCodePrivateKey
 
@@ -751,12 +819,20 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
                     }
 
                     self.pendingOutgoingTransferPreparations.removeValue(forKey: deviceID)
-                    self.outboundAppDelegates.forEach { delegate in
-                        delegate.connectionFailed(error: error)
-                    }
+                    delegate?.connectionFailed(error: error)
                 }
             }
         }
+
+        return true
+    }
+
+
+    private func normalizedKeyFingerprint(_ keyFingerprint: String?) -> String? {
+        let normalized = keyFingerprint?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .lowercased()
+        return normalized?.isEmpty == false ? normalized : nil
     }
     
     
@@ -799,6 +875,78 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
             transfer.delegate.transferFinished()
         }
         outgoingTransfers.removeValue(forKey: connection.id)
+    }
+
+
+    func receiverAuthenticationPending(
+        connection _: OutboundNearbyConnection,
+        certificateData: Data,
+        device: RemoteDeviceInfo,
+        fingerprint: String
+    ) {
+        guard let normalizedFingerprint = normalizedKeyFingerprint(fingerprint) else { return }
+        log("[NearbyConnectionManager] Receiver auth pending: fingerprint=\(normalizedFingerprint) device=\(device.name ?? "unknown") (\(device.id ?? "no-id"))")
+        pendingNotificationSyncTrustQueue.sync {
+            pendingNotificationSyncTrust[normalizedFingerprint] = PendingReceiverTrust(
+                certificateData: certificateData,
+                device: device
+            )
+        }
+    }
+
+
+    public func commitNotificationSyncReceiverTrust(_ fingerprint: String) -> Bool {
+        guard let normalizedFingerprint = normalizedKeyFingerprint(fingerprint) else {
+            return false
+        }
+
+        let pending = pendingNotificationSyncTrustQueue.sync {
+            pendingNotificationSyncTrust.removeValue(forKey: normalizedFingerprint)
+        }
+
+        if pending == nil {
+            let alreadyTrusted = TrustStore.shared.trustedCertificates.keys.contains(normalizedFingerprint)
+            if alreadyTrusted {
+                log("[NearbyConnectionManager] Commit trust skipped: already trusted for \(normalizedFingerprint)")
+                return true
+            }
+
+            log("[NearbyConnectionManager] Commit trust failed: no pending entry for \(normalizedFingerprint)")
+            return false
+        }
+
+        guard let pending,
+              let certificate = try? Sharing_Nearby_PublicCertificate(serializedBytes: pending.certificateData) else {
+            log("[NearbyConnectionManager] Commit trust failed: could not parse certificate for \(normalizedFingerprint)")
+            return false
+        }
+
+        let derivedFingerprint = certificate.secretID.hex.lowercased()
+        guard derivedFingerprint == normalizedFingerprint else {
+            log("[NearbyConnectionManager] Commit trust failed: fingerprint mismatch pending=\(normalizedFingerprint) derived=\(derivedFingerprint)")
+            return false
+        }
+
+        log("[NearbyConnectionManager] Commit trust succeeded for fingerprint=\(normalizedFingerprint)")
+        TrustStore.shared.addTrusted(certificate: certificate, device: pending.device)
+        return true
+    }
+
+
+    public func clearPendingNotificationSyncReceiverTrust(_ fingerprint: String? = nil) {
+        if fingerprint == nil {
+            pendingNotificationSyncTrustQueue.sync {
+                pendingNotificationSyncTrust.removeAll()
+            }
+            log("[NearbyConnectionManager] Cleared all pending receiver trust entries")
+            return
+        }
+
+        guard let normalizedFingerprint = normalizedKeyFingerprint(fingerprint) else { return }
+        _ = pendingNotificationSyncTrustQueue.sync {
+            pendingNotificationSyncTrust.removeValue(forKey: normalizedFingerprint)
+        }
+        log("[NearbyConnectionManager] Cleared pending receiver trust for \(normalizedFingerprint)")
     }
     
     
@@ -937,5 +1085,11 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
         let device: RemoteDeviceInfo
         let connection: OutboundNearbyConnection
         let delegate: OutboundAppDelegate
+    }
+
+
+    private struct PendingReceiverTrust {
+        let certificateData: Data
+        let device: RemoteDeviceInfo
     }
 }

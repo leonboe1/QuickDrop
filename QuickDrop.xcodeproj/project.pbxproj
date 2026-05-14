@@ -14,6 +14,8 @@
 		699DEBAE2AB0573200115D22 /* QuickDropShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 699DEBA12AB0573200115D22 /* QuickDropShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		69DA9A1229E0BF5100A442DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA9A1129E0BF5100A442DA /* AppDelegate.swift */; };
 		69DA9A1429E0BF5200A442DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69DA9A1329E0BF5200A442DA /* Assets.xcassets */; };
+		A1C0DE112F4C000100ABC001 /* ClipboardSyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE102F4C000100ABC001 /* ClipboardSyncCoordinator.swift */; };
+		A1C0DE122F4C000100ABC001 /* ClipboardSyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE102F4C000100ABC001 /* ClipboardSyncCoordinator.swift */; };
 		A1B2C3D42F33AA0100ABC001 /* MirroredNotificationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3DA2F33AA0100ABC001 /* MirroredNotificationSupport.swift */; };
 		A1B2C3D52F33AA0100ABC001 /* MirroredNotificationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3DA2F33AA0100ABC001 /* MirroredNotificationSupport.swift */; };
 		A1B2C3D62F33AA0100ABC001 /* MirroredNotificationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3DA2F33AA0100ABC001 /* MirroredNotificationSupport.swift */; };
@@ -508,6 +510,7 @@
 		69DA9A2B29E18CB500A442DA /* offline_wire_formats.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = offline_wire_formats.pb.swift; sourceTree = "<group>"; };
 		69DA9A2C29E18CB500A442DA /* securegcm.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = securegcm.pb.swift; sourceTree = "<group>"; };
 		69DA9A2D29E18CB500A442DA /* securemessage.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = securemessage.pb.swift; sourceTree = "<group>"; };
+		A1C0DE102F4C000100ABC001 /* ClipboardSyncCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardSyncCoordinator.swift; sourceTree = "<group>"; };
 		A1B2C3DA2F33AA0100ABC001 /* MirroredNotificationSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirroredNotificationSupport.swift; sourceTree = "<group>"; };
 		A1F5B3D82F3A1A0100A1B2C3 /* NotificationSyncPairingToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSyncPairingToken.swift; sourceTree = "<group>"; };
 		A1F5B3D92F3A1A0100A1B2C4 /* NotificationSyncQrSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSyncQrSheetManager.swift; sourceTree = "<group>"; };
@@ -930,6 +933,7 @@
 		EBC05C6B2E33B57100EECC18 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A1C0DE102F4C000100ABC001 /* ClipboardSyncCoordinator.swift */,
 				EB1325F72E70287C00FD749C /* SendToExtension.swift */,
 				EB5C383E2E38C49D0052EFD7 /* LaunchAtLogin.swift */,
 				EB886E662E4F2F7C0052B7D9 /* License.swift */,
@@ -1387,6 +1391,7 @@
 				EBC05C842E33B58300EECC18 /* IssueView.swift in Sources */,
 				EBC05C852E33B58300EECC18 /* NetworkFilterIssueView.swift in Sources */,
 				EB7A95F42EF6E1BE0021111B /* IntroductionView.swift in Sources */,
+				A1C0DE112F4C000100ABC001 /* ClipboardSyncCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1445,6 +1450,7 @@
 				EB3B9F2D2EF7150400D6704E /* IssueView.swift in Sources */,
 				EB3B9F2E2EF7150400D6704E /* NetworkFilterIssueView.swift in Sources */,
 				EB3B9F2F2EF7150400D6704E /* IntroductionView.swift in Sources */,
+				A1C0DE122F4C000100ABC001 /* ClipboardSyncCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

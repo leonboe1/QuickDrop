@@ -29,6 +29,19 @@ protocol OutboundNearbyConnectionDelegate {
     func transferAccepted(connection: OutboundNearbyConnection)
     func failedWithError(connection: OutboundNearbyConnection, error: Error)
     func transferFinished(connection: OutboundNearbyConnection)
+    func receiverAuthenticationPending(
+        connection: OutboundNearbyConnection,
+        certificateData: Data,
+        device: RemoteDeviceInfo,
+        fingerprint: String
+    )
+}
+
+
+public enum ReceiverAuthenticationPolicy: Equatable {
+    case none
+    case trustedReceiver(fingerprint: String)
+    case bootstrapReceiverTrust(fingerprint: String)
 }
 
 
@@ -64,21 +77,45 @@ public struct RemoteDeviceInfo: Codable, Identifiable, Equatable {
     public let qrCodeData: Data?
     public let isQuickDropPeer: Bool
     public var id: String?
+    public let keyFingerprint: String?
+    public let supportsNotificationSync: Bool
+    public let supportsClipboardReceive: Bool
 
-    init(name: String?, type: DeviceType?, id: String? = nil, isQuickDropPeer: Bool = false) {
+    init(
+        name: String?,
+        type: DeviceType?,
+        id: String? = nil,
+        isQuickDropPeer: Bool = false,
+        keyFingerprint: String? = nil,
+        supportsNotificationSync: Bool = false,
+        supportsClipboardReceive: Bool = false
+    ) {
         self.name = name
         self.type = type ?? .phone
         self.id = id
         self.qrCodeData = nil
         self.isQuickDropPeer = isQuickDropPeer
+        self.keyFingerprint = Self.normalizedKeyFingerprint(keyFingerprint)
+        self.supportsNotificationSync = supportsNotificationSync
+        self.supportsClipboardReceive = supportsClipboardReceive
     }
 
-    init(info: EndpointInfo, id: String? = nil, isQuickDropPeer: Bool = false) {
+    init(
+        info: EndpointInfo,
+        id: String? = nil,
+        isQuickDropPeer: Bool = false,
+        keyFingerprint: String? = nil,
+        supportsNotificationSync: Bool = false,
+        supportsClipboardReceive: Bool = false
+    ) {
         self.name = info.name
         self.type = info.deviceType
         self.qrCodeData = info.qrCodeData
         self.id = id
         self.isQuickDropPeer = isQuickDropPeer
+        self.keyFingerprint = Self.normalizedKeyFingerprint(keyFingerprint)
+        self.supportsNotificationSync = supportsNotificationSync
+        self.supportsClipboardReceive = supportsClipboardReceive
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -88,6 +125,9 @@ public struct RemoteDeviceInfo: Codable, Identifiable, Equatable {
         case isQuickDropPeer
         case isVerifiedQuickDropPeer
         case id
+        case keyFingerprint
+        case supportsNotificationSync
+        case supportsClipboardReceive
     }
 
     public init(from decoder: Decoder) throws {
@@ -99,6 +139,11 @@ public struct RemoteDeviceInfo: Codable, Identifiable, Equatable {
             ?? container.decodeIfPresent(Bool.self, forKey: .isVerifiedQuickDropPeer)
             ?? false
         id = try container.decodeIfPresent(String.self, forKey: .id)
+        keyFingerprint = Self.normalizedKeyFingerprint(
+            try container.decodeIfPresent(String.self, forKey: .keyFingerprint)
+        )
+        supportsNotificationSync = try container.decodeIfPresent(Bool.self, forKey: .supportsNotificationSync) ?? false
+        supportsClipboardReceive = try container.decodeIfPresent(Bool.self, forKey: .supportsClipboardReceive) ?? false
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -108,6 +153,9 @@ public struct RemoteDeviceInfo: Codable, Identifiable, Equatable {
         try container.encodeIfPresent(qrCodeData, forKey: .qrCodeData)
         try container.encode(isQuickDropPeer, forKey: .isQuickDropPeer)
         try container.encodeIfPresent(id, forKey: .id)
+        try container.encodeIfPresent(keyFingerprint, forKey: .keyFingerprint)
+        try container.encode(supportsNotificationSync, forKey: .supportsNotificationSync)
+        try container.encode(supportsClipboardReceive, forKey: .supportsClipboardReceive)
     }
 
     
@@ -151,6 +199,13 @@ public struct RemoteDeviceInfo: Codable, Identifiable, Equatable {
             return "smartphone"
         }
         return "iphone"
+    }
+
+    private static func normalizedKeyFingerprint(_ keyFingerprint: String?) -> String? {
+        let normalized = keyFingerprint?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .lowercased()
+        return normalized?.isEmpty == false ? normalized : nil
     }
 }
 

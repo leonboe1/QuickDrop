@@ -129,7 +129,13 @@ class SendModel: ObservableObject, OutboundAppDelegate {
             selectedDevice = device
             
             runAfter(seconds: 0.3) {
-                NearbyConnectionManager.shared.startOutgoingTransfer(deviceID: device.id!, delegate: self, urls: self.urls, textToSend: self.textToSend)
+                NearbyConnectionManager.shared.startOutgoingTransfer(
+                    deviceID: device.id!,
+                    delegate: self,
+                    urls: self.urls,
+                    textToSend: self.textToSend,
+                    receiverAuthenticationPolicy: .none
+                )
                 self.progressState = "Connecting".localized()
             }
         }

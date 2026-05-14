@@ -22,11 +22,13 @@ class OutboundNearbyConnection: NearbyConnection {
     private var currentState: State = .initial
     private let urlsToSend: [URL]
     private let textToSend: String?
+    private let receiverAuthenticationPolicy: ReceiverAuthenticationPolicy
     private var ukeyClientFinishMsgData: Data?
     private var queue: [OutgoingFileTransfer] = []
     private var currentTransfer: OutgoingFileTransfer?
     private var totalBytesToSend: Int64 = 0
     private var textPayloadID: Int64 = 0
+    private var receiverAuthenticationVerified = false
     
     public var qrCodePrivateKey: ECPrivateKey?
     public var delegate: OutboundNearbyConnectionDelegate?
@@ -35,10 +37,17 @@ class OutboundNearbyConnection: NearbyConnection {
         case initial, sentUkeyClientInit, sentUkeyClientFinish, sentPairedKeyEncryption, sentPairedKeyResult, sentIntroduction, sendingFiles
     }
 
-    init(connection: NWConnection, id: String, urlsToSend: [URL], textToSend: String?) {
+    init(
+        connection: NWConnection,
+        id: String,
+        urlsToSend: [URL],
+        textToSend: String?,
+        receiverAuthenticationPolicy: ReceiverAuthenticationPolicy
+    ) {
         
         self.urlsToSend = urlsToSend
         self.textToSend = textToSend
+        self.receiverAuthenticationPolicy = receiverAuthenticationPolicy
         
         super.init(connection: connection, id: id)
         
@@ -368,7 +377,12 @@ class OutboundNearbyConnection: NearbyConnection {
         pairedResult.v1 = Sharing_Nearby_V1Frame()
         pairedResult.v1.type = .pairedKeyResult
         pairedResult.v1.pairedKeyResult = Sharing_Nearby_PairedKeyResultFrame()
-        pairedResult.v1.pairedKeyResult.status = .unable
+        if receiverAuthenticationPolicy.requiresReceiverAuthentication {
+            try verifyReceiverAuthentication(frame: frame)
+            pairedResult.v1.pairedKeyResult.status = .success
+        } else {
+            pairedResult.v1.pairedKeyResult.status = .unable
+        }
         
         try sendTransferSetupFrame(pairedResult)
         currentState = .sentPairedKeyResult
@@ -377,6 +391,9 @@ class OutboundNearbyConnection: NearbyConnection {
     
     private func processPairedKeyResult(frame: Sharing_Nearby_Frame) throws {
         guard frame.hasV1, frame.v1.hasPairedKeyResult else { throw NearbyError.requiredFieldMissing("sharingNearbyFrame.v1.pairedKeyResult") }
+        if receiverAuthenticationPolicy.requiresReceiverAuthentication, !receiverAuthenticationVerified {
+            throw NearbyError.protocolError("Receiver authentication incomplete")
+        }
 
         var introduction = Sharing_Nearby_Frame()
         introduction.version = .v1
@@ -471,8 +488,86 @@ class OutboundNearbyConnection: NearbyConnection {
             try sendDisconnectionAndDisconnect()
         }
     }
-    
-    
+
+
+    private func verifyReceiverAuthentication(frame: Sharing_Nearby_Frame) throws {
+        guard let expectedFingerprint = receiverAuthenticationPolicy.expectedReceiverKeyFingerprint, !expectedFingerprint.isEmpty else {
+            throw NearbyError.protocolError("Missing expected receiver fingerprint")
+        }
+
+        guard let certificate = frame.v1.certificateInfo.publicCertificate.first else {
+            throw NearbyError.protocolError("Missing receiver certificate")
+        }
+
+        let certificateData = try certificate.serializedData()
+        let secretID = certificate.secretID
+        guard !secretID.isEmpty else {
+            throw NearbyError.protocolError("Missing receiver key ID")
+        }
+
+        let peerGenericKey = try Securemessage_GenericPublicKey(serializedBytes: certificate.publicKey)
+        guard let derivedKeyID = peerGenericKey.id() else {
+            throw NearbyError.protocolError("Receiver key ID derivation failed")
+        }
+
+        guard secretID == derivedKeyID else {
+            throw NearbyError.protocolError("Receiver key ID mismatch")
+        }
+
+        let actualFingerprint = derivedKeyID.hex.lowercased()
+        guard actualFingerprint == expectedFingerprint else {
+            throw NearbyError.protocolError("Receiver fingerprint mismatch")
+        }
+
+        let pinnedCertificateData = TrustStore.shared.findTrustedKey(for: secretID)
+        if pinnedCertificateData == nil, !receiverAuthenticationPolicy.allowsReceiverTrustBootstrap {
+            throw NearbyError.protocolError("Receiver certificate is not trusted")
+        }
+
+        if let pinnedCertificateData, pinnedCertificateData != certificateData {
+            throw NearbyError.protocolError("Receiver certificate changed")
+        }
+
+        let pairedKeyEncryption = frame.v1.pairedKeyEncryption
+        guard pairedKeyEncryption.secretIDHash == secretID else {
+            throw NearbyError.protocolError("Receiver sent unexpected key ID")
+        }
+
+        guard let authKeyData = authKey?.data() else {
+            throw NearbyError.protocolError("Missing auth key for receiver verification")
+        }
+
+        let domain = Domain.instance(curve: .EC256r1)
+        let ecKey = peerGenericKey.ecP256PublicKey
+        let point = Point(
+            BInt(magnitude: [UInt8](ecKey.x.ensureLength(length: 32))),
+            BInt(magnitude: [UInt8](ecKey.y.ensureLength(length: 32)))
+        )
+
+        guard let peerPublicKey = try? ECPublicKey(domain: domain, w: point) else {
+            throw NearbyError.protocolError("Invalid receiver public key")
+        }
+
+        let signature = try ECSignature(asn1: .build(pairedKeyEncryption.signedData), domain: domain)
+        guard peerPublicKey.verify(signature: signature, msg: authKeyData) else {
+            throw NearbyError.protocolError("Receiver signature verification failed")
+        }
+
+        if pinnedCertificateData == nil, receiverAuthenticationPolicy.allowsReceiverTrustBootstrap {
+            guard let device = remoteDeviceInfo else {
+                throw NearbyError.protocolError("Missing remote device info for receiver trust")
+            }
+            delegate?.receiverAuthenticationPending(
+                connection: self,
+                certificateData: certificateData,
+                device: device,
+                fingerprint: actualFingerprint
+            )
+        }
+
+        receiverAuthenticationVerified = true
+    }
+
     private func hasURL() -> Bool {
         urlsToSend.count == 1 && !urlsToSend[0].isFileURL
     }
@@ -591,5 +686,34 @@ class OutboundNearbyConnection: NearbyConnection {
         let handle: FileHandle?
         let totalBytes: Int64
         var currentOffset: Int64
+    }
+}
+
+private extension ReceiverAuthenticationPolicy {
+    var expectedReceiverKeyFingerprint: String? {
+        switch self {
+        case .none:
+            return nil
+        case .trustedReceiver(let fingerprint), .bootstrapReceiverTrust(let fingerprint):
+            return Self.normalizedFingerprint(fingerprint)
+        }
+    }
+
+    var allowsReceiverTrustBootstrap: Bool {
+        if case .bootstrapReceiverTrust = self {
+            return true
+        }
+        return false
+    }
+
+    var requiresReceiverAuthentication: Bool {
+        if case .none = self {
+            return false
+        }
+        return true
+    }
+
+    static func normalizedFingerprint(_ fingerprint: String) -> String {
+        fingerprint.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
     }
 }

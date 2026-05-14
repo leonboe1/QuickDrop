@@ -131,6 +131,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     func startReceiving() {
         guard receiveModel == nil else {
             log("[AppDelegate] startReceiving called while receiver is already active. Ignoring duplicate call.")
+            ClipboardSyncCoordinator.shared.start()
             return
         }
 
@@ -146,6 +147,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                 }
             }
         })
+
+        ClipboardSyncCoordinator.shared.start()
     }
     
     
@@ -174,6 +177,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
 
     func applicationWillTerminate(_: Notification) {
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        ClipboardSyncCoordinator.shared.stop()
         NearbyConnectionManager.shared.stopDeviceDiscovery()
         NearbyConnectionManager.shared.becomeInvisible()
     }
