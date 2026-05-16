@@ -15,7 +15,9 @@ final class ClipboardSyncCoordinator {
     private let pollInterval: TimeInterval = 1
     private let transferTimeout: TimeInterval = 75
 
+    private var isStarted = false
     private var pollTimer: Timer?
+    private var trustStoreObserver: NSObjectProtocol?
     private var lastObservedChangeCount: Int
     private var suppressedClipboardText: String?
     private var startedOwnDiscovery = false
@@ -27,6 +29,56 @@ final class ClipboardSyncCoordinator {
     }
 
     func start() {
+        guard !isStarted else {
+            refreshPollingState()
+            return
+        }
+
+        isStarted = true
+        trustStoreObserver = NotificationCenter.default.addObserver(
+            forName: TrustStore.trustedCertificatesDidChange,
+            object: TrustStore.shared,
+            queue: .main
+        ) { [weak self] _ in
+            self?.refreshPollingState()
+        }
+
+        refreshPollingState()
+    }
+
+    func stop() {
+        guard isStarted || pollTimer != nil else { return }
+
+        log("[ClipboardSyncCoordinator] Stopping clipboard watcher")
+        isStarted = false
+        if let trustStoreObserver {
+            NotificationCenter.default.removeObserver(trustStoreObserver)
+            self.trustStoreObserver = nil
+        }
+        stopPolling(clearTransfers: true)
+    }
+
+    private func refreshPollingState() {
+        guard isStarted else { return }
+
+        guard hasTrustedClipboardSyncDevice else {
+            if pollTimer != nil {
+                log("[ClipboardSyncCoordinator] Pausing clipboard watcher because no trusted clipboard sync device is saved")
+            }
+            stopPolling(clearTransfers: true)
+            return
+        }
+
+        startPollingIfNeeded()
+    }
+
+    private var hasTrustedClipboardSyncDevice: Bool {
+        TrustStore.shared.trustedCertificates.values.contains {
+            $0.grantedUseCases.contains(.clipboardSync)
+        }
+    }
+
+    private func startPollingIfNeeded() {
         guard pollTimer == nil else { return }
 
         let manager = NearbyConnectionManager.shared
@@ -42,16 +94,15 @@ final class ClipboardSyncCoordinator {
         }
     }
 
-    func stop() {
-        guard pollTimer != nil else { return }
-
-        log("[ClipboardSyncCoordinator] Stopping clipboard watcher")
+    private func stopPolling(clearTransfers: Bool) {
         pollTimer?.invalidate()
         pollTimer = nil
         suppressedClipboardText = nil
-        activeTransfersByFingerprint.values.forEach { $0.cancelTimeout() }
-        activeTransfersByFingerprint.removeAll()
-        queuedTextByFingerprint.removeAll()
+        if clearTransfers {
+            activeTransfersByFingerprint.values.forEach { $0.cancelTimeout() }
+            activeTransfersByFingerprint.removeAll()
+            queuedTextByFingerprint.removeAll()
+        }
 
         guard startedOwnDiscovery else { return }
         startedOwnDiscovery = false

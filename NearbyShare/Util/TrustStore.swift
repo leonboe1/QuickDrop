@@ -11,6 +11,7 @@ import CryptoKit
 class TrustStore: ObservableObject {
     
     static let shared = TrustStore()
+    static let trustedCertificatesDidChange = Notification.Name("TrustStore.trustedCertificatesDidChange")
     
     @Published private(set) var trustedCertificates: [String: TrustedCertificate] = [:]
     
@@ -58,9 +59,15 @@ class TrustStore: ObservableObject {
         do {
             try persistTrustedCertificates()
             AppGroup.appGroupUD.removeObject(forKey: trustedKeysKey)
+            notifyTrustedCertificatesDidChange()
         } catch {
             print("[TrustStore] Failed to save trusted certificates to keychain: \(error.localizedDescription)")
         }
+    }
+
+
+    private func notifyTrustedCertificatesDidChange() {
+        NotificationCenter.default.post(name: Self.trustedCertificatesDidChange, object: self)
     }
     
     
