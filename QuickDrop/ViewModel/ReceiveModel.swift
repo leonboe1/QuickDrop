@@ -84,7 +84,7 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
 
         #if os(macOS)
         DispatchQueue.main.async {
-            if transfer.type == .notificationSync {
+            if transfer.type == .notificationSync || transfer.type == .clipboardSync {
                 self.hideQuickDropToast()
                 self.toastActions = nil
                 self.progress = nil
@@ -93,7 +93,10 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
                 let resolvedSenderName = (senderName?.isEmpty == false) ? senderName! : "AndroidDevice".localized()
                 self.activeDeviceName = resolvedSenderName
 
-                let compareMessage = "NotificationSyncToastQrSubtitle".localized()
+                let pairingUseCase: PairingUseCase = transfer.type == .clipboardSync ? .clipboardSync : .notificationSync
+                let compareMessage = transfer.type == .clipboardSync
+                    ? "ClipboardSyncToastQrSubtitle".localized()
+                    : "NotificationSyncToastQrSubtitle".localized()
                 self.consentState = ConsentToastState(
                     transferID: transferID,
                     pinCodeMessage: "",
@@ -105,17 +108,18 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
                         withAnimation {
                             self.consentState = nil
                         }
-                        guard let receiverFingerprint = NotificationSyncPairingToken.receiverFingerprintHex() else {
+                        guard let receiverFingerprint = PairingToken.receiverFingerprintHex() else {
                             log("[ReceiveModel] Missing local receiver fingerprint; cannot start notification sync pairing.")
                             secondaryButtonAction()
                             self.hideQuickDropToast(style: .fade)
                             return
                         }
-                        let pairingToken = NotificationSyncPairingToken.generate()
-                        NotificationSyncQrSheetManager.shared.open(
+                        let pairingToken = PairingToken.generate()
+                        PairingQrSheetManager.shared.open(
                             token: pairingToken,
                             receiverFingerprint: receiverFingerprint,
-                            deviceName: resolvedSenderName
+                            deviceName: resolvedSenderName,
+                            useCase: pairingUseCase
                         )
                         NearbyConnectionManager.shared.submitUserConsent(
                             transferID: transferID,
@@ -237,13 +241,13 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
     }
 
     
-    func notificationSyncSetupConfirmed() {
+    func pairingSetupConfirmed() {
         #if os(macOS)
         DispatchQueue.main.async {
             if self.consentState?.notificationSyncStage != nil {
                 self.hideQuickDropToast(style: .fade)
             }
-            NotificationSyncQrSheetManager.shared.close()
+            PairingQrSheetManager.shared.close()
         }
         #endif
     }

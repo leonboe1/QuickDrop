@@ -22,6 +22,7 @@ class OutboundNearbyConnection: NearbyConnection {
     private var currentState: State = .initial
     private let urlsToSend: [URL]
     private let textToSend: String?
+    private let isClipboardSyncTransfer: Bool
     private let receiverAuthenticationPolicy: ReceiverAuthenticationPolicy
     private var ukeyClientFinishMsgData: Data?
     private var queue: [OutgoingFileTransfer] = []
@@ -42,11 +43,13 @@ class OutboundNearbyConnection: NearbyConnection {
         id: String,
         urlsToSend: [URL],
         textToSend: String?,
+        isClipboardSyncTransfer: Bool = false,
         receiverAuthenticationPolicy: ReceiverAuthenticationPolicy
     ) {
         
         self.urlsToSend = urlsToSend
         self.textToSend = textToSend
+        self.isClipboardSyncTransfer = isClipboardSyncTransfer
         self.receiverAuthenticationPolicy = receiverAuthenticationPolicy
         
         super.init(connection: connection, id: id)
@@ -398,6 +401,9 @@ class OutboundNearbyConnection: NearbyConnection {
         var introduction = Sharing_Nearby_Frame()
         introduction.version = .v1
         introduction.v1.type = .introduction
+        if isClipboardSyncTransfer {
+            introduction.v1.introduction.useCase = .remoteCopy
+        }
         
         if let textToSend = textToSend {
             var meta = Sharing_Nearby_TextMetadata()

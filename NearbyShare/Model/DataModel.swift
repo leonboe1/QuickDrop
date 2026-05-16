@@ -19,7 +19,7 @@ protocol InboundNearbyConnectionDelegate {
     func updatedTransferProgress(connection: InboundNearbyConnection, progress: Double)
     func connectionWasTerminated(connection: InboundNearbyConnection, savedFiles: [URL], error: Error?)
     func showPlusScreen()
-    func notificationSyncSetupConfirmed(connection: InboundNearbyConnection)
+    func pairingSetupConfirmed(connection: InboundNearbyConnection)
 }
 
 
@@ -51,11 +51,11 @@ public protocol InboundAppDelegate: AnyObject {
     func connectionWasTerminated(connectionID: String, from device: RemoteDeviceInfo?, savedFiles: [URL], wasPlainTextTransfer: Bool, wasClipboardSync: Bool, error: Error?)
     func transferProgress(connectionID: String, progress: Double)
     func showPlusScreen()
-    func notificationSyncSetupConfirmed()
+    func pairingSetupConfirmed()
 }
 
 extension InboundAppDelegate {
-    func notificationSyncSetupConfirmed() {}
+    func pairingSetupConfirmed() {}
 }
 
 
@@ -235,6 +235,7 @@ public struct TransferMetadata {
         case url
         case wifiPassword
         case notificationSync
+        case clipboardSync
     }
     
     private func getSummary() -> String {
@@ -298,6 +299,12 @@ public struct TransferMetadata {
                 return textDescription
             }
             return "NotificationSyncConsentPromptFromDevice".localized(with: deviceName)
+
+            case .clipboardSync:
+            if let textDescription, !textDescription.isEmpty {
+                return textDescription
+            }
+            return "ClipboardSyncConsentPromptFromDevice".localized(with: deviceName)
         }
     }
     
@@ -306,7 +313,7 @@ public struct TransferMetadata {
     }
 }
 
-enum PairingUseCase: String {
+enum PairingUseCase: String, Codable, Hashable {
     case notificationSync = "notification_sync"
     case clipboardSync = "clipboard_sync"
 

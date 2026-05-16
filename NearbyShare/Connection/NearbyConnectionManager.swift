@@ -391,9 +391,9 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
         }
     }
 
-    func notificationSyncSetupConfirmed(connection _: InboundNearbyConnection) {
+    func pairingSetupConfirmed(connection _: InboundNearbyConnection) {
         inboundAppDelegates.forEach { delegate in
-            delegate.notificationSyncSetupConfirmed()
+            delegate.pairingSetupConfirmed()
         }
     }
     
@@ -770,6 +770,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
         urls: [URL],
         textToSend: String?,
         preparationFinished: (() -> Void)? = nil,
+        isClipboardSyncTransfer: Bool = false,
         receiverAuthenticationPolicy: ReceiverAuthenticationPolicy
     ) -> Bool {
         log("Starting outgoing transfer to \(deviceID)")
@@ -808,6 +809,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
                         id: deviceID,
                         urlsToSend: localUrls,
                         textToSend: textToSend,
+                        isClipboardSyncTransfer: isClipboardSyncTransfer,
                         receiverAuthenticationPolicy: receiverAuthenticationPolicy
                     )
                     conn.remoteDeviceInfo = info.device

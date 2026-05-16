@@ -134,6 +134,7 @@ final class ClipboardSyncCoordinator {
             delegate: delegate,
             urls: [],
             textToSend: clipboardText,
+            isClipboardSyncTransfer: true,
             receiverAuthenticationPolicy: .trustedReceiver(fingerprint: target.fingerprint)
         )
     }
@@ -174,6 +175,7 @@ final class ClipboardSyncCoordinator {
                       !deviceID.isEmpty,
                       let fingerprint = device.keyFingerprint,
                       trustedFingerprints.contains(fingerprint),
+                      TrustStore.shared.hasUseCaseGrant(.clipboardSync, for: fingerprint),
                       device.supportsClipboardReceive,
                       device.type != .computer,
                       seenFingerprints.insert(fingerprint).inserted else {

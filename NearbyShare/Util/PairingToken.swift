@@ -1,8 +1,8 @@
 //
-//  NotificationSyncPairingToken.swift
+//  PairingToken.swift
 //  QuickDrop
 //
-//  Created by Codex on 2026-03-15.
+//  Created by Leon Böttger on 2026-03-15.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import QRCode
 import SwiftUI
 import LUI
 
-enum NotificationSyncPairingToken {
+enum PairingToken {
     static func generate() -> String {
         Data.randomData(length: 16).urlSafeBase64EncodedString()
     }
@@ -22,14 +22,14 @@ enum NotificationSyncPairingToken {
         return keyId.hex.lowercased()
     }
 
-    static func qrPayload(token: String, receiverFingerprint: String, useCase: PairingUseCase = .notificationSync) -> String {
+    static func qrPayload(token: String, receiverFingerprint: String, useCase: PairingUseCase) -> String {
         "quickdrop://pair?token=\(token)&usecase=\(useCase.rawValue)&receiver=\(receiverFingerprint)"
     }
 
     static func makeQrImage(
         token: String,
         receiverFingerprint: String,
-        useCase: PairingUseCase = .notificationSync,
+        useCase: PairingUseCase,
         foregroundColor: CGColor = CGColor(gray: 0, alpha: 1),
         backgroundColor: CGColor = CGColor(srgbRed: 1, green: 1, blue: 1, alpha: 1)
     ) -> Image? {
@@ -47,7 +47,7 @@ enum NotificationSyncPairingToken {
                 .image(dimension: 1000)
             return Image(decorative: qrCodeImage, scale: 1.0, orientation: .up)
         } catch {
-            log("[NotificationSyncPairingToken] QR code generation failed: \(error)")
+            log("[PairingToken] QR code generation failed: \(error)")
             return nil
         }
     }

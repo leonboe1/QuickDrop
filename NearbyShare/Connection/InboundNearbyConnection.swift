@@ -678,6 +678,8 @@ class InboundNearbyConnection: NearbyConnection {
                     return
                 }
 
+                // Existing trust only proves this is the same device key we trusted before.
+                // It does not by itself grant a new feature, such as clipboard sync.
                 let trustedData = TrustStore.shared.findTrustedKey(for: peerCertificate.secretID)
                 if let trustedData {
                     guard let currentData = try? peerCertificate.serializedData(),
@@ -685,13 +687,10 @@ class InboundNearbyConnection: NearbyConnection {
                         self.rejectTransfer(with: .reject)
                         return
                     }
-                    DispatchQueue.main.async {
-                        self.delegate?.notificationSyncSetupConfirmed(connection: self)
-                    }
-                    submitUserConsent(accepted: true, trustDevice: false)
-                    return
                 }
 
+                // The QR token proves the user accepted this specific pairing use case.
+                // Require it even for already-trusted devices before adding a new grant.
                 let matches = TrustStore.shared.confirmPendingPairingTrust(
                     secretIdHex: peerCertificate.secretID.hex,
                     useCase: pairingUseCase,
@@ -703,9 +702,19 @@ class InboundNearbyConnection: NearbyConnection {
                     return
                 }
 
-                TrustStore.shared.addTrusted(certificate: peerCertificate, device: device)
+                // Preserve the existing trusted certificate when present; otherwise store
+                // the newly paired device and attach the confirmed use-case grant.
+                if trustedData != nil {
+                    TrustStore.shared.grantUseCase(pairingUseCase, for: peerCertificate.secretID.hex)
+                } else {
+                    TrustStore.shared.addTrusted(
+                        certificate: peerCertificate,
+                        device: device,
+                        grantedUseCases: [pairingUseCase]
+                    )
+                }
                 DispatchQueue.main.async {
-                    self.delegate?.notificationSyncSetupConfirmed(connection: self)
+                    self.delegate?.pairingSetupConfirmed(connection: self)
                 }
                 submitUserConsent(accepted: true, trustDevice: false)
                 return
@@ -738,7 +747,22 @@ class InboundNearbyConnection: NearbyConnection {
         if let textMetadata = frame.v1.introduction.textMetadata.first {
             let isURL = textMetadata.type == .url
             textPayloadID = textMetadata.payloadID
-            isClipboardSyncTransfer = !isURL && isAuthenticated && receiverAuthenticationAccepted
+            let isRemoteCopy = frame.v1.introduction.hasUseCase
+                && frame.v1.introduction.useCase == .remoteCopy
+            if isRemoteCopy && !isURL {
+                let peerFingerprint = peerCertificate?.secretID.hex
+                let isClipboardSyncAllowed = isAuthenticated
+                    && receiverAuthenticationAccepted
+                    && TrustStore.shared.hasUseCaseGrant(.clipboardSync, for: peerFingerprint)
+                guard isClipboardSyncAllowed else {
+                    log("[InboundNearbyConnection \(self.id)] Rejecting clipboard sync transfer because the sender is not trusted for clipboard sync.")
+                    self.rejectTransfer(with: .reject, markAsUserRejected: false)
+                    return
+                }
+                isClipboardSyncTransfer = true
+            } else {
+                isClipboardSyncTransfer = false
+            }
 
             let metadata = TransferMetadata(
                 files: [],
@@ -797,17 +821,15 @@ class InboundNearbyConnection: NearbyConnection {
            let pairingUseCase = PairingUseCase(protoValue: pairingMetadata.useCase) {
             let secretIdHex = peerCertificate.secretID.hex
             if accepted {
-                if TrustStore.shared.findTrustedKey(for: peerCertificate.secretID) == nil {
-                    if let token = pairingToken {
-                        TrustStore.shared.registerPendingPairingTrust(
-                            secretIdHex: secretIdHex,
-                            pinCode: token,
-                            useCase: pairingUseCase
-                        )
-                    } else {
-                        log("[InboundNearbyConnection \(self.id)] Missing pairing token; pending trust not registered.")
-                        TrustStore.shared.clearPendingPairingTrust(secretIdHex: secretIdHex)
-                    }
+                if let token = pairingToken {
+                    TrustStore.shared.registerPendingPairingTrust(
+                        secretIdHex: secretIdHex,
+                        pinCode: token,
+                        useCase: pairingUseCase
+                    )
+                } else {
+                    log("[InboundNearbyConnection \(self.id)] Missing pairing token; pending trust not registered.")
+                    TrustStore.shared.clearPendingPairingTrust(secretIdHex: secretIdHex)
                 }
             } else {
                 TrustStore.shared.clearPendingPairingTrust(secretIdHex: secretIdHex)
@@ -896,7 +918,9 @@ class InboundNearbyConnection: NearbyConnection {
         switch useCase {
         case .notificationSync:
             return .notificationSync
-        case .clipboardSync, .none:
+        case .clipboardSync:
+            return .clipboardSync
+        case .none:
             return nil
         }
     }

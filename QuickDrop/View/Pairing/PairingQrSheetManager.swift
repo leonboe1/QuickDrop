@@ -1,33 +1,39 @@
 //
-//  NotificationSyncQrSheetManager.swift
+//  PairingQrSheetManager.swift
 //  QuickDrop
 //
-//  Created by Codex on 2026-03-15.
+//  Created by Leon Böttger on 2026-03-15.
 //
 
 import AppKit
 import SwiftUI
 
-final class NotificationSyncQrSheetManager: NSObject, NSWindowDelegate {
-    static let shared = NotificationSyncQrSheetManager()
+final class PairingQrSheetManager: NSObject, NSWindowDelegate {
+    static let shared = PairingQrSheetManager()
 
     private var alert: NSAlert?
     private weak var alertWindow: NSWindow?
 
-    func open(token: String, receiverFingerprint: String, deviceName: String) {
+    func open(
+        token: String,
+        receiverFingerprint: String,
+        deviceName: String,
+        useCase: PairingUseCase
+    ) {
         guard alert == nil else { return }
-        guard let qrImage = NotificationSyncPairingToken.makeQrImage(
+        guard let qrImage = PairingToken.makeQrImage(
             token: token,
-            receiverFingerprint: receiverFingerprint
+            receiverFingerprint: receiverFingerprint,
+            useCase: useCase
         ) else { return }
 
         let alert = NSAlert()
-        alert.messageText = "NotificationSyncQrPairingTitle".localized()
-        alert.informativeText = "NotificationSyncQrPairingDescription".localized(with: deviceName)
+        alert.messageText = "PairingQrSheetTitle".localized()
+        alert.informativeText = "PairingQrSheetDescription".localized(with: deviceName)
         alert.addButton(withTitle: "Cancel".localized())
         alert.alertStyle = .informational
 
-        let accessoryView = NSHostingView(rootView: NotificationSyncQrAccessoryView(qrImage: qrImage))
+        let accessoryView = NSHostingView(rootView: PairingQrAccessoryView(qrImage: qrImage))
         accessoryView.frame = NSRect(x: 0, y: 0, width: 180, height: 180)
         alert.accessoryView = accessoryView
         alert.layout()
@@ -71,7 +77,7 @@ final class NotificationSyncQrSheetManager: NSObject, NSWindowDelegate {
     }
 }
 
-private struct NotificationSyncQrAccessoryView: View {
+private struct PairingQrAccessoryView: View {
     let qrImage: Image
 
     var body: some View {

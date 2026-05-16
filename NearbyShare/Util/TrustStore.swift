@@ -71,16 +71,42 @@ class TrustStore: ObservableObject {
     }
     
     
-    func addTrusted(certificate: Sharing_Nearby_PublicCertificate, device: RemoteDeviceInfo) {
+    func addTrusted(
+        certificate: Sharing_Nearby_PublicCertificate,
+        device: RemoteDeviceInfo,
+        grantedUseCases: Set<PairingUseCase> = []
+    ) {
         guard let publicKeyData = try? certificate.serializedData() else { return }
+        let fingerprint = certificate.secretID.hex
+        let existingGrants = trustedCertificates[fingerprint]?.grantedUseCases ?? []
         
-        trustedCertificates[certificate.secretID.hex] = TrustedCertificate(
+        trustedCertificates[fingerprint] = TrustedCertificate(
             device: device,
             creationDate: Date(),
-            certificateData: publicKeyData
+            certificateData: publicKeyData,
+            grantedUseCases: existingGrants.union(grantedUseCases)
         )
         
         saveTrustedCertificates()
+    }
+
+
+    func grantUseCase(_ useCase: PairingUseCase, for secretIdHex: String) {
+        let normalized = secretIdHex.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        guard let existing = trustedCertificates[normalized] else { return }
+        trustedCertificates[normalized] = existing.withGrantedUseCase(useCase)
+        saveTrustedCertificates()
+    }
+
+
+    func hasUseCaseGrant(_ useCase: PairingUseCase, for secretIdHex: String?) -> Bool {
+        guard let normalized = secretIdHex?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .lowercased(),
+              !normalized.isEmpty else {
+            return false
+        }
+        return trustedCertificates[normalized]?.grantedUseCases.contains(useCase) == true
     }
     
     
@@ -142,6 +168,43 @@ class TrustStore: ObservableObject {
         let device: RemoteDeviceInfo
         let creationDate: Date
         let certificateData: Data
+        let grantedUseCases: Set<PairingUseCase>
+
+        init(
+            device: RemoteDeviceInfo,
+            creationDate: Date,
+            certificateData: Data,
+            grantedUseCases: Set<PairingUseCase> = []
+        ) {
+            self.device = device
+            self.creationDate = creationDate
+            self.certificateData = certificateData
+            self.grantedUseCases = grantedUseCases
+        }
+
+        private enum CodingKeys: String, CodingKey {
+            case device
+            case creationDate
+            case certificateData
+            case grantedUseCases
+        }
+
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            device = try container.decode(RemoteDeviceInfo.self, forKey: .device)
+            creationDate = try container.decode(Date.self, forKey: .creationDate)
+            certificateData = try container.decode(Data.self, forKey: .certificateData)
+            grantedUseCases = try container.decodeIfPresent(Set<PairingUseCase>.self, forKey: .grantedUseCases) ?? []
+        }
+
+        func withGrantedUseCase(_ useCase: PairingUseCase) -> TrustedCertificate {
+            TrustedCertificate(
+                device: device,
+                creationDate: creationDate,
+                certificateData: certificateData,
+                grantedUseCases: grantedUseCases.union([useCase])
+            )
+        }
     }
 
     struct PendingPairingTrust: Equatable {
