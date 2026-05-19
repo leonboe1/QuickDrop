@@ -10,6 +10,7 @@ import UIKit
 import DeviceKit
 #endif
 
+import Darwin
 import Foundation
 import Network
 import System
@@ -34,6 +35,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     private var inboundAppDelegates: [InboundAppDelegate] = []
     private var outgoingTransfers: [String: OutgoingTransferInfo] = [:]
     private var pendingOutgoingTransferPreparations: [String: UUID] = [:]
+    private var outgoingServiceResolvers: [String: NearbyOutgoingServiceResolver] = [:]
     private let pendingNotificationSyncTrustQueue = DispatchQueue(label: "NearbyConnectionManager.pendingNotificationSyncTrust")
     private var pendingNotificationSyncTrust: [String: PendingReceiverTrust] = [:]
     private var startedDeviceDiscovery = false
@@ -445,6 +447,8 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
                                 self.addFoundDevice(service: res)
                             case let .removed(res):
                                 self.removeFoundDevice(service: res)
+                            case let .changed(_, new, _):
+                                self.addFoundDevice(service: new)
                             default:
                                 log("[NearbyConnectionManager] Ignoring change \(change)")
                             }
@@ -536,11 +540,11 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     
     
     public func cancelTransfer(id: String) {
-        
         if let transfer = incomingConnections[id] {
             transfer.cancel()
         }
         pendingOutgoingTransferPreparations.removeValue(forKey: id)
+        outgoingServiceResolvers.removeValue(forKey: id)?.cancel()
         if let info = outgoingTransfers[id] {
             info.connection.cancel()
         }
@@ -716,7 +720,13 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     private func removeFoundDevice(service: NWBrowser.Result) {
         guard let endpointID = endpointID(for: service) else { return }
         deviceNameResolver.cancelLookup(for: endpointID)
-        guard let _ = foundServices.removeValue(forKey: endpointID) else { return }
+        guard let currentService = foundServices[endpointID] else { return }
+        // Ignore delayed removals for an older Bonjour result after a changed result
+        // has already replaced the service for this endpoint ID.
+        guard serviceIdentity(currentService.service) == serviceIdentity(service) else {
+            return
+        }
+        foundServices.removeValue(forKey: endpointID)
         for delegate in outboundAppDelegates {
             delegate.removeDevice(id: endpointID)
         }
@@ -795,30 +805,41 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
                         return
                     }
 
-                    self.pendingOutgoingTransferPreparations.removeValue(forKey: deviceID)
-                    guard let delegate else { return }
+                    guard let delegate else {
+                        self.pendingOutgoingTransferPreparations.removeValue(forKey: deviceID)
+                        return
+                    }
 
                     preparationFinished?()
 
-                    let tcp = NWProtocolTCP.Options()
-                    tcp.noDelay = true
-                    let nwconn = NWConnection(to: info.service.endpoint, using: NWParameters(tls: .none, tcp: tcp))
+                    self.resolveOutgoingEndpoint(for: info.service, deviceID: deviceID) { endpoint in
+                        guard let info = self.foundServices[deviceID],
+                              self.pendingOutgoingTransferPreparations[deviceID] == preparationID else {
+                            return
+                        }
 
-                    let conn = OutboundNearbyConnection(
-                        connection: nwconn,
-                        id: deviceID,
-                        urlsToSend: localUrls,
-                        textToSend: textToSend,
-                        isClipboardSyncTransfer: isClipboardSyncTransfer,
-                        receiverAuthenticationPolicy: receiverAuthenticationPolicy
-                    )
-                    conn.remoteDeviceInfo = info.device
-                    conn.delegate = self
-                    conn.qrCodePrivateKey = self.qrCodePrivateKey
+                        self.pendingOutgoingTransferPreparations.removeValue(forKey: deviceID)
 
-                    let transfer = OutgoingTransferInfo(service: info.service, device: info.device!, connection: conn, delegate: delegate)
-                    self.outgoingTransfers[deviceID] = transfer
-                    conn.start()
+                        let tcp = NWProtocolTCP.Options()
+                        tcp.noDelay = true
+                        let nwconn = NWConnection(to: endpoint, using: NWParameters(tls: .none, tcp: tcp))
+
+                        let conn = OutboundNearbyConnection(
+                            connection: nwconn,
+                            id: deviceID,
+                            urlsToSend: localUrls,
+                            textToSend: textToSend,
+                            isClipboardSyncTransfer: isClipboardSyncTransfer,
+                            receiverAuthenticationPolicy: receiverAuthenticationPolicy
+                        )
+                        conn.remoteDeviceInfo = info.device
+                        conn.delegate = self
+                        conn.qrCodePrivateKey = self.qrCodePrivateKey
+
+                        let transfer = OutgoingTransferInfo(service: info.service, device: info.device!, connection: conn, delegate: delegate)
+                        self.outgoingTransfers[deviceID] = transfer
+                        conn.start()
+                    }
                 }
             } catch {
                 log("[NearbyConnectionManager] Error storing URLs: \(error)")
@@ -837,11 +858,43 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     }
 
 
+    private func resolveOutgoingEndpoint(
+        for service: NWBrowser.Result,
+        deviceID: String,
+        completion: @escaping (NWEndpoint) -> Void
+    ) {
+        guard let resolver = NearbyOutgoingServiceResolver(result: service, resolveTimeout: 2.5, completion: { [weak self] endpoints in
+            guard let self else { return }
+            self.outgoingServiceResolvers.removeValue(forKey: deviceID)
+
+            if let endpoint = endpoints.first {
+                completion(endpoint.endpoint)
+            } else {
+                log("[NearbyConnectionManager] Could not resolve outgoing service for \(deviceID); falling back to Bonjour endpoint \(service.endpoint)")
+                completion(service.endpoint)
+            }
+        }) else {
+            log("[NearbyConnectionManager] Cannot create resolver for outgoing service; falling back to Bonjour endpoint")
+            completion(service.endpoint)
+            return
+        }
+
+        outgoingServiceResolvers.removeValue(forKey: deviceID)?.cancel()
+        outgoingServiceResolvers[deviceID] = resolver
+        resolver.start()
+    }
+
+
     private func normalizedKeyFingerprint(_ keyFingerprint: String?) -> String? {
         let normalized = keyFingerprint?
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .lowercased()
         return normalized?.isEmpty == false ? normalized : nil
+    }
+    
+    
+    private func serviceIdentity(_ service: NWBrowser.Result) -> String {
+        String(describing: service.endpoint)
     }
     
     
