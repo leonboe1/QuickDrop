@@ -13,13 +13,21 @@ final class ClipboardSyncNotificationPresenter {
 
     static let shared = ClipboardSyncNotificationPresenter()
     static let notificationIdentifier = "quickdrop-clipboard-sync"
+    private static let notificationIdentifierPrefix = "\(notificationIdentifier)-"
 
     private let center = UNUserNotificationCenter.current()
     private let queue = DispatchQueue(label: "ClipboardSyncNotificationPresenter")
     private var pendingNotifications: [(String, String?)] = []
     private var authorizationRequestInFlight = false
+    private var postedNotificationIdentifiers: Set<String> = []
 
     private init() {}
+
+    static func isClipboardSyncNotification(_ notification: UNNotification) -> Bool {
+        notification.request.identifier == notificationIdentifier
+            || notification.request.identifier.hasPrefix(notificationIdentifierPrefix)
+            || notification.request.content.threadIdentifier == notificationIdentifier
+    }
 
     func present(clipboardText: String, senderDeviceName: String?) {
         queue.async {
@@ -101,9 +109,12 @@ final class ClipboardSyncNotificationPresenter {
         content.threadIdentifier = Self.notificationIdentifier
         content.interruptionLevel = .active
 
-        let identifier = Self.notificationIdentifier
-        center.removePendingNotificationRequests(withIdentifiers: [identifier])
-        center.removeDeliveredNotifications(withIdentifiers: [identifier])
+        let identifier = Self.makeNotificationIdentifier()
+        var identifiersToRemove = postedNotificationIdentifiers
+        identifiersToRemove.insert(Self.notificationIdentifier)
+        postedNotificationIdentifiers = [identifier]
+        center.removePendingNotificationRequests(withIdentifiers: Array(identifiersToRemove))
+        center.removeDeliveredNotifications(withIdentifiers: Array(identifiersToRemove))
 
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: nil)
         center.add(request) { error in
@@ -119,6 +130,10 @@ final class ClipboardSyncNotificationPresenter {
         clipboardText
             .replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
             .trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    private static func makeNotificationIdentifier() -> String {
+        "\(notificationIdentifierPrefix)\(UUID().uuidString)"
     }
 }
 

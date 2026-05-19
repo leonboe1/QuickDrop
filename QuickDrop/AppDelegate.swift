@@ -35,6 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     // MARK: NSApplicationDelegate functions
     
     func applicationDidFinishLaunching(_: Notification) {
+        UNUserNotificationCenter.current().delegate = self
+
         // app did not lauch before
         if !Settings.sharedInstance.appLaunchedBefore {
             runAfter(seconds: 0.1) { log("[AppDelegate] Opening Welcome Screen") }
@@ -66,9 +68,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             startReceiving()
         }
 
-        UNUserNotificationCenter.current().delegate = self
-        
-        
         // MARK: Menu Bar
         
         let menu = NSMenu()
@@ -171,7 +170,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     public func userNotificationCenter(_: UNUserNotificationCenter,
                                        willPresent notification: UNNotification,
                                        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if notification.request.identifier == ClipboardSyncNotificationPresenter.notificationIdentifier {
+        if ClipboardSyncNotificationPresenter.isClipboardSyncNotification(notification) {
             completionHandler([.banner])
             return
         }
