@@ -17,6 +17,7 @@ struct NearbyResolvedBonjourEndpoint {
     let interface: NWInterface?
     let description: String
     let isIPv4: Bool
+    let isLinkLocal: Bool
 }
 
 
@@ -126,6 +127,9 @@ final class NearbyBonjourServiceResolver: NSObject, NetServiceDelegate {
             if lhs.isIPv4 != rhs.isIPv4 {
                 return lhs.isIPv4
             }
+            if lhs.isLinkLocal != rhs.isLinkLocal {
+                return !lhs.isLinkLocal
+            }
             return lhs.description < rhs.description
         }
     }
@@ -185,7 +189,8 @@ final class NearbyBonjourServiceResolver: NSObject, NetServiceDelegate {
                 port: portRawValue,
                 interface: isIPv6LinkLocal ? interface : nil,
                 description: description,
-                isIPv4: addressFamily == AF_INET
+                isIPv4: addressFamily == AF_INET,
+                isLinkLocal: isIPv6LinkLocal
             )
         }
     }
