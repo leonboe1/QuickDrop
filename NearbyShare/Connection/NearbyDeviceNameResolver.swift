@@ -10,7 +10,12 @@ import Foundation
 import Network
 
 final class NearbyDeviceNameResolver {
-    private var hostnameResolvers: [UUID: NearbyNetworkScannerHostnameResolver] = [:]
+    private static let hostnameLookupQueue = DispatchQueue(
+        label: "com.leonboettger.quickdrop.deviceNameHostnameLookup",
+        qos: .utility
+    )
+
+    private var hostnameResolvers: [UUID: NearbyBonjourServiceResolver] = [:]
     private var lookupTokens: [String: UUID] = [:]
     
     func needsLookup(for endpointInfo: EndpointInfo?) -> Bool {
@@ -47,10 +52,25 @@ final class NearbyDeviceNameResolver {
 
     private func resolveAdvertisedHostname(for service: NWBrowser.Result, completion: @escaping (String?) -> Void) {
         let resolverID = UUID()
-        guard let resolver = NearbyNetworkScannerHostnameResolver(result: service, resolveTimeout: 0.5, completion: { [weak self] hostname in
-            self?.hostnameResolvers.removeValue(forKey: resolverID)
-            completion(hostname)
-        }) else {
+        guard let resolver = NearbyBonjourServiceResolver(
+            result: service,
+            resolveTimeout: 0.5,
+            watchdogGracePeriod: 1.0,
+            completion: { [weak self] endpoints in
+                self?.hostnameResolvers.removeValue(forKey: resolverID)
+                guard let ipv4Address = endpoints.first(where: \.isIPv4)?.host else {
+                    completion(nil)
+                    return
+                }
+
+                Self.hostnameLookupQueue.async {
+                    let hostname = NearbyHostLookup.hostname(forIPv4: ipv4Address)
+                    DispatchQueue.main.async {
+                        completion(hostname)
+                    }
+                }
+            }
+        ) else {
             completion(nil)
             return
         }
@@ -61,139 +81,9 @@ final class NearbyDeviceNameResolver {
 }
 
 
-private final class NearbyNetworkScannerHostnameResolver: NSObject, NetServiceDelegate {
-    private static let hostnameLookupQueue = DispatchQueue(
-        label: "com.leonboettger.quickdrop.networkScannerHostname",
-        qos: .utility
-    )
-
-    private let service: NetService
-    private let resolveTimeout: TimeInterval
-    private var timeoutWorkItem: DispatchWorkItem?
-    private var completion: ((String?) -> Void)?
-    private var finished = false
-
-    init?(
-        result: NWBrowser.Result,
-        resolveTimeout: TimeInterval,
-        completion: @escaping (String?) -> Void
-    ) {
-        guard case let NWEndpoint.service(name: name, type: type, domain: domain, interface: _) = result.endpoint else {
-            return nil
-        }
-
-        self.service = NetService(
-            domain: Self.normalizedServiceDomain(domain),
-            type: Self.normalizedServiceType(type),
-            name: name
-        )
-        self.resolveTimeout = resolveTimeout
-        self.completion = completion
-        super.init()
-    }
-
-    
-    func start() {
-        service.delegate = self
-        service.resolve(withTimeout: resolveTimeout)
-
-        let timeoutWorkItem = DispatchWorkItem { [weak self] in
-            self?.finish(hostname: nil)
-        }
-        self.timeoutWorkItem = timeoutWorkItem
-        DispatchQueue.main.asyncAfter(deadline: .now() + resolveTimeout + 1.0, execute: timeoutWorkItem)
-    }
-
-    
-    func cancel() {
-        finish(hostname: nil, notify: false)
-    }
-    
-
-    func netServiceDidResolveAddress(_ sender: NetService) {
-        let numericAddresses = sender.addresses?.compactMap(Self.numericHostString) ?? []
-        guard let ipv4Address = numericAddresses.first(where: NearbyNetworkScannerHostLookup.isIPv4Address) else {
-            finish(hostname: nil)
-            return
-        }
-
-        Self.hostnameLookupQueue.async { [weak self] in
-            let hostname = NearbyNetworkScannerHostLookup.hostname(forIPv4: ipv4Address)
-            DispatchQueue.main.async {
-                self?.finish(hostname: hostname)
-            }
-        }
-    }
-    
-
-    func netService(_ sender: NetService, didNotResolve errorDict: [String: NSNumber]) {
-        finish(hostname: nil)
-    }
-    
-
-    private func finish(hostname: String?, notify: Bool = true) {
-        guard !finished else { return }
-        finished = true
-        timeoutWorkItem?.cancel()
-        service.stop()
-        service.delegate = nil
-
-        let completion = completion
-        self.completion = nil
-
-        if notify {
-            completion?(hostname)
-        }
-    }
-    
-
-    private static func normalizedServiceDomain(_ domain: String) -> String {
-        let trimmedDomain = domain.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmedDomain.isEmpty else { return "local." }
-        return trimmedDomain.hasSuffix(".") ? trimmedDomain : "\(trimmedDomain)."
-    }
-
-    
-    private static func normalizedServiceType(_ type: String) -> String {
-        let trimmedType = type.trimmingCharacters(in: .whitespacesAndNewlines)
-        return trimmedType.hasSuffix(".") ? trimmedType : "\(trimmedType)."
-    }
-
-    
-    private static func numericHostString(from addressData: Data) -> String? {
-        addressData.withUnsafeBytes { rawBuffer in
-            guard let baseAddress = rawBuffer.baseAddress else { return nil }
-
-            var hostBuffer = [CChar](repeating: 0, count: Int(NI_MAXHOST))
-            let sockaddrPointer = baseAddress.assumingMemoryBound(to: sockaddr.self)
-            let result = getnameinfo(
-                sockaddrPointer,
-                socklen_t(addressData.count),
-                &hostBuffer,
-                socklen_t(hostBuffer.count),
-                nil,
-                0,
-                NI_NUMERICHOST
-            )
-
-            guard result == 0 else { return nil }
-            return String(cString: hostBuffer)
-                .split(separator: "%")
-                .first
-                .map(String.init)
-        }
-    }
-}
-
-
-private enum NearbyNetworkScannerHostLookup {
+private enum NearbyHostLookup {
     static func hostname(forIPv4 address: String) -> String? {
         reverseDNSName(forIPv4: address).flatMap(prettifyDisplayName)
-    }
-
-    
-    static func isIPv4Address(_ address: String) -> Bool {
-        !address.contains(":")
     }
 
     

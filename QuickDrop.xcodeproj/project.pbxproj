@@ -31,12 +31,12 @@
 		EB05DFBE2E59FC8900EF567A /* TrustedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */; };
 		EB05DFBF2E59FD0A00EF567A /* TrustedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */; };
 		EB05DFC02E5A2EAA00EF567A /* TrustedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */; };
-		EB0A22E32FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift */; };
-		EB0A22E42FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift */; };
-		EB0A22E52FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift */; };
-		EB0A22E62FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift */; };
-		EB0A22E72FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift */; };
-		EB0A22E82FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift */; };
+		EB0A22E32FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift */; };
+		EB0A22E42FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift */; };
+		EB0A22E52FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift */; };
+		EB0A22E62FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift */; };
+		EB0A22E72FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift */; };
+		EB0A22E82FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A22E22FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift */; };
 		EB1325D32E701D8E00FD749C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1325D22E701D8900FD749C /* Settings.swift */; };
 		EB1325D42E701D8E00FD749C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1325D22E701D8900FD749C /* Settings.swift */; };
 		EB1325D52E701D8E00FD749C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1325D22E701D8900FD749C /* Settings.swift */; };
@@ -524,7 +524,7 @@
 		A1F5B3D82F3A1A0100A1B2C3 /* PairingToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingToken.swift; sourceTree = "<group>"; };
 		A1F5B3D92F3A1A0100A1B2C4 /* PairingQrSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingQrSheetManager.swift; sourceTree = "<group>"; };
 		EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustedDevicesView.swift; sourceTree = "<group>"; };
-		EB0A22E22FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyOutgoingServiceResolver.swift; sourceTree = "<group>"; };
+		EB0A22E22FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyBonjourServiceResolver.swift; sourceTree = "<group>"; };
 		EB1325D22E701D8900FD749C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		EB1325E72E7025D900FD749C /* ActiveNetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNetworkInterface.swift; sourceTree = "<group>"; };
 		EB1325E82E7025D900FD749C /* ApIsolation6Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApIsolation6Tester.swift; sourceTree = "<group>"; };
@@ -808,7 +808,7 @@
 			isa = PBXGroup;
 			children = (
 				69DA9A1E29E0C0B300A442DA /* NearbyConnectionManager.swift */,
-				EB0A22E22FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift */,
+				EB0A22E22FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift */,
 				EB3B9F192EF7150400D67050 /* NearbyDeviceNameResolver.swift */,
 				69DA9A2229E17F0400A442DA /* InboundNearbyConnection.swift */,
 				A1B2C3DA2F33AA0100ABC001 /* MirroredNotificationSupport.swift */,
@@ -1320,7 +1320,7 @@
 				EB5C37C52E377A780052EFD7 /* securemessage.pb.swift in Sources */,
 				EB5C37C62E377A780052EFD7 /* securegcm.pb.swift in Sources */,
 				EB5C37C72E377A780052EFD7 /* wire_format.pb.swift in Sources */,
-				EB0A22E42FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */,
+				EB0A22E42FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */,
 				EB5C37C82E377A780052EFD7 /* ukey.pb.swift in Sources */,
 				EB5C37C92E377A780052EFD7 /* device_to_device_messages.pb.swift in Sources */,
 				EB950B742E520957002D68FA /* Attachments.swift in Sources */,
@@ -1399,7 +1399,7 @@
 				EBC05C822E33B58300EECC18 /* ApIsolationIssueView.swift in Sources */,
 				EBC05C832E33B58300EECC18 /* FirewallIssueView.swift in Sources */,
 				EB1325FA2E70288300FD749C /* SendToExtension.swift in Sources */,
-				EB0A22E72FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */,
+				EB0A22E72FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */,
 				EB1325F42E7025D900FD749C /* ApIsolationTester.swift in Sources */,
 				EB1325F52E7025D900FD749C /* ActiveNetworkInterface.swift in Sources */,
 				EB1325F62E7025D900FD749C /* ApIsolation6Tester.swift in Sources */,
@@ -1460,7 +1460,7 @@
 				EB3B9F272EF7150400D6704E /* ApIsolationIssueView.swift in Sources */,
 				EB3B9F282EF7150400D6704E /* FirewallIssueView.swift in Sources */,
 				EB3B9F292EF7150400D6704E /* SendToExtension.swift in Sources */,
-				EB0A22E82FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */,
+				EB0A22E82FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */,
 				EB3B9F2A2EF7150400D6704E /* ApIsolationTester.swift in Sources */,
 				EB3B9F2B2EF7150400D6704E /* ActiveNetworkInterface.swift in Sources */,
 				EB3B9F2C2EF7150400D6704E /* ApIsolation6Tester.swift in Sources */,
@@ -1491,7 +1491,7 @@
 				EB3B9F592EF7151900D6704E /* securemessage.pb.swift in Sources */,
 				EB3B9F5A2EF7151900D6704E /* securegcm.pb.swift in Sources */,
 				EB3B9F5B2EF7151900D6704E /* wire_format.pb.swift in Sources */,
-				EB0A22E52FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */,
+				EB0A22E52FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */,
 				EB3B9F5C2EF7151900D6704E /* ukey.pb.swift in Sources */,
 				EB3B9F5D2EF7151900D6704E /* device_to_device_messages.pb.swift in Sources */,
 				EB3B9F5F2EF7151900D6704E /* Attachments.swift in Sources */,
@@ -1540,7 +1540,7 @@
 				EB5C37F92E377CE70052EFD7 /* securegcm.pb.swift in Sources */,
 				EB5C37FA2E377CE70052EFD7 /* Helpers.swift in Sources */,
 				EB5C37FB2E377CE70052EFD7 /* InboundNearbyConnection.swift in Sources */,
-				EB0A22E62FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */,
+				EB0A22E62FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */,
 				A1B2C3D82F33AA0100ABC001 /* MirroredNotificationSupport.swift in Sources */,
 				EB9925802E45D53E00357055 /* sharing_enums.pb.swift in Sources */,
 				EB5C37FC2E377CE70052EFD7 /* OutboundNearbyConnection.swift in Sources */,
@@ -1585,7 +1585,7 @@
 				EB16B6132E58B4B9007D9792 /* IdentityManager.swift in Sources */,
 				EB950B4D2E520436002D68FA /* NearbyConnection.swift in Sources */,
 				EB950B502E520436002D68FA /* wire_format.pb.swift in Sources */,
-				EB0A22E32FBCF59300B78FF5 /* NearbyOutgoingServiceResolver.swift in Sources */,
+				EB0A22E32FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */,
 				EB950B582E5205B4002D68FA /* Zip.swift in Sources */,
 				EB950B512E520436002D68FA /* securemessage.pb.swift in Sources */,
 				EBA1BB1F2EF1F6030068E46E /* ChangeDeviceNameModifier.swift in Sources */,
@@ -1812,7 +1812,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SHARED_BUILD = 147;
+				SHARED_BUILD = 148;
 				SHARED_VERSION = 4.0;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1875,7 +1875,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
-				SHARED_BUILD = 147;
+				SHARED_BUILD = 148;
 				SHARED_VERSION = 4.0;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

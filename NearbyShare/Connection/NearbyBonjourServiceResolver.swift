@@ -1,37 +1,67 @@
 //
-//  NearbyOutgoingServiceResolver.swift
+//  NearbyBonjourServiceResolver.swift
 //  QuickDrop
 //
 //  Created by Leon Böttger on 19.05.26.
 //
 
+import Darwin
 import Foundation
 import Network
 
-final class NearbyOutgoingServiceResolver: NSObject, NetServiceDelegate {
+struct NearbyResolvedBonjourEndpoint {
+    let endpoint: NWEndpoint
+    /// Numeric host string; IPv6 link-local hosts may include a `%scopeID` suffix for NWEndpoint routing.
+    let host: String
+    let port: UInt16
+    let interface: NWInterface?
+    let description: String
+    let isIPv4: Bool
+}
+
+
+final class NearbyBonjourServiceResolver: NSObject, NetServiceDelegate {
+    private static let defaultWatchdogGracePeriod: TimeInterval = 0.5
+
     private let service: NetService
     private let resolveTimeout: TimeInterval
+    private let watchdogGracePeriod: TimeInterval
+    private let interface: NWInterface?
     private var timeoutWorkItem: DispatchWorkItem?
-    private var completion: (([NearbyResolvedServiceEndpoint]) -> Void)?
+    private var completion: (([NearbyResolvedBonjourEndpoint]) -> Void)?
     private var finished = false
 
     init?(
         result: NWBrowser.Result,
         resolveTimeout: TimeInterval,
-        completion: @escaping ([NearbyResolvedServiceEndpoint]) -> Void
+        watchdogGracePeriod: TimeInterval = defaultWatchdogGracePeriod,
+        completion: @escaping ([NearbyResolvedBonjourEndpoint]) -> Void
     ) {
-        guard case let NWEndpoint.service(name: name, type: type, domain: domain, interface: _) = result.endpoint else {
+        guard let components = Self.serviceEndpointComponents(from: result) else {
             return nil
         }
 
         self.service = NetService(
-            domain: Self.normalizedServiceDomain(domain),
-            type: Self.normalizedServiceType(type),
-            name: name
+            domain: Self.normalizedServiceDomain(components.domain),
+            type: Self.normalizedServiceType(components.type),
+            name: components.name
         )
         self.resolveTimeout = resolveTimeout
+        self.watchdogGracePeriod = watchdogGracePeriod
+        self.interface = components.interface
         self.completion = completion
         super.init()
+    }
+
+
+    private static func serviceEndpointComponents(
+        from result: NWBrowser.Result
+    ) -> (name: String, type: String, domain: String, interface: NWInterface?)? {
+        guard case let NWEndpoint.service(name: name, type: type, domain: domain, interface: interface) = result.endpoint else {
+            return nil
+        }
+
+        return (name: name, type: type, domain: domain, interface: interface)
     }
 
 
@@ -43,7 +73,7 @@ final class NearbyOutgoingServiceResolver: NSObject, NetServiceDelegate {
             self?.finish(endpoints: [])
         }
         self.timeoutWorkItem = timeoutWorkItem
-        DispatchQueue.main.asyncAfter(deadline: .now() + resolveTimeout + 0.5, execute: timeoutWorkItem)
+        DispatchQueue.main.asyncAfter(deadline: .now() + resolveTimeout + watchdogGracePeriod, execute: timeoutWorkItem)
     }
 
 
@@ -53,7 +83,7 @@ final class NearbyOutgoingServiceResolver: NSObject, NetServiceDelegate {
 
 
     func netServiceDidResolveAddress(_ sender: NetService) {
-        finish(endpoints: Self.resolvedEndpoints(from: sender))
+        finish(endpoints: Self.resolvedEndpoints(from: sender, interface: interface))
     }
 
 
@@ -62,7 +92,7 @@ final class NearbyOutgoingServiceResolver: NSObject, NetServiceDelegate {
     }
 
 
-    private func finish(endpoints: [NearbyResolvedServiceEndpoint], notify: Bool = true) {
+    private func finish(endpoints: [NearbyResolvedBonjourEndpoint], notify: Bool = true) {
         guard !finished else { return }
         finished = true
         timeoutWorkItem?.cancel()
@@ -80,9 +110,12 @@ final class NearbyOutgoingServiceResolver: NSObject, NetServiceDelegate {
     }
 
 
-    private static func resolvedEndpoints(from service: NetService) -> [NearbyResolvedServiceEndpoint] {
+    private static func resolvedEndpoints(
+        from service: NetService,
+        interface: NWInterface?
+    ) -> [NearbyResolvedBonjourEndpoint] {
         let endpoints = (service.addresses ?? [])
-            .compactMap(resolvedEndpoint)
+            .compactMap { resolvedEndpoint(from: $0, interface: interface) }
 
         var seenDescriptions = Set<String>()
         let uniqueEndpoints = endpoints.filter { endpoint in
@@ -98,7 +131,10 @@ final class NearbyOutgoingServiceResolver: NSObject, NetServiceDelegate {
     }
 
 
-    private static func resolvedEndpoint(from addressData: Data) -> NearbyResolvedServiceEndpoint? {
+    private static func resolvedEndpoint(
+        from addressData: Data,
+        interface: NWInterface?
+    ) -> NearbyResolvedBonjourEndpoint? {
         addressData.withUnsafeBytes { rawBuffer in
             guard let baseAddress = rawBuffer.baseAddress else { return nil }
 
@@ -123,7 +159,11 @@ final class NearbyOutgoingServiceResolver: NSObject, NetServiceDelegate {
 
             guard result == 0 else { return nil }
 
-            let host = String(cString: hostBuffer)
+            var host = String(cString: hostBuffer)
+            if addressFamily == AF_INET6 {
+                host = scopedIPv6Host(host, addressData: addressData)
+            }
+
             guard let portRawValue = UInt16(String(cString: portBuffer)),
                   let port = NWEndpoint.Port(rawValue: portRawValue) else {
                 return nil
@@ -137,11 +177,43 @@ final class NearbyOutgoingServiceResolver: NSObject, NetServiceDelegate {
                 description = "\(host):\(portRawValue)"
             }
 
-            return NearbyResolvedServiceEndpoint(
+            let isIPv6LinkLocal = addressFamily == AF_INET6 && host.lowercased().hasPrefix("fe80:")
+
+            return NearbyResolvedBonjourEndpoint(
                 endpoint: endpoint,
+                host: host,
+                port: portRawValue,
+                interface: isIPv6LinkLocal ? interface : nil,
                 description: description,
                 isIPv4: addressFamily == AF_INET
             )
+        }
+    }
+
+
+    private static func scopedIPv6Host(
+        _ host: String,
+        addressData: Data
+    ) -> String {
+        guard !host.contains("%"),
+              host.lowercased().hasPrefix("fe80:") else {
+            return host
+        }
+
+        guard let scopeID = ipv6ScopeID(from: addressData), scopeID != 0 else {
+            return host
+        }
+
+        return "\(host)%\(scopeID)"
+    }
+
+
+    private static func ipv6ScopeID(from addressData: Data) -> UInt32? {
+        addressData.withUnsafeBytes { rawBuffer in
+            guard let baseAddress = rawBuffer.baseAddress else { return nil }
+            let sockaddrPointer = baseAddress.assumingMemoryBound(to: sockaddr.self)
+            guard Int32(sockaddrPointer.pointee.sa_family) == AF_INET6 else { return nil }
+            return baseAddress.assumingMemoryBound(to: sockaddr_in6.self).pointee.sin6_scope_id
         }
     }
 
@@ -157,11 +229,4 @@ final class NearbyOutgoingServiceResolver: NSObject, NetServiceDelegate {
         let trimmedType = type.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmedType.hasSuffix(".") ? trimmedType : "\(trimmedType)."
     }
-}
-
-
-struct NearbyResolvedServiceEndpoint {
-    let endpoint: NWEndpoint
-    let description: String
-    let isIPv4: Bool
 }

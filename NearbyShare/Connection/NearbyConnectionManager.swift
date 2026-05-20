@@ -10,7 +10,6 @@ import UIKit
 import DeviceKit
 #endif
 
-import Darwin
 import Foundation
 import Network
 import System
@@ -35,7 +34,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     private var inboundAppDelegates: [InboundAppDelegate] = []
     private var outgoingTransfers: [String: OutgoingTransferInfo] = [:]
     private var pendingOutgoingTransferPreparations: [String: UUID] = [:]
-    private var outgoingServiceResolvers: [String: NearbyOutgoingServiceResolver] = [:]
+    private var outgoingServiceResolvers: [String: NearbyBonjourServiceResolver] = [:]
     private let pendingNotificationSyncTrustQueue = DispatchQueue(label: "NearbyConnectionManager.pendingNotificationSyncTrust")
     private var pendingNotificationSyncTrust: [String: PendingReceiverTrust] = [:]
     private var startedDeviceDiscovery = false
@@ -812,7 +811,7 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
 
                     preparationFinished?()
 
-                    self.resolveOutgoingEndpoint(for: info.service, deviceID: deviceID) { endpoint in
+                    self.resolveOutgoingEndpoint(for: info.service, deviceID: deviceID) { endpoint, requiredInterface in
                         guard let info = self.foundServices[deviceID],
                               self.pendingOutgoingTransferPreparations[deviceID] == preparationID else {
                             return
@@ -822,7 +821,9 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
 
                         let tcp = NWProtocolTCP.Options()
                         tcp.noDelay = true
-                        let nwconn = NWConnection(to: endpoint, using: NWParameters(tls: .none, tcp: tcp))
+                        let parameters = NWParameters(tls: .none, tcp: tcp)
+                        parameters.requiredInterface = requiredInterface
+                        let nwconn = NWConnection(to: endpoint, using: parameters)
 
                         let conn = OutboundNearbyConnection(
                             connection: nwconn,
@@ -861,21 +862,21 @@ public class NearbyConnectionManager: NSObject, NetServiceDelegate, InboundNearb
     private func resolveOutgoingEndpoint(
         for service: NWBrowser.Result,
         deviceID: String,
-        completion: @escaping (NWEndpoint) -> Void
+        completion: @escaping (NWEndpoint, NWInterface?) -> Void
     ) {
-        guard let resolver = NearbyOutgoingServiceResolver(result: service, resolveTimeout: 2.5, completion: { [weak self] endpoints in
+        guard let resolver = NearbyBonjourServiceResolver(result: service, resolveTimeout: 2.5, completion: { [weak self] endpoints in
             guard let self else { return }
             self.outgoingServiceResolvers.removeValue(forKey: deviceID)
 
             if let endpoint = endpoints.first {
-                completion(endpoint.endpoint)
+                completion(endpoint.endpoint, endpoint.interface)
             } else {
                 log("[NearbyConnectionManager] Could not resolve outgoing service for \(deviceID); falling back to Bonjour endpoint \(service.endpoint)")
-                completion(service.endpoint)
+                completion(service.endpoint, nil)
             }
         }) else {
             log("[NearbyConnectionManager] Cannot create resolver for outgoing service; falling back to Bonjour endpoint")
-            completion(service.endpoint)
+            completion(service.endpoint, nil)
             return
         }
 
