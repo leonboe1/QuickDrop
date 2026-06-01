@@ -74,9 +74,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
 
         let visibleItem = NSMenuItem(
             title: getDefaultVisibleLabel(),
-            action: nil,
+            action: #selector(visibleMenuItemSelected),
             keyEquivalent: ""
         )
+        visibleItem.target = self
         self.visibleItem = visibleItem
         menu.addItem(visibleItem)
 
@@ -231,6 +232,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
 
     
     // MARK: - Button Actions
+
+    @objc private func visibleMenuItemSelected() {}
     
     @objc func sendClipboard() {
        
