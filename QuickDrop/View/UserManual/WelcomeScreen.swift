@@ -9,6 +9,25 @@ import SwiftUI
 import UniformTypeIdentifiers
 import LUI
 
+struct WelcomeScreenNavigationRequest {
+    let tab: Tab
+    let id = UUID()
+}
+
+
+final class WelcomeScreenNavigationState: ObservableObject {
+    @Published private(set) var request: WelcomeScreenNavigationRequest
+
+    init(selection: Tab = .receive) {
+        self.request = WelcomeScreenNavigationRequest(tab: selection)
+    }
+    
+    func select(_ tab: Tab) {
+        request = WelcomeScreenNavigationRequest(tab: tab)
+    }
+}
+
+
 struct WelcomeScreen: View {
     
     static let width: CGFloat = 1000
@@ -21,7 +40,23 @@ struct WelcomeScreen: View {
     let openCableTransmissionView: () -> Void
     let checkForNetworkIssues: () -> Void
     
-    @State private var selection: Tab = Tab.receive
+    @ObservedObject var navigationState: WelcomeScreenNavigationState
+    @State private var selection: Tab
+    
+    init(
+        openPlusScreen: @escaping () -> Void,
+        openAppAdvertisementView: @escaping () -> Void,
+        openCableTransmissionView: @escaping () -> Void,
+        checkForNetworkIssues: @escaping () -> Void,
+        navigationState: WelcomeScreenNavigationState
+    ) {
+        self.openPlusScreen = openPlusScreen
+        self.openAppAdvertisementView = openAppAdvertisementView
+        self.openCableTransmissionView = openCableTransmissionView
+        self.checkForNetworkIssues = checkForNetworkIssues
+        self.navigationState = navigationState
+        _selection = State(initialValue: navigationState.request.tab)
+    }
     
     var body: some View {
         
@@ -35,11 +70,17 @@ struct WelcomeScreen: View {
             )
             
             List(selection: listBinding) {
-                ForEach(Tab.allCases.filter({$0 != .settings }), id: \.self) { tab in
+                ForEach([Tab.receive, .send, .notificationSync, .clipboardSync], id: \.self) { tab in
                     Label(tab.sidebarTitle, systemImage: tab.systemImage)
                         .tag(tab)
                         .frame(height: 30)
                 }
+                
+                Divider()
+                
+                Label(Tab.troubleshooting.sidebarTitle, systemImage: Tab.troubleshooting.systemImage)
+                    .tag(Tab.troubleshooting)
+                    .frame(height: 30)
                 
                 Divider()
                 
@@ -76,12 +117,11 @@ struct WelcomeScreen: View {
                 Color.defaultBackground.edgesIgnoringSafeArea(.vertical)
             
                     if selection == .settings {
-                        SettingsView()
+                        SettingsView(openPlus: openPlusScreen)
                     }
                     else {
                         TutorialView(
                             tab: selection,
-                            openPlus: openPlusScreen,
                             openAppAdvertisementView: openAppAdvertisementView
                         )
                         .onAppear {
@@ -90,6 +130,11 @@ struct WelcomeScreen: View {
                             }
                         }
                     }
+            }
+        }
+        .onReceive(navigationState.$request) { request in
+            if selection != request.tab {
+                selection = request.tab
             }
         }
         .onDrop(of: [.fileURL], isTargeted: nil) { providers in
@@ -182,6 +227,7 @@ enum Tab: CaseIterable {
     case receive
     case send
     case notificationSync
+    case clipboardSync
     case troubleshooting
     case settings
     
@@ -193,6 +239,8 @@ enum Tab: CaseIterable {
             return "SendFiles".localized()
         case .notificationSync:
             return "NotificationSyncSidebar".localized()
+        case .clipboardSync:
+            return "ClipboardSyncSidebar".localized()
         case .troubleshooting:
             return "TroubleshootingAndFaq".localized()
         case .settings:
@@ -210,11 +258,13 @@ enum Tab: CaseIterable {
     var text: String {
         switch self {
         case .receive:
-            "UserManualDescription"
+            "UserManualDescription".localized()
         case .send:
-            "SendFilesDescription"
+            "SendFilesDescription".localized()
         case .notificationSync:
-            "NotificationSyncManualDescription"
+            "NotificationSyncManualDescription".localized()
+        case .clipboardSync:
+            "ClipboardSyncManualDescription".localized()
         default:
             ""
         }
@@ -228,6 +278,8 @@ enum Tab: CaseIterable {
             return "tray.and.arrow.up"
         case .notificationSync:
             return "bell"
+        case .clipboardSync:
+            return "clipboard"
         case .troubleshooting:
             return "exclamationmark.triangle"
         case .settings:
@@ -238,5 +290,5 @@ enum Tab: CaseIterable {
 
 
 #Preview {
-    WelcomeScreen(openPlusScreen: {}, openAppAdvertisementView: {}, openCableTransmissionView: {}, checkForNetworkIssues: {})
+    WelcomeScreen(openPlusScreen: {}, openAppAdvertisementView: {}, openCableTransmissionView: {}, checkForNetworkIssues: {}, navigationState: WelcomeScreenNavigationState())
 }

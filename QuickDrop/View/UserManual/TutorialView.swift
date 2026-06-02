@@ -12,11 +12,7 @@ import SwiftUI
 struct TutorialView: View {
     
     let tab: Tab
-    let openPlus: () -> Void
     let openAppAdvertisementView: () -> Void
-    
-    @State private var licenseWindow: NSWindow?
-    @ObservedObject var iapManager = IAPManager.sharedInstance
     
     var body: some View {
         
@@ -35,7 +31,7 @@ struct TutorialView: View {
                         .padding(.top)
                     }
                     else {
-                        Text(tab.text.localized())
+                        Text(tab.text)
                             .multilineTextAlignment(.leading)
                             .fixedSize(horizontal: false, vertical: true)
                             .padding()
@@ -44,51 +40,22 @@ struct TutorialView: View {
                 .frame(width: 550)
                 
                 if tab == .receive {
-                    HStack(spacing: 30) {
-                        
-                        Button {
-                            licenseWindow = openLicenseWindow()
-                        } label: {
-                            Text("Acknowledgements")
-                                .underline()
-                                .font(.footnote)
-                                .opacity(0.5)
-                        }
-                        .buttonStyle(.plain)
-                       
-                        #if !GITHUB
-                        if !iapManager.plusVersionState {
-                            Button {
-                                openPlus()
-                            } label: {
-                                Text("SupportQuickDrop")
-                                    .underline()
-                                    .font(.footnote)
-                                    .opacity(0.5)
-                            }
-                            .buttonStyle(.plain)
-                        }
-                        #endif
-                        
-                        #if DEBUG
-                        Button {
-                            IAPManager.sharedInstance.plusVersionState = false
-                            Settings.sharedInstance.deleteAllUserDefaults()
-                        } label: {
-                            Text("ResetAllSettings")
-                                .underline()
-                                .font(.footnote)
-                                .opacity(0.5)
-                        }
-                        .buttonStyle(.plain)
-                        #endif
+                    Button {
+                        showSamsungOneUI85Alert()
+                    } label: {
+                        Text("SamsungOneUI85HelpLink".localized())
+                            .underline()
+                            .font(.footnote)
+                            .multilineTextAlignment(.center)
+                            .opacity(0.7)
                     }
+                    .buttonStyle(.plain)
                     .padding()
                 }
                 else if tab == .send {
                     EnableExtensionView()
                 }
-                else if tab == .notificationSync {
+                else if tab == .notificationSync || tab == .clipboardSync {
                     Button {
                         openAppAdvertisementView()
                     } label: {
@@ -98,6 +65,21 @@ struct TutorialView: View {
                     .padding()
                 }
             }
+        }
+    }
+    
+    private func showSamsungOneUI85Alert() {
+        let alert = NSAlert()
+        alert.alertStyle = .informational
+        alert.messageText = "SamsungOneUI85AlertTitle".localized()
+        alert.informativeText = "SamsungOneUI85AlertMessage".localized()
+        alert.addButton(withTitle: "CloseAlert".localized())
+
+        if let window = NSApp.mainWindow ?? NSApp.keyWindow {
+            alert.beginSheetModal(for: window) { _ in }
+        }
+        else {
+            alert.runModal()
         }
     }
 }
@@ -198,5 +180,5 @@ private struct SharingPickerPresenter: NSViewRepresentable {
 
 
 #Preview {
-    WelcomeScreen(openPlusScreen: {}, openAppAdvertisementView: {}, openCableTransmissionView: {}, checkForNetworkIssues: {})
+    WelcomeScreen(openPlusScreen: {}, openAppAdvertisementView: {}, openCableTransmissionView: {}, checkForNetworkIssues: {}, navigationState: WelcomeScreenNavigationState())
 }

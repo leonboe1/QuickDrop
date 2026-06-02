@@ -11,10 +11,14 @@ import LUI
 
 struct SettingsView: View {
     
+    let openPlus: () -> Void
+    
     @ObservedObject var settings = Settings.sharedInstance
     @ObservedObject var connectionManager = NearbyConnectionManager.shared
+    @ObservedObject var iapManager = IAPManager.sharedInstance
     
     @State private var isChangeDeviceNameAlertPresented = false
+    @State private var licenseWindow: NSWindow?
     
     var body: some View {
         
@@ -68,17 +72,33 @@ struct SettingsView: View {
                 Divider()
                     .padding(.vertical, 10)
                 
-                Button {
-                    openTrustedDevicesWindow()
-                } label: {
-                    Text("ManageTrustedDevices")
-                        .underline()
-                        .font(.subheadline)
-                        .opacity(0.5)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 15)
+                HStack(spacing: 30) {
+                    SettingsFooterButton("ManageTrustedDevices") {
+                        openTrustedDevicesWindow()
+                    }
+                    
+                    SettingsFooterButton("Acknowledgements") {
+                        licenseWindow = openLicenseWindow()
+                    }
+                    
+                    #if !GITHUB
+                    if !iapManager.plusVersionState {
+                        SettingsFooterButton("SupportQuickDrop") {
+                            openPlus()
+                        }
+                    }
+                    #endif
+                    
+                    #if DEBUG
+                    SettingsFooterButton("ResetAllSettings") {
+                        IAPManager.sharedInstance.plusVersionState = false
+                        Settings.sharedInstance.deleteAllUserDefaults()
+                    }
+                    #endif
                 }
-                .buttonStyle(PlainButtonStyle())
+                .minimumScaleFactor(0.7)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 15)
             }
         }
     }
@@ -194,7 +214,31 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(openPlus: {})
             .frame(width: 800, height: 500)
+    }
+}
+
+
+private struct SettingsFooterButton: View {
+    let title: String
+    let action: () -> Void
+    
+    init(_ title: String, action: @escaping () -> Void) {
+        self.title = title
+        self.action = action
+    }
+    
+    var body: some View {
+        Button {
+            action()
+        } label: {
+            Text(title.localized())
+                .underline()
+                .font(.subheadline)
+                .lineLimit(1)
+                .opacity(0.5)
+        }
+        .buttonStyle(.plain)
     }
 }

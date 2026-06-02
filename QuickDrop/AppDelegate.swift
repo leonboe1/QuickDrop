@@ -27,6 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     private var errorAlertHandler = ErrorAlertHandler.shared
 
     private var receiveModel: ReceiveModel?
+    private let welcomeNavigationState = WelcomeScreenNavigationState()
 
     var showsFirewallAlert = false
     var visibleItem: NSMenuItem? = nil
@@ -233,7 +234,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     
     // MARK: - Button Actions
 
-    @objc private func visibleMenuItemSelected() {}
+    @objc private func visibleMenuItemSelected() {
+        showMainWindow(selectedTab: .settings)
+    }
     
     @objc func sendClipboard() {
        
@@ -252,6 +255,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
 
     
     @objc func openMainWindow() {
+        showMainWindow()
+    }
+    
+    
+    private func showMainWindow(selectedTab: Tab? = nil) {
+        if let selectedTab {
+            welcomeNavigationState.select(selectedTab)
+        }
+        
         defer {
             if let welcomeWindow, !Settings.sharedInstance.appLaunchedBefore {
                 runAfter(seconds: 0.2) {
@@ -278,7 +290,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             openPlusScreen: openPlusScreen,
             openAppAdvertisementView: { self.openSheetView(type: .downloadAndroidApp) },
             openCableTransmissionView: { self.openSheetView(type: .downloadCableConnectionApp) },
-            checkForNetworkIssues: performDeviceToDeviceCheck
+            checkForNetworkIssues: performDeviceToDeviceCheck,
+            navigationState: welcomeNavigationState
         )
         
         welcomeWindow = NSWindow(

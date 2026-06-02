@@ -6056,6 +6056,472 @@
         }
       }
     },
+    "ClipboardSyncManualDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكنك الآن مزامنة حافظة Mac تلقائيًا مع هاتفك والعكس! للبدء، ثبّت تطبيق Android باستخدام الزر أدناه. بعد ذلك، اضغط على قائمة الإعدادات في الزاوية العلوية، وفعّل خيار مزامنة الحافظة.\n\nسيطلب منك جهاز Mac بعد ذلك السماح بمزامنة الحافظة. بعد منح الإذن، ستظل حافظة كلا الجهازين متزامنة، طالما كان الجهازان متصلين بنفس الشبكة.\n\nيتم نقل جميع محتويات الحافظة باستخدام تشفير من طرف إلى طرف وتبقى بالكامل ضمن شبكتك المحلية. يمكنك تعطيل مزامنة الحافظة في أي وقت من هاتفك."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ara pots sincronitzar automàticament el porta-retalls del teu Mac amb el telèfon i a l'inrevés! Per començar, instal·la l'app d'Android amb el botó de sota. Després, toca el menú de configuració a la cantonada superior i activa l'interruptor de sincronització del porta-retalls.\n\nEl Mac et demanarà permís per permetre la sincronització del porta-retalls. Un cop donis permís, els porta-retalls de tots dos dispositius es mantindran sincronitzats mentre tots dos dispositius estiguin connectats a la mateixa xarxa.\n\nTot el contingut del porta-retalls es transfereix amb xifratge d'extrem a extrem i roman íntegrament dins de la teva xarxa local. Pots desactivar la sincronització del porta-retalls en qualsevol moment des del telèfon."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyní můžete automaticky synchronizovat schránku svého Macu s telefonem a naopak! Začněte instalací aplikace pro Android pomocí tlačítka níže. Poté klepněte na nabídku nastavení v horním rohu a zapněte přepínač pro synchronizaci schránky.\n\nVáš Mac vás poté vyzve k povolení synchronizace schránky. Po udělení oprávnění zůstanou schránky obou zařízení synchronizované, pokud budou obě zařízení připojena ke stejné síti.\n\nVeškerý obsah schránky se přenáší pomocí end-to-end šifrování a zůstává výhradně ve vaší místní síti. Synchronizaci schránky můžete kdykoli vypnout v telefonu."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kan nu automatisk synkronisere udklipsholderen på din Mac med din telefon og omvendt! For at komme i gang skal du installere Android-appen med knappen nedenfor. Tryk derefter på indstillingsmenuen i det øverste hjørne, og slå kontakten til udklipsholder-synkronisering til.\n\nDin Mac vil derefter bede dig om at tillade synkronisering af udklipsholderen. Når du har givet tilladelse, forbliver udklipsholderne på begge enheder synkroniserede, så længe begge enheder er forbundet til det samme netværk.\n\nAlt indhold fra udklipsholderen overføres med end-to-end-kryptering og forbliver helt inden for dit lokale netværk. Du kan til enhver tid deaktivere synkronisering af udklipsholderen på din telefon."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kannst jetzt die Zwischenablage deines Macs automatisch mit deinem Handy synchronisieren und umgekehrt! Installiere dazu zunächst die Android-App über den Button unten. Tippe danach oben auf das Einstellungsmenü und aktiviere den Schalter für die Zwischenablage-Synchronisierung.\n\nDein Mac wird dich dann fragen, ob du die Synchronisierung der Zwischenablage erlauben möchtest. Nachdem du die Erlaubnis gegeben hast, bleiben die Zwischenablagen beider Geräte synchron, solange beide Geräte mit demselben Netzwerk verbunden sind.\n\nAlle Inhalte der Zwischenablage werden mit Ende-zu-Ende-Verschlüsselung übertragen und bleiben vollständig in deinem lokalen Netzwerk. Du kannst die Zwischenablage-Synchronisierung jederzeit auf deinem Handy deaktivieren."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τώρα μπορείτε να συγχρονίζετε αυτόματα το πρόχειρο του Mac σας με το τηλέφωνό σας και αντίστροφα! Για να ξεκινήσετε, εγκαταστήστε την εφαρμογή Android χρησιμοποιώντας το παρακάτω κουμπί. Έπειτα, πατήστε το μενού ρυθμίσεων στην επάνω γωνία και ενεργοποιήστε τον διακόπτη για συγχρονισμό προχείρου.\n\nΤο Mac σας θα σας ζητήσει στη συνέχεια να επιτρέψετε τον συγχρονισμό προχείρου. Αφού δώσετε άδεια, τα πρόχειρα και των δύο συσκευών θα παραμένουν συγχρονισμένα, εφόσον και οι δύο συσκευές είναι συνδεδεμένες στο ίδιο δίκτυο.\n\nΌλα τα περιεχόμενα του προχείρου μεταφέρονται με κρυπτογράφηση end-to-end και παραμένουν εξ ολοκλήρου στο τοπικό σας δίκτυο. Μπορείτε να απενεργοποιήσετε τον συγχρονισμό προχείρου ανά πάσα στιγμή από το τηλέφωνό σας."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can now automatically sync the clipboard of your Mac to your phone and vice versa! To get started, install the Android app using the button below. Afterward, tap the settings menu in the top corner, and enable the toggle for clipboard sync.\n\nYour Mac will then prompt you to allow clipboard syncing. After granting permission, the clipboard of both devices will stay in sync, as long as both devices are connected to the same network.\n\nAll clipboard contents are transferred using end-to-end encryption and stay entirely within your local network. You can disable clipboard syncing at any time on your phone."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can now automatically sync the clipboard of your Mac to your phone and vice versa! To get started, install the Android app using the button below. Afterward, tap the settings menu in the top corner, and enable the toggle for clipboard sync.\n\nYour Mac will then prompt you to allow clipboard syncing. After granting permission, the clipboard of both devices will stay in sync, as long as both devices are connected to the same network.\n\nAll clipboard contents are transferred using end-to-end encryption and stay entirely within your local network. You can disable clipboard syncing at any time on your phone."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can now automatically sync the clipboard of your Mac to your phone and vice versa! To get started, install the Android app using the button below. Afterward, tap the settings menu in the top corner, and enable the toggle for clipboard sync.\n\nYour Mac will then prompt you to allow clipboard syncing. After granting permission, the clipboard of both devices will stay in sync, as long as both devices are connected to the same network.\n\nAll clipboard contents are transferred using end-to-end encryption and stay entirely within your local network. You can disable clipboard syncing at any time on your phone."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can now automatically sync the clipboard of your Mac to your phone and vice versa! To get started, install the Android app using the button below. Afterward, tap the settings menu in the top corner, and enable the toggle for clipboard sync.\n\nYour Mac will then prompt you to allow clipboard syncing. After granting permission, the clipboard of both devices will stay in sync, as long as both devices are connected to the same network.\n\nAll clipboard contents are transferred using end-to-end encryption and stay entirely within your local network. You can disable clipboard syncing at any time on your phone."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora puedes sincronizar automáticamente el portapapeles de tu Mac con tu teléfono y viceversa. Para comenzar, instala la app de Android usando el botón de abajo. Luego, toca el menú de ajustes en la esquina superior y activa la opción de sincronización del portapapeles.\n\nTu Mac te pedirá permiso para permitir la sincronización del portapapeles. Después de concederlo, el portapapeles de ambos dispositivos se mantendrá sincronizado, siempre que ambos dispositivos estén conectados a la misma red.\n\nTodo el contenido del portapapeles se transfiere con cifrado de extremo a extremo y permanece íntegramente dentro de tu red local. Puedes desactivar la sincronización del portapapeles en cualquier momento desde tu teléfono."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Ahora puedes sincronizar automáticamente el portapapeles de tu Mac con tu teléfono y viceversa! Para comenzar, instala la app de Android usando el botón de abajo. Luego, toca el menú de configuración en la esquina superior y activa el interruptor de sincronización del portapapeles.\n\nTu Mac te pedirá permiso para permitir la sincronización del portapapeles. Después de concederlo, el portapapeles de ambos dispositivos se mantendrá sincronizado, siempre que ambos dispositivos estén conectados a la misma red.\n\nTodo el contenido del portapapeles se transfiere con cifrado de extremo a extremo y permanece completamente dentro de tu red local. Puedes desactivar la sincronización del portapapeles en cualquier momento desde tu teléfono."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voit nyt synkronoida Macisi leikepöydän automaattisesti puhelimeesi ja päinvastoin! Aloita asentamalla Android-sovellus alla olevalla painikkeella. Napauta sitten yläkulmassa olevaa asetusvalikkoa ja ota leikepöydän synkronointi käyttöön.\n\nMacisi pyytää seuraavaksi lupaa leikepöydän synkronointiin. Kun annat luvan, molempien laitteiden leikepöydät pysyvät synkronoituina, kunhan molemmat laitteet ovat samassa verkossa.\n\nKaikki leikepöydän sisältö siirretään päästä päähän -salauksella ja pysyy kokonaan paikallisessa verkossasi. Voit poistaa leikepöydän synkronoinnin käytöstä milloin tahansa puhelimellasi."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous pouvez maintenant synchroniser automatiquement le presse-papiers de votre Mac avec votre téléphone, et inversement ! Pour commencer, installez l’app Android à l’aide du bouton ci-dessous. Ensuite, touchez le menu des réglages dans le coin supérieur et activez l’option de synchronisation du presse-papiers.\n\nVotre Mac vous demandera alors d’autoriser la synchronisation du presse-papiers. Après avoir accordé l’autorisation, les presse-papiers des deux appareils resteront synchronisés tant que les deux appareils seront connectés au même réseau.\n\nTout le contenu du presse-papiers est transféré avec un chiffrement de bout en bout et reste entièrement dans votre réseau local. Vous pouvez désactiver la synchronisation du presse-papiers à tout moment sur votre téléphone."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous pouvez maintenant synchroniser automatiquement le presse-papiers de votre Mac avec votre téléphone, et inversement! Pour commencer, installez l’app Android à l’aide du bouton ci-dessous. Ensuite, touchez le menu des réglages dans le coin supérieur et activez l’option de synchronisation du presse-papiers.\n\nVotre Mac vous demandera ensuite d’autoriser la synchronisation du presse-papiers. Après avoir accordé l’autorisation, les presse-papiers des deux appareils resteront synchronisés tant que les deux appareils seront connectés au même réseau.\n\nTout le contenu du presse-papiers est transféré avec un chiffrement de bout en bout et reste entièrement sur votre réseau local. Vous pouvez désactiver la synchronisation du presse-papiers à tout moment sur votre téléphone."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עכשיו אפשר לסנכרן אוטומטית את הלוח של ה-Mac שלך עם הטלפון ולהפך! כדי להתחיל, התקן את אפליקציית Android באמצעות הכפתור למטה. לאחר מכן, הקש על תפריט ההגדרות בפינה העליונה והפעל את המתג לסנכרון הלוח.\n\nה-Mac שלך יבקש ממך לאפשר סנכרון לוח. לאחר מתן ההרשאה, הלוחות של שני המכשירים יישארו מסונכרנים כל עוד שני המכשירים מחוברים לאותה רשת.\n\nכל תוכן הלוח מועבר באמצעות הצפנה מקצה לקצה ונשאר כולו בתוך הרשת המקומית שלך. אפשר להשבית את סנכרון הלוח בכל עת בטלפון שלך."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अब आप अपने Mac के क्लिपबोर्ड को अपने फ़ोन के साथ और इसके उलट अपने आप सिंक कर सकते हैं! शुरू करने के लिए, नीचे दिए गए बटन का उपयोग करके Android ऐप इंस्टॉल करें। इसके बाद, ऊपर के कोने में सेटिंग्स मेनू पर टैप करें और क्लिपबोर्ड सिंक के लिए टॉगल सक्षम करें।\n\nइसके बाद आपका Mac आपसे क्लिपबोर्ड सिंकिंग की अनुमति मांगेगा। अनुमति देने के बाद, दोनों डिवाइसों के क्लिपबोर्ड सिंक रहेंगे, जब तक दोनों डिवाइस एक ही नेटवर्क से जुड़े हैं।\n\nक्लिपबोर्ड की सभी सामग्री एंड-टू-एंड एन्क्रिप्शन का उपयोग करके ट्रांसफर की जाती है और पूरी तरह आपके स्थानीय नेटवर्क के भीतर रहती है। आप अपने फ़ोन पर किसी भी समय क्लिपबोर्ड सिंकिंग बंद कर सकते हैं।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sada možete automatski sinkronizirati međuspremnik svog Maca s telefonom i obratno! Za početak instalirajte Android aplikaciju pomoću gumba u nastavku. Zatim dodirnite izbornik postavki u gornjem kutu i uključite prekidač za sinkronizaciju međuspremnika.\n\nVaš Mac će vas zatim zatražiti dopuštenje za sinkronizaciju međuspremnika. Nakon što dopustite, međuspremnici oba uređaja ostat će sinkronizirani dok su oba uređaja povezana na istu mrežu.\n\nSav sadržaj međuspremnika prenosi se end-to-end enkripcijom i ostaje u potpunosti unutar vaše lokalne mreže. Sinkronizaciju međuspremnika možete bilo kada isključiti na telefonu."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostantól automatikusan szinkronizálhatod a Mac vágólapját a telefonoddal és fordítva! Első lépésként telepítsd az Android-alkalmazást az alábbi gombbal. Ezután koppints a felső sarokban lévő beállítások menüre, és kapcsold be a vágólap-szinkronizálás kapcsolóját.\n\nA Mac ezután megkér, hogy engedélyezd a vágólap szinkronizálását. Az engedély megadása után mindkét eszköz vágólapja szinkronban marad, amíg mindkét eszköz ugyanahhoz a hálózathoz csatlakozik.\n\nA vágólap teljes tartalma végpontok közötti titkosítással kerül átvitelre, és teljes egészében a helyi hálózatodon belül marad. A vágólap-szinkronizálást bármikor kikapcsolhatod a telefonodon."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekarang Anda dapat menyinkronkan clipboard Mac Anda secara otomatis ke ponsel dan sebaliknya! Untuk memulai, instal aplikasi Android menggunakan tombol di bawah. Setelah itu, ketuk menu pengaturan di pojok atas dan aktifkan tombol untuk sinkronisasi clipboard.\n\nMac Anda kemudian akan meminta izin untuk sinkronisasi clipboard. Setelah izin diberikan, clipboard kedua perangkat akan tetap sinkron selama keduanya terhubung ke jaringan yang sama.\n\nSemua isi clipboard ditransfer menggunakan enkripsi end-to-end dan tetap sepenuhnya berada di dalam jaringan lokal Anda. Anda dapat menonaktifkan sinkronisasi clipboard kapan saja di ponsel Anda."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ora puoi sincronizzare automaticamente gli appunti del Mac con il telefono e viceversa! Per iniziare, installa l'app Android usando il pulsante qui sotto. Poi tocca il menu delle impostazioni nell'angolo in alto e attiva l'interruttore per la sincronizzazione degli appunti.\n\nIl Mac ti chiederà quindi di consentire la sincronizzazione degli appunti. Dopo aver concesso l'autorizzazione, gli appunti di entrambi i dispositivi resteranno sincronizzati finché entrambi i dispositivi saranno connessi alla stessa rete.\n\nTutti i contenuti degli appunti vengono trasferiti con crittografia end-to-end e restano interamente all'interno della tua rete locale. Puoi disattivare la sincronizzazione degli appunti in qualsiasi momento sul telefono."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macのクリップボードを電話と自動的に同期し、その逆もできるようになりました！始めるには、下のボタンを使ってAndroidアプリをインストールしてください。その後、上部の角にある設定メニューをタップし、クリップボード同期のトグルを有効にします。\n\nMacでクリップボード同期を許可するよう求められます。許可すると、両方のデバイスが同じネットワークに接続されている限り、両方のデバイスのクリップボードは同期されたままになります。\n\nすべてのクリップボード内容はエンドツーエンド暗号化で転送され、完全にローカルネットワーク内に留まります。クリップボード同期は電話側でいつでも無効にできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이제 Mac의 클립보드를 휴대폰과 자동으로 동기화하고 반대로도 동기화할 수 있습니다! 시작하려면 아래 버튼을 사용해 Android 앱을 설치하세요. 그런 다음 상단 모서리의 설정 메뉴를 탭하고 클립보드 동기화 토글을 활성화하세요.\n\n그러면 Mac에서 클립보드 동기화를 허용할지 묻습니다. 권한을 부여하면 두 기기가 같은 네트워크에 연결되어 있는 동안 두 기기의 클립보드가 계속 동기화됩니다.\n\n모든 클립보드 내용은 종단 간 암호화를 사용해 전송되며 로컬 네트워크 안에만 유지됩니다. 휴대폰에서 언제든지 클립보드 동기화를 비활성화할 수 있습니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anda kini boleh menyegerakkan papan klip Mac anda secara automatik ke telefon anda dan sebaliknya! Untuk bermula, pasang apl Android menggunakan butang di bawah. Selepas itu, ketik menu tetapan di penjuru atas dan hidupkan togol untuk penyegerakan papan klip.\n\nMac anda kemudian akan meminta anda membenarkan penyegerakan papan klip. Selepas memberikan kebenaran, papan klip kedua-dua peranti akan kekal segerak selagi kedua-dua peranti disambungkan ke rangkaian yang sama.\n\nSemua kandungan papan klip dipindahkan menggunakan penyulitan hujung ke hujung dan kekal sepenuhnya dalam rangkaian setempat anda. Anda boleh melumpuhkan penyegerakan papan klip pada bila-bila masa pada telefon anda."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kan nå automatisk synkronisere utklippstavlen på Macen din med telefonen og omvendt! For å komme i gang installerer du Android-appen med knappen nedenfor. Trykk deretter på innstillingsmenyen i det øverste hjørnet, og slå på bryteren for utklippssynk.\n\nMacen din vil deretter be deg om å tillate synkronisering av utklippstavlen. Når du har gitt tillatelse, vil utklippstavlene på begge enhetene holde seg synkronisert så lenge begge enhetene er koblet til samme nettverk.\n\nAlt innhold på utklippstavlen overføres med ende-til-ende-kryptering og forblir helt innenfor det lokale nettverket ditt. Du kan deaktivere utklippssynk når som helst på telefonen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je kunt nu automatisch het klembord van je Mac met je telefoon synchroniseren en andersom! Installeer om te beginnen de Android-app met de knop hieronder. Tik daarna op het instellingenmenu in de bovenhoek en schakel de optie voor klembordsynchronisatie in.\n\nJe Mac vraagt je vervolgens om klembordsynchronisatie toe te staan. Nadat je toestemming hebt gegeven, blijven de klemborden van beide apparaten gesynchroniseerd zolang beide apparaten met hetzelfde netwerk zijn verbonden.\n\nAlle klembordinhoud wordt overgedragen met end-to-end-versleuteling en blijft volledig binnen je lokale netwerk. Je kunt klembordsynchronisatie op elk moment uitschakelen op je telefoon."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Możesz teraz automatycznie synchronizować schowek Maca z telefonem i odwrotnie! Aby rozpocząć, zainstaluj aplikację Android za pomocą przycisku poniżej. Następnie dotknij menu ustawień w górnym rogu i włącz przełącznik synchronizacji schowka.\n\nMac poprosi Cię wtedy o zezwolenie na synchronizację schowka. Po udzieleniu zgody schowki obu urządzeń pozostaną zsynchronizowane, o ile oba urządzenia będą połączone z tą samą siecią.\n\nCała zawartość schowka jest przesyłana z użyciem szyfrowania end-to-end i pozostaje całkowicie w Twojej sieci lokalnej. Możesz wyłączyć synchronizację schowka w dowolnym momencie na telefonie."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agora você pode sincronizar automaticamente a área de transferência do seu Mac com o telefone e vice-versa! Para começar, instale o app Android usando o botão abaixo. Depois, toque no menu de configurações no canto superior e ative a opção de sincronização da área de transferência.\n\nSeu Mac pedirá permissão para permitir a sincronização da área de transferência. Depois de conceder a permissão, as áreas de transferência dos dois dispositivos permanecerão sincronizadas enquanto ambos estiverem conectados à mesma rede.\n\nTodo o conteúdo da área de transferência é transferido usando criptografia de ponta a ponta e permanece inteiramente dentro da sua rede local. Você pode desativar a sincronização da área de transferência a qualquer momento no telefone."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agora pode sincronizar automaticamente a área de transferência do seu Mac com o telefone e vice-versa! Para começar, instale a app Android usando o botão abaixo. Depois, toque no menu de definições no canto superior e ative a opção de sincronização da área de transferência.\n\nO seu Mac irá então pedir-lhe para permitir a sincronização da área de transferência. Depois de conceder permissão, as áreas de transferência de ambos os dispositivos permanecerão sincronizadas, desde que ambos os dispositivos estejam ligados à mesma rede.\n\nTodo o conteúdo da área de transferência é transferido com encriptação ponto a ponto e permanece totalmente dentro da sua rede local. Pode desativar a sincronização da área de transferência a qualquer momento no telefone."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acum puteți sincroniza automat clipboardul Mac-ului cu telefonul și invers! Pentru a începe, instalați aplicația Android folosind butonul de mai jos. Apoi atingeți meniul de setări din colțul de sus și activați comutatorul pentru sincronizarea clipboardului.\n\nMac-ul vă va solicita apoi să permiteți sincronizarea clipboardului. După acordarea permisiunii, clipboardurile ambelor dispozitive vor rămâne sincronizate atât timp cât ambele dispozitive sunt conectate la aceeași rețea.\n\nTot conținutul clipboardului este transferat folosind criptare end-to-end și rămâne integral în rețeaua locală. Puteți dezactiva sincronizarea clipboardului oricând pe telefon."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Теперь вы можете автоматически синхронизировать буфер обмена Mac с телефоном и обратно! Чтобы начать, установите приложение Android с помощью кнопки ниже. Затем нажмите меню настроек в верхнем углу и включите переключатель синхронизации буфера обмена.\n\nЗатем Mac попросит разрешить синхронизацию буфера обмена. После предоставления разрешения буферы обмена обоих устройств будут оставаться синхронизированными, пока оба устройства подключены к одной сети.\n\nВсе содержимое буфера обмена передается с использованием сквозного шифрования и полностью остается в вашей локальной сети. Вы можете отключить синхронизацию буфера обмена в любое время на телефоне."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kan nu automatiskt synkronisera urklippet på din Mac med din telefon och tvärtom! För att komma igång installerar du Android-appen med knappen nedan. Tryck sedan på inställningsmenyn i det övre hörnet och aktivera reglaget för urklippssynk.\n\nDin Mac kommer sedan att be dig att tillåta urklippssynkronisering. När du har gett tillstånd hålls urklippen på båda enheterna synkroniserade så länge båda enheterna är anslutna till samma nätverk.\n\nAllt innehåll i urklippet överförs med end-to-end-kryptering och stannar helt inom ditt lokala nätverk. Du kan inaktivera urklippssynkronisering när som helst på din telefon."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตอนนี้คุณสามารถซิงค์คลิปบอร์ดของ Mac กับโทรศัพท์ของคุณและในทางกลับกันได้โดยอัตโนมัติ! ในการเริ่มต้น ให้ติดตั้งแอป Android โดยใช้ปุ่มด้านล่าง จากนั้นแตะเมนูการตั้งค่าที่มุมด้านบนและเปิดสวิตช์สำหรับการซิงค์คลิปบอร์ด\n\nจากนั้น Mac ของคุณจะขอให้คุณอนุญาตการซิงค์คลิปบอร์ด หลังจากให้สิทธิ์แล้ว คลิปบอร์ดของทั้งสองอุปกรณ์จะซิงค์กันอยู่เสมอ ตราบใดที่ทั้งสองอุปกรณ์เชื่อมต่อกับเครือข่ายเดียวกัน\n\nเนื้อหาคลิปบอร์ดทั้งหมดจะถูกถ่ายโอนโดยใช้การเข้ารหัสแบบ end-to-end และจะอยู่ภายในเครือข่ายภายในของคุณทั้งหมด คุณสามารถปิดใช้งานการซิงค์คลิปบอร์ดได้ทุกเมื่อบนโทรศัพท์ของคุณ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Artık Mac'inizin panosunu telefonunuzla ve tersini otomatik olarak senkronize edebilirsiniz! Başlamak için aşağıdaki düğmeyi kullanarak Android uygulamasını yükleyin. Ardından üst köşedeki ayarlar menüsüne dokunun ve pano senkronizasyonu için geçiş düğmesini etkinleştirin.\n\nMac'iniz daha sonra pano senkronizasyonuna izin vermenizi isteyecektir. İzin verdikten sonra, her iki cihaz da aynı ağa bağlı olduğu sürece iki cihazın panosu senkronize kalır.\n\nTüm pano içerikleri uçtan uca şifreleme kullanılarak aktarılır ve tamamen yerel ağınız içinde kalır. Pano senkronizasyonunu telefonunuzdan istediğiniz zaman devre dışı bırakabilirsiniz."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тепер ви можете автоматично синхронізувати буфер обміну свого Mac із телефоном і навпаки! Щоб почати, установіть Android-додаток за допомогою кнопки нижче. Потім торкніться меню налаштувань у верхньому куті та ввімкніть перемикач синхронізації буфера обміну.\n\nПісля цього Mac попросить дозволити синхронізацію буфера обміну. Після надання дозволу буфери обміну обох пристроїв залишатимуться синхронізованими, доки обидва пристрої підключені до однієї мережі.\n\nУвесь вміст буфера обміну передається з використанням наскрізного шифрування та повністю залишається у вашій локальній мережі. Ви можете вимкнути синхронізацію буфера обміну будь-коли на телефоні."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giờ đây bạn có thể tự động đồng bộ bảng ghi tạm của máy Mac với điện thoại và ngược lại! Để bắt đầu, hãy cài đặt ứng dụng Android bằng nút bên dưới. Sau đó, chạm vào menu cài đặt ở góc trên và bật công tắc đồng bộ bảng ghi tạm.\n\nMáy Mac của bạn sau đó sẽ yêu cầu bạn cho phép đồng bộ bảng ghi tạm. Sau khi cấp quyền, bảng ghi tạm của cả hai thiết bị sẽ luôn được đồng bộ miễn là cả hai thiết bị được kết nối với cùng một mạng.\n\nTất cả nội dung bảng ghi tạm được truyền bằng mã hóa đầu cuối và hoàn toàn nằm trong mạng cục bộ của bạn. Bạn có thể tắt đồng bộ bảng ghi tạm bất cứ lúc nào trên điện thoại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "现在，你可以自动将 Mac 的剪贴板同步到手机，也可以反向同步！要开始使用，请通过下面的按钮安装 Android 应用。然后，点击顶部角落的设置菜单，并开启剪贴板同步开关。\n\n随后，你的 Mac 会提示你允许剪贴板同步。授权后，只要两台设备连接到同一网络，双方设备的剪贴板就会保持同步。\n\n所有剪贴板内容都会使用端到端加密传输，并完全保留在你的本地网络内。你可以随时在手机上关闭剪贴板同步。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在，你可以自動將 Mac 的剪貼簿同步到手機，也可以反向同步！若要開始，請使用下方按鈕安裝 Android App。之後，點一下頂端角落的設定選單，並啟用剪貼簿同步開關。\n\n接著，你的 Mac 會提示你允許剪貼簿同步。授權後，只要兩部裝置連接到同一個網路，兩部裝置的剪貼簿就會保持同步。\n\n所有剪貼簿內容都會使用端對端加密傳輸，並完全保留在你的區域網路內。你可以隨時在手機上停用剪貼簿同步。"
+          }
+        }
+      }
+    },
+    "ClipboardSyncSidebar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مزامنة الحافظة"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronització del porta-retalls"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronizace schránky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Udklipsholder-synk"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwischenablage-Sync"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συγχρονισμός προχείρου"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clipboard Sync"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clipboard Sync"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clipboard Sync"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clipboard Sync"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronización del portapapeles"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronización del portapapeles"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leikepöydän synkronointi"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronisation du presse-papiers"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronisation du presse-papiers"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סנכרון הלוח"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "क्लिपबोर्ड सिंक"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinkronizacija međuspremnika"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vágólap szinkronizálása"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinkronisasi Clipboard"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronizzazione appunti"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クリップボード同期"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "클립보드 동기화"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penyegerakan Papan Klip"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utklippssynk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klembordsynchronisatie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronizacja schowka"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronização da área de transferência"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronização da área de transferência"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronizare clipboard"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синхронизация буфера обмена"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Urklippssynk"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ซิงค์คลิปบอร์ด"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pano Senkronizasyonu"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синхронізація буфера обміну"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đồng bộ bảng ghi tạm"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剪贴板同步"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剪貼簿同步"
+          }
+        }
+      }
+    },
     "ClipboardSyncToastQrSubtitle" : {
       "comment" : "Subtitle in the toast when starting clipboard sync pairing.",
       "extractionState" : "manual",
@@ -14450,229 +14916,229 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إذا لم يظهر جهاز Mac على جهاز Android الخاص بك، على الرغم من أن كلا الجهازين متصلان بنفس شبكة Wi-Fi، أو إذا فشلت عملية الإرسال، جرّب ما يلي:\n\n1) افتح إعدادات النظام، وانتقل إلى \"الخصوصية والأمان\" > \"الشبكة المحلية\". تأكد من تفعيل QuickDrop. إذا كنت تستخدم جدار حماية أو برنامج مكافحة فيروسات تابعًا لجهة خارجية، يُرجى الرجوع إلى وثائق البرنامج للسماح بالاتصالات الواردة لـ QuickDrop.\n\n2) أعد تشغيل QuickDrop بالنقر على أيقونة شريط القوائم، واختر الخيار الأخير، ثم افتح التطبيق مرة أخرى. أعد تشغيل جهاز Android الخاص بك.\n\nملاحظة: بعض الشبكات لا تسمح للأجهزة بالتواصل مع بعضها. في هذه الحالة، تحتاج إلى تنزيل تطبيق QuickDrop على هاتفك وتوصيل جهاز Mac بنقطة الاتصال الخاصة بهاتفك لإرسال الملفات. يمكنك العثور على رابط التطبيق في الشريط الجانبي على اليمين."
+            "value" : "إذا لم يظهر جهاز Mac على جهاز Android الخاص بك، على الرغم من أن كلا الجهازين متصلان بنفس شبكة Wi-Fi، أو إذا فشلت عملية الإرسال، جرّب ما يلي:\n\n1) افتح إعدادات النظام، وانتقل إلى \"الخصوصية والأمان\" > \"الشبكة المحلية\". تأكد من تفعيل QuickDrop. إذا كنت تستخدم جدار حماية أو برنامج مكافحة فيروسات تابعًا لجهة خارجية، يُرجى الرجوع إلى وثائق البرنامج للسماح بالاتصالات الواردة لـ QuickDrop.\n\n2) أعد تشغيل QuickDrop بالنقر على أيقونة شريط القوائم، واختر الخيار الأخير، ثم افتح التطبيق مرة أخرى. أعد تشغيل جهاز Android الخاص بك.\n\nملاحظة: بعض الشبكات لا تسمح للأجهزة بالتواصل مع بعضها. في هذه الحالة، تحتاج إلى تنزيل تطبيق QuickDrop على هاتفك وتوصيل جهاز Mac بنقطة الاتصال الخاصة بهاتفك لإرسال الملفات. يمكنك العثور على رابط التطبيق في الشريط الجانبي على اليمين.\n\nإذا كان لديك جهاز Samsung أحدث يعمل بنظام OneUI 8.5 أو أعلى، فقد لا يظهر Mac الخاص بك في QuickShare على جهازك بسبب مشكلة في OneUI. يوجد حاليًا خياران لحل ذلك:\n\n1) نزّل تطبيق QuickDrop من Google Play. فهو يوفر وظائف أكثر من QuickShare، مثل مزامنة الإشعارات والحافظة.\n\n2) بخلاف ذلك، في صفحة QuickShare، اضغط على النقاط الثلاث في الزاوية العلوية اليمنى، واختر الإعدادات، ثم عطّل خيار \"المشاركة مع أجهزة Apple\". بعد ذلك، سيظهر Mac الخاص بك في صفحة QuickShare."
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Si el teu Mac no apareix al teu dispositiu Android encara que ambdós estiguin connectats a la mateixa xarxa Wi-Fi o la transmissió falla, prova això:\n\n1) Obre les Configuracions del Sistema i ves a \"Privacitat i Seguretat\" > \"Xarxa Local\". Comprova que QuickDrop està activat. Si utilitzes un tallafocs o programari antivirus de tercers, consulta la documentació d'aquest programa per permetre connexions entrants per a QuickDrop.\n\n2) Reinicia QuickDrop fent clic a la icona de la barra de menús, selecciona l'última entrada i obre l'app de nou. Reinicia el teu dispositiu Android.\n\nNota: Algunes xarxes no permeten la comunicació entre dispositius. En aquest cas, hauràs de descarregar l'app QuickDrop al teu telèfon i connectar el teu Mac al punt d'accés del teu telèfon per transferir arxius. El link de l'app es pot trobar al menú lateral esquerre."
+            "value" : "Si el teu Mac no apareix al teu dispositiu Android encara que ambdós estiguin connectats a la mateixa xarxa Wi-Fi o la transmissió falla, prova això:\n\n1) Obre les Configuracions del Sistema i ves a \"Privacitat i Seguretat\" > \"Xarxa Local\". Comprova que QuickDrop està activat. Si utilitzes un tallafocs o programari antivirus de tercers, consulta la documentació d'aquest programa per permetre connexions entrants per a QuickDrop.\n\n2) Reinicia QuickDrop fent clic a la icona de la barra de menús, selecciona l'última entrada i obre l'app de nou. Reinicia el teu dispositiu Android.\n\nNota: Algunes xarxes no permeten la comunicació entre dispositius. En aquest cas, hauràs de descarregar l'app QuickDrop al teu telèfon i connectar el teu Mac al punt d'accés del teu telèfon per transferir arxius. El link de l'app es pot trobar al menú lateral esquerre.\n\nSi tens un dispositiu Samsung més nou amb OneUI 8.5 o superior, pot ser que el Mac no sigui visible a QuickShare al dispositiu a causa d’un problema de OneUI. Actualment tens dues opcions per resoldre-ho:\n\n1) Descarrega l'app QuickDrop des de Google Play. Inclou més funcionalitats que QuickShare, com ara la sincronització de notificacions i del porta-retalls.\n\n2) Si no, a la pàgina de QuickShare, prem els tres punts de la cantonada superior dreta, tria configuració i desactiva l'interruptor \"Comparteix amb dispositius Apple\". Després, el Mac apareixerà a la pàgina de QuickShare."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pokud se váš Mac nezobrazuje na zařízení Android, i přestože obě zařízení jsou připojena ke stejné síti Wi-Fi, nebo přenos selhal, zkuste následující:\n\n1) Otevřete Nastavení systému, přejděte na \"Soukromí a zabezpečení\" > \"Místní síť\". Ujistěte se, že je QuickDrop povolen. Pokud používáte firewall třetí strany nebo antivirový program, zkontrolujte dokumentaci programu, aby povoloval příchozí připojení pro QuickDrop.\n\n2) Restartujte QuickDrop kliknutím na ikonu v menu baru, zvolte poslední položku a znovu aplikaci spusťte. Restartujte své zařízení Android.\n\nPoznámka: Některé sítě neumožňují komunikovat zařízení mezi sebou. V takovém případě musíte stáhnout aplikaci QuickDrop pro telefon a připojit Mac k hotspotu telefonu. Odkaz na aplikaci najdete v levém bočním panelu."
+            "value" : "Pokud se váš Mac nezobrazuje na zařízení Android, i přestože obě zařízení jsou připojena ke stejné síti Wi-Fi, nebo přenos selhal, zkuste následující:\n\n1) Otevřete Nastavení systému, přejděte na \"Soukromí a zabezpečení\" > \"Místní síť\". Ujistěte se, že je QuickDrop povolen. Pokud používáte firewall třetí strany nebo antivirový program, zkontrolujte dokumentaci programu, aby povoloval příchozí připojení pro QuickDrop.\n\n2) Restartujte QuickDrop kliknutím na ikonu v menu baru, zvolte poslední položku a znovu aplikaci spusťte. Restartujte své zařízení Android.\n\nPoznámka: Některé sítě neumožňují komunikovat zařízení mezi sebou. V takovém případě musíte stáhnout aplikaci QuickDrop pro telefon a připojit Mac k hotspotu telefonu. Odkaz na aplikaci najdete v levém bočním panelu.\n\nPokud máte novější zařízení Samsung s OneUI 8.5 nebo vyšším, váš Mac nemusí být v QuickShare na zařízení viditelný kvůli problému v OneUI. V současnosti existují dvě možnosti, jak to vyřešit:\n\n1) Stáhněte si aplikaci QuickDrop z Google Play. Nabízí více funkcí než QuickShare, například synchronizaci oznámení a schránky.\n\n2) Případně na stránce QuickShare klepněte na tři tečky v pravém horním rohu, zvolte nastavení a poté vypněte přepínač „Sdílet se zařízeními Apple“. Poté se váš Mac na stránce QuickShare zobrazí."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hvis din Mac ikke vises på din Android-enhed, selvom begge er på samme Wi-Fi-netværk, eller overførslen mislykkes, prøv følgende:\n\n1) Åbn Systemindstillinger, gå til \"Privatliv & Sikkerhed\" > \"Lokalnetværk\". Sørg for, at QuickDrop er aktiveret. Hvis du bruger en tredjeparts firewall eller antivirusprogram, skal du tjekke programmets dokumentation for at tillade indgående forbindelser for QuickDrop.\n\n2) Genstart QuickDrop ved at klikke på menulinjeikonet, vælge sidste punkt, og åbne appen igen. Genstart din Android-enhed.\n\nBemærk: Nogle netværk tillader ikke enheder at kommunikere med hinanden. I dette tilfælde skal du downloade QuickDrop-appen for din telefon og forbinde din Mac til din telefons hotspot for at overføre filer. Linket til appen findes i venstre side."
+            "value" : "Hvis din Mac ikke vises på din Android-enhed, selvom begge er på samme Wi-Fi-netværk, eller overførslen mislykkes, prøv følgende:\n\n1) Åbn Systemindstillinger, gå til \"Privatliv & Sikkerhed\" > \"Lokalnetværk\". Sørg for, at QuickDrop er aktiveret. Hvis du bruger en tredjeparts firewall eller antivirusprogram, skal du tjekke programmets dokumentation for at tillade indgående forbindelser for QuickDrop.\n\n2) Genstart QuickDrop ved at klikke på menulinjeikonet, vælge sidste punkt, og åbne appen igen. Genstart din Android-enhed.\n\nBemærk: Nogle netværk tillader ikke enheder at kommunikere med hinanden. I dette tilfælde skal du downloade QuickDrop-appen for din telefon og forbinde din Mac til din telefons hotspot for at overføre filer. Linket til appen findes i venstre side.\n\nHvis du har en nyere Samsung-enhed med OneUI 8.5 eller nyere, er din Mac muligvis ikke synlig i QuickShare på enheden på grund af et problem i OneUI. Der er i øjeblikket to muligheder for at løse dette:\n\n1) Download QuickDrop-appen fra Google Play. Den har mere funktionalitet end QuickShare, f.eks. notifikations- og udklipsholder-synk.\n\n2) Ellers skal du på QuickShare-siden trykke på de tre prikker i øverste højre hjørne, vælge indstillinger og derefter deaktivere kontakten \"Del med Apple-enheder\". Derefter vises din Mac på QuickShare-siden."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wenn dein Mac nicht auf deinem Android-Gerät angezeigt wird, obwohl beide Geräte mit demselben WLAN verbunden sind, oder die Übertragung fehlgeschlagen ist, versuche Folgendes:\n\n1) Öffne die Systemeinstellungen und gehe zu \"Datenschutz & Sicherheit\" > \"Lokales Netzwerk\". Stelle sicher, dass QuickDrop aktiviert ist. Wenn du eine Firewall oder ein Antivirenprogramm eines Drittanbieters verwendest, überprüfe die Dokumentation, um eingehende Verbindungen für QuickDrop zuzulassen.\n\n2) Starte QuickDrop neu, indem du auf das Symbol in der Menüleiste klickst, den letzten Eintrag auswählst und die App erneut öffnest. Starte auch dein Android-Gerät neu.\n\nHinweis: Einige Netzwerke erlauben keine Kommunikation zwischen Geräten. In diesem Fall lade die QuickDrop-App auf dein Telefon herunter und verbinde deinen Mac mit dem Hotspot deines Telefons, um Dateien zu übertragen. Den Link zur App findest du in der Seitenleiste links."
+            "value" : "Wenn dein Mac nicht auf deinem Android-Gerät angezeigt wird, obwohl beide Geräte mit demselben WLAN verbunden sind, oder die Übertragung fehlgeschlagen ist, versuche Folgendes:\n\n1) Öffne die Systemeinstellungen und gehe zu \"Datenschutz & Sicherheit\" > \"Lokales Netzwerk\". Stelle sicher, dass QuickDrop aktiviert ist. Wenn du eine Firewall oder ein Antivirenprogramm eines Drittanbieters verwendest, überprüfe die Dokumentation, um eingehende Verbindungen für QuickDrop zuzulassen.\n\n2) Starte QuickDrop neu, indem du auf das Symbol in der Menüleiste klickst, den letzten Eintrag auswählst und die App erneut öffnest. Starte auch dein Android-Gerät neu.\n\nHinweis: Einige Netzwerke erlauben keine Kommunikation zwischen Geräten. In diesem Fall lade die QuickDrop-App auf dein Telefon herunter und verbinde deinen Mac mit dem Hotspot deines Telefons, um Dateien zu übertragen. Den Link zur App findest du in der Seitenleiste links.\n\nWenn du ein neueres Samsung-Gerät mit OneUI 8.5 oder höher hast, ist dein Mac aufgrund eines Problems in OneUI möglicherweise nicht in QuickShare auf deinem Gerät sichtbar. Derzeit gibt es zwei Möglichkeiten, das zu beheben:\n\n1) Lade die QuickDrop-App aus Google Play herunter. Sie bietet mehr Funktionen als QuickShare, zum Beispiel Benachrichtigungs- und Zwischenablage-Sync.\n\n2) Öffne andernfalls auf deinem Gerät die QuickShare-Seite, tippe oben rechts auf die drei Punkte, wähle die Einstellungen und deaktiviere dann den Schalter „Mit Apple-Geräten teilen“. Danach wird dein Mac auf der QuickShare-Seite angezeigt."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Εάν το Mac σας δεν εμφανίζεται στη συσκευή Android ακόμα και αν και οι δύο συσκευές είναι συνδεδεμένες στο ίδιο δίκτυο Wi-Fi, ή η μεταφορά απέτυχε, δοκιμάστε τα εξής:\n\n1) Ανοίξτε τις Ρυθμίσεις Συστήματος και μεταβείτε στο \"Απόρρητο & Ασφάλεια\" > \"Τοπικό Δίκτυο\". Βεβαιωθείτε ότι το QuickDrop είναι ενεργοποιημένο. Αν χρησιμοποιείτε firewall τρίτων ή πρόγραμμα antivirus, παρακαλώ ελέγξτε τη τεκμηρίωση του προγράμματος αυτού για να επιτρέψετε εισερχόμενες συνδέσεις για το QuickDrop.\n\n2) Επανακινήστε το QuickDrop κάνοντας κλικ στο εικονίδιο της γραμμής μενού, επιλέξτε την τελευταία καταχώρηση και ανοίξτε ξανά την εφαρμογή. Επανεκκινήστε τη συσκευή Android.\n\nΣημείωση: Ορισμένα δίκτυα δεν επιτρέπουν στις συσκευές να επικοινωνούν μεταξύ τους. Σε αυτή την περίπτωση, χρειάζεται να κατεβάσετε την εφαρμογή QuickDrop για το τηλέφωνό σας και να συνδέσετε το Mac σας στο hotspot του τηλεφώνου σας για να μεταφέρετε αρχεία. Ο σύνδεσμος προς την εφαρμογή μπορεί να βρεθεί στη πλευρική μπάρα αριστερά."
+            "value" : "Εάν το Mac σας δεν εμφανίζεται στη συσκευή Android ακόμα και αν και οι δύο συσκευές είναι συνδεδεμένες στο ίδιο δίκτυο Wi-Fi, ή η μεταφορά απέτυχε, δοκιμάστε τα εξής:\n\n1) Ανοίξτε τις Ρυθμίσεις Συστήματος και μεταβείτε στο \"Απόρρητο & Ασφάλεια\" > \"Τοπικό Δίκτυο\". Βεβαιωθείτε ότι το QuickDrop είναι ενεργοποιημένο. Αν χρησιμοποιείτε firewall τρίτων ή πρόγραμμα antivirus, παρακαλώ ελέγξτε τη τεκμηρίωση του προγράμματος αυτού για να επιτρέψετε εισερχόμενες συνδέσεις για το QuickDrop.\n\n2) Επανακινήστε το QuickDrop κάνοντας κλικ στο εικονίδιο της γραμμής μενού, επιλέξτε την τελευταία καταχώρηση και ανοίξτε ξανά την εφαρμογή. Επανεκκινήστε τη συσκευή Android.\n\nΣημείωση: Ορισμένα δίκτυα δεν επιτρέπουν στις συσκευές να επικοινωνούν μεταξύ τους. Σε αυτή την περίπτωση, χρειάζεται να κατεβάσετε την εφαρμογή QuickDrop για το τηλέφωνό σας και να συνδέσετε το Mac σας στο hotspot του τηλεφώνου σας για να μεταφέρετε αρχεία. Ο σύνδεσμος προς την εφαρμογή μπορεί να βρεθεί στη πλευρική μπάρα αριστερά.\n\nΑν έχετε νεότερη συσκευή Samsung με OneUI 8.5 ή νεότερη έκδοση, το Mac σας μπορεί να μην είναι ορατό στο QuickShare στη συσκευή σας λόγω προβλήματος στο OneUI. Αυτήν τη στιγμή υπάρχουν δύο επιλογές για να το λύσετε:\n\n1) Κατεβάστε την εφαρμογή QuickDrop από το Google Play. Προσφέρει περισσότερες λειτουργίες από το QuickShare, όπως συγχρονισμό ειδοποιήσεων και προχείρου.\n\n2) Διαφορετικά, στη σελίδα QuickShare, πατήστε τις τρεις τελείες στην επάνω δεξιά γωνία, επιλέξτε ρυθμίσεις και απενεργοποιήστε τον διακόπτη «Κοινή χρήση με συσκευές Apple». Στη συνέχεια, το Mac σας θα εμφανιστεί στη σελίδα QuickShare."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If your Mac does not show up on your Android device even though both devices are connected to the same Wi-Fi network, or the transmission failed, try the following:\n\n1) Open System Settings, and go to \"Privacy & Security\" > \"Local Network\". Make sure that QuickDrop is enabled. If you use a third-party firewall or an antivirus program, please check the documentation of this program to allow incoming connections for QuickDrop.\n\n2) Restart QuickDrop by clicking the menu bar icon, choose the last entry, and open the app again. Restart your Android device.\n\nNote: Some networks do not allow devices to communicate with each other. In this case, you need to download the QuickDrop app for your phone, and connect your Mac to your phone's hotspot to transfer files. The link to the app can be found in the sidebar on the left."
+            "value" : "If your Mac does not show up on your Android device even though both devices are connected to the same Wi-Fi network, or the transmission failed, try the following:\n\n1) Open System Settings, and go to \"Privacy & Security\" > \"Local Network\". Make sure that QuickDrop is enabled. If you use a third-party firewall or an antivirus program, please check the documentation of this program to allow incoming connections for QuickDrop.\n\n2) Restart QuickDrop by clicking the menu bar icon, choose the last entry, and open the app again. Restart your Android device.\n\nNote: Some networks do not allow devices to communicate with each other. In this case, you need to download the QuickDrop app for your phone, and connect your Mac to your phone's hotspot to transfer files. The link to the app can be found in the sidebar on the left.\n\nIf you have a newer Samsung device with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device due to an issue in OneUI. There are currently two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If your Mac is missing in your Android device under same Wi-Fi, or sending failed, try:\n\n1) Ensure 'Local Network' access for QuickDrop is on.\n2) Restart QuickDrop, Android and try again. If network forbids direct connections, use phone hotspot & QuickDrop app for transfers (link in sidebar)."
+            "value" : "If your Mac is missing in your Android device under same Wi-Fi, or sending failed, try:\n\n1) Ensure 'Local Network' access for QuickDrop is on.\n2) Restart QuickDrop, Android and try again. If network forbids direct connections, use phone hotspot & QuickDrop app for transfers (link in sidebar).\n\nIf you have a newer Samsung device with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device due to an issue in OneUI. There are currently two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If your Mac isn’t shown on your Android device, or transfers fail:\n\n1) In System Settings > \"Privacy & Security\" > \"Local Network,\" ensure QuickDrop is enabled. For third-party firewalls or antivirus, check their documentation to permit QuickDrop connections.\n\n2) Restart QuickDrop via the menu icon, reopen it, and restart your Android device.\n\nIf this fails, your network might block device communication. Use QuickDrop on your phone and connect via hotspot instead."
+            "value" : "If your Mac isn’t shown on your Android device, or transfers fail:\n\n1) In System Settings > \"Privacy & Security\" > \"Local Network,\" ensure QuickDrop is enabled. For third-party firewalls or antivirus, check their documentation to permit QuickDrop connections.\n\n2) Restart QuickDrop via the menu icon, reopen it, and restart your Android device.\n\nIf this fails, your network might block device communication. Use QuickDrop on your phone and connect via hotspot instead.\n\nIf you have a newer Samsung device with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device due to an issue in OneUI. There are currently two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If your Mac isn’t shown on Android or the transfer failed:\n\n1) Open Settings, go to Privacy & Security > Local Network, and enable QuickDrop. Check antivirus settings for inbound connection rules.\n\n2) Restart QuickDrop and your Android. \n\nSome networks block communication – use your Android hotspot and the QuickDrop app instead."
+            "value" : "If your Mac isn’t shown on Android or the transfer failed:\n\n1) Open Settings, go to Privacy & Security > Local Network, and enable QuickDrop. Check antivirus settings for inbound connection rules.\n\n2) Restart QuickDrop and your Android. \n\nSome networks block communication – use your Android hotspot and the QuickDrop app instead.\n\nIf you have a newer Samsung device with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device due to an issue in OneUI. There are currently two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Si tu Mac no aparece en tu dispositivo Android, aunque ambos estén conectados a la misma red wifi, o si la transmisión falló, prueba lo siguiente:\n\n1) Abre Configuración del sistema y ve a \"Privacidad y seguridad\" > \"Red local\". Asegúrate de que QuickDrop esté habilitado. Si usas un firewall o antivirus de terceros, consulta su documentación para permitir conexiones entrantes para QuickDrop.\n\n2) Reinicia QuickDrop haciendo clic en el icono de la barra de menús, elige la última opción y abre la aplicación nuevamente. Reinicia tu dispositivo Android.\n\nNota: Algunas redes no permiten la comunicación entre dispositivos. En ese caso, descarga la aplicación de QuickDrop en tu teléfono y conecta tu Mac al punto de acceso de tu teléfono para transferir archivos. El enlace a la aplicación se encuentra en la barra lateral izquierda."
+            "value" : "Si tu Mac no aparece en tu dispositivo Android, aunque ambos estén conectados a la misma red wifi, o si la transmisión falló, prueba lo siguiente:\n\n1) Abre Configuración del sistema y ve a \"Privacidad y seguridad\" > \"Red local\". Asegúrate de que QuickDrop esté habilitado. Si usas un firewall o antivirus de terceros, consulta su documentación para permitir conexiones entrantes para QuickDrop.\n\n2) Reinicia QuickDrop haciendo clic en el icono de la barra de menús, elige la última opción y abre la aplicación nuevamente. Reinicia tu dispositivo Android.\n\nNota: Algunas redes no permiten la comunicación entre dispositivos. En ese caso, descarga la aplicación de QuickDrop en tu teléfono y conecta tu Mac al punto de acceso de tu teléfono para transferir archivos. El enlace a la aplicación se encuentra en la barra lateral izquierda.\n\nSi tienes un dispositivo Samsung más reciente con OneUI 8.5 o superior, es posible que tu Mac no sea visible en QuickShare en tu dispositivo debido a un problema en OneUI. Actualmente hay dos opciones para resolverlo:\n\n1) Descarga la app QuickDrop desde Google Play. Incluye más funciones que QuickShare, como sincronización de notificaciones y del portapapeles.\n\n2) Si no, en la página de QuickShare, toca los tres puntos en la esquina superior derecha, elige ajustes y desactiva el interruptor \"Compartir con dispositivos Apple\". Después, tu Mac aparecerá en la página de QuickShare."
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Si tu Mac no aparece en tu dispositivo Android aunque ambos dispositivos estén conectados a la misma red Wi-Fi, o la transmisión falló, intenta lo siguiente:\n\n1) Abre Configuración del Sistema y ve a \"Privacidad y Seguridad\" > \"Red Local\". Asegúrate de que QuickDrop esté habilitado. Si usas un firewall o un programa antivirus de terceros, consulta la documentación de este programa para permitir conexiones entrantes para QuickDrop.\n\n2). Reinicia QuickDrop haciendo clic en el icono de la barra de menú, elige la última entrada y abre la app nuevamente. Reinicia tu dispositivo Android.\n\nNota: Algunas redes no permiten que los dispositivos se comuniquen entre sí. En ese caso, necesitas descargar la aplicación QuickDrop para tu teléfono y conectar tu Mac al hotspot de tu teléfono para transferir archivos. El enlace a la aplicación se encuentra en la barra lateral izquierda."
+            "value" : "Si tu Mac no aparece en tu dispositivo Android aunque ambos dispositivos estén conectados a la misma red Wi-Fi, o la transmisión falló, intenta lo siguiente:\n\n1) Abre Configuración del Sistema y ve a \"Privacidad y Seguridad\" > \"Red Local\". Asegúrate de que QuickDrop esté habilitado. Si usas un firewall o un programa antivirus de terceros, consulta la documentación de este programa para permitir conexiones entrantes para QuickDrop.\n\n2). Reinicia QuickDrop haciendo clic en el icono de la barra de menú, elige la última entrada y abre la app nuevamente. Reinicia tu dispositivo Android.\n\nNota: Algunas redes no permiten que los dispositivos se comuniquen entre sí. En ese caso, necesitas descargar la aplicación QuickDrop para tu teléfono y conectar tu Mac al hotspot de tu teléfono para transferir archivos. El enlace a la aplicación se encuentra en la barra lateral izquierda.\n\nSi tienes un dispositivo Samsung más nuevo con OneUI 8.5 o superior, es posible que tu Mac no aparezca en QuickShare en tu dispositivo debido a un problema en OneUI. Actualmente hay dos opciones para resolverlo:\n\n1) Descarga la app QuickDrop desde Google Play. Incluye más funciones que QuickShare, como sincronización de notificaciones y del portapapeles.\n\n2) Si no, en la página de QuickShare, toca los tres puntos en la esquina superior derecha, elige configuración y desactiva el interruptor \"Compartir con dispositivos Apple\". Después, tu Mac aparecerá en la página de QuickShare."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jos Mac ei näy Android-laitteellasi, vaikka molemmat ovat yhdistettynä samaan Wi-Fi-verkkoon, tai siirto epäonnistui, kokeile seuraavia:\n\n1) Avaa Järjestelmäasetukset ja siirry kohtaan 'Tietosuoja & Turvallisuus' > 'Paikallisverkko'. Varmista, että QuickDrop on käytössä. Jos käytät kolmannen osapuolen palomuuria tai virustorjuntaohjelmaa, tarkista ohjelman ohjeista miten sallitaan yhteydet QuickDropille.\n\n2) Käynnistä QuickDrop uudelleen napsauttamalla valikkopalkin kuvaketta, valitse viimeinen valikko ja avaa sovellus uudelleen. Käynnistä myös Android-laitteesi uudelleen.\n\nHuom: Jotkut verkot eivät salli laitteiden välistä yhteyttä. Tällöin tarvitset QuickDrop-sovelluksen puhelimeesi ja yhdistät helposti Macin puhelimesi hotspotista tiedostoja varten. Linkit sovellusten löytämiseen ovat vasemmalla sivupalkissa."
+            "value" : "Jos Mac ei näy Android-laitteellasi, vaikka molemmat ovat yhdistettynä samaan Wi-Fi-verkkoon, tai siirto epäonnistui, kokeile seuraavia:\n\n1) Avaa Järjestelmäasetukset ja siirry kohtaan 'Tietosuoja & Turvallisuus' > 'Paikallisverkko'. Varmista, että QuickDrop on käytössä. Jos käytät kolmannen osapuolen palomuuria tai virustorjuntaohjelmaa, tarkista ohjelman ohjeista miten sallitaan yhteydet QuickDropille.\n\n2) Käynnistä QuickDrop uudelleen napsauttamalla valikkopalkin kuvaketta, valitse viimeinen valikko ja avaa sovellus uudelleen. Käynnistä myös Android-laitteesi uudelleen.\n\nHuom: Jotkut verkot eivät salli laitteiden välistä yhteyttä. Tällöin tarvitset QuickDrop-sovelluksen puhelimeesi ja yhdistät helposti Macin puhelimesi hotspotista tiedostoja varten. Linkit sovellusten löytämiseen ovat vasemmalla sivupalkissa.\n\nJos sinulla on uudempi Samsung-laite, jossa on OneUI 8.5 tai uudempi, Macisi ei välttämättä näy laitteen QuickSharessa OneUI-ongelman vuoksi. Tällä hetkellä tämän ratkaisemiseen on kaksi vaihtoehtoa:\n\n1) Lataa QuickDrop-sovellus Google Playsta. Siinä on enemmän toimintoja kuin QuickSharessa, kuten ilmoitusten ja leikepöydän synkronointi.\n\n2) Muussa tapauksessa avaa QuickShare-sivu, napauta oikean yläkulman kolmea pistettä, valitse asetukset ja poista sitten käytöstä kytkin \"Jaa Apple-laitteiden kanssa\". Sen jälkeen Macisi näkyy QuickShare-sivulla."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Si votre Mac n'apparaît pas sur votre appareil Android, même si les deux appareils sont connectés au même réseau Wi-Fi, ou si la transmission a échoué, essayez ce qui suit :\n\n1) Ouvrez les Réglages Système et allez dans \"Confidentialité et Sécurité\" > \"Réseau Local\". Assurez-vous que QuickDrop est activé. Si vous utilisez un pare-feu tiers ou un programme antivirus, consultez la documentation de ce programme pour autoriser les connexions entrantes pour QuickDrop.\n\n2) Redémarrez QuickDrop en cliquant sur l'icône de la barre de menus, choisissez la dernière entrée et ouvrez à nouveau l'application. Redémarrez votre appareil Android.\n\nRemarque : Certains réseaux ne permettent pas aux appareils de communiquer entre eux. Dans ce cas, vous devez télécharger l'application QuickDrop pour votre téléphone et connecter votre Mac au point d'accès de votre téléphone pour transférer des fichiers. Le lien vers l'application se trouve dans la barre latérale à gauche."
+            "value" : "Si votre Mac n'apparaît pas sur votre appareil Android, même si les deux appareils sont connectés au même réseau Wi-Fi, ou si la transmission a échoué, essayez ce qui suit :\n\n1) Ouvrez les Réglages Système et allez dans \"Confidentialité et Sécurité\" > \"Réseau Local\". Assurez-vous que QuickDrop est activé. Si vous utilisez un pare-feu tiers ou un programme antivirus, consultez la documentation de ce programme pour autoriser les connexions entrantes pour QuickDrop.\n\n2) Redémarrez QuickDrop en cliquant sur l'icône de la barre de menus, choisissez la dernière entrée et ouvrez à nouveau l'application. Redémarrez votre appareil Android.\n\nRemarque : Certains réseaux ne permettent pas aux appareils de communiquer entre eux. Dans ce cas, vous devez télécharger l'application QuickDrop pour votre téléphone et connecter votre Mac au point d'accès de votre téléphone pour transférer des fichiers. Le lien vers l'application se trouve dans la barre latérale à gauche.\n\nSi vous possédez un appareil Samsung récent avec OneUI 8.5 ou une version ultérieure, votre Mac peut ne pas être visible dans QuickShare sur votre appareil en raison d’un problème dans OneUI. Il existe actuellement deux options pour résoudre ce problème :\n\n1) Téléchargez l’application QuickDrop depuis Google Play. Elle offre plus de fonctionnalités que QuickShare, comme la synchronisation des notifications et du presse-papiers.\n\n2) Sinon, sur la page QuickShare, touchez les trois points dans le coin supérieur droit, choisissez les réglages, puis désactivez l’option « Partager avec les appareils Apple ». Ensuite, votre Mac apparaîtra sur la page QuickShare."
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Si votre Mac n'apparaît pas sur votre appareil Android alors que les deux appareils sont connectés au même réseau Wi-Fi, ou si la transmission a échoué, essayez ce qui suit :\n\n1) Ouvrez les Réglages système et allez dans \"Confidentialité et Sécurité\" > \"Réseau local\". Assurez-vous que QuickDrop est activé. Si vous utilisez un pare-feu tiers ou un programme antivirus, veuillez consulter la documentation pour autoriser les connexions entrantes pour QuickDrop.\n\n2) Redémarrez QuickDrop en cliquant sur l'icône de la barre de menu, sélectionnez la dernière entrée et ouvrez l'application à nouveau. Redémarrez votre appareil Android.\n\nRemarque : Certains réseaux n'autorisent pas les appareils à communiquer entre eux. Dans ce cas, vous devez télécharger l'application QuickDrop pour votre téléphone et connecter votre Mac au point d'accès de votre téléphone pour transférer des fichiers. Le lien vers l'application se trouve dans la barre latérale à gauche."
+            "value" : "Si votre Mac n'apparaît pas sur votre appareil Android alors que les deux appareils sont connectés au même réseau Wi-Fi, ou si la transmission a échoué, essayez ce qui suit :\n\n1) Ouvrez les Réglages système et allez dans \"Confidentialité et Sécurité\" > \"Réseau local\". Assurez-vous que QuickDrop est activé. Si vous utilisez un pare-feu tiers ou un programme antivirus, veuillez consulter la documentation pour autoriser les connexions entrantes pour QuickDrop.\n\n2) Redémarrez QuickDrop en cliquant sur l'icône de la barre de menu, sélectionnez la dernière entrée et ouvrez l'application à nouveau. Redémarrez votre appareil Android.\n\nRemarque : Certains réseaux n'autorisent pas les appareils à communiquer entre eux. Dans ce cas, vous devez télécharger l'application QuickDrop pour votre téléphone et connecter votre Mac au point d'accès de votre téléphone pour transférer des fichiers. Le lien vers l'application se trouve dans la barre latérale à gauche.\n\nSi vous avez un appareil Samsung récent avec OneUI 8.5 ou une version ultérieure, votre Mac pourrait ne pas être visible dans QuickShare sur votre appareil en raison d’un problème dans OneUI. Il existe actuellement deux options pour résoudre ce problème :\n\n1) Téléchargez l’application QuickDrop depuis Google Play. Elle offre plus de fonctionnalités que QuickShare, comme la synchronisation des notifications et du presse-papiers.\n\n2) Sinon, sur la page QuickShare, touchez les trois points dans le coin supérieur droit, choisissez les réglages, puis désactivez l’option « Partager avec les appareils Apple ». Ensuite, votre Mac apparaîtra sur la page QuickShare."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "אם ה-Mac שלך לא מופיע במכשיר ה-Android שלך למרות שהמכשירים מחוברים לאותה רשת Wi-Fi, או אם ההעברה נכשלה, נסה את השלבים הבאים:\n\n1) פתח את הגדרות המערכת ועבור ל\"פרטיות וביטחון\" > \"רשת מקומית\". ודא ש-QuickDrop מופעל. אם אתה משתמש בחומת אש או תוכנת אנטי-וירוס של צד שלישי, בדוק את תיעוד התוכנה כדי לאפשר חיבורים נכנסים ל-QuickDrop.\n\n2) אתחל את QuickDrop על ידי לחיצה על אייקון סרגל התפריטים, בחר את הערך האחרון ופתח את האפליקציה שוב. אתחל את מכשיר ה-Android שלך.\n\nהערה: כמה רשתות אינן מאפשרות תיקשורת בין מכשירים. במקרה כזה, תצטרך להוריד את אפליקציית QuickDrop לטלפון שלך ולחבר את ה-Mac לנקודת הגישה של הטלפון שלך כדי להעביר קבצים. הקישור לאפליקציה זמין בצד שמאל."
+            "value" : "אם ה-Mac שלך לא מופיע במכשיר ה-Android שלך למרות שהמכשירים מחוברים לאותה רשת Wi-Fi, או אם ההעברה נכשלה, נסה את השלבים הבאים:\n\n1) פתח את הגדרות המערכת ועבור ל\"פרטיות וביטחון\" > \"רשת מקומית\". ודא ש-QuickDrop מופעל. אם אתה משתמש בחומת אש או תוכנת אנטי-וירוס של צד שלישי, בדוק את תיעוד התוכנה כדי לאפשר חיבורים נכנסים ל-QuickDrop.\n\n2) אתחל את QuickDrop על ידי לחיצה על אייקון סרגל התפריטים, בחר את הערך האחרון ופתח את האפליקציה שוב. אתחל את מכשיר ה-Android שלך.\n\nהערה: כמה רשתות אינן מאפשרות תיקשורת בין מכשירים. במקרה כזה, תצטרך להוריד את אפליקציית QuickDrop לטלפון שלך ולחבר את ה-Mac לנקודת הגישה של הטלפון שלך כדי להעביר קבצים. הקישור לאפליקציה זמין בצד שמאל.\n\nאם יש לך מכשיר Samsung חדש יותר עם OneUI 8.5 ומעלה, ייתכן שה-Mac שלך לא יהיה גלוי ב-QuickShare במכשיר בגלל בעיה ב-OneUI. כרגע יש שתי אפשרויות לפתור זאת:\n\n1) הורד את אפליקציית QuickDrop מ-Google Play. היא כוללת יותר יכולות מ-QuickShare, כמו סנכרון התראות ולוח.\n\n2) אחרת, בעמוד QuickShare, לחץ על שלוש הנקודות בפינה הימנית העליונה, בחר הגדרות, ואז כבה את המתג \"שיתוף עם מכשירי Apple\". לאחר מכן ה-Mac שלך יופיע בעמוד QuickShare."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "यदि आपका Mac आपके Android डिवाइस पर प्रदर्शित नहीं हो रहा है, जबकि दोनों डिवाइस एक ही वाई-फ़ाई नेटवर्क से जुड़े हुए हैं, या ट्रांसमिशन विफल हो गया, तो कृपया निम्नलिखित प्रयास करें:\n\n1) सिस्टम सेटिंग्स खोलें और 'गोपनीयता और सुरक्षा' > 'स्थानीय नेटवर्क' पर जाएं। सुनिश्चित करें कि QuickDrop सक्षम है। अगर आप थर्ड-पार्टी फायरवॉल या एंटीवायरस प्रोग्राम का उपयोग करते हैं, तो QuickDrop के लिए आने वाले कनेक्शनों की अनुमति देने की प्रक्रिया के लिए संबंधित डाक्यूमेंटेशन देखें।\n\n2) QuickDrop को पुनः आरंभ करें: मेनू बार आइकन पर क्लिक करें, आखिरी प्रविष्टि चुनें और ऐप को दोबारा खोलें। अपने Android डिवाइस को रीस्टार्ट करें।\n\nध्यान दें: कुछ नेटवर्क डिवाइस को आपस में बातचीत करने की अनुमति नहीं देते हैं। इस स्थिति में, आपको अपने फोन के लिए QuickDrop ऐप डाउनलोड करना होगा, और फ़ाइल स्थानांतरित करने के लिए अपने Mac को अपने फोन के हॉटस्पॉट से कनेक्ट करना होगा। ऐप का लिंक बाईं ओर के साइडबार में उपलब्ध है।"
+            "value" : "यदि आपका Mac आपके Android डिवाइस पर प्रदर्शित नहीं हो रहा है, जबकि दोनों डिवाइस एक ही वाई-फ़ाई नेटवर्क से जुड़े हुए हैं, या ट्रांसमिशन विफल हो गया, तो कृपया निम्नलिखित प्रयास करें:\n\n1) सिस्टम सेटिंग्स खोलें और 'गोपनीयता और सुरक्षा' > 'स्थानीय नेटवर्क' पर जाएं। सुनिश्चित करें कि QuickDrop सक्षम है। अगर आप थर्ड-पार्टी फायरवॉल या एंटीवायरस प्रोग्राम का उपयोग करते हैं, तो QuickDrop के लिए आने वाले कनेक्शनों की अनुमति देने की प्रक्रिया के लिए संबंधित डाक्यूमेंटेशन देखें।\n\n2) QuickDrop को पुनः आरंभ करें: मेनू बार आइकन पर क्लिक करें, आखिरी प्रविष्टि चुनें और ऐप को दोबारा खोलें। अपने Android डिवाइस को रीस्टार्ट करें।\n\nध्यान दें: कुछ नेटवर्क डिवाइस को आपस में बातचीत करने की अनुमति नहीं देते हैं। इस स्थिति में, आपको अपने फोन के लिए QuickDrop ऐप डाउनलोड करना होगा, और फ़ाइल स्थानांतरित करने के लिए अपने Mac को अपने फोन के हॉटस्पॉट से कनेक्ट करना होगा। ऐप का लिंक बाईं ओर के साइडबार में उपलब्ध है।\n\nयदि आपके पास OneUI 8.5 या उससे नए संस्करण वाला नया Samsung डिवाइस है, तो OneUI की समस्या के कारण आपका Mac आपके डिवाइस के QuickShare में दिखाई नहीं दे सकता। इसे हल करने के लिए वर्तमान में दो विकल्प हैं:\n\n1) Google Play से QuickDrop ऐप डाउनलोड करें। इसमें QuickShare से अधिक सुविधाएं हैं, जैसे नोटिफिकेशन और क्लिपबोर्ड सिंक।\n\n2) अन्यथा, QuickShare पेज पर, ऊपर दाईं ओर तीन बिंदुओं पर क्लिक करें, सेटिंग्स चुनें, फिर \"Apple डिवाइसों के साथ साझा करें\" टॉगल बंद करें। इसके बाद आपका Mac QuickShare पेज पर दिखाई देगा।"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ako se vaš Mac ne pojavljuje na vašem Android uređaju iako su oba uređaja spojena na istu Wi-Fi mrežu, ili prijenos nije uspio, pokušajte sljedeće:\n\n1) Otvorite Postavke sustava i idite na \"Privatnost i sigurnost\" > \"Lokalna mreža\". Pobrinite se da je QuickDrop omogućen. Ako koristite treću stranu vatrozida ili antivirusni program, provjerite dokumentaciju tog programa da biste omogućili dolazne veze za QuickDrop.\n\n2) Ponovno pokrenite QuickDrop klikom na ikonu na traci izbornika, odaberite zadnji unos i ponovno otvorite aplikaciju. Ponovno pokrenite svoj Android uređaj.\n\nNapomena: Neke mreže ne dopuštaju komunikaciju među uređajima. U tom slučaju preuzmite aplikaciju QuickDrop za svoj telefon i povežite Mac s hotspotom svog telefona za prijenos datoteka. Veza do aplikacije može se pronaći u bočnoj traci slijeva."
+            "value" : "Ako se vaš Mac ne pojavljuje na vašem Android uređaju iako su oba uređaja spojena na istu Wi-Fi mrežu, ili prijenos nije uspio, pokušajte sljedeće:\n\n1) Otvorite Postavke sustava i idite na \"Privatnost i sigurnost\" > \"Lokalna mreža\". Pobrinite se da je QuickDrop omogućen. Ako koristite treću stranu vatrozida ili antivirusni program, provjerite dokumentaciju tog programa da biste omogućili dolazne veze za QuickDrop.\n\n2) Ponovno pokrenite QuickDrop klikom na ikonu na traci izbornika, odaberite zadnji unos i ponovno otvorite aplikaciju. Ponovno pokrenite svoj Android uređaj.\n\nNapomena: Neke mreže ne dopuštaju komunikaciju među uređajima. U tom slučaju preuzmite aplikaciju QuickDrop za svoj telefon i povežite Mac s hotspotom svog telefona za prijenos datoteka. Veza do aplikacije može se pronaći u bočnoj traci slijeva.\n\nAko imate noviji Samsung uređaj s OneUI 8.5 ili novijim, vaš Mac možda neće biti vidljiv u QuickShareu na uređaju zbog problema u OneUI-ju. Trenutno postoje dvije mogućnosti za rješavanje toga:\n\n1) Preuzmite aplikaciju QuickDrop s Google Playa. Ima više funkcija od QuickSharea, kao što su sinkronizacija obavijesti i međuspremnika.\n\n2) U suprotnom, na stranici QuickShare kliknite tri točke u gornjem desnom kutu, odaberite postavke, a zatim isključite prekidač \"Dijeli s Apple uređajima\". Nakon toga će se vaš Mac prikazati na stranici QuickShare."
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ha a Mac-ed nem jelenik meg az Android-eszközödön, annak ellenére, hogy mindkét eszköz ugyanahhoz a Wi-Fi hálózathoz csatlakozik, vagy a fájlátvitel sikertelen volt, próbáld ki az alábbiakat:\n\n1) Nyisd meg a Rendszerbeállításokat, és menj a \"Adatvédelem és biztonság\" > \"Helyi hálózat\" menüpontra. Győződj meg róla, hogy a QuickDrop engedélyezve van. Ha harmadik féltől származó tűzfalat vagy vírusirtót használsz, ellenőrizd a program dokumentációját, hogy engedélyezve legyenek a bejövő kapcsolatok a QuickDrop számára.\n\n2) Indítsd újra a QuickDrop-ot a menüsor ikonjára kattintva, válaszd az utolsó bejegyzést, majd nyisd meg újra az alkalmazást. Indítsd újra az Android-eszközödet is.\n\nMegjegyzés: Egyes hálózatok nem engedélyezik az eszközök közötti kommunikációt. Ebben az esetben töltsd le a QuickDrop alkalmazást a telefonodra, és csatlakoztasd a Mac-et a telefonod hotspotjára a fájlátvitelhez. Az alkalmazás linkje a bal oldali oldalsávban található."
+            "value" : "Ha a Mac-ed nem jelenik meg az Android-eszközödön, annak ellenére, hogy mindkét eszköz ugyanahhoz a Wi-Fi hálózathoz csatlakozik, vagy a fájlátvitel sikertelen volt, próbáld ki az alábbiakat:\n\n1) Nyisd meg a Rendszerbeállításokat, és menj a \"Adatvédelem és biztonság\" > \"Helyi hálózat\" menüpontra. Győződj meg róla, hogy a QuickDrop engedélyezve van. Ha harmadik féltől származó tűzfalat vagy vírusirtót használsz, ellenőrizd a program dokumentációját, hogy engedélyezve legyenek a bejövő kapcsolatok a QuickDrop számára.\n\n2) Indítsd újra a QuickDrop-ot a menüsor ikonjára kattintva, válaszd az utolsó bejegyzést, majd nyisd meg újra az alkalmazást. Indítsd újra az Android-eszközödet is.\n\nMegjegyzés: Egyes hálózatok nem engedélyezik az eszközök közötti kommunikációt. Ebben az esetben töltsd le a QuickDrop alkalmazást a telefonodra, és csatlakoztasd a Mac-et a telefonod hotspotjára a fájlátvitelhez. Az alkalmazás linkje a bal oldali oldalsávban található.\n\nHa újabb, OneUI 8.5 vagy újabb rendszert futtató Samsung készüléked van, előfordulhat, hogy a Mac egy OneUI-probléma miatt nem látható a készülék QuickShare felületén. Jelenleg két lehetőség van a megoldásra:\n\n1) Töltsd le a QuickDrop alkalmazást a Google Playről. Több funkciót kínál, mint a QuickShare, például értesítés- és vágólap-szinkronizálást.\n\n2) Ellenkező esetben a QuickShare oldalon koppints a jobb felső sarokban lévő három pontra, válaszd a beállításokat, majd kapcsold ki a „Megosztás Apple-eszközökkel” kapcsolót. Ezután a Mac meg fog jelenni a QuickShare oldalon."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jika Mac Anda tidak muncul di perangkat Android Anda meskipun kedua perangkat terhubung ke jaringan Wi-Fi yang sama, atau transmisi gagal, coba langkah berikut:\n\n1) Buka Pengaturan Sistem, dan masuk ke \"Privasi & Keamanan\" > \"Jaringan Lokal\". Pastikan QuickDrop diaktifkan. Jika Anda menggunakan firewall pihak ketiga atau program antivirus, silakan periksa dokumentasi program ini untuk mengizinkan koneksi masuk untuk QuickDrop.\n\n2) Mulai ulang QuickDrop dengan mengklik ikon bilah menu, pilih entri terakhir, dan buka kembali aplikasinya. Mulai ulang perangkat Android Anda.\n\nCatatan: Beberapa jaringan tidak memungkinkan perangkat untuk saling berkomunikasi. Dalam kasus ini, Anda perlu mengunduh aplikasi QuickDrop untuk ponsel Anda, dan hubungkan Mac Anda ke hotspot ponsel Anda untuk mentransfer file. Tautan ke aplikasi dapat ditemukan di sidebar di sebelah kiri."
+            "value" : "Jika Mac Anda tidak muncul di perangkat Android Anda meskipun kedua perangkat terhubung ke jaringan Wi-Fi yang sama, atau transmisi gagal, coba langkah berikut:\n\n1) Buka Pengaturan Sistem, dan masuk ke \"Privasi & Keamanan\" > \"Jaringan Lokal\". Pastikan QuickDrop diaktifkan. Jika Anda menggunakan firewall pihak ketiga atau program antivirus, silakan periksa dokumentasi program ini untuk mengizinkan koneksi masuk untuk QuickDrop.\n\n2) Mulai ulang QuickDrop dengan mengklik ikon bilah menu, pilih entri terakhir, dan buka kembali aplikasinya. Mulai ulang perangkat Android Anda.\n\nCatatan: Beberapa jaringan tidak memungkinkan perangkat untuk saling berkomunikasi. Dalam kasus ini, Anda perlu mengunduh aplikasi QuickDrop untuk ponsel Anda, dan hubungkan Mac Anda ke hotspot ponsel Anda untuk mentransfer file. Tautan ke aplikasi dapat ditemukan di sidebar di sebelah kiri.\n\nJika Anda memiliki perangkat Samsung yang lebih baru dengan OneUI 8.5 atau lebih tinggi, Mac Anda mungkin tidak terlihat di QuickShare pada perangkat karena masalah di OneUI. Saat ini ada dua opsi untuk mengatasinya:\n\n1) Unduh aplikasi QuickDrop dari Google Play. Aplikasi ini memiliki lebih banyak fungsi daripada QuickShare, seperti sinkronisasi notifikasi dan clipboard.\n\n2) Jika tidak, di halaman QuickShare, ketuk tiga titik di pojok kanan atas, pilih pengaturan, lalu nonaktifkan tombol \"Bagikan dengan perangkat Apple\". Setelah itu, Mac Anda akan muncul di halaman QuickShare."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Se il tuo Mac non viene visualizzato sul dispositivo Android, anche se entrambi sono connessi alla stessa rete Wi-Fi, oppure se la trasmissione è fallita, prova quanto segue:\n\n1) Apri le Impostazioni di Sistema e vai su \"Privacy e Sicurezza\" > \"Rete Locale\". Assicurati che QuickDrop sia abilitato. Se utilizzi un firewall o un programma antivirus di terze parti, consulta la documentazione per consentire le connessioni in entrata per QuickDrop.\n\n2) Riavvia QuickDrop cliccando sull'icona nella barra dei menu, seleziona l'ultima voce e riapri l'app. Riavvia anche il tuo dispositivo Android.\n\nNota: alcune reti non permettono ai dispositivi di comunicare tra loro. In tal caso, scarica l'app QuickDrop sul telefono e collega il Mac all'hotspot del telefono per trasferire i file. Il link per l'app si trova nella barra laterale a sinistra."
+            "value" : "Se il tuo Mac non viene visualizzato sul dispositivo Android, anche se entrambi sono connessi alla stessa rete Wi-Fi, oppure se la trasmissione è fallita, prova quanto segue:\n\n1) Apri le Impostazioni di Sistema e vai su \"Privacy e Sicurezza\" > \"Rete Locale\". Assicurati che QuickDrop sia abilitato. Se utilizzi un firewall o un programma antivirus di terze parti, consulta la documentazione per consentire le connessioni in entrata per QuickDrop.\n\n2) Riavvia QuickDrop cliccando sull'icona nella barra dei menu, seleziona l'ultima voce e riapri l'app. Riavvia anche il tuo dispositivo Android.\n\nNota: alcune reti non permettono ai dispositivi di comunicare tra loro. In tal caso, scarica l'app QuickDrop sul telefono e collega il Mac all'hotspot del telefono per trasferire i file. Il link per l'app si trova nella barra laterale a sinistra.\n\nSe hai un dispositivo Samsung più recente con OneUI 8.5 o superiore, il Mac potrebbe non essere visibile in QuickShare sul dispositivo a causa di un problema in OneUI. Al momento ci sono due opzioni per risolvere il problema:\n\n1) Scarica l’app QuickDrop da Google Play. Offre più funzionalità di QuickShare, come la sincronizzazione delle notifiche e degli appunti.\n\n2) In alternativa, nella pagina QuickShare, tocca i tre puntini nell’angolo in alto a destra, scegli impostazioni, quindi disattiva l’interruttore \"Condividi con dispositivi Apple\". Dopo, il Mac apparirà nella pagina QuickShare."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "MacとAndroidデバイスが同じWi-Fiネットワークに接続されているにもかかわらず、MacがAndroidデバイスに表示されない、または転送が失敗する場合は、以下をお試しください:\n\n1) システム設定を開き、「プライバシーとセキュリティ」>「ローカルネットワーク」に移動します。QuickDropが有効になっていることを確認してください。サードパーティ製のファイアウォールやウイルス対策ソフトを使用している場合は、QuickDropの受信接続を許可するように設定を確認してください。\n\n2) メニューバーのアイコンをクリックしてQuickDropを再起動し、最後の項目を選択してアプリを再度開きます。Androidデバイスも再起動してください。\n\n注意: 一部のネットワークでは、デバイス間の通信が許可されていない場合があります。この場合、スマートフォン用のQuickDropアプリをダウンロードし、Macをスマートフォンのホットスポットに接続してファイルを転送する必要があります。アプリのリンクは左側のサイドバーにあります。"
+            "value" : "MacとAndroidデバイスが同じWi-Fiネットワークに接続されているにもかかわらず、MacがAndroidデバイスに表示されない、または転送が失敗する場合は、以下をお試しください:\n\n1) システム設定を開き、「プライバシーとセキュリティ」>「ローカルネットワーク」に移動します。QuickDropが有効になっていることを確認してください。サードパーティ製のファイアウォールやウイルス対策ソフトを使用している場合は、QuickDropの受信接続を許可するように設定を確認してください。\n\n2) メニューバーのアイコンをクリックしてQuickDropを再起動し、最後の項目を選択してアプリを再度開きます。Androidデバイスも再起動してください。\n\n注意: 一部のネットワークでは、デバイス間の通信が許可されていない場合があります。この場合、スマートフォン用のQuickDropアプリをダウンロードし、Macをスマートフォンのホットスポットに接続してファイルを転送する必要があります。アプリのリンクは左側のサイドバーにあります。\n\nOneUI 8.5以降を搭載した新しいSamsung端末をお使いの場合、OneUIの問題により、お使いのMacが端末のQuickShareに表示されないことがあります。現在、解決方法は2つあります：\n\n1) Google PlayからQuickDropアプリをダウンロードします。通知同期やクリップボード同期など、QuickShareより多くの機能があります。\n\n2) それ以外の場合は、QuickShareページで右上の3点メニューをタップし、設定を選択してから「Appleデバイスと共有」トグルを無効にします。その後、MacがQuickShareページに表示されます。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac과 Android 기기가 동일한 Wi-Fi 네트워크에 연결되어 있음에도 불구하고 Mac이 Android 기기에 표시되지 않거나 전송이 실패한 경우, 다음을 시도해 보세요:\n\n1) 시스템 설정을 열고 \"개인정보 보호 및 보안\" > \"로컬 네트워크\"로 이동합니다. QuickDrop이 활성화되어 있는지 확인하세요. 타사 방화벽이나 백신 프로그램을 사용하는 경우, 해당 프로그램의 문서를 확인하여 QuickDrop의 수신 연결을 허용하세요.\n\n2) 메뉴 막대 아이콘을 클릭하여 QuickDrop을 다시 시작하고, 마지막 항목을 선택한 후 앱을 다시 엽니다. Android 기기를 재시작하세요.\n\n참고: 일부 네트워크에서는 기기 간 통신이 허용되지 않을 수 있습니다. 이 경우, 휴대폰용 QuickDrop 앱을 다운로드하고 Mac을 휴대폰의 핫스팟에 연결하여 파일을 전송해야 합니다. 앱 링크는 왼쪽 사이드바에서 찾을 수 있습니다."
+            "value" : "Mac과 Android 기기가 동일한 Wi-Fi 네트워크에 연결되어 있음에도 불구하고 Mac이 Android 기기에 표시되지 않거나 전송이 실패한 경우, 다음을 시도해 보세요:\n\n1) 시스템 설정을 열고 \"개인정보 보호 및 보안\" > \"로컬 네트워크\"로 이동합니다. QuickDrop이 활성화되어 있는지 확인하세요. 타사 방화벽이나 백신 프로그램을 사용하는 경우, 해당 프로그램의 문서를 확인하여 QuickDrop의 수신 연결을 허용하세요.\n\n2) 메뉴 막대 아이콘을 클릭하여 QuickDrop을 다시 시작하고, 마지막 항목을 선택한 후 앱을 다시 엽니다. Android 기기를 재시작하세요.\n\n참고: 일부 네트워크에서는 기기 간 통신이 허용되지 않을 수 있습니다. 이 경우, 휴대폰용 QuickDrop 앱을 다운로드하고 Mac을 휴대폰의 핫스팟에 연결하여 파일을 전송해야 합니다. 앱 링크는 왼쪽 사이드바에서 찾을 수 있습니다.\n\nOneUI 8.5 이상이 설치된 최신 Samsung 기기를 사용하는 경우, OneUI 문제로 인해 기기의 QuickShare에 Mac이 보이지 않을 수 있습니다. 현재 이를 해결하는 방법은 두 가지입니다:\n\n1) Google Play에서 QuickDrop 앱을 다운로드하세요. 알림 및 클립보드 동기화 등 QuickShare보다 더 많은 기능을 제공합니다.\n\n2) 또는 QuickShare 페이지에서 오른쪽 상단의 점 세 개를 누르고 설정을 선택한 다음 \"Apple 기기와 공유\" 토글을 끄세요. 그러면 Mac이 QuickShare 페이지에 표시됩니다."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jika Mac anda tidak muncul di peranti Android anda walaupun kedua-dua peranti disambungkan ke rangkaian Wi-Fi yang sama, atau penghantaran gagal, cuba yang berikut:\n\n1) Buka Tetapan Sistem, dan pergi ke \"Privasi & Keselamatan\" > \"Rangkaian Setempat\". Pastikan QuickDrop diaktifkan. Jika anda menggunakan firewall pihak ketiga atau program antivirus, sila semak dokumentasi program tersebut untuk membenarkan sambungan masuk untuk QuickDrop.\n\n2) Mulakan semula QuickDrop dengan mengklik ikon bar menu, pilih entri terakhir, dan buka semula aplikasi. Mulakan semula peranti Android anda.\n\nNota: Beberapa rangkaian tidak membenarkan peranti berkomunikasi antara satu sama lain. Dalam kes seperti itu, muat turun aplikasi QuickDrop untuk telefon anda, dan sambungkan Mac anda ke hotspot telefon anda untuk memindahkan fail. Pautan ke aplikasi boleh didapati di bar sisi sebelah kiri."
+            "value" : "Jika Mac anda tidak muncul di peranti Android anda walaupun kedua-dua peranti disambungkan ke rangkaian Wi-Fi yang sama, atau penghantaran gagal, cuba yang berikut:\n\n1) Buka Tetapan Sistem, dan pergi ke \"Privasi & Keselamatan\" > \"Rangkaian Setempat\". Pastikan QuickDrop diaktifkan. Jika anda menggunakan firewall pihak ketiga atau program antivirus, sila semak dokumentasi program tersebut untuk membenarkan sambungan masuk untuk QuickDrop.\n\n2) Mulakan semula QuickDrop dengan mengklik ikon bar menu, pilih entri terakhir, dan buka semula aplikasi. Mulakan semula peranti Android anda.\n\nNota: Beberapa rangkaian tidak membenarkan peranti berkomunikasi antara satu sama lain. Dalam kes seperti itu, muat turun aplikasi QuickDrop untuk telefon anda, dan sambungkan Mac anda ke hotspot telefon anda untuk memindahkan fail. Pautan ke aplikasi boleh didapati di bar sisi sebelah kiri.\n\nJika anda mempunyai peranti Samsung yang lebih baharu dengan OneUI 8.5 atau lebih tinggi, Mac anda mungkin tidak kelihatan dalam QuickShare pada peranti disebabkan isu dalam OneUI. Pada masa ini terdapat dua pilihan untuk menyelesaikannya:\n\n1) Muat turun apl QuickDrop daripada Google Play. Ia mempunyai lebih banyak fungsi daripada QuickShare, seperti penyegerakan pemberitahuan dan papan klip.\n\n2) Jika tidak, pada halaman QuickShare, ketik tiga titik di penjuru kanan atas, pilih tetapan, kemudian matikan togol \"Kongsi dengan peranti Apple\". Selepas itu, Mac anda akan muncul pada halaman QuickShare."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hvis Mac-en din ikke vises på Android-enheten din selv om begge enhetene er koblet til samme Wi-Fi-nettverk, eller overføringen mislyktes, prøv følgende:\n\n1) Åpne Systeminnstillinger, og gå til \"Personvern og Sikkerhet\" > \"Lokalt Nettverk\". Sørg for at QuickDrop er aktivert. Hvis du bruker en tredjeparts brannmur eller et antivirusprogram, vennligst sjekk dokumentasjonen til dette programmet for å tillate innkommende tilkoblinger for QuickDrop.\n\n2) Start QuickDrop på nytt ved å klikke på menylinjeikonet, velg den siste oppføringen, og åpne appen på nytt. Start Android-enheten din på nytt.\n\nMerk: Noen nettverk tillater ikke at enheter kommuniserer med hverandre. I dette tilfellet må du laste ned QuickDrop-appen for telefonen din, og koble Mac-en til telefonens hotspot for å overføre filer. Lenken til appen finner du i sidepanelet til venstre."
+            "value" : "Hvis Mac-en din ikke vises på Android-enheten din selv om begge enhetene er koblet til samme Wi-Fi-nettverk, eller overføringen mislyktes, prøv følgende:\n\n1) Åpne Systeminnstillinger, og gå til \"Personvern og Sikkerhet\" > \"Lokalt Nettverk\". Sørg for at QuickDrop er aktivert. Hvis du bruker en tredjeparts brannmur eller et antivirusprogram, vennligst sjekk dokumentasjonen til dette programmet for å tillate innkommende tilkoblinger for QuickDrop.\n\n2) Start QuickDrop på nytt ved å klikke på menylinjeikonet, velg den siste oppføringen, og åpne appen på nytt. Start Android-enheten din på nytt.\n\nMerk: Noen nettverk tillater ikke at enheter kommuniserer med hverandre. I dette tilfellet må du laste ned QuickDrop-appen for telefonen din, og koble Mac-en til telefonens hotspot for å overføre filer. Lenken til appen finner du i sidepanelet til venstre.\n\nHvis du har en nyere Samsung-enhet med OneUI 8.5 eller nyere, kan det hende at Macen din ikke er synlig i QuickShare på enheten på grunn av et problem i OneUI. Det finnes for øyeblikket to måter å løse dette på:\n\n1) Last ned QuickDrop-appen fra Google Play. Den har mer funksjonalitet enn QuickShare, som varslings- og utklippssynk.\n\n2) Hvis ikke, gå til QuickShare-siden, trykk på de tre prikkene øverst til høyre, velg innstillinger, og slå deretter av bryteren \"Del med Apple-enheter\". Etterpå vises Macen din på QuickShare-siden."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Als je Mac niet verschijnt op je Android-apparaat, zelfs als beide apparaten met hetzelfde Wi-Fi-netwerk zijn verbonden, of als de overdracht is mislukt, probeer dan het volgende:\n\n1) Open Systeeminstellingen en ga naar \"Privacy en beveiliging\" > \"Lokaal netwerk\". Zorg ervoor dat QuickDrop is ingeschakeld. Als je een firewall of antivirusprogramma van derden gebruikt, raadpleeg dan de documentatie van dat programma om inkomende verbindingen voor QuickDrop toe te staan.\n\n2) Herstart QuickDrop door op het menubalkpictogram te klikken, kies de laatste optie en open de app opnieuw. Herstart ook je Android-apparaat.\n\nOpmerking: Sommige netwerken staan niet toe dat apparaten met elkaar communiceren. In dat geval moet je de QuickDrop-app op je telefoon downloaden en je Mac verbinden met de hotspot van je telefoon om bestanden over te dragen. De link naar de app is te vinden in de zijbalk aan de linkerkant."
+            "value" : "Als je Mac niet verschijnt op je Android-apparaat, zelfs als beide apparaten met hetzelfde Wi-Fi-netwerk zijn verbonden, of als de overdracht is mislukt, probeer dan het volgende:\n\n1) Open Systeeminstellingen en ga naar \"Privacy en beveiliging\" > \"Lokaal netwerk\". Zorg ervoor dat QuickDrop is ingeschakeld. Als je een firewall of antivirusprogramma van derden gebruikt, raadpleeg dan de documentatie van dat programma om inkomende verbindingen voor QuickDrop toe te staan.\n\n2) Herstart QuickDrop door op het menubalkpictogram te klikken, kies de laatste optie en open de app opnieuw. Herstart ook je Android-apparaat.\n\nOpmerking: Sommige netwerken staan niet toe dat apparaten met elkaar communiceren. In dat geval moet je de QuickDrop-app op je telefoon downloaden en je Mac verbinden met de hotspot van je telefoon om bestanden over te dragen. De link naar de app is te vinden in de zijbalk aan de linkerkant.\n\nAls je een nieuwer Samsung-apparaat met OneUI 8.5 of hoger hebt, is je Mac mogelijk niet zichtbaar in QuickShare op je apparaat door een probleem in OneUI. Er zijn momenteel twee opties om dit op te lossen:\n\n1) Download de QuickDrop-app uit Google Play. Die heeft meer functies dan QuickShare, zoals synchronisatie van meldingen en het klembord.\n\n2) Ga anders op de QuickShare-pagina naar de drie puntjes rechtsboven, kies instellingen en schakel daarna de optie \"Delen met Apple-apparaten\" uit. Daarna verschijnt je Mac op de QuickShare-pagina."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jeśli Twój Mac nie pojawia się na urządzeniu z Androidem, mimo że oba urządzenia są w tej samej sieci Wi-Fi, lub jeśli przesyłanie nie powiodło się, spróbuj następujące kroki:\n\n1) Otwórz Ustawienia Systemowe i przejdź do \"Prywatność i bezpieczeństwo\" > \"Lokalna sieć\". Upewnij się, że QuickDrop jest włączony. Jeśli używasz zapory lub programu antywirusowego, zapoznaj się z dokumentacją, aby zezwolić na połączenia przychodzące dla QuickDrop.\n\n2) Uruchom ponownie QuickDrop: kliknij ikonę na pasku menu, wybierz ostatni wpis i otwórz aplikację ponownie. Zrestartuj urządzenie z Androidem.\n\nUwaga: Niektóre sieci nie pozwalają urządzeniom na komunikację. W tym przypadku pobierz aplikację QuickDrop na telefon i połącz Maca z hotspotem telefonu. Link do aplikacji znajduje się w pasku bocznym po lewej."
+            "value" : "Jeśli Twój Mac nie pojawia się na urządzeniu z Androidem, mimo że oba urządzenia są w tej samej sieci Wi-Fi, lub jeśli przesyłanie nie powiodło się, spróbuj następujące kroki:\n\n1) Otwórz Ustawienia Systemowe i przejdź do \"Prywatność i bezpieczeństwo\" > \"Lokalna sieć\". Upewnij się, że QuickDrop jest włączony. Jeśli używasz zapory lub programu antywirusowego, zapoznaj się z dokumentacją, aby zezwolić na połączenia przychodzące dla QuickDrop.\n\n2) Uruchom ponownie QuickDrop: kliknij ikonę na pasku menu, wybierz ostatni wpis i otwórz aplikację ponownie. Zrestartuj urządzenie z Androidem.\n\nUwaga: Niektóre sieci nie pozwalają urządzeniom na komunikację. W tym przypadku pobierz aplikację QuickDrop na telefon i połącz Maca z hotspotem telefonu. Link do aplikacji znajduje się w pasku bocznym po lewej.\n\nJeśli masz nowsze urządzenie Samsung z OneUI 8.5 lub nowszym, Twój Mac może nie być widoczny w QuickShare na urządzeniu z powodu problemu w OneUI. Obecnie są dwie możliwości rozwiązania tego problemu:\n\n1) Pobierz aplikację QuickDrop z Google Play. Ma więcej funkcji niż QuickShare, na przykład synchronizację powiadomień i schowka.\n\n2) W przeciwnym razie na stronie QuickShare stuknij trzy kropki w prawym górnym rogu, wybierz ustawienia, a następnie wyłącz przełącznik „Udostępnij urządzeniom Apple”. Potem Twój Mac pojawi się na stronie QuickShare."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Se o seu Mac não aparecer no seu dispositivo Android, mesmo estando ambos conectados à mesma rede Wi-Fi, ou se a transmissão falhar, tente o seguinte:\n\n1) Abra as Configurações do Sistema e vá para \"Privacidade e Segurança\" > \"Rede Local\". Certifique-se de que o QuickDrop está ativado. Se você estiver usando um firewall ou antivírus de terceiros, verifique a documentação do programa para permitir conexões de entrada para o QuickDrop.\n\n2) Reinicie o QuickDrop clicando no ícone da barra de menu, escolha a última opção e abra o aplicativo novamente. Reinicie também o seu dispositivo Android.\n\nObservação: Algumas redes não permitem que os dispositivos se comuniquem entre si. Nesse caso, baixe o aplicativo QuickDrop no seu telefone e conecte seu Mac ao ponto de acesso do telefone para transferir arquivos. O link para o aplicativo pode ser encontrado na barra lateral à esquerda."
+            "value" : "Se o seu Mac não aparecer no seu dispositivo Android, mesmo estando ambos conectados à mesma rede Wi-Fi, ou se a transmissão falhar, tente o seguinte:\n\n1) Abra as Configurações do Sistema e vá para \"Privacidade e Segurança\" > \"Rede Local\". Certifique-se de que o QuickDrop está ativado. Se você estiver usando um firewall ou antivírus de terceiros, verifique a documentação do programa para permitir conexões de entrada para o QuickDrop.\n\n2) Reinicie o QuickDrop clicando no ícone da barra de menu, escolha a última opção e abra o aplicativo novamente. Reinicie também o seu dispositivo Android.\n\nObservação: Algumas redes não permitem que os dispositivos se comuniquem entre si. Nesse caso, baixe o aplicativo QuickDrop no seu telefone e conecte seu Mac ao ponto de acesso do telefone para transferir arquivos. O link para o aplicativo pode ser encontrado na barra lateral à esquerda.\n\nSe você tem um dispositivo Samsung mais recente com OneUI 8.5 ou superior, talvez o seu Mac não apareça no QuickShare do dispositivo devido a um problema no OneUI. Atualmente há duas opções para resolver isso:\n\n1) Baixe o app QuickDrop no Google Play. Ele vem com mais funcionalidades que o QuickShare, como sincronização de notificações e da área de transferência.\n\n2) Caso contrário, na página do QuickShare, toque nos três pontos no canto superior direito, escolha configurações e desative a opção \"Compartilhar com dispositivos Apple\". Depois disso, seu Mac aparecerá na página do QuickShare."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Se o seu Mac não aparecer no seu dispositivo Android, mesmo que ambos estejam conectados à mesma rede Wi-Fi, ou se a transmissão falhar, tente o seguinte:\n\n1) Abra as Definições do Sistema e vá a \"Privacidade e Segurança\" > \"Rede Local\". Certifique-se de que o QuickDrop está ativado. Se utilizar um firewall de terceiros ou um programa antivírus, consulte a documentação desse programa para permitir conexões de entrada para o QuickDrop.\n\n2) Reinicie o QuickDrop clicando no ícone da barra de menus, escolha a última opção e abra novamente a aplicação. Reinicie o seu dispositivo Android.\n\nNota: Algumas redes não permitem que os dispositivos comuniquem entre si. Neste caso, precisa de descarregar a aplicação QuickDrop para o seu telemóvel e ligar o seu Mac ao hotspot do seu telemóvel para transferir ficheiros. O link para a aplicação pode ser encontrado na barra lateral à esquerda."
+            "value" : "Se o seu Mac não aparecer no seu dispositivo Android, mesmo que ambos estejam conectados à mesma rede Wi-Fi, ou se a transmissão falhar, tente o seguinte:\n\n1) Abra as Definições do Sistema e vá a \"Privacidade e Segurança\" > \"Rede Local\". Certifique-se de que o QuickDrop está ativado. Se utilizar um firewall de terceiros ou um programa antivírus, consulte a documentação desse programa para permitir conexões de entrada para o QuickDrop.\n\n2) Reinicie o QuickDrop clicando no ícone da barra de menus, escolha a última opção e abra novamente a aplicação. Reinicie o seu dispositivo Android.\n\nNota: Algumas redes não permitem que os dispositivos comuniquem entre si. Neste caso, precisa de descarregar a aplicação QuickDrop para o seu telemóvel e ligar o seu Mac ao hotspot do seu telemóvel para transferir ficheiros. O link para a aplicação pode ser encontrado na barra lateral à esquerda.\n\nSe tiver um dispositivo Samsung mais recente com OneUI 8.5 ou superior, o seu Mac pode não aparecer no QuickShare do dispositivo devido a um problema no OneUI. Atualmente existem duas opções para resolver isto:\n\n1) Transfira a app QuickDrop a partir da Google Play. Tem mais funcionalidades do que o QuickShare, como sincronização de notificações e da área de transferência.\n\n2) Caso contrário, na página do QuickShare, toque nos três pontos no canto superior direito, escolha definições e desative a opção \"Partilhar com dispositivos Apple\". Depois, o seu Mac aparecerá na página do QuickShare."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dacă Mac-ul tău nu apare pe dispozitivul Android, deși ambele dispozitive sunt conectate la aceeași rețea Wi-Fi, sau dacă transmiterea a eșuat, încearcă următoarele:\n\n1) Deschide Setările Sistemului și mergi la \"Confidențialitate și Securitate\" > \"Rețea Locală\". Asigură-te că QuickDrop este activat. Dacă folosești un firewall terț sau un program antivirus, consultă documentația acestuia pentru a permite conexiunile de intrare pentru QuickDrop.\n\n2) Repornește QuickDrop făcând clic pe pictograma din bara de meniu, alege ultima opțiune și deschide din nou aplicația. Repornește dispozitivul Android.\n\nNotă: Unele rețele nu permit dispozitivelor să comunice între ele. În acest caz, trebuie să descarci aplicația QuickDrop pentru telefonul tău și să conectezi Mac-ul la hotspotul telefonului pentru a transfera fișiere. Linkul către aplicație se găsește în bara laterală din stânga."
+            "value" : "Dacă Mac-ul tău nu apare pe dispozitivul Android, deși ambele dispozitive sunt conectate la aceeași rețea Wi-Fi, sau dacă transmiterea a eșuat, încearcă următoarele:\n\n1) Deschide Setările Sistemului și mergi la \"Confidențialitate și Securitate\" > \"Rețea Locală\". Asigură-te că QuickDrop este activat. Dacă folosești un firewall terț sau un program antivirus, consultă documentația acestuia pentru a permite conexiunile de intrare pentru QuickDrop.\n\n2) Repornește QuickDrop făcând clic pe pictograma din bara de meniu, alege ultima opțiune și deschide din nou aplicația. Repornește dispozitivul Android.\n\nNotă: Unele rețele nu permit dispozitivelor să comunice între ele. În acest caz, trebuie să descarci aplicația QuickDrop pentru telefonul tău și să conectezi Mac-ul la hotspotul telefonului pentru a transfera fișiere. Linkul către aplicație se găsește în bara laterală din stânga.\n\nDacă aveți un dispozitiv Samsung mai nou cu OneUI 8.5 sau o versiune ulterioară, Mac-ul dvs. poate să nu fie vizibil în QuickShare pe dispozitiv din cauza unei probleme din OneUI. În prezent există două opțiuni pentru a rezolva acest lucru:\n\n1) Descărcați aplicația QuickDrop din Google Play. Are mai multe funcții decât QuickShare, cum ar fi sincronizarea notificărilor și a clipboardului.\n\n2) În caz contrar, pe pagina QuickShare, apăsați pe cele trei puncte din colțul dreapta sus, alegeți setări, apoi dezactivați comutatorul \"Partajare cu dispozitive Apple\". După aceea, Mac-ul dvs. va apărea pe pagina QuickShare."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Если ваш Mac не отображается на устройстве Android, даже если оба устройства подключены к одной и той же Wi-Fi сети, или передача не удалась, попробуйте следующее:\n\n1) Откройте \"Системные настройки\" и перейдите в \"Конфиденциальность и безопасность\" > \"Локальная сеть\". Убедитесь, что QuickDrop включён. Если вы используете сторонний брандмауэр или антивирусную программу, ознакомьтесь с их документацией, чтобы разрешить входящие соединения для QuickDrop.\n\n2) Перезапустите QuickDrop, нажав на значок в строке меню, выберите последний пункт и снова откройте приложение. Перезагрузите ваше Android-устройство.\n\nПримечание: Некоторые сети не позволяют устройствам взаимодействовать друг с другом. В этом случае загрузите приложение QuickDrop на телефон и подключите Mac к точке доступа телефона для передачи файлов. Ссылка на приложение доступна в боковой панели слева."
+            "value" : "Если ваш Mac не отображается на устройстве Android, даже если оба устройства подключены к одной и той же Wi-Fi сети, или передача не удалась, попробуйте следующее:\n\n1) Откройте \"Системные настройки\" и перейдите в \"Конфиденциальность и безопасность\" > \"Локальная сеть\". Убедитесь, что QuickDrop включён. Если вы используете сторонний брандмауэр или антивирусную программу, ознакомьтесь с их документацией, чтобы разрешить входящие соединения для QuickDrop.\n\n2) Перезапустите QuickDrop, нажав на значок в строке меню, выберите последний пункт и снова откройте приложение. Перезагрузите ваше Android-устройство.\n\nПримечание: Некоторые сети не позволяют устройствам взаимодействовать друг с другом. В этом случае загрузите приложение QuickDrop на телефон и подключите Mac к точке доступа телефона для передачи файлов. Ссылка на приложение доступна в боковой панели слева.\n\nЕсли у вас новое устройство Samsung с OneUI 8.5 или новее, ваш Mac может не отображаться в QuickShare на устройстве из-за проблемы в OneUI. Сейчас есть два способа решить это:\n\n1) Скачайте приложение QuickDrop из Google Play. В нем больше возможностей, чем в QuickShare, например синхронизация уведомлений и буфера обмена.\n\n2) Либо на странице QuickShare нажмите на три точки в правом верхнем углу, выберите настройки, затем отключите переключатель «Поделиться с устройствами Apple». После этого ваш Mac появится на странице QuickShare."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Om din Mac inte visas på din Android-enhet trots att båda enheterna är anslutna till samma Wi-Fi-nätverk, eller om överföringen misslyckades, försök följande:\n\n1) Öppna Systeminställningar, och gå till \"Integritet & Säkerhet\" > \"Lokalt nätverk\". Kontrollera att QuickDrop är aktiverat. Om du använder en tredjeparts brandvägg eller antivirusprogram, kontrollera dokumentationen för att tillåta inkommande anslutningar för QuickDrop.\n\n2) Starta om QuickDrop genom att klicka på menyradsikonen, välj sista posten och öppna appen igen. Starta om din Android-enhet.\n\nObs: Vissa nätverk tillåter inte enheter att kommunicera med varandra. I så fall behöver du ladda ner QuickDrop-appen till din telefon och ansluta din Mac till din telefons hotspot för att överföra filer. Länken till appen finns i sidofältet till vänster."
+            "value" : "Om din Mac inte visas på din Android-enhet trots att båda enheterna är anslutna till samma Wi-Fi-nätverk, eller om överföringen misslyckades, försök följande:\n\n1) Öppna Systeminställningar, och gå till \"Integritet & Säkerhet\" > \"Lokalt nätverk\". Kontrollera att QuickDrop är aktiverat. Om du använder en tredjeparts brandvägg eller antivirusprogram, kontrollera dokumentationen för att tillåta inkommande anslutningar för QuickDrop.\n\n2) Starta om QuickDrop genom att klicka på menyradsikonen, välj sista posten och öppna appen igen. Starta om din Android-enhet.\n\nObs: Vissa nätverk tillåter inte enheter att kommunicera med varandra. I så fall behöver du ladda ner QuickDrop-appen till din telefon och ansluta din Mac till din telefons hotspot för att överföra filer. Länken till appen finns i sidofältet till vänster.\n\nOm du har en nyare Samsung-enhet med OneUI 8.5 eller senare kanske din Mac inte syns i QuickShare på enheten på grund av ett problem i OneUI. Det finns för närvarande två sätt att lösa detta:\n\n1) Ladda ner QuickDrop-appen från Google Play. Den har fler funktioner än QuickShare, till exempel notifikations- och urklippssynk.\n\n2) Annars går du till QuickShare-sidan, trycker på de tre punkterna uppe till höger, väljer inställningar och stänger sedan av reglaget \"Dela med Apple-enheter\". Därefter visas din Mac på QuickShare-sidan."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "หาก Mac ของคุณไม่ปรากฏบนอุปกรณ์ Android แม้ว่าทั้งสองอุปกรณ์จะเชื่อมต่อกับเครือข่าย Wi-Fi เดียวกัน หรือการส่งล้มเหลว ลองทำตามขั้นตอนต่อไปนี้:\n\n1) เปิดการตั้งค่าระบบ แล้วไปที่ \"ความเป็นส่วนตัวและความปลอดภัย\" > \"เครือข่ายท้องถิ่น\" ตรวจสอบให้แน่ใจว่าเปิดใช้งาน QuickDrop แล้ว หากคุณใช้ไฟร์วอลล์หรือโปรแกรมป้องกันไวรัสของบริษัทอื่น โปรดดูเอกสารประกอบเพื่ออนุญาตการเชื่อมต่อขาเข้าสำหรับ QuickDrop\n\n2) รีสตาร์ท QuickDrop โดยคลิกที่ไอคอนในแถบเมนู เลือกรายการสุดท้าย และเปิดแอปอีกครั้ง รีสตาร์ทอุปกรณ์ Android ของคุณด้วย\n\nหมายเหตุ: เครือข่ายบางเครือข่ายไม่อนุญาตให้อุปกรณ์สื่อสารกันได้ ในกรณีนี้ คุณต้องดาวน์โหลดแอป QuickDrop บนโทรศัพท์ และเชื่อมต่อ Mac ของคุณกับฮอตสปอตของโทรศัพท์เพื่อส่งไฟล์ ลิงก์สำหรับดาวน์โหลดแอปอยู่ในแถบด้านซ้าย"
+            "value" : "หาก Mac ของคุณไม่ปรากฏบนอุปกรณ์ Android แม้ว่าทั้งสองอุปกรณ์จะเชื่อมต่อกับเครือข่าย Wi-Fi เดียวกัน หรือการส่งล้มเหลว ลองทำตามขั้นตอนต่อไปนี้:\n\n1) เปิดการตั้งค่าระบบ แล้วไปที่ \"ความเป็นส่วนตัวและความปลอดภัย\" > \"เครือข่ายท้องถิ่น\" ตรวจสอบให้แน่ใจว่าเปิดใช้งาน QuickDrop แล้ว หากคุณใช้ไฟร์วอลล์หรือโปรแกรมป้องกันไวรัสของบริษัทอื่น โปรดดูเอกสารประกอบเพื่ออนุญาตการเชื่อมต่อขาเข้าสำหรับ QuickDrop\n\n2) รีสตาร์ท QuickDrop โดยคลิกที่ไอคอนในแถบเมนู เลือกรายการสุดท้าย และเปิดแอปอีกครั้ง รีสตาร์ทอุปกรณ์ Android ของคุณด้วย\n\nหมายเหตุ: เครือข่ายบางเครือข่ายไม่อนุญาตให้อุปกรณ์สื่อสารกันได้ ในกรณีนี้ คุณต้องดาวน์โหลดแอป QuickDrop บนโทรศัพท์ และเชื่อมต่อ Mac ของคุณกับฮอตสปอตของโทรศัพท์เพื่อส่งไฟล์ ลิงก์สำหรับดาวน์โหลดแอปอยู่ในแถบด้านซ้าย\n\nหากคุณมีอุปกรณ์ Samsung รุ่นใหม่ที่ใช้ OneUI 8.5 หรือสูงกว่า Mac ของคุณอาจไม่ปรากฏใน QuickShare บนอุปกรณ์เนื่องจากปัญหาใน OneUI ขณะนี้มีสองวิธีในการแก้ไขปัญหานี้:\n\n1) ดาวน์โหลดแอป QuickDrop จาก Google Play แอปนี้มีฟังก์ชันมากกว่า QuickShare เช่น การซิงค์การแจ้งเตือนและคลิปบอร์ด\n\n2) มิฉะนั้น ในหน้า QuickShare ให้แตะจุดสามจุดที่มุมขวาบน เลือกการตั้งค่า แล้วปิดสวิตช์ \"แชร์กับอุปกรณ์ Apple\" หลังจากนั้น Mac ของคุณจะปรากฏในหน้า QuickShare"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Her iki cihaz da aynı Wi-Fi ağında bağlı olmasına rağmen Mac'iniz Android cihazınızda görünmüyorsa veya aktarım başarısız olduysa şunları deneyin:\n\n1) Sistem Ayarlarını açın, \"Gizlilik ve Güvenlik\" > \"Yerel Ağ\"a gidin. QuickDrop'un etkin olduğundan emin olun. Üçüncü taraf bir güvenlik duvarı veya antivirüs programı kullanıyorsanız, bu programın belgelerine bakarak QuickDrop için gelen bağlantılara izin vermeyi kontrol edin.\n\n2) Menü çubuğu simgesine tıklayıp son seçeneği seçerek QuickDrop'u yeniden başlatın ve uygulamayı tekrar açın. Android cihazınızı yeniden başlatın.\n\nNot: Bazı ağlar cihazların birbirleriyle iletişim kurmasına izin vermez. Bu durumda, telefonunuz için QuickDrop uygulamasını indirerek dosya aktarmak için Mac'inizi telefonunuzun hotspot'una bağlamanız gerekecektir. Uygulamaya bağlantı sol taraftaki kenar çubuğunda bulunabilir."
+            "value" : "Her iki cihaz da aynı Wi-Fi ağında bağlı olmasına rağmen Mac'iniz Android cihazınızda görünmüyorsa veya aktarım başarısız olduysa şunları deneyin:\n\n1) Sistem Ayarlarını açın, \"Gizlilik ve Güvenlik\" > \"Yerel Ağ\"a gidin. QuickDrop'un etkin olduğundan emin olun. Üçüncü taraf bir güvenlik duvarı veya antivirüs programı kullanıyorsanız, bu programın belgelerine bakarak QuickDrop için gelen bağlantılara izin vermeyi kontrol edin.\n\n2) Menü çubuğu simgesine tıklayıp son seçeneği seçerek QuickDrop'u yeniden başlatın ve uygulamayı tekrar açın. Android cihazınızı yeniden başlatın.\n\nNot: Bazı ağlar cihazların birbirleriyle iletişim kurmasına izin vermez. Bu durumda, telefonunuz için QuickDrop uygulamasını indirerek dosya aktarmak için Mac'inizi telefonunuzun hotspot'una bağlamanız gerekecektir. Uygulamaya bağlantı sol taraftaki kenar çubuğunda bulunabilir.\n\nOneUI 8.5 veya daha yüksek sürüme sahip yeni bir Samsung cihazınız varsa, OneUI’deki bir sorun nedeniyle Mac’iniz cihazınızdaki QuickShare’de görünmeyebilir. Bunu çözmek için şu anda iki seçenek vardır:\n\n1) QuickDrop uygulamasını Google Play'den indirin. Bildirim ve pano senkronizasyonu gibi QuickShare'den daha fazla işlev sunar.\n\n2) Aksi takdirde, QuickShare sayfasında sağ üst köşedeki üç noktaya dokunun, ayarları seçin, ardından \"Apple aygıtlarıyla paylaş\" geçişini devre dışı bırakın. Sonrasında Mac'iniz QuickShare sayfasında görünecektir."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Якщо ваш Mac не відображається на вашому Android-пристрої, навіть якщо обидва пристрої підключені до однієї Wi-Fi мережі, або передача не вдалася, спробуйте наступне:\n\n1) Відкрийте Системні налаштування та перейдіть до \"Конфіденційність і безпека\" > \"Локальна мережа\". Переконайтеся, що QuickDrop увімкнено. Якщо ви використовуєте сторонній брандмауер або антивірусну програму, перегляньте документацію цієї програми, щоб дозволити вхідні з'єднання для QuickDrop.\n\n2) Перезапустіть QuickDrop, натиснувши на значок у рядку меню, виберіть останній пункт і знову відкрийте додаток. Перезапустіть ваш Android-пристрій.\n\nПримітка: Деякі мережі не дозволяють пристроям спілкуватися один з одним. У цьому випадку вам потрібно завантажити додаток QuickDrop для вашого телефону та підключити Mac до точки доступу вашого телефону для передачі файлів. Посилання на додаток можна знайти в бічній панелі зліва."
+            "value" : "Якщо ваш Mac не відображається на вашому Android-пристрої, навіть якщо обидва пристрої підключені до однієї Wi-Fi мережі, або передача не вдалася, спробуйте наступне:\n\n1) Відкрийте Системні налаштування та перейдіть до \"Конфіденційність і безпека\" > \"Локальна мережа\". Переконайтеся, що QuickDrop увімкнено. Якщо ви використовуєте сторонній брандмауер або антивірусну програму, перегляньте документацію цієї програми, щоб дозволити вхідні з'єднання для QuickDrop.\n\n2) Перезапустіть QuickDrop, натиснувши на значок у рядку меню, виберіть останній пункт і знову відкрийте додаток. Перезапустіть ваш Android-пристрій.\n\nПримітка: Деякі мережі не дозволяють пристроям спілкуватися один з одним. У цьому випадку вам потрібно завантажити додаток QuickDrop для вашого телефону та підключити Mac до точки доступу вашого телефону для передачі файлів. Посилання на додаток можна знайти в бічній панелі зліва.\n\nЯкщо у вас новіший пристрій Samsung з OneUI 8.5 або новішою версією, ваш Mac може не відображатися в QuickShare на пристрої через проблему в OneUI. Наразі є два варіанти вирішення цього:\n\n1) Завантажте застосунок QuickDrop з Google Play. Він має більше можливостей, ніж QuickShare, зокрема синхронізацію сповіщень і буфера обміну.\n\n2) Або на сторінці QuickShare натисніть три крапки у верхньому правому куті, виберіть налаштування, а потім вимкніть перемикач «Ділитися з пристроями Apple». Після цього ваш Mac з’явиться на сторінці QuickShare."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nếu Mac của bạn không xuất hiện trên thiết bị Android mặc dù cả hai được kết nối cùng mạng Wi-Fi hoặc truyền tải thất bại, hãy thử những điều sau:\n\n1) Mở Cài đặt Hệ thống, đi đến \"Quyền Riêng tư & Bảo mật\" > \"Mạng Cục bộ\". Đảm bảo rằng QuickDrop được bật. Nếu bạn sử dụng tường lửa của bên thứ ba hoặc chương trình chống virus, vui lòng kiểm tra tài liệu của chương trình để cho phép kết nối đến cho QuickDrop.\n\n2) Khởi động lại QuickDrop bằng cách nhấp vào biểu tượng thanh menu, chọn mục cuối cùng, và mở lại ứng dụng. Khởi động lại thiết bị Android của bạn.\n\nLưu ý: Một số mạng không cho phép thiết bị giao tiếp với nhau. Trong trường hợp này, bạn cần tải ứng dụng QuickDrop cho điện thoại và kết nối Mac với hotspot của điện thoại để truyền tệp. Liên kết tới ứng dụng có thể tìm thấy trong thanh bên trái."
+            "value" : "Nếu Mac của bạn không xuất hiện trên thiết bị Android mặc dù cả hai được kết nối cùng mạng Wi-Fi hoặc truyền tải thất bại, hãy thử những điều sau:\n\n1) Mở Cài đặt Hệ thống, đi đến \"Quyền Riêng tư & Bảo mật\" > \"Mạng Cục bộ\". Đảm bảo rằng QuickDrop được bật. Nếu bạn sử dụng tường lửa của bên thứ ba hoặc chương trình chống virus, vui lòng kiểm tra tài liệu của chương trình để cho phép kết nối đến cho QuickDrop.\n\n2) Khởi động lại QuickDrop bằng cách nhấp vào biểu tượng thanh menu, chọn mục cuối cùng, và mở lại ứng dụng. Khởi động lại thiết bị Android của bạn.\n\nLưu ý: Một số mạng không cho phép thiết bị giao tiếp với nhau. Trong trường hợp này, bạn cần tải ứng dụng QuickDrop cho điện thoại và kết nối Mac với hotspot của điện thoại để truyền tệp. Liên kết tới ứng dụng có thể tìm thấy trong thanh bên trái.\n\nNếu bạn có thiết bị Samsung mới hơn với OneUI 8.5 trở lên, máy Mac của bạn có thể không hiển thị trong QuickShare trên thiết bị do một sự cố trong OneUI. Hiện có hai cách để giải quyết việc này:\n\n1) Tải ứng dụng QuickDrop từ Google Play. Ứng dụng này có nhiều chức năng hơn QuickShare, chẳng hạn như đồng bộ thông báo và bảng ghi tạm.\n\n2) Nếu không, trên trang QuickShare, nhấn vào ba dấu chấm ở góc trên bên phải, chọn cài đặt, rồi tắt công tắc \"Chia sẻ với thiết bị Apple\". Sau đó, máy Mac của bạn sẽ xuất hiện trên trang QuickShare."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "如果您的 Mac 没有显示在 Android 设备上，即使两个设备已连接到同一个 Wi-Fi 网络，或者传输失败，请尝试以下操作：\n\n1）打开系统设置，前往“隐私与安全性”>“本地网络”。确保已启用 QuickDrop。如果您使用的是第三方防火墙或防病毒程序，请查阅相关文档，允许 QuickDrop 的传入连接。\n\n2）点击菜单栏图标重新启动 QuickDrop，选择最后一个选项并重新打开应用。重启您的 Android 设备。\n\n注意：某些网络不允许设备之间通信。在这种情况下，请在手机上下载 QuickDrop 应用，并将 Mac 连接到手机的热点以进行文件传输。应用下载链接位于左侧边栏中。"
+            "value" : "如果您的 Mac 没有显示在 Android 设备上，即使两个设备已连接到同一个 Wi-Fi 网络，或者传输失败，请尝试以下操作：\n\n1）打开系统设置，前往“隐私与安全性”>“本地网络”。确保已启用 QuickDrop。如果您使用的是第三方防火墙或防病毒程序，请查阅相关文档，允许 QuickDrop 的传入连接。\n\n2）点击菜单栏图标重新启动 QuickDrop，选择最后一个选项并重新打开应用。重启您的 Android 设备。\n\n注意：某些网络不允许设备之间通信。在这种情况下，请在手机上下载 QuickDrop 应用，并将 Mac 连接到手机的热点以进行文件传输。应用下载链接位于左侧边栏中。\n\n如果你使用搭载 OneUI 8.5 或更高版本的较新 Samsung 设备，由于 OneUI 中的问题，你的 Mac 可能不会显示在设备的 QuickShare 中。目前有两种方法可以解决此问题：\n\n1) 从 Google Play 下载 QuickDrop 应用。它比 QuickShare 提供更多功能，例如通知同步和剪贴板同步。\n\n2) 否则，请在 QuickShare 页面点击右上角的三个点，选择设置，然后关闭“与 Apple 设备共享”开关。之后，你的 Mac 就会显示在 QuickShare 页面上。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "如果您的 Mac 沒有顯示在 Android 設備上，即使兩台設備都連接到同一 Wi-Fi 網路，或者傳輸失敗，請嘗試以下方法：\n\n1) 開啟「系統設置」，轉到「隱私和安全性」>「本地網路」。確保已啟用 QuickDrop。如果使用第三方防火牆或防毒程式，請檢查程式的說明文件以允許 QuickDrop 的傳入連接。\n\n2) 通過點擊菜單欄圖標重啟 QuickDrop，選擇最後一個條目並重新打開應用程式。重啟 Android 設備。\n\n注意：某些網絡不允許設備之間通信。在這種情況下，您需要為手機下載 QuickDrop 應用程式，並將您的 Mac 連接到手機的熱點來傳輸文件。應用程式鏈接可以在左側邊欄中找到。"
+            "value" : "如果您的 Mac 沒有顯示在 Android 設備上，即使兩台設備都連接到同一 Wi-Fi 網路，或者傳輸失敗，請嘗試以下方法：\n\n1) 開啟「系統設置」，轉到「隱私和安全性」>「本地網路」。確保已啟用 QuickDrop。如果使用第三方防火牆或防毒程式，請檢查程式的說明文件以允許 QuickDrop 的傳入連接。\n\n2) 通過點擊菜單欄圖標重啟 QuickDrop，選擇最後一個條目並重新打開應用程式。重啟 Android 設備。\n\n注意：某些網絡不允許設備之間通信。在這種情況下，您需要為手機下載 QuickDrop 應用程式，並將您的 Mac 連接到手機的熱點來傳輸文件。應用程式鏈接可以在左側邊欄中找到。\n\n如果你使用搭載 OneUI 8.5 或更高版本的較新 Samsung 裝置，由於 OneUI 中的問題，你的 Mac 可能不會顯示在裝置的 QuickShare 中。目前有兩種方法可以解決此問題：\n\n1) 從 Google Play 下載 QuickDrop App。它比 QuickShare 提供更多功能，例如通知同步和剪貼簿同步。\n\n2) 否則，請在 QuickShare 頁面點一下右上角的三個點，選擇設定，然後關閉「與 Apple 裝置分享」開關。之後，你的 Mac 就會顯示在 QuickShare 頁面上。"
           }
         }
       }
@@ -31208,6 +31674,705 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "重置所有設置"
+          }
+        }
+      }
+    },
+    "SamsungOneUI85AlertMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "على أجهزة Samsung الأحدث التي تعمل بنظام OneUI 8.5 أو أعلى، قد لا يظهر Mac الخاص بك في QuickShare على جهازك. هناك خياران لحل ذلك:\n\n1) نزّل تطبيق QuickDrop من Google Play. فهو يوفر وظائف أكثر من QuickShare، مثل مزامنة الإشعارات والحافظة.\n\n2) بخلاف ذلك، في صفحة QuickShare، اضغط على النقاط الثلاث في الزاوية العلوية اليمنى، واختر الإعدادات، ثم عطّل خيار \"المشاركة مع أجهزة Apple\". بعد ذلك، سيظهر Mac الخاص بك في صفحة QuickShare."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En dispositius Samsung més nous amb OneUI 8.5 o superior, pot ser que el teu Mac no sigui visible a QuickShare al dispositiu. Tens dues opcions per resoldre-ho:\n\n1) Descarrega l'app QuickDrop des de Google Play. Inclou més funcionalitats que QuickShare, com ara la sincronització de notificacions i del porta-retalls.\n\n2) Si no, a la pàgina de QuickShare, prem els tres punts de la cantonada superior dreta, tria configuració i desactiva l'interruptor \"Comparteix amb dispositius Apple\". Després, el Mac apareixerà a la pàgina de QuickShare."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na novějších zařízeních Samsung s OneUI 8.5 nebo novějším se váš Mac nemusí v QuickShare na zařízení zobrazovat. Existují dvě možnosti, jak to vyřešit:\n\n1) Stáhněte si aplikaci QuickDrop z Google Play. Nabízí více funkcí než QuickShare, například synchronizaci oznámení a schránky.\n\n2) Případně na stránce QuickShare klepněte na tři tečky v pravém horním rohu, zvolte nastavení a poté vypněte přepínač „Sdílet se zařízeními Apple“. Poté se váš Mac na stránce QuickShare zobrazí."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På nyere Samsung-enheder med OneUI 8.5 eller nyere er din Mac muligvis ikke synlig i QuickShare på din enhed. Der er to muligheder for at løse dette:\n\n1) Download QuickDrop-appen fra Google Play. Den har mere funktionalitet end QuickShare, f.eks. notifikations- og udklipsholder-synk.\n\n2) Ellers skal du på QuickShare-siden trykke på de tre prikker i øverste højre hjørne, vælge indstillinger og derefter deaktivere kontakten \"Del med Apple-enheder\". Derefter vises din Mac på QuickShare-siden."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf neueren Samsung-Geräten mit OneUI 8.5 oder höher ist dein Mac möglicherweise nicht in QuickShare auf deinem Gerät sichtbar. Es gibt zwei Möglichkeiten, das zu beheben:\n\n1) Lade die QuickDrop-App aus Google Play herunter. Sie bietet mehr Funktionen als QuickShare, zum Beispiel Benachrichtigungs- und Zwischenablage-Sync.\n\n2) Öffne andernfalls auf deinem Gerät die QuickShare-Seite, tippe oben rechts auf die drei Punkte, wähle die Einstellungen und deaktiviere dann den Schalter „Mit Apple-Geräten teilen“. Danach wird dein Mac auf der QuickShare-Seite angezeigt."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σε νεότερες συσκευές Samsung με OneUI 8.5 ή νεότερο, το Mac σας μπορεί να μην είναι ορατό στο QuickShare της συσκευής σας. Υπάρχουν δύο επιλογές για να το λύσετε:\n\n1) Κατεβάστε την εφαρμογή QuickDrop από το Google Play. Προσφέρει περισσότερες λειτουργίες από το QuickShare, όπως συγχρονισμό ειδοποιήσεων και προχείρου.\n\n2) Διαφορετικά, στη σελίδα QuickShare, πατήστε τις τρεις τελείες στην επάνω δεξιά γωνία, επιλέξτε ρυθμίσεις και απενεργοποιήστε τον διακόπτη «Κοινή χρήση με συσκευές Apple». Στη συνέχεια, το Mac σας θα εμφανιστεί στη σελίδα QuickShare."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On newer Samsung devices with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On newer Samsung devices with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On newer Samsung devices with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On newer Samsung devices with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En dispositivos Samsung más recientes con OneUI 8.5 o superior, es posible que tu Mac no sea visible en QuickShare en tu dispositivo. Hay dos opciones para resolverlo:\n\n1) Descarga la app QuickDrop desde Google Play. Incluye más funciones que QuickShare, como sincronización de notificaciones y del portapapeles.\n\n2) Si no, en la página de QuickShare, toca los tres puntos en la esquina superior derecha, elige ajustes y desactiva el interruptor \"Compartir con dispositivos Apple\". Después, tu Mac aparecerá en la página de QuickShare."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En dispositivos Samsung más nuevos con OneUI 8.5 o superior, es posible que tu Mac no aparezca en QuickShare en tu dispositivo. Hay dos opciones para resolverlo:\n\n1) Descarga la app QuickDrop desde Google Play. Incluye más funciones que QuickShare, como sincronización de notificaciones y del portapapeles.\n\n2) Si no, en la página de QuickShare, toca los tres puntos en la esquina superior derecha, elige configuración y desactiva el interruptor \"Compartir con dispositivos Apple\". Después, tu Mac aparecerá en la página de QuickShare."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uudemmilla Samsung-laitteilla, joissa on OneUI 8.5 tai uudempi, Macisi ei välttämättä näy laitteen QuickSharessa. Tämän voi ratkaista kahdella tavalla:\n\n1) Lataa QuickDrop-sovellus Google Playsta. Siinä on enemmän toimintoja kuin QuickSharessa, kuten ilmoitusten ja leikepöydän synkronointi.\n\n2) Muussa tapauksessa avaa QuickShare-sivu, napauta oikean yläkulman kolmea pistettä, valitse asetukset ja poista sitten käytöstä kytkin \"Jaa Apple-laitteiden kanssa\". Sen jälkeen Macisi näkyy QuickShare-sivulla."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sur les appareils Samsung récents avec OneUI 8.5 ou une version ultérieure, votre Mac peut ne pas être visible dans QuickShare sur votre appareil. Deux options permettent de résoudre ce problème :\n\n1) Téléchargez l’application QuickDrop depuis Google Play. Elle offre plus de fonctionnalités que QuickShare, comme la synchronisation des notifications et du presse-papiers.\n\n2) Sinon, sur la page QuickShare, touchez les trois points dans le coin supérieur droit, choisissez les réglages, puis désactivez l’option « Partager avec les appareils Apple ». Ensuite, votre Mac apparaîtra sur la page QuickShare."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sur les appareils Samsung récents avec OneUI 8.5 ou une version ultérieure, votre Mac pourrait ne pas être visible dans QuickShare sur votre appareil. Deux options permettent de résoudre ce problème :\n\n1) Téléchargez l’application QuickDrop depuis Google Play. Elle offre plus de fonctionnalités que QuickShare, comme la synchronisation des notifications et du presse-papiers.\n\n2) Sinon, sur la page QuickShare, touchez les trois points dans le coin supérieur droit, choisissez les réglages, puis désactivez l’option « Partager avec les appareils Apple ». Ensuite, votre Mac apparaîtra sur la page QuickShare."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "במכשירי Samsung חדשים יותר עם OneUI 8.5 ומעלה, ייתכן שה-Mac שלך לא יהיה גלוי ב-QuickShare במכשיר. יש שתי אפשרויות לפתור זאת:\n\n1) הורד את אפליקציית QuickDrop מ-Google Play. היא כוללת יותר יכולות מ-QuickShare, כמו סנכרון התראות ולוח.\n\n2) אחרת, בעמוד QuickShare, לחץ על שלוש הנקודות בפינה הימנית העליונה, בחר הגדרות, ואז כבה את המתג \"שיתוף עם מכשירי Apple\". לאחר מכן ה-Mac שלך יופיע בעמוד QuickShare."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OneUI 8.5 या उससे नए संस्करण वाले नए Samsung डिवाइसों पर, आपका Mac आपके डिवाइस के QuickShare में दिखाई नहीं दे सकता। इसे हल करने के दो विकल्प हैं:\n\n1) Google Play से QuickDrop ऐप डाउनलोड करें। इसमें QuickShare से अधिक सुविधाएं हैं, जैसे नोटिफिकेशन और क्लिपबोर्ड सिंक।\n\n2) अन्यथा, QuickShare पेज पर, ऊपर दाईं ओर तीन बिंदुओं पर क्लिक करें, सेटिंग्स चुनें, फिर \"Apple डिवाइसों के साथ साझा करें\" टॉगल बंद करें। इसके बाद आपका Mac QuickShare पेज पर दिखाई देगा।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na novijim Samsung uređajima s OneUI 8.5 ili novijim, vaš Mac možda neće biti vidljiv u QuickShareu na uređaju. Postoje dvije mogućnosti za rješavanje ovoga:\n\n1) Preuzmite aplikaciju QuickDrop s Google Playa. Ima više funkcija od QuickSharea, kao što su sinkronizacija obavijesti i međuspremnika.\n\n2) U suprotnom, na stranici QuickShare kliknite tri točke u gornjem desnom kutu, odaberite postavke, a zatim isključite prekidač \"Dijeli s Apple uređajima\". Nakon toga će se vaš Mac prikazati na stranici QuickShare."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Az újabb, OneUI 8.5 vagy újabb rendszert futtató Samsung készülékeken előfordulhat, hogy a Mac nem látható a készülék QuickShare felületén. Két lehetőség van a megoldásra:\n\n1) Töltsd le a QuickDrop alkalmazást a Google Playről. Több funkciót kínál, mint a QuickShare, például értesítés- és vágólap-szinkronizálást.\n\n2) Ellenkező esetben a QuickShare oldalon koppints a jobb felső sarokban lévő három pontra, válaszd a beállításokat, majd kapcsold ki a „Megosztás Apple-eszközökkel” kapcsolót. Ezután a Mac meg fog jelenni a QuickShare oldalon."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pada perangkat Samsung yang lebih baru dengan OneUI 8.5 atau lebih tinggi, Mac Anda mungkin tidak terlihat di QuickShare pada perangkat Anda. Ada dua opsi untuk mengatasinya:\n\n1) Unduh aplikasi QuickDrop dari Google Play. Aplikasi ini memiliki lebih banyak fungsi daripada QuickShare, seperti sinkronisasi notifikasi dan clipboard.\n\n2) Jika tidak, di halaman QuickShare, ketuk tiga titik di pojok kanan atas, pilih pengaturan, lalu nonaktifkan tombol \"Bagikan dengan perangkat Apple\". Setelah itu, Mac Anda akan muncul di halaman QuickShare."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sui dispositivi Samsung più recenti con OneUI 8.5 o superiore, il Mac potrebbe non essere visibile in QuickShare sul dispositivo. Ci sono due opzioni per risolvere il problema:\n\n1) Scarica l’app QuickDrop da Google Play. Offre più funzionalità di QuickShare, come la sincronizzazione delle notifiche e degli appunti.\n\n2) In alternativa, nella pagina QuickShare, tocca i tre puntini nell’angolo in alto a destra, scegli impostazioni, quindi disattiva l’interruttore \"Condividi con dispositivi Apple\". Dopo, il Mac apparirà nella pagina QuickShare."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OneUI 8.5以降を搭載した新しいSamsung端末では、お使いのMacが端末のQuickShareに表示されない場合があります。解決方法は2つあります：\n\n1) Google PlayからQuickDropアプリをダウンロードします。通知同期やクリップボード同期など、QuickShareより多くの機能があります。\n\n2) それ以外の場合は、QuickShareページで右上の3点メニューをタップし、設定を選択してから「Appleデバイスと共有」トグルを無効にします。その後、MacがQuickShareページに表示されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OneUI 8.5 이상이 설치된 최신 Samsung 기기에서는 기기의 QuickShare에 Mac이 보이지 않을 수 있습니다. 이를 해결하는 방법은 두 가지입니다:\n\n1) Google Play에서 QuickDrop 앱을 다운로드하세요. 알림 및 클립보드 동기화 등 QuickShare보다 더 많은 기능을 제공합니다.\n\n2) 또는 QuickShare 페이지에서 오른쪽 상단의 점 세 개를 누르고 설정을 선택한 다음 \"Apple 기기와 공유\" 토글을 끄세요. 그러면 Mac이 QuickShare 페이지에 표시됩니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pada peranti Samsung yang lebih baharu dengan OneUI 8.5 atau lebih tinggi, Mac anda mungkin tidak kelihatan dalam QuickShare pada peranti anda. Terdapat dua pilihan untuk menyelesaikannya:\n\n1) Muat turun apl QuickDrop daripada Google Play. Ia mempunyai lebih banyak fungsi daripada QuickShare, seperti penyegerakan pemberitahuan dan papan klip.\n\n2) Jika tidak, pada halaman QuickShare, ketik tiga titik di penjuru kanan atas, pilih tetapan, kemudian matikan togol \"Kongsi dengan peranti Apple\". Selepas itu, Mac anda akan muncul pada halaman QuickShare."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På nyere Samsung-enheter med OneUI 8.5 eller nyere kan det hende at Macen din ikke er synlig i QuickShare på enheten. Det finnes to måter å løse dette på:\n\n1) Last ned QuickDrop-appen fra Google Play. Den har mer funksjonalitet enn QuickShare, som varslings- og utklippssynk.\n\n2) Hvis ikke, gå til QuickShare-siden, trykk på de tre prikkene øverst til høyre, velg innstillinger, og slå deretter av bryteren \"Del med Apple-enheter\". Etterpå vises Macen din på QuickShare-siden."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op nieuwere Samsung-apparaten met OneUI 8.5 of hoger is je Mac mogelijk niet zichtbaar in QuickShare op je apparaat. Er zijn twee opties om dit op te lossen:\n\n1) Download de QuickDrop-app uit Google Play. Die heeft meer functies dan QuickShare, zoals synchronisatie van meldingen en het klembord.\n\n2) Ga anders op de QuickShare-pagina naar de drie puntjes rechtsboven, kies instellingen en schakel daarna de optie \"Delen met Apple-apparaten\" uit. Daarna verschijnt je Mac op de QuickShare-pagina."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na nowszych urządzeniach Samsung z OneUI 8.5 lub nowszym Twój Mac może nie być widoczny w QuickShare na urządzeniu. Są dwie możliwości rozwiązania tego problemu:\n\n1) Pobierz aplikację QuickDrop z Google Play. Ma więcej funkcji niż QuickShare, na przykład synchronizację powiadomień i schowka.\n\n2) W przeciwnym razie na stronie QuickShare stuknij trzy kropki w prawym górnym rogu, wybierz ustawienia, a następnie wyłącz przełącznik „Udostępnij urządzeniom Apple”. Potem Twój Mac pojawi się na stronie QuickShare."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em dispositivos Samsung mais recentes com OneUI 8.5 ou superior, talvez o seu Mac não apareça no QuickShare do dispositivo. Há duas opções para resolver isso:\n\n1) Baixe o app QuickDrop no Google Play. Ele vem com mais funcionalidades que o QuickShare, como sincronização de notificações e da área de transferência.\n\n2) Caso contrário, na página do QuickShare, toque nos três pontos no canto superior direito, escolha configurações e desative a opção \"Compartilhar com dispositivos Apple\". Depois disso, seu Mac aparecerá na página do QuickShare."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em dispositivos Samsung mais recentes com OneUI 8.5 ou superior, o seu Mac pode não aparecer no QuickShare do dispositivo. Existem duas opções para resolver isto:\n\n1) Transfira a app QuickDrop a partir da Google Play. Tem mais funcionalidades do que o QuickShare, como sincronização de notificações e da área de transferência.\n\n2) Caso contrário, na página do QuickShare, toque nos três pontos no canto superior direito, escolha definições e desative a opção \"Partilhar com dispositivos Apple\". Depois, o seu Mac aparecerá na página do QuickShare."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pe dispozitivele Samsung mai noi cu OneUI 8.5 sau o versiune ulterioară, Mac-ul dvs. poate să nu fie vizibil în QuickShare pe dispozitiv. Există două opțiuni pentru a rezolva acest lucru:\n\n1) Descărcați aplicația QuickDrop din Google Play. Are mai multe funcții decât QuickShare, cum ar fi sincronizarea notificărilor și a clipboardului.\n\n2) În caz contrar, pe pagina QuickShare, apăsați pe cele trei puncte din colțul dreapta sus, alegeți setări, apoi dezactivați comutatorul \"Partajare cu dispozitive Apple\". După aceea, Mac-ul dvs. va apărea pe pagina QuickShare."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На новых устройствах Samsung с OneUI 8.5 или новее ваш Mac может не отображаться в QuickShare на устройстве. Есть два способа решить это:\n\n1) Скачайте приложение QuickDrop из Google Play. В нем больше возможностей, чем в QuickShare, например синхронизация уведомлений и буфера обмена.\n\n2) Либо на странице QuickShare нажмите на три точки в правом верхнем углу, выберите настройки, затем отключите переключатель «Поделиться с устройствами Apple». После этого ваш Mac появится на странице QuickShare."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På nyare Samsung-enheter med OneUI 8.5 eller senare kanske din Mac inte syns i QuickShare på enheten. Det finns två sätt att lösa detta:\n\n1) Ladda ner QuickDrop-appen från Google Play. Den har fler funktioner än QuickShare, till exempel notifikations- och urklippssynk.\n\n2) Annars går du till QuickShare-sidan, trycker på de tre punkterna uppe till höger, väljer inställningar och stänger sedan av reglaget \"Dela med Apple-enheter\". Därefter visas din Mac på QuickShare-sidan."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บนอุปกรณ์ Samsung รุ่นใหม่ที่ใช้ OneUI 8.5 หรือสูงกว่า Mac ของคุณอาจไม่ปรากฏใน QuickShare บนอุปกรณ์ของคุณ มีสองวิธีในการแก้ไขปัญหานี้:\n\n1) ดาวน์โหลดแอป QuickDrop จาก Google Play แอปนี้มีฟังก์ชันมากกว่า QuickShare เช่น การซิงค์การแจ้งเตือนและคลิปบอร์ด\n\n2) มิฉะนั้น ในหน้า QuickShare ให้แตะจุดสามจุดที่มุมขวาบน เลือกการตั้งค่า แล้วปิดสวิตช์ \"แชร์กับอุปกรณ์ Apple\" หลังจากนั้น Mac ของคุณจะปรากฏในหน้า QuickShare"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OneUI 8.5 veya daha yüksek sürüme sahip yeni Samsung cihazlarda Mac'iniz cihazınızdaki QuickShare'de görünmeyebilir. Bunu çözmek için iki seçenek vardır:\n\n1) QuickDrop uygulamasını Google Play'den indirin. Bildirim ve pano senkronizasyonu gibi QuickShare'den daha fazla işlev sunar.\n\n2) Aksi takdirde, QuickShare sayfasında sağ üst köşedeki üç noktaya dokunun, ayarları seçin, ardından \"Apple aygıtlarıyla paylaş\" geçişini devre dışı bırakın. Sonrasında Mac'iniz QuickShare sayfasında görünecektir."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На новіших пристроях Samsung з OneUI 8.5 або новішою версією ваш Mac може не відображатися в QuickShare на пристрої. Є два варіанти вирішення цього:\n\n1) Завантажте застосунок QuickDrop з Google Play. Він має більше можливостей, ніж QuickShare, зокрема синхронізацію сповіщень і буфера обміну.\n\n2) Або на сторінці QuickShare натисніть три крапки у верхньому правому куті, виберіть налаштування, а потім вимкніть перемикач «Ділитися з пристроями Apple». Після цього ваш Mac з’явиться на сторінці QuickShare."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên các thiết bị Samsung mới hơn với OneUI 8.5 trở lên, máy Mac của bạn có thể không hiển thị trong QuickShare trên thiết bị. Có hai cách để giải quyết việc này:\n\n1) Tải ứng dụng QuickDrop từ Google Play. Ứng dụng này có nhiều chức năng hơn QuickShare, chẳng hạn như đồng bộ thông báo và bảng ghi tạm.\n\n2) Nếu không, trên trang QuickShare, nhấn vào ba dấu chấm ở góc trên bên phải, chọn cài đặt, rồi tắt công tắc \"Chia sẻ với thiết bị Apple\". Sau đó, máy Mac của bạn sẽ xuất hiện trên trang QuickShare."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在搭载 OneUI 8.5 或更高版本的较新 Samsung 设备上，你的 Mac 可能不会显示在设备的 QuickShare 中。有两种方法可以解决此问题：\n\n1) 从 Google Play 下载 QuickDrop 应用。它比 QuickShare 提供更多功能，例如通知同步和剪贴板同步。\n\n2) 否则，请在 QuickShare 页面点击右上角的三个点，选择设置，然后关闭“与 Apple 设备共享”开关。之后，你的 Mac 就会显示在 QuickShare 页面上。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在搭載 OneUI 8.5 或更高版本的較新 Samsung 裝置上，你的 Mac 可能不會顯示在裝置的 QuickShare 中。有兩種方法可以解決此問題：\n\n1) 從 Google Play 下載 QuickDrop App。它比 QuickShare 提供更多功能，例如通知同步和剪貼簿同步。\n\n2) 否則，請在 QuickShare 頁面點一下右上角的三個點，選擇設定，然後關閉「與 Apple 裝置分享」開關。之後，你的 Mac 就會顯示在 QuickShare 頁面上。"
+          }
+        }
+      }
+    },
+    "SamsungOneUI85AlertTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac غير مرئي؟"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El Mac no és visible?"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac není vidět?"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac ikke synlig?"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac nicht sichtbar?"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το Mac δεν είναι ορατό;"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac not visible?"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac not visible?"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac not visible?"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac not visible?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿El Mac no es visible?"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿El Mac no aparece?"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eikö Mac näy?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac non visible ?"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac non visible?"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ה-Mac לא גלוי?"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac दिखाई नहीं दे रहा?"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac nije vidljiv?"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nem látható a Mac?"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac tidak terlihat?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac non visibile?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macが表示されませんか？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac이 보이지 않나요?"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac tidak kelihatan?"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac ikke synlig?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac niet zichtbaar?"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac niewidoczny?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac não aparece?"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac não aparece?"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac-ul nu este vizibil?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac не виден?"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac syns inte?"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac ไม่ปรากฏหรือไม่?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac görünmüyor mu?"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac не видно?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Máy Mac không hiển thị?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 不可见？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 不可見？"
+          }
+        }
+      }
+    },
+    "SamsungOneUI85HelpLink" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac غير مرئي على جهاز Samsung مع OneUI 8.5؟"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El Mac no és visible en un dispositiu Samsung amb OneUI 8.5?"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac není viditelný na zařízení Samsung s OneUI 8.5?"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er Mac ikke synlig på en Samsung-enhed med OneUI 8.5?"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac auf Samsung-Gerät mit OneUI 8.5 nicht sichtbar?"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν είναι ορατό το Mac σε συσκευή Samsung με OneUI 8.5;"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac not visible on Samsung device with OneUI 8.5?"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac not visible on Samsung device with OneUI 8.5?"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac not visible on Samsung device with OneUI 8.5?"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac not visible on Samsung device with OneUI 8.5?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Mac no visible en un dispositivo Samsung con OneUI 8.5?"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿La Mac no aparece en un dispositivo Samsung con OneUI 8.5?"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eikö Mac näy Samsung-laitteella, jossa on OneUI 8.5?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac non visible sur un appareil Samsung avec OneUI 8.5 ?"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac non visible sur un appareil Samsung avec OneUI 8.5?"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ה-Mac לא גלוי במכשיר Samsung עם OneUI 8.5?"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OneUI 8.5 वाले Samsung डिवाइस पर Mac दिखाई नहीं दे रहा?"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac nije vidljiv na Samsung uređaju s OneUI 8.5?"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nem látható a Mac OneUI 8.5-öt futtató Samsung készüléken?"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac tidak terlihat di perangkat Samsung dengan OneUI 8.5?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac non visibile su un dispositivo Samsung con OneUI 8.5?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OneUI 8.5のSamsung端末でMacが表示されませんか？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OneUI 8.5가 설치된 Samsung 기기에서 Mac이 보이지 않나요?"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac tidak kelihatan pada peranti Samsung dengan OneUI 8.5?"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er Macen ikke synlig på en Samsung-enhet med OneUI 8.5?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac niet zichtbaar op een Samsung-apparaat met OneUI 8.5?"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac niewidoczny na urządzeniu Samsung z OneUI 8.5?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac não aparece em dispositivo Samsung com OneUI 8.5?"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac não aparece num dispositivo Samsung com OneUI 8.5?"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac-ul nu este vizibil pe un dispozitiv Samsung cu OneUI 8.5?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac не виден на устройстве Samsung с OneUI 8.5?"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Syns inte Macen på en Samsung-enhet med OneUI 8.5?"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac ไม่ปรากฏบนอุปกรณ์ Samsung ที่ใช้ OneUI 8.5?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac, OneUI 8.5 yüklü Samsung cihazda görünmüyor mu?"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac не видно на пристрої Samsung з OneUI 8.5?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Máy Mac không hiển thị trên thiết bị Samsung với OneUI 8.5?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 在搭载 OneUI 8.5 的 Samsung 设备上不可见？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 在搭載 OneUI 8.5 的 Samsung 裝置上不可見？"
           }
         }
       }
