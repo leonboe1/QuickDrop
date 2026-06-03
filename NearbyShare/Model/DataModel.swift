@@ -254,27 +254,27 @@ public struct TransferMetadata {
         let type = UTType(mimeType: mimeType) ?? UTType(filenameExtension: ext)
 
         if let type, type.conforms(to: .pdf) {
-            return UTType.pdf.localizedDescription ?? "PDF"
+            return "PDF".localized()
         }
         if let type, type.conforms(to: .image) {
-            return UTType.image.localizedDescription ?? "Image"
+            return "Image".localized()
         }
         if let type, type.conforms(to: .video) || type.conforms(to: .movie) {
-            return UTType.video.localizedDescription ?? "Video"
+            return "Video".localized()
         }
         if let type, type.conforms(to: .audio) {
-            return UTType.audio.localizedDescription ?? "Audio"
+            return "Audio".localized()
         }
         if let type, type.conforms(to: .text) {
-            return UTType.text.localizedDescription ?? "Text"
+            return "Text".localized()
         }
         if let type, type.conforms(to: .archive) {
-            return UTType.archive.localizedDescription ?? "Archive"
+            return "Archive".localized()
         }
         if let type, let description = type.localizedDescription {
             return description
         }
-        return "File"
+        return "File".localized()
     }
     
     public func getDescription(deviceName: String) -> String {
