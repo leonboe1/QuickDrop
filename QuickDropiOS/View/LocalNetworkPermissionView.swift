@@ -27,13 +27,13 @@ public struct LocalNetworkPermissionView: View {
                 let manager = NearbyConnectionManager.shared
                 manager.startDeviceDiscovery()
             }
-        }, continueLabel: "introduction_continue", canSkip: false, nextView: {
+        }, continueLabel: "introduction_continue", nextView: {
             #if !EXTENSION
             BluetoothPermissionView()
             #else
             IntroductionDoneView()
             #endif
-        }, nextViewSkip: {}, topView: {
+        }, topView: {
             IntroductionIconView(icon: "wifi")
         })
         .onChange(of: scenePhase) { newValue in
@@ -57,11 +57,7 @@ private struct BluetoothPermissionView: View {
                        subtitle: "BluetoothPermissionRequiredSubtitle",
                        permissionAction: requestBluetoothAccess,
                        continueLabel: "introduction_continue",
-                       canSkip: false,
                        nextView: {
-                           IntroductionDoneView()
-                       },
-                       nextViewSkip: {
                            IntroductionDoneView()
                        },
                        topView: {

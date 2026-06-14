@@ -143,7 +143,6 @@ private struct QuickDropFAQSettingsView: View {
     var body: some View {
         NavigationSubView(header: "TroubleshootingAndFaq") {
             FAQView(faqItems: faqItems)
-                .padding(.top)
         }
     }
 }
