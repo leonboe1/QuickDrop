@@ -14,6 +14,8 @@ struct IntroductionView: View {
     static let height: CGFloat = 540
     
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.scenePhase) private var scenePhase
+    @ObservedObject private var bluetooth = BluetoothPermissionManager.shared
     @State private var currentPage: IntroductionPage = .splash
 
     @State private var pollingPage: IntroductionPage? = nil
@@ -120,6 +122,10 @@ struct IntroductionView: View {
         .onChange(of: currentPage) { newValue in
             pageDidChange(to: newValue)
         }
+        .onChange(of: scenePhase) { newValue in
+            guard newValue == .active, currentPage == .bluetoothAccess else { return }
+            refreshBluetoothPermissionAndAdvanceIfAllowed()
+        }
         .task(id: pollingPage) {
             guard let page = pollingPage else { return }
             
@@ -181,6 +187,11 @@ struct IntroductionView: View {
     
 
     private func continueTapped() {
+        if currentPage == .bluetoothAccess {
+            continueBluetoothPermission()
+            return
+        }
+
         // If already allowed, advance immediately
         if currentPage.canContinue() {
             advance()
@@ -197,13 +208,57 @@ struct IntroductionView: View {
     }
 
     
+    private func continueBluetoothPermission() {
+        bluetooth.refresh()
+
+        if bluetooth.isAllowed {
+            advance()
+            return
+        }
+
+        pollingPage = .bluetoothAccess
+
+        guard bluetooth.canRequestPermission else {
+            bluetooth.openSystemBluetoothSettings()
+            return
+        }
+
+        bluetooth.requestPermission { allowed in
+            DispatchQueue.main.async {
+                guard currentPage == .bluetoothAccess else {
+                    stopPolling()
+                    return
+                }
+
+                if allowed {
+                    stopPolling()
+                    advance()
+                }
+                else {
+                    pollingPage = .bluetoothAccess
+                }
+            }
+        }
+    }
+
+
+    private func refreshBluetoothPermissionAndAdvanceIfAllowed() {
+        bluetooth.refresh()
+
+        guard currentPage == .bluetoothAccess, bluetooth.isAllowed else { return }
+
+        stopPolling()
+        advance()
+    }
+
+
     private func advance() {
-        
+
         if currentPage == .localNetworkAccess {
             let _ = DeviceToDeviceHeuristicScanner.shared.hasLocalNetworkAccess(completion: {_ in })
             triggerLocalNetworkPermission()
         }
-        
+
         if let nextPage = currentPage.presentNextPage() {
             currentPage = nextPage
         } else {
@@ -223,6 +278,7 @@ enum IntroductionPage: CaseIterable {
     case splash
     case noWifi
     case localNetworkAccess
+    case bluetoothAccess
     case enableShareExtension
     case finished
     
@@ -234,6 +290,8 @@ enum IntroductionPage: CaseIterable {
             return "introduction_no_wifi"
         case .localNetworkAccess:
             return "introduction_local_network_access"
+        case .bluetoothAccess:
+            return "BluetoothPermissionRequiredTitle"
         case .enableShareExtension:
             return "introduction_enable_share_extension"
         case .finished:
@@ -250,6 +308,8 @@ enum IntroductionPage: CaseIterable {
             return "introduction_no_wifi_description"
         case .localNetworkAccess:
             return "introduction_local_network_access_description".localized(with: "introduction_continue".localized())
+        case .bluetoothAccess:
+            return "BluetoothPermissionRequiredSubtitle"
         case .enableShareExtension:
             if #available(macOS 13.0, *) {
                 return "introduction_enable_share_extension_description".localized(with: "EnableQuickDropExtension".localized())
@@ -267,6 +327,8 @@ enum IntroductionPage: CaseIterable {
         switch self {
         case .noWifi:
             return .init(action: presentNextPage, warningTitle: "introduction_no_wifi_skip_title", warningMessage: "introduction_no_wifi_skip_message")
+        case .bluetoothAccess:
+            return .init(action: { .enableShareExtension }, warningTitle: "BluetoothPermissionSkipAlertTitle", warningMessage: "BluetoothPermissionSkipAlertMessage")
         default:
             return nil
         }
@@ -290,6 +352,8 @@ enum IntroductionPage: CaseIterable {
         case .noWifi:
             return firstPermissionPane()
         case .localNetworkAccess:
+            return .bluetoothAccess
+        case .bluetoothAccess:
             return .enableShareExtension
         case .enableShareExtension:
             return .finished
@@ -304,7 +368,7 @@ enum IntroductionPage: CaseIterable {
             // Local network access is requested first on macOS 15+
             return .localNetworkAccess
         }
-        return .enableShareExtension
+        return .bluetoothAccess
     }
     
     
@@ -312,6 +376,8 @@ enum IntroductionPage: CaseIterable {
         switch self {
             case .noWifi:
                 return NearbyConnectionManager.shared.isConnectedToLocalNetwork
+            case .bluetoothAccess:
+                return BluetoothPermissionManager.shared.isAllowed
             default:
                 return true
         }
@@ -332,6 +398,8 @@ enum IntroductionPage: CaseIterable {
                 imageView(for: "wifi.slash", with: height)
             case .localNetworkAccess:
                 imageView(for: "network", with: height)
+            case .bluetoothAccess:
+                imageView(for: "antenna.radiowaves.left.and.right", with: height)
             case .enableShareExtension:
                 imageView(for: "square.and.arrow.up", with: height)
             case .finished:
@@ -350,8 +418,7 @@ enum IntroductionPage: CaseIterable {
             .frame(height: height * 0.5)
             .padding(.top, height * 0.13)
     }
-    
-    
+
     struct SkipAction: Identifiable {
         let action: () -> IntroductionPage?
         let warningTitle: String

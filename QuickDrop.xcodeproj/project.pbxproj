@@ -28,6 +28,15 @@
 		A1F5B3DC2F3A1A0100A1B2C7 /* PairingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F5B3D82F3A1A0100A1B2C3 /* PairingToken.swift */; };
 		A1F5B3DD2F3A1A0100A1B2C8 /* PairingQrSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F5B3D92F3A1A0100A1B2C4 /* PairingQrSheetManager.swift */; };
 		A1F5B3DE2F3A1A0100A1B2C9 /* PairingQrSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F5B3D92F3A1A0100A1B2C4 /* PairingQrSheetManager.swift */; };
+		A3D000000000000000000202 /* BluetoothPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D000000000000000000002 /* BluetoothPermissionManager.swift */; };
+		A3D000000000000000000203 /* BluetoothPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D000000000000000000002 /* BluetoothPermissionManager.swift */; };
+		A6D000000000000000000101 /* AndroidAirDropModeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D000000000000000000001 /* AndroidAirDropModeDetector.swift */; };
+		A6D000000000000000000102 /* AndroidAirDropModeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D000000000000000000001 /* AndroidAirDropModeDetector.swift */; };
+		A6D000000000000000000201 /* AndroidAirDropModeDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D000000000000000000002 /* AndroidAirDropModeDetectorTests.swift */; };
+		A7D000000000000000000101 /* AndroidAirDropModeIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */; };
+		A7D000000000000000000102 /* AndroidAirDropModeIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */; };
+		A7D000000000000000000103 /* AndroidAirDropModeIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */; };
+		A7D000000000000000000104 /* AndroidAirDropModeIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */; };
 		EB05DFBE2E59FC8900EF567A /* TrustedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */; };
 		EB05DFBF2E59FD0A00EF567A /* TrustedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */; };
 		EB05DFC02E5A2EAA00EF567A /* TrustedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */; };
@@ -382,6 +391,13 @@
 			remoteGlobalIDString = 699DEBA02AB0573200115D22;
 			remoteInfo = ShareExtension;
 		};
+		E14627D44A6E1CA296A9A53D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69DA9A0629E0BF5100A442DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69DA9A0D29E0BF5100A442DA;
+			remoteInfo = QuickDrop;
+		};
 		EB3B9F8C2EF7153000D6704E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 69DA9A0629E0BF5100A442DA /* Project object */;
@@ -495,6 +511,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		156115A05E122702111639A0 /* QuickDropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		691F53B92ABB70840089FD92 /* DeviceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListCell.swift; sourceTree = "<group>"; };
 		691F53BA2ABB70840089FD92 /* DeviceListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceListCell.xib; sourceTree = "<group>"; };
 		691F53BD2ABF03820089FD92 /* OutboundNearbyConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutboundNearbyConnection.swift; sourceTree = "<group>"; };
@@ -523,6 +540,10 @@
 		A1C0DE152F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardSyncNotificationPresenter.swift; sourceTree = "<group>"; };
 		A1F5B3D82F3A1A0100A1B2C3 /* PairingToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingToken.swift; sourceTree = "<group>"; };
 		A1F5B3D92F3A1A0100A1B2C4 /* PairingQrSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingQrSheetManager.swift; sourceTree = "<group>"; };
+		A3D000000000000000000002 /* BluetoothPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPermissionManager.swift; sourceTree = "<group>"; };
+		A6D000000000000000000001 /* AndroidAirDropModeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidAirDropModeDetector.swift; sourceTree = "<group>"; };
+		A6D000000000000000000002 /* AndroidAirDropModeDetectorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AndroidAirDropModeDetectorTests.swift; sourceTree = "<group>"; };
+		A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidAirDropModeIssueView.swift; sourceTree = "<group>"; };
 		EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustedDevicesView.swift; sourceTree = "<group>"; };
 		EB0A22E22FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyBonjourServiceResolver.swift; sourceTree = "<group>"; };
 		EB1325D22E701D8900FD749C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -595,6 +616,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F5F5F63DAC90375051BA9F4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		699DEB9E2AB0573200115D22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -713,6 +741,7 @@
 				EBC05C8B2E33B59E00EECC18 /* Resources */,
 				EB3B9F492EF7150400D6704E /* QuickDrop copy-Info.plist */,
 				EB3B9F8A2EF7151900D6704E /* QuickDropShareExtension copy-Info.plist */,
+				9E6A957675D279417AA88926 /* QuickDropTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -725,6 +754,7 @@
 				EB950B2D2E52027F002D68FA /* iOSShareExtension.appex */,
 				EB3B9F482EF7150400D6704E /* QuickDropGitHub.app */,
 				EB3B9F892EF7151900D6704E /* QuickDropShareExtensionGitHub.appex */,
+				156115A05E122702111639A0 /* QuickDropTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -768,6 +798,14 @@
 				EB5C371D2E3669150052EFD7 /* Connection */,
 			);
 			path = NearbyShare;
+			sourceTree = "<group>";
+		};
+		9E6A957675D279417AA88926 /* QuickDropTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6D000000000000000000002 /* AndroidAirDropModeDetectorTests.swift */,
+			);
+			path = QuickDropTests;
 			sourceTree = "<group>";
 		};
 		A1F5B3DA2F3A1A0100A1B2C5 /* Pairing */ = {
@@ -944,6 +982,7 @@
 		EBC05C6B2E33B57100EECC18 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A3D000000000000000000002 /* BluetoothPermissionManager.swift */,
 				A1C0DE102F4C000100ABC001 /* ClipboardSyncCoordinator.swift */,
 				A1C0DE152F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift */,
 				EB1325F72E70287C00FD749C /* SendToExtension.swift */,
@@ -952,6 +991,7 @@
 				EB6FE7D12EFEFB2700FF2BCF /* AllowedWorkMonitor.swift */,
 				EB36435F2D73A29F009CDFF8 /* AudioManager.swift */,
 				EBC05C5A2E33936C00EECC18 /* ErrorAlertHandler.swift */,
+				A6D000000000000000000001 /* AndroidAirDropModeDetector.swift */,
 				EB1325EA2E7025D900FD749C /* SelfTest */,
 			);
 			path = Util;
@@ -964,6 +1004,7 @@
 				EBC05C7E2E33B58300EECC18 /* FirewallIssueView.swift */,
 				EBC05C7F2E33B58300EECC18 /* IssueView.swift */,
 				EBC05C802E33B58300EECC18 /* NetworkFilterIssueView.swift */,
+				A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */,
 			);
 			path = IssueViews;
 			sourceTree = "<group>";
@@ -981,6 +1022,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		32A98F34E7D10C21DC2EEA19 /* QuickDropTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B473F6C65C8455203EA5FD18 /* Build configuration list for PBXNativeTarget "QuickDropTests" */;
+			buildPhases = (
+				BECDC1522AF83179791FA522 /* Sources */,
+				F5F5F63DAC90375051BA9F4E /* Frameworks */,
+				36CE9ED35EE7975FAB802535 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4F698F843B0C498BFC216AB /* PBXTargetDependency */,
+			);
+			name = QuickDropTests;
+			productName = QuickDropTests;
+			productReference = 156115A05E122702111639A0 /* QuickDropTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		699DEBA02AB0573200115D22 /* QuickDropShareExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 699DEBB12AB0573200115D22 /* Build configuration list for PBXNativeTarget "QuickDropShareExtension" */;
@@ -1137,6 +1196,9 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					32A98F34E7D10C21DC2EEA19 = {
+						CreatedOnToolsVersion = 26.0;
+					};
 					699DEBA02AB0573200115D22 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -1196,11 +1258,19 @@
 				EB950B2C2E52027F002D68FA /* iOSShareExtension */,
 				EB3B9EF02EF7150400D6704E /* QuickDropGitHub */,
 				EB3B9F4A2EF7151900D6704E /* QuickDropShareExtensionGitHub */,
+				32A98F34E7D10C21DC2EEA19 /* QuickDropTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		36CE9ED35EE7975FAB802535 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		699DEB9F2AB0573200115D22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1300,6 +1370,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BECDC1522AF83179791FA522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D000000000000000000201 /* AndroidAirDropModeDetectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		699DEB9D2AB0573200115D22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1312,6 +1390,7 @@
 				EBE5FF432EDB71810019B380 /* Configuration.swift in Sources */,
 				EB6FE7D42EFEFB2700FF2BCF /* AllowedWorkMonitor.swift in Sources */,
 				EBC05C872E33B58300EECC18 /* IssueView.swift in Sources */,
+				A7D000000000000000000103 /* AndroidAirDropModeIssueView.swift in Sources */,
 				EBC05C882E33B58300EECC18 /* FirewallIssueView.swift in Sources */,
 				EBC05C892E33B58300EECC18 /* ApIsolationIssueView.swift in Sources */,
 				699DEBA62AB0573200115D22 /* ShareViewController.swift in Sources */,
@@ -1363,6 +1442,8 @@
 				EB16B6182E58B4C8007D9792 /* TrustStore.swift in Sources */,
 				EBC05C5B2E33937200EECC18 /* ErrorAlertHandler.swift in Sources */,
 				EB1325D42E701D8E00FD749C /* Settings.swift in Sources */,
+				A3D000000000000000000202 /* BluetoothPermissionManager.swift in Sources */,
+				A6D000000000000000000101 /* AndroidAirDropModeDetector.swift in Sources */,
 				EB886E5D2E4F13EB0052B7D9 /* Zip.swift in Sources */,
 				EB5C37BF2E377A780052EFD7 /* ukey.pb.swift in Sources */,
 				EB5C37C02E377A780052EFD7 /* securemessage.pb.swift in Sources */,
@@ -1398,6 +1479,7 @@
 				EB6FE7D62EFEFB2700FF2BCF /* AllowedWorkMonitor.swift in Sources */,
 				EBC05C822E33B58300EECC18 /* ApIsolationIssueView.swift in Sources */,
 				EBC05C832E33B58300EECC18 /* FirewallIssueView.swift in Sources */,
+				A7D000000000000000000101 /* AndroidAirDropModeIssueView.swift in Sources */,
 				EB1325FA2E70288300FD749C /* SendToExtension.swift in Sources */,
 				EB0A22E72FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */,
 				EB1325F42E7025D900FD749C /* ApIsolationTester.swift in Sources */,
@@ -1424,6 +1506,8 @@
 				EB3B9F082EF7150400D6704E /* TrustStore.swift in Sources */,
 				EB3B9F092EF7150400D6704E /* ErrorAlertHandler.swift in Sources */,
 				EB3B9F0A2EF7150400D6704E /* Settings.swift in Sources */,
+				A3D000000000000000000203 /* BluetoothPermissionManager.swift in Sources */,
+				A6D000000000000000000102 /* AndroidAirDropModeDetector.swift in Sources */,
 				EB3B9F0B2EF7150400D6704E /* Zip.swift in Sources */,
 				EB3B9F0C2EF7150400D6704E /* ukey.pb.swift in Sources */,
 				EB3B9F0D2EF7150400D6704E /* securemessage.pb.swift in Sources */,
@@ -1459,6 +1543,7 @@
 				EB6FE7D52EFEFB2700FF2BCF /* AllowedWorkMonitor.swift in Sources */,
 				EB3B9F272EF7150400D6704E /* ApIsolationIssueView.swift in Sources */,
 				EB3B9F282EF7150400D6704E /* FirewallIssueView.swift in Sources */,
+				A7D000000000000000000102 /* AndroidAirDropModeIssueView.swift in Sources */,
 				EB3B9F292EF7150400D6704E /* SendToExtension.swift in Sources */,
 				EB0A22E82FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */,
 				EB3B9F2A2EF7150400D6704E /* ApIsolationTester.swift in Sources */,
@@ -1483,6 +1568,7 @@
 				EB3B9F522EF7151900D6704E /* Configuration.swift in Sources */,
 				EB6FE7D22EFEFB2700FF2BCF /* AllowedWorkMonitor.swift in Sources */,
 				EB3B9F532EF7151900D6704E /* IssueView.swift in Sources */,
+				A7D000000000000000000104 /* AndroidAirDropModeIssueView.swift in Sources */,
 				EB3B9F542EF7151900D6704E /* FirewallIssueView.swift in Sources */,
 				EB3B9F552EF7151900D6704E /* ApIsolationIssueView.swift in Sources */,
 				EB3B9F562EF7151900D6704E /* ShareViewController.swift in Sources */,
@@ -1622,6 +1708,12 @@
 			target = 699DEBA02AB0573200115D22 /* QuickDropShareExtension */;
 			targetProxy = 699DEBAC2AB0573200115D22 /* PBXContainerItemProxy */;
 		};
+		C4F698F843B0C498BFC216AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickDrop;
+			target = 69DA9A0D29E0BF5100A442DA /* QuickDrop */;
+			targetProxy = E14627D44A6E1CA296A9A53D /* PBXContainerItemProxy */;
+		};
 		EB3B9F8D2EF7153000D6704E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EB3B9F4A2EF7151900D6704E /* QuickDropShareExtensionGitHub */;
@@ -1647,6 +1739,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9A4E1D6A03B4FDA5B2074DF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92SDAWLN76;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonboettger.neardrop.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickDrop.app/Contents/MacOS/QuickDrop";
+			};
+			name = Release;
+		};
+		A8C87F63E411A0C639408AC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92SDAWLN76;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonboettger.neardrop.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickDrop.app/Contents/MacOS/QuickDrop";
+			};
+			name = Debug;
+		};
 		699DEBAF2AB0573200115D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1904,7 +2039,7 @@
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = YES;
 				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
 				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
 				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
@@ -1919,6 +2054,8 @@
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025-2026 Leon Böttger";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network access is needed to detect devices and transfer files over your Wi-Fi network.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -1969,7 +2106,7 @@
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = YES;
 				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
 				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
 				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
@@ -1984,6 +2121,8 @@
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025-2026 Leon Böttger";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network access is needed to detect devices and transfer files over your Wi-Fi network.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -2033,7 +2172,7 @@
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = YES;
 				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
 				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
 				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
@@ -2048,6 +2187,8 @@
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025-2026 Leon Böttger";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network access is needed to detect devices and transfer files over your Wi-Fi network.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -2099,7 +2240,7 @@
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = YES;
 				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
 				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
 				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
@@ -2114,6 +2255,8 @@
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025-2026 Leon Böttger";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network access is needed to detect devices and transfer files over your Wi-Fi network.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -2427,6 +2570,15 @@
 			buildConfigurations = (
 				69DA9A1C29E0BF5200A442DA /* Debug */,
 				69DA9A1D29E0BF5200A442DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B473F6C65C8455203EA5FD18 /* Build configuration list for PBXNativeTarget "QuickDropTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4E1D6A03B4FDA5B2074DF0 /* Release */,
+				A8C87F63E411A0C639408AC5 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

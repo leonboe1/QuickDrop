@@ -41,9 +41,9 @@ struct TutorialView: View {
                 
                 if tab == .receive {
                     Button {
-                        showSamsungOneUI85Alert()
+                        showAndroidAirDropModeAlert()
                     } label: {
-                        Text("SamsungOneUI85HelpLink".localized())
+                        Text("AndroidAirDropModeHelpLink".localized())
                             .underline()
                             .font(.footnote)
                             .multilineTextAlignment(.center)
@@ -68,11 +68,11 @@ struct TutorialView: View {
         }
     }
     
-    private func showSamsungOneUI85Alert() {
+    private func showAndroidAirDropModeAlert() {
         let alert = NSAlert()
         alert.alertStyle = .informational
-        alert.messageText = "SamsungOneUI85AlertTitle".localized()
-        alert.informativeText = "SamsungOneUI85AlertMessage".localized()
+        alert.messageText = "AndroidAirDropModeAlertTitle".localized()
+        alert.informativeText = "AndroidAirDropModeAlertMessage".localized()
         alert.addButton(withTitle: "CloseAlert".localized())
 
         if let window = NSApp.mainWindow ?? NSApp.keyWindow {

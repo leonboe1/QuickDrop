@@ -27,6 +27,7 @@ class ErrorAlertHandler {
     private var firewallAlertWindow: NSWindow?
     private var apIsolationAlertWindow: NSWindow?
     private var networkFilterAlertWindow: NSWindow?
+    private var androidAirDropModeAlertWindow: NSWindow?
     #endif
     
     func showErrorAlert(for deviceName: String, error: Error) {
@@ -124,6 +125,11 @@ class ErrorAlertHandler {
         AudioManager.playErrorSound()
 
         DispatchQueue.main.async { [self] in
+            if let existingWindow = alertWindow(for: type), existingWindow.isVisible {
+                bringAlertWindowToFront(existingWindow)
+                return
+            }
+
             // Create an NSWindow to host the SwiftUI view
             let alertWindow = NSWindow(
                 contentRect: NSRect(x: 0, y: 0, width: issueViewWidth, height: issueViewHeight),
@@ -142,6 +148,9 @@ class ErrorAlertHandler {
             case .Firewall:
                 firewallAlertWindow = alertWindow
                 alertWindow.contentView = NSHostingView(rootView: FirewallIssueView())
+            case .AndroidAirDropMode:
+                androidAirDropModeAlertWindow = alertWindow
+                alertWindow.contentView = NSHostingView(rootView: AndroidAirDropModeIssueView())
             }
 
             alertWindow.title = "QuickDrop"
@@ -149,9 +158,8 @@ class ErrorAlertHandler {
             alertWindow.isReleasedWhenClosed = false
             alertWindow.setFrameAutosaveName(type.rawValue)
 
-            NSApp.activate(ignoringOtherApps: true)
-            alertWindow.makeKeyAndOrderFront(nil)
             alertWindow.level = .normal
+            bringAlertWindowToFront(alertWindow)
         }
     }
     
@@ -163,6 +171,26 @@ class ErrorAlertHandler {
             self.apIsolationAlertWindow = nil
         }
     }
+
+    private func alertWindow(for type: AlertType) -> NSWindow? {
+        switch type {
+        case .ApIsolation:
+            return apIsolationAlertWindow
+        case .NetworkFilter:
+            return networkFilterAlertWindow
+        case .Firewall:
+            return firewallAlertWindow
+        case .AndroidAirDropMode:
+            return androidAirDropModeAlertWindow
+        }
+    }
+
+    private func bringAlertWindowToFront(_ window: NSWindow) {
+        _ = NSApp.setActivationPolicy(.regular)
+        NSApp.activate(ignoringOtherApps: true)
+        window.makeKeyAndOrderFront(nil)
+        window.orderFrontRegardless()
+    }
     #endif
 }
 
@@ -171,4 +199,5 @@ enum AlertType: String {
     case ApIsolation
     case NetworkFilter
     case Firewall
+    case AndroidAirDropMode
 }

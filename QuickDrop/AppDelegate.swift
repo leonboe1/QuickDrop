@@ -7,6 +7,7 @@
 
 import AudioToolbox
 import BezelNotification
+import Combine
 import Cocoa
 import Network
 import StoreKit
@@ -27,15 +28,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     private var errorAlertHandler = ErrorAlertHandler.shared
 
     private var receiveModel: ReceiveModel?
+    private var bluetoothAuthorizationObserver: AnyCancellable?
     private let welcomeNavigationState = WelcomeScreenNavigationState()
 
     var showsFirewallAlert = false
     var visibleItem: NSMenuItem? = nil
+    private var didShowAndroidAirDropModeAlert = false
 
     
     // MARK: NSApplicationDelegate functions
     
     func applicationDidFinishLaunching(_: Notification) {
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+            LUIInit(configuration: configuration)
+            return
+        }
+
         UNUserNotificationCenter.current().delegate = self
 
         // app did not lauch before
@@ -120,6 +128,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         NearbyConnectionManager.shared.changedDeviceNameCallback = {
             self.visibleItem?.title = self.getDefaultVisibleLabel()
         }
+
+        setupAndroidAirDropModeDetection()
+        requestBluetoothPermissionForExistingUserIfNeeded()
         
         
         // MARK: Logging
@@ -183,6 +194,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     func applicationWillTerminate(_: Notification) {
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         ClipboardSyncCoordinator.shared.stop()
+        AndroidAirDropModeDetector.shared.stop()
         NearbyConnectionManager.shared.stopDeviceDiscovery()
         NearbyConnectionManager.shared.becomeInvisible()
     }
@@ -418,6 +430,58 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                 ErrorAlertHandler.shared.openAlert(type: .ApIsolation)
             }
         }
+    }
+
+    private func setupAndroidAirDropModeDetection() {
+        log("[AppDelegate] Setting up Android AirDrop mode detection. authorization=\(BluetoothPermissionManager.shared.authorization.rawValue)")
+
+        bluetoothAuthorizationObserver = BluetoothPermissionManager.shared.$authorization
+            .removeDuplicates()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] authorization in
+                guard let self else { return }
+
+                log("[AppDelegate] Bluetooth authorization changed for Android AirDrop mode detection: \(authorization.rawValue)")
+
+                if authorization == .allowedAlways {
+                    self.startAndroidAirDropModeDetection()
+                }
+                else {
+                    AndroidAirDropModeDetector.shared.stop()
+                }
+            }
+
+        BluetoothPermissionManager.shared.refresh()
+    }
+
+    private func requestBluetoothPermissionForExistingUserIfNeeded() {
+        let bluetoothPermission = BluetoothPermissionManager.shared
+        bluetoothPermission.refresh()
+
+        guard Settings.sharedInstance.appLaunchedBefore, bluetoothPermission.canRequestPermission else { return }
+
+        log("[AppDelegate] Requesting Bluetooth permission for existing user.")
+
+        bluetoothPermission.requestPermission { allowed in
+            log("[AppDelegate] Existing user Bluetooth permission request completed. allowed=\(allowed)")
+        }
+    }
+
+    private func startAndroidAirDropModeDetection() {
+        guard !didShowAndroidAirDropModeAlert else { return }
+
+        AndroidAirDropModeDetector.shared.start { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.showAndroidAirDropModeAlertIfNeeded()
+            }
+        }
+    }
+
+    private func showAndroidAirDropModeAlertIfNeeded() {
+        guard !didShowAndroidAirDropModeAlert else { return }
+
+        didShowAndroidAirDropModeAlert = true
+        ErrorAlertHandler.shared.openAlert(type: .AndroidAirDropMode)
     }
     
     
