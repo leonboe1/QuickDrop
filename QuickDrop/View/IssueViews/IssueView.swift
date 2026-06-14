@@ -102,7 +102,6 @@ struct IssueView: View {
 
 
 #Preview {
-    NetworkFilterIssueView()
+    IssueView(image: .smartphone, header: "Header", description: "Description")
         .frame(width: 600, height: 400)
 }
-

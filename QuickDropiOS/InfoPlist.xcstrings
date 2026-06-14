@@ -25,6 +25,472 @@
         }
       }
     },
+    "NSBluetoothAlwaysUsageDescription" : {
+      "comment" : "Privacy - Bluetooth Always Usage Description",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستخدم QuickDrop تقنية Bluetooth لتحسين اكتشاف الأجهزة القريبة."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop utilitza Bluetooth per millorar la detecció de dispositius propers."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop používá Bluetooth pro vylepšenou detekci zařízení v okolí."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop bruger Bluetooth til forbedret registrering af enheder i nærheden."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop verwendet Bluetooth für eine verbesserte Erkennung von Geräten in der Nähe."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το QuickDrop χρησιμοποιεί Bluetooth για βελτιωμένο εντοπισμό κοντινών συσκευών."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop uses Bluetooth for enhanced nearby device detection."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop uses Bluetooth for enhanced nearby device detection."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop uses Bluetooth for enhanced nearby device detection."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop uses Bluetooth for enhanced nearby device detection."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop usa Bluetooth para mejorar la detección de dispositivos cercanos."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop usa Bluetooth para mejorar la detección de dispositivos cercanos."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop käyttää Bluetoothia läheisten laitteiden parempaan havaitsemiseen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop utilise le Bluetooth pour améliorer la détection des appareils à proximité."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop utilise le Bluetooth pour améliorer la détection des appareils à proximité."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop משתמש ב-Bluetooth לזיהוי משופר של מכשירים בקרבת מקום."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop आस-पास के डिवाइस की बेहतर पहचान के लिए Bluetooth का उपयोग करता है।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop koristi Bluetooth za poboljšano otkrivanje uređaja u blizini."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A QuickDrop Bluetoothot használ a közeli eszközök fejlettebb felismeréséhez."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop menggunakan Bluetooth untuk deteksi perangkat terdekat yang lebih baik."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop usa il Bluetooth per un rilevamento migliorato dei dispositivi nelle vicinanze."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDropは、近くのデバイスをより正確に検出するためにBluetoothを使用します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop은 주변 기기를 더 잘 감지하기 위해 Bluetooth를 사용합니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop menggunakan Bluetooth untuk pengesanan peranti berdekatan yang dipertingkatkan."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop bruker Bluetooth for forbedret oppdagelse av enheter i nærheten."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop gebruikt Bluetooth voor verbeterde detectie van apparaten in de buurt."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop używa Bluetooth do ulepszonego wykrywania pobliskich urządzeń."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O QuickDrop usa Bluetooth para melhorar a detecção de dispositivos próximos."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O QuickDrop usa Bluetooth para melhorar a deteção de dispositivos próximos."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop folosește Bluetooth pentru detectarea îmbunătățită a dispozitivelor din apropiere."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop использует Bluetooth для улучшенного обнаружения устройств поблизости."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop använder Bluetooth för förbättrad upptäckt av enheter i närheten."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop ใช้ Bluetooth เพื่อการตรวจจับอุปกรณ์ใกล้เคียงที่ดียิ่งขึ้น"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop, yakındaki cihazları daha iyi algılamak için Bluetooth kullanır."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop використовує Bluetooth для покращеного виявлення пристроїв поблизу."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop sử dụng Bluetooth để phát hiện thiết bị lân cận tốt hơn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop 使用蓝牙来增强附近设备检测。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop 使用藍牙來增強附近裝置偵測。"
+          }
+        }
+      }
+    },
+    "NSBluetoothPeripheralUsageDescription" : {
+      "comment" : "Privacy - Bluetooth Peripheral Usage Description",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستخدم QuickDrop تقنية Bluetooth لتحسين اكتشاف الأجهزة القريبة."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop utilitza Bluetooth per millorar la detecció de dispositius propers."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop používá Bluetooth pro vylepšenou detekci zařízení v okolí."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop bruger Bluetooth til forbedret registrering af enheder i nærheden."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop verwendet Bluetooth für eine verbesserte Erkennung von Geräten in der Nähe."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το QuickDrop χρησιμοποιεί Bluetooth για βελτιωμένο εντοπισμό κοντινών συσκευών."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop uses Bluetooth for enhanced nearby device detection."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop uses Bluetooth for enhanced nearby device detection."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop uses Bluetooth for enhanced nearby device detection."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop uses Bluetooth for enhanced nearby device detection."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop usa Bluetooth para mejorar la detección de dispositivos cercanos."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop usa Bluetooth para mejorar la detección de dispositivos cercanos."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop käyttää Bluetoothia läheisten laitteiden parempaan havaitsemiseen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop utilise le Bluetooth pour améliorer la détection des appareils à proximité."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop utilise le Bluetooth pour améliorer la détection des appareils à proximité."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop משתמש ב-Bluetooth לזיהוי משופר של מכשירים בקרבת מקום."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop आस-पास के डिवाइस की बेहतर पहचान के लिए Bluetooth का उपयोग करता है।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop koristi Bluetooth za poboljšano otkrivanje uređaja u blizini."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A QuickDrop Bluetoothot használ a közeli eszközök fejlettebb felismeréséhez."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop menggunakan Bluetooth untuk deteksi perangkat terdekat yang lebih baik."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop usa il Bluetooth per un rilevamento migliorato dei dispositivi nelle vicinanze."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDropは、近くのデバイスをより正確に検出するためにBluetoothを使用します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop은 주변 기기를 더 잘 감지하기 위해 Bluetooth를 사용합니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop menggunakan Bluetooth untuk pengesanan peranti berdekatan yang dipertingkatkan."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop bruker Bluetooth for forbedret oppdagelse av enheter i nærheten."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop gebruikt Bluetooth voor verbeterde detectie van apparaten in de buurt."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop używa Bluetooth do ulepszonego wykrywania pobliskich urządzeń."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O QuickDrop usa Bluetooth para melhorar a detecção de dispositivos próximos."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O QuickDrop usa Bluetooth para melhorar a deteção de dispositivos próximos."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop folosește Bluetooth pentru detectarea îmbunătățită a dispozitivelor din apropiere."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop использует Bluetooth для улучшенного обнаружения устройств поблизости."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop använder Bluetooth för förbättrad upptäckt av enheter i närheten."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop ใช้ Bluetooth เพื่อการตรวจจับอุปกรณ์ใกล้เคียงที่ดียิ่งขึ้น"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop, yakındaki cihazları daha iyi algılamak için Bluetooth kullanır."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop використовує Bluetooth для покращеного виявлення пристроїв поблизу."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop sử dụng Bluetooth để phát hiện thiết bị lân cận tốt hơn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop 使用蓝牙来增强附近设备检测。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QuickDrop 使用藍牙來增強附近裝置偵測。"
+          }
+        }
+      }
+    },
     "NSHumanReadableCopyright" : {
       "comment" : "Copyright (human-readable)",
       "extractionState" : "extracted_with_value",

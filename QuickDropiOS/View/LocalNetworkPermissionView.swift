@@ -28,7 +28,11 @@ public struct LocalNetworkPermissionView: View {
                 manager.startDeviceDiscovery()
             }
         }, continueLabel: "introduction_continue", canSkip: false, nextView: {
+            #if !EXTENSION
+            BluetoothPermissionView()
+            #else
             IntroductionDoneView()
+            #endif
         }, nextViewSkip: {}, topView: {
             IntroductionIconView(icon: "wifi")
         })
@@ -40,6 +44,53 @@ public struct LocalNetworkPermissionView: View {
         }
     }
 }
+
+#if !EXTENSION
+private struct BluetoothPermissionView: View {
+
+    @ObservedObject private var bluetoothPermission = BluetoothPermissionManager.shared
+    @State private var requestedBluetoothAccess = false
+
+    var body: some View {
+        PermissionView(title: "BluetoothPermissionRequiredTitle",
+                       watchSymbol: "",
+                       subtitle: "BluetoothPermissionRequiredSubtitle",
+                       permissionAction: requestBluetoothAccess,
+                       continueLabel: "introduction_continue",
+                       canSkip: false,
+                       nextView: {
+                           IntroductionDoneView()
+                       },
+                       nextViewSkip: {
+                           IntroductionDoneView()
+                       },
+                       topView: {
+                           IntroductionIconView(icon: "antenna.radiowaves.left.and.right")
+                       })
+    }
+
+    private func requestBluetoothAccess() {
+        requestedBluetoothAccess = true
+        bluetoothPermission.refresh()
+
+        if bluetoothPermission.isAllowed {
+            IntroductionViewController.sharedInstance.canProceed = true
+            return
+        }
+
+        guard bluetoothPermission.canRequestPermission else {
+            IntroductionViewController.sharedInstance.canProceed = true
+            return
+        }
+
+        bluetoothPermission.requestPermission { _ in
+            DispatchQueue.main.async {
+                IntroductionViewController.sharedInstance.canProceed = true
+            }
+        }
+    }
+}
+#endif
 
 
 #Preview {

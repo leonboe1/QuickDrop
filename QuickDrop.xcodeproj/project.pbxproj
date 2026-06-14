@@ -37,6 +37,10 @@
 		A7D000000000000000000102 /* AndroidAirDropModeIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */; };
 		A7D000000000000000000103 /* AndroidAirDropModeIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */; };
 		A7D000000000000000000104 /* AndroidAirDropModeIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */; };
+		A8D000000000000000000101 /* BluetoothPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D000000000000000000002 /* BluetoothPermissionManager.swift */; };
+		A8D000000000000000000102 /* AndroidAirDropModeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D000000000000000000001 /* AndroidAirDropModeDetector.swift */; };
+		A8D000000000000000000103 /* AndroidAirDropModeIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D000000000000000000001 /* AndroidAirDropModeIssueView.swift */; };
+		A8D000000000000000000104 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC05C7F2E33B58300EECC18 /* IssueView.swift */; };
 		EB05DFBE2E59FC8900EF567A /* TrustedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */; };
 		EB05DFBF2E59FD0A00EF567A /* TrustedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */; };
 		EB05DFC02E5A2EAA00EF567A /* TrustedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05DFBD2E59FC8000EF567A /* TrustedDevicesView.swift */; };
@@ -1624,6 +1628,8 @@
 				EB886E532E4E19390052B7D9 /* HKDF.swift in Sources */,
 				EB5C37F82E377CE70052EFD7 /* SleepManager.swift in Sources */,
 				EB5C37F92E377CE70052EFD7 /* securegcm.pb.swift in Sources */,
+				A8D000000000000000000101 /* BluetoothPermissionManager.swift in Sources */,
+				A8D000000000000000000102 /* AndroidAirDropModeDetector.swift in Sources */,
 				EB5C37FA2E377CE70052EFD7 /* Helpers.swift in Sources */,
 				EB5C37FB2E377CE70052EFD7 /* InboundNearbyConnection.swift in Sources */,
 				EB0A22E62FBCF59300B78FF5 /* NearbyBonjourServiceResolver.swift in Sources */,
@@ -1640,6 +1646,8 @@
 				EB979F942E50CA23008B8C5C /* Configuration.swift in Sources */,
 				EB979F952E50CA23008B8C5C /* ContentView.swift in Sources */,
 				EB6FE7CF2EFEB42800FF2BCF /* NoLocalNetworkAccessAlertView.swift in Sources */,
+				A8D000000000000000000103 /* AndroidAirDropModeIssueView.swift in Sources */,
+				A8D000000000000000000104 /* IssueView.swift in Sources */,
 				EBBEE1462EC9D93400AA7831 /* PhotoManager.swift in Sources */,
 				EB97A01A2E51EAA2008B8C5C /* UIAlert.swift in Sources */,
 				EB979F962E50CA23008B8C5C /* FilePicker.swift in Sources */,
@@ -2407,6 +2415,8 @@
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025-2026 Leon Böttger";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network access is needed to detect devices and transfer files over your Wi-Fi network.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "The add photos permission is required to save received photos and videos to your photo library.";
@@ -2452,6 +2462,8 @@
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "QuickDrop uses Bluetooth for enhanced nearby device detection.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025-2026 Leon Böttger";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network access is needed to detect devices and transfer files over your Wi-Fi network.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "The add photos permission is required to save received photos and videos to your photo library.";

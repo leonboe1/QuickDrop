@@ -43,6 +43,31 @@ struct AndroidAirDropModeDetectorTests {
         #expect(observation.airDropModePacketCount == 0)
     }
 
+    #if os(iOS)
+    @Test
+    func iOSDetectsNonConnectableFCF1AdvertisementsWithoutServiceData() {
+        var classifier = AndroidAirDropModeClassifier(minimumRSSI: -70, requiredPacketsPerSignal: 2)
+
+        let firstAirDropMode = classifier.record(.iOSAirDropMode(rssi: -62))
+        #expect(!firstAirDropMode.isDetected)
+
+        let detected = classifier.record(.iOSAirDropMode(rssi: -61))
+        #expect(detected.isDetected)
+        #expect(detected.airDropModePacketCount == 2)
+        #expect(detected.strongestAirDropModeRSSI == -61)
+    }
+
+    @Test
+    func iOSIgnoresBackgroundFCF1AdvertisementsWithServiceData() {
+        var classifier = AndroidAirDropModeClassifier(minimumRSSI: -70, requiredPacketsPerSignal: 1)
+
+        classifier.record(.iOSBackgroundFCF1(rssi: -55))
+        let observation = classifier.record(.iOSBackgroundFCF1(rssi: -56))
+
+        #expect(!observation.isDetected)
+        #expect(observation.airDropModePacketCount == 0)
+    }
+    #else
     @Test
     func ignoresNearbyAppleAndBackgroundFCF1Advertisements() {
         var classifier = AndroidAirDropModeClassifier(minimumRSSI: -70, requiredPacketsPerSignal: 1)
@@ -61,6 +86,7 @@ struct AndroidAirDropModeDetectorTests {
         #expect(!observation.isDetected)
         #expect(observation.airDropModePacketCount == 0)
     }
+    #endif
 
     @Test
     func scansOnlyForAirDropModeServiceAndAllowsDuplicatePackets() {
@@ -70,6 +96,25 @@ struct AndroidAirDropModeDetectorTests {
 }
 
 private extension AndroidAirDropAdvertisement {
+    static func iOSAirDropMode(rssi: Int) -> Self {
+        advertisement(
+            rssi: rssi,
+            manufacturerDataHex: nil,
+            serviceUUIDs: ["FCF1"],
+            isConnectable: false
+        )
+    }
+
+    static func iOSBackgroundFCF1(rssi: Int) -> Self {
+        advertisement(
+            rssi: rssi,
+            manufacturerDataHex: nil,
+            serviceUUIDs: ["FCF1"],
+            serviceDataHexByUUID: ["FCF1": "0407329497cd97ce4739a79920b877a45bb8d6d1a7"],
+            isConnectable: true
+        )
+    }
+
     static func airDropMode(rssi: Int) -> Self {
         airDropMode(manufacturerDataSuffix: "28b429412f624af300", rssi: rssi)
     }
@@ -85,12 +130,16 @@ private extension AndroidAirDropAdvertisement {
     static func advertisement(
         rssi: Int,
         manufacturerDataHex: String?,
-        serviceUUIDs: Set<String>
+        serviceUUIDs: Set<String>,
+        serviceDataHexByUUID: [String: String] = [:],
+        isConnectable: Bool? = nil
     ) -> Self {
         AndroidAirDropAdvertisement(
             rssi: rssi,
             manufacturerDataHex: manufacturerDataHex,
-            serviceUUIDs: serviceUUIDs
+            serviceUUIDs: serviceUUIDs,
+            serviceDataHexByUUID: serviceDataHexByUUID,
+            isConnectable: isConnectable
         )
     }
 }

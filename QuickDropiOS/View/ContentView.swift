@@ -13,8 +13,52 @@ struct ContentView: View {
     
     @ObservedObject var luiSettings = LUISettings.sharedInstance
     @ObservedObject var iapManager = IAPManager.sharedInstance
+
+    #if !EXTENSION
+    @ObservedObject private var bluetoothPermission = BluetoothPermissionManager.shared
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var showAndroidAirDropModeIssue = false
+    @State private var didShowAndroidAirDropModeIssue = false
+    @State private var shouldRequestBluetoothPermissionAutomatically = LUISettings.sharedInstance.appLaunchedBefore
+    #endif
     
     var body: some View {
+        #if !EXTENSION
+        rootContent
+            .sheet(isPresented: $showAndroidAirDropModeIssue) {
+                NavigationView {
+                    AndroidAirDropModeIssueView()
+                        .navigationTitle(String("QuickDrop"))
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarItems(trailing: XButton(action: { showAndroidAirDropModeIssue = false }))
+                }
+            }
+            .onAppear {
+                requestBluetoothPermissionForExistingUserIfNeeded()
+                startAndroidAirDropModeDetectionIfAllowed()
+            }
+            .onChange(of: bluetoothPermission.authorization) { _ in
+                startAndroidAirDropModeDetectionIfAllowed()
+            }
+            .onChange(of: scenePhase) { newValue in
+                switch newValue {
+                case .active:
+                    requestBluetoothPermissionForExistingUserIfNeeded()
+                    startAndroidAirDropModeDetectionIfAllowed()
+                case .background:
+                    AndroidAirDropModeDetector.shared.stop()
+                case .inactive:
+                    break
+                @unknown default:
+                    break
+                }
+            }
+        #else
+        rootContent
+        #endif
+    }
+
+    private var rootContent: some View {
         AppRootView(phoneView: {
             DeviceListView()
                 .environment(\.sheetActive, isShareExtension())
@@ -26,15 +70,81 @@ struct ContentView: View {
                     NavigationLinkLabel(imageName: "folder.fill", text: "BrowseDownloadedFiles")
                 }
                 
-                LUILink(destination: NavigationSubView(header: "TrustedDevices") {
-                    TrustedDevicesView()
-                }) {
+                LUILink(destination: TrustedDevicesView()) {
                     NavigationLinkLabel(imageName: "checkmark.shield.fill", text: "ManageTrustedDevices", backgroundColor: .green)
+                }
+            }
+
+            CustomSection {
+                LUILink(destination: QuickDropFAQSettingsView()) {
+                    NavigationLinkLabel(imageName: "questionmark.circle.fill", text: "TroubleshootingAndFaq", backgroundColor: .orange)
                 }
             }
         }, firstIntroductionView: {
             LocalNetworkPermissionView()
         })
+    }
+
+    #if !EXTENSION
+    private func requestBluetoothPermissionForExistingUserIfNeeded() {
+        guard shouldRequestBluetoothPermissionAutomatically else { return }
+
+        requestBluetoothPermissionIfNeeded()
+    }
+
+    private func requestBluetoothPermissionIfNeeded() {
+        bluetoothPermission.refresh()
+
+        guard bluetoothPermission.canRequestPermission else { return }
+
+        log("[ContentView] Requesting Bluetooth permission for Android AirDrop mode detection.")
+
+        bluetoothPermission.requestPermission { allowed in
+            log("[ContentView] Bluetooth permission request completed. allowed=\(allowed)")
+
+            guard allowed else { return }
+
+            DispatchQueue.main.async {
+                startAndroidAirDropModeDetectionIfAllowed()
+            }
+        }
+    }
+
+    private func startAndroidAirDropModeDetectionIfAllowed() {
+        guard !didShowAndroidAirDropModeIssue else { return }
+
+        bluetoothPermission.refresh()
+
+        guard bluetoothPermission.isAllowed else { return }
+
+        AndroidAirDropModeDetector.shared.start { _ in
+            DispatchQueue.main.async {
+                guard !didShowAndroidAirDropModeIssue else { return }
+
+                didShowAndroidAirDropModeIssue = true
+                showAndroidAirDropModeIssue = true
+            }
+        }
+    }
+    #endif
+}
+
+private struct QuickDropFAQSettingsView: View {
+
+    private let faqItems: [FAQItem] = [
+        .init(question: "FaqNotVisibleOrConnectingQuestion", answer: "FaqNotVisibleOrConnectingAnswer"),
+        .init(question: "FaqPhotoDateNotPreservedQuestion", answer: "FaqPhotoDateNotPreservedAnswer"),
+        .init(question: "FaqAndroidDeviceNotVisibleQuestion", answer: "FaqAndroidDeviceNotVisibleAnswer"),
+        .init(question: "FaqTrustedDevicesQuestion", answer: "FaqTrustedDevicesAnswer"),
+        .init(question: "MultipleFilesSendingQuestion", answer: "MultipleFilesSendingAnswer"),
+        .init(question: "FaqBugQuestion", answer: "FaqBugAnswer"),
+    ]
+
+    var body: some View {
+        NavigationSubView(header: "TroubleshootingAndFaq") {
+            FAQView(faqItems: faqItems)
+                .padding(.top)
+        }
     }
 }
 

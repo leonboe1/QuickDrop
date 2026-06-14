@@ -13,11 +13,23 @@ struct AndroidAirDropAdvertisement: Equatable {
     let rssi: Int
     let manufacturerDataHex: String?
     let serviceUUIDs: Set<String>
+    let serviceDataHexByUUID: [String: String]
+    let isConnectable: Bool?
 
-    init(rssi: Int, manufacturerDataHex: String?, serviceUUIDs: Set<String>) {
+    init(
+        rssi: Int,
+        manufacturerDataHex: String?,
+        serviceUUIDs: Set<String>,
+        serviceDataHexByUUID: [String: String] = [:],
+        isConnectable: Bool? = nil
+    ) {
         self.rssi = rssi
         self.manufacturerDataHex = manufacturerDataHex?.lowercased()
         self.serviceUUIDs = Set(serviceUUIDs.map { $0.uppercased() })
+        self.serviceDataHexByUUID = Dictionary(
+            uniqueKeysWithValues: serviceDataHexByUUID.map { ($0.key.uppercased(), $0.value.lowercased()) }
+        )
+        self.isConnectable = isConnectable
     }
 }
 
@@ -82,8 +94,19 @@ struct AndroidAirDropModeClassifier {
     }
 
     static func isAirDropModeAdvertisement(_ advertisement: AndroidAirDropAdvertisement) -> Bool {
+        #if os(iOS)
+        // iOS exposes the AirDrop-compatible Android share-mode service UUID,
+        // but hides the Apple manufacturer payload from third-party apps. The
+        // share sheet emits a non-connectable FCF1 packet without service data;
+        // background AirDrop-compatible discovery emits connectable FCF1 packets
+        // with FCF1 service data.
+        advertisement.serviceUUIDs.contains(airDropModeServiceUUID) &&
+        advertisement.isConnectable == false &&
+        advertisement.serviceDataHexByUUID[airDropModeServiceUUID] == nil
+        #else
         advertisement.manufacturerDataHex?.hasPrefix(airDropModeManufacturerPrefix) == true &&
         advertisement.serviceUUIDs.contains(airDropModeServiceUUID)
+        #endif
     }
 
     private static func strongerRSSI(_ current: Int?, _ candidate: Int) -> Int {
@@ -184,7 +207,8 @@ final class AndroidAirDropModeDetector: NSObject, CBCentralManagerDelegate {
     private func beginScanning() {
         guard !isScanning, let centralManager, centralManager.state == .poweredOn else { return }
 
-        log("[AndroidAirDropModeDetector] BLE scan started for service \(AndroidAirDropModeClassifier.airDropModeServiceUUID).")
+        let scanTargetDescription = Self.scanServiceUUIDs.map(\.uuidString).joined(separator: ", ")
+        log("[AndroidAirDropModeDetector] BLE scan started for \(scanTargetDescription).")
 
         // Duplicate delivery is intentional: the classifier waits for repeated
         // matching packets so one transient advertisement does not trigger the alert.
@@ -200,6 +224,7 @@ final class AndroidAirDropModeDetector: NSObject, CBCentralManagerDelegate {
         rssi: Int
     ) -> AndroidAirDropAdvertisement {
         var serviceUUIDs = Set<String>()
+        var serviceDataHexByUUID: [String: String] = [:]
 
         [
             CBAdvertisementDataServiceUUIDsKey,
@@ -211,13 +236,18 @@ final class AndroidAirDropModeDetector: NSObject, CBCentralManagerDelegate {
         }
 
         if let serviceData = advertisementData[CBAdvertisementDataServiceDataKey] as? [CBUUID: Data] {
-            serviceData.keys.forEach { serviceUUIDs.insert($0.uuidString) }
+            serviceData.forEach { uuid, data in
+                serviceUUIDs.insert(uuid.uuidString)
+                serviceDataHexByUUID[uuid.uuidString] = data.androidAirDropModeHexString
+            }
         }
 
         return AndroidAirDropAdvertisement(
             rssi: rssi,
             manufacturerDataHex: (advertisementData[CBAdvertisementDataManufacturerDataKey] as? Data)?.androidAirDropModeHexString,
-            serviceUUIDs: serviceUUIDs
+            serviceUUIDs: serviceUUIDs,
+            serviceDataHexByUUID: serviceDataHexByUUID,
+            isConnectable: advertisementData[CBAdvertisementDataIsConnectable] as? Bool
         )
     }
 }
