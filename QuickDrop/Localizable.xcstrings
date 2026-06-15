@@ -938,229 +938,229 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "على أجهزة Android التي تم تمكين المشاركة مع أجهزة Apple عليها، قد لا يظهر Mac الخاص بك في QuickShare على جهازك. هناك خياران لحل ذلك:\n\n1) نزّل تطبيق QuickDrop من Google Play. فهو يوفر وظائف أكثر من QuickShare، مثل مزامنة الإشعارات والحافظة.\n\n2) بخلاف ذلك، في صفحة QuickShare، اضغط على النقاط الثلاث في الزاوية العلوية اليمنى، واختر الإعدادات، ثم عطّل خيار \"شارك مع أجهزة Apple\". بعد ذلك، سيظهر Mac الخاص بك في صفحة QuickShare."
+            "value" : "على أجهزة Samsung الأحدث التي تعمل بنظام OneUI 8.5 أو أعلى، قد لا يظهر Mac الخاص بك في QuickShare على جهازك. هناك خياران لحل ذلك:\n\n1) نزّل تطبيق QuickDrop من Google Play. فهو يوفر وظائف أكثر من QuickShare، مثل مزامنة الإشعارات والحافظة.\n\n2) بخلاف ذلك، في صفحة QuickShare، اضغط على النقاط الثلاث في الزاوية العلوية اليمنى، واختر الإعدادات، ثم عطّل خيار \"المشاركة مع أجهزة Apple\". بعد ذلك، سيظهر Mac الخاص بك في صفحة QuickShare."
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "En dispositius Android amb la compartició amb dispositius Apple activada, pot ser que el teu Mac no sigui visible a QuickShare al dispositiu. Tens dues opcions per resoldre-ho:\n\n1) Descarrega l'app QuickDrop des de Google Play. Inclou més funcionalitats que QuickShare, com ara la sincronització de notificacions i del porta-retalls.\n\n2) Si no, a la pàgina de QuickShare, prem els tres punts de la cantonada superior dreta, tria configuració i desactiva l'interruptor \"Compartir amb dispositius d'Apple\". Després, el Mac apareixerà a la pàgina de QuickShare."
+            "value" : "En dispositius Samsung més nous amb OneUI 8.5 o superior, pot ser que el teu Mac no sigui visible a QuickShare al dispositiu. Tens dues opcions per resoldre-ho:\n\n1) Descarrega l'app QuickDrop des de Google Play. Inclou més funcionalitats que QuickShare, com ara la sincronització de notificacions i del porta-retalls.\n\n2) Si no, a la pàgina de QuickShare, prem els tres punts de la cantonada superior dreta, tria configuració i desactiva l'interruptor \"Comparteix amb dispositius Apple\". Després, el Mac apareixerà a la pàgina de QuickShare."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Na zařízeních Android se zapnutým sdílením se zařízeními Apple nemusí být váš Mac viditelný v QuickShare na zařízení. Existují dvě možnosti, jak to vyřešit:\n\n1) Stáhněte si aplikaci QuickDrop z Google Play. Nabízí více funkcí než QuickShare, například synchronizaci oznámení a schránky.\n\n2) Případně na stránce QuickShare klepněte na tři tečky v pravém horním rohu, zvolte nastavení a poté vypněte přepínač „Sdílet se zařízeními Apple“. Poté se váš Mac na stránce QuickShare zobrazí."
+            "value" : "Na novějších zařízeních Samsung s OneUI 8.5 nebo novějším se váš Mac nemusí v QuickShare na zařízení zobrazovat. Existují dvě možnosti, jak to vyřešit:\n\n1) Stáhněte si aplikaci QuickDrop z Google Play. Nabízí více funkcí než QuickShare, například synchronizaci oznámení a schránky.\n\n2) Případně na stránce QuickShare klepněte na tři tečky v pravém horním rohu, zvolte nastavení a poté vypněte přepínač „Sdílet se zařízeními Apple“. Poté se váš Mac na stránce QuickShare zobrazí."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "På Android-enheder med deling med Apple-enheder slået til er din Mac muligvis ikke synlig i QuickShare på enheden. Der er to muligheder for at løse dette:\n\n1) Download QuickDrop-appen fra Google Play. Den har mere funktionalitet end QuickShare, f.eks. notifikations- og udklipsholder-synk.\n\n2) Ellers skal du på QuickShare-siden trykke på de tre prikker i øverste højre hjørne, vælge indstillinger og derefter deaktivere kontakten \"Del med Apple-enheder\". Derefter vises din Mac på QuickShare-siden."
+            "value" : "På nyere Samsung-enheder med OneUI 8.5 eller nyere er din Mac muligvis ikke synlig i QuickShare på din enhed. Der er to muligheder for at løse dette:\n\n1) Download QuickDrop-appen fra Google Play. Den har mere funktionalitet end QuickShare, f.eks. notifikations- og udklipsholder-synk.\n\n2) Ellers skal du på QuickShare-siden trykke på de tre prikker i øverste højre hjørne, vælge indstillinger og derefter deaktivere kontakten \"Del med Apple-enheder\". Derefter vises din Mac på QuickShare-siden."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Auf Android-Geräten mit aktivierter Freigabe für Apple-Geräte ist dein Mac möglicherweise nicht in QuickShare auf deinem Gerät sichtbar. Es gibt zwei Möglichkeiten, das zu beheben:\n\n1) Lade die QuickDrop-App aus Google Play herunter. Sie bietet mehr Funktionen als QuickShare, zum Beispiel Benachrichtigungs- und Zwischenablage-Sync.\n\n2) Öffne andernfalls auf deinem Gerät die QuickShare-Seite, tippe oben rechts auf die drei Punkte, wähle die Einstellungen und deaktiviere dann den Schalter „Für Apple-Geräte freigeben“. Danach wird dein Mac auf der QuickShare-Seite angezeigt."
+            "value" : "Auf neueren Samsung-Geräten mit OneUI 8.5 oder höher ist dein Mac möglicherweise nicht in QuickShare auf deinem Gerät sichtbar. Es gibt zwei Möglichkeiten, das zu beheben:\n\n1) Lade die QuickDrop-App aus Google Play herunter. Sie bietet mehr Funktionen als QuickShare, zum Beispiel Benachrichtigungs- und Zwischenablage-Sync.\n\n2) Öffne andernfalls auf deinem Gerät die QuickShare-Seite, tippe oben rechts auf die drei Punkte, wähle die Einstellungen und deaktiviere dann den Schalter „Mit Apple-Geräten teilen“. Danach wird dein Mac auf der QuickShare-Seite angezeigt."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Σε συσκευές Android με ενεργή την κοινή χρήση με συσκευές Apple, το Mac σας μπορεί να μην είναι ορατό στο QuickShare στη συσκευή σας. Υπάρχουν δύο επιλογές για να το λύσετε:\n\n1) Κατεβάστε την εφαρμογή QuickDrop από το Google Play. Προσφέρει περισσότερες λειτουργίες από το QuickShare, όπως συγχρονισμό ειδοποιήσεων και προχείρου.\n\n2) Διαφορετικά, στη σελίδα QuickShare, πατήστε τις τρεις τελείες στην επάνω δεξιά γωνία, επιλέξτε ρυθμίσεις και απενεργοποιήστε τον διακόπτη «Κοινή χρήση με συσκευές Apple». Στη συνέχεια, το Mac σας θα εμφανιστεί στη σελίδα QuickShare."
+            "value" : "Σε νεότερες συσκευές Samsung με OneUI 8.5 ή νεότερο, το Mac σας μπορεί να μην είναι ορατό στο QuickShare της συσκευής σας. Υπάρχουν δύο επιλογές για να το λύσετε:\n\n1) Κατεβάστε την εφαρμογή QuickDrop από το Google Play. Προσφέρει περισσότερες λειτουργίες από το QuickShare, όπως συγχρονισμό ειδοποιήσεων και προχείρου.\n\n2) Διαφορετικά, στη σελίδα QuickShare, πατήστε τις τρεις τελείες στην επάνω δεξιά γωνία, επιλέξτε ρυθμίσεις και απενεργοποιήστε τον διακόπτη «Κοινή χρήση με συσκευές Apple». Στη συνέχεια, το Mac σας θα εμφανιστεί στη σελίδα QuickShare."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "On Android devices with Apple device sharing enabled, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
+            "value" : "On newer Samsung devices with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "On Android devices with Apple device sharing enabled, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
+            "value" : "On newer Samsung devices with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "On Android devices with Apple device sharing enabled, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
+            "value" : "On newer Samsung devices with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "On Android devices with Apple device sharing enabled, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
+            "value" : "On newer Samsung devices with OneUI 8.5 or higher, your Mac might not be visible in QuickShare on your device. There are two options to resolve this:\n\n1) Download the QuickDrop app from Google Play. It comes with more functionality than QuickShare, such as notification and clipboard sync.\n\n2) Otherwise, on the QuickShare page, click on the three dots in the top right corner, choose settings, then disable the toggle for \"Share with Apple devices\". Afterwards, your Mac will show up on the QuickShare page."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "En dispositivos Android con la opción para compartir con dispositivos Apple activada, es posible que tu Mac no sea visible en QuickShare en tu dispositivo. Hay dos opciones para resolverlo:\n\n1) Descarga la app QuickDrop desde Google Play. Incluye más funciones que QuickShare, como sincronización de notificaciones y del portapapeles.\n\n2) Si no, en la página de QuickShare, toca los tres puntos en la esquina superior derecha, elige ajustes y desactiva el interruptor \"Compartir con dispositivos Apple\". Después, tu Mac aparecerá en la página de QuickShare."
+            "value" : "En dispositivos Samsung más recientes con OneUI 8.5 o superior, es posible que tu Mac no sea visible en QuickShare en tu dispositivo. Hay dos opciones para resolverlo:\n\n1) Descarga la app QuickDrop desde Google Play. Incluye más funciones que QuickShare, como sincronización de notificaciones y del portapapeles.\n\n2) Si no, en la página de QuickShare, toca los tres puntos en la esquina superior derecha, elige ajustes y desactiva el interruptor \"Compartir con dispositivos Apple\". Después, tu Mac aparecerá en la página de QuickShare."
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "En dispositivos Android con compartir con dispositivos Apple activado, es posible que tu Mac no aparezca en QuickShare en tu dispositivo. Hay dos opciones para resolverlo:\n\n1) Descarga la app QuickDrop desde Google Play. Incluye más funciones que QuickShare, como sincronización de notificaciones y del portapapeles.\n\n2) Si no, en la página de QuickShare, toca los tres puntos en la esquina superior derecha, elige configuración y desactiva el interruptor \"Compartir con dispositivos Apple\". Después, tu Mac aparecerá en la página de QuickShare."
+            "value" : "En dispositivos Samsung más nuevos con OneUI 8.5 o superior, es posible que tu Mac no aparezca en QuickShare en tu dispositivo. Hay dos opciones para resolverlo:\n\n1) Descarga la app QuickDrop desde Google Play. Incluye más funciones que QuickShare, como sincronización de notificaciones y del portapapeles.\n\n2) Si no, en la página de QuickShare, toca los tres puntos en la esquina superior derecha, elige configuración y desactiva el interruptor \"Compartir con dispositivos Apple\". Después, tu Mac aparecerá en la página de QuickShare."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Android-laitteilla, joissa jako Apple-laitteiden kanssa on käytössä, Macisi ei välttämättä näy laitteen QuickSharessa. Tämän voi ratkaista kahdella tavalla:\n\n1) Lataa QuickDrop-sovellus Google Playsta. Siinä on enemmän toimintoja kuin QuickSharessa, kuten ilmoitusten ja leikepöydän synkronointi.\n\n2) Muussa tapauksessa avaa QuickShare-sivu, napauta oikean yläkulman kolmea pistettä, valitse asetukset ja poista sitten käytöstä kytkin \"Jaa Apple-laitteiden kanssa\". Sen jälkeen Macisi näkyy QuickShare-sivulla."
+            "value" : "Uudemmilla Samsung-laitteilla, joissa on OneUI 8.5 tai uudempi, Macisi ei välttämättä näy laitteen QuickSharessa. Tämän voi ratkaista kahdella tavalla:\n\n1) Lataa QuickDrop-sovellus Google Playsta. Siinä on enemmän toimintoja kuin QuickSharessa, kuten ilmoitusten ja leikepöydän synkronointi.\n\n2) Muussa tapauksessa avaa QuickShare-sivu, napauta oikean yläkulman kolmea pistettä, valitse asetukset ja poista sitten käytöstä kytkin \"Jaa Apple-laitteiden kanssa\". Sen jälkeen Macisi näkyy QuickShare-sivulla."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sur les appareils Android avec le partage avec les appareils Apple activé, votre Mac peut ne pas être visible dans QuickShare sur votre appareil. Deux options permettent de résoudre ce problème :\n\n1) Téléchargez l’application QuickDrop depuis Google Play. Elle offre plus de fonctionnalités que QuickShare, comme la synchronisation des notifications et du presse-papiers.\n\n2) Sinon, sur la page QuickShare, touchez les trois points dans le coin supérieur droit, choisissez les réglages, puis désactivez l’option « Partager avec les appareils Apple ». Ensuite, votre Mac apparaîtra sur la page QuickShare."
+            "value" : "Sur les appareils Samsung récents avec OneUI 8.5 ou une version ultérieure, votre Mac peut ne pas être visible dans QuickShare sur votre appareil. Deux options permettent de résoudre ce problème :\n\n1) Téléchargez l’application QuickDrop depuis Google Play. Elle offre plus de fonctionnalités que QuickShare, comme la synchronisation des notifications et du presse-papiers.\n\n2) Sinon, sur la page QuickShare, touchez les trois points dans le coin supérieur droit, choisissez les réglages, puis désactivez l’option « Partager avec les appareils Apple ». Ensuite, votre Mac apparaîtra sur la page QuickShare."
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sur les appareils Android où le partage avec les appareils Apple est activé, votre Mac pourrait ne pas être visible dans QuickShare sur votre appareil. Deux options permettent de résoudre ce problème :\n\n1) Téléchargez l’application QuickDrop depuis Google Play. Elle offre plus de fonctionnalités que QuickShare, comme la synchronisation des notifications et du presse-papiers.\n\n2) Sinon, sur la page QuickShare, touchez les trois points dans le coin supérieur droit, choisissez les réglages, puis désactivez l’option « Partager avec les appareils Apple ». Ensuite, votre Mac apparaîtra sur la page QuickShare."
+            "value" : "Sur les appareils Samsung récents avec OneUI 8.5 ou une version ultérieure, votre Mac pourrait ne pas être visible dans QuickShare sur votre appareil. Deux options permettent de résoudre ce problème :\n\n1) Téléchargez l’application QuickDrop depuis Google Play. Elle offre plus de fonctionnalités que QuickShare, comme la synchronisation des notifications et du presse-papiers.\n\n2) Sinon, sur la page QuickShare, touchez les trois points dans le coin supérieur droit, choisissez les réglages, puis désactivez l’option « Partager avec les appareils Apple ». Ensuite, votre Mac apparaîtra sur la page QuickShare."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "במכשירי Android שבהם השיתוף עם מכשירי Apple מופעל, ייתכן שה-Mac שלך לא יהיה גלוי ב-QuickShare במכשיר. יש שתי אפשרויות לפתור זאת:\n\n1) הורד את אפליקציית QuickDrop מ-Google Play. היא כוללת יותר יכולות מ-QuickShare, כמו סנכרון התראות ולוח.\n\n2) אחרת, בעמוד QuickShare, לחץ על שלוש הנקודות בפינה הימנית העליונה, בחר הגדרות, ואז כבה את המתג \"שתף עם מכשירי Apple\". לאחר מכן ה-Mac שלך יופיע בעמוד QuickShare."
+            "value" : "במכשירי Samsung חדשים יותר עם OneUI 8.5 ומעלה, ייתכן שה-Mac שלך לא יהיה גלוי ב-QuickShare במכשיר. יש שתי אפשרויות לפתור זאת:\n\n1) הורד את אפליקציית QuickDrop מ-Google Play. היא כוללת יותר יכולות מ-QuickShare, כמו סנכרון התראות ולוח.\n\n2) אחרת, בעמוד QuickShare, לחץ על שלוש הנקודות בפינה הימנית העליונה, בחר הגדרות, ואז כבה את המתג \"שיתוף עם מכשירי Apple\". לאחר מכן ה-Mac שלך יופיע בעמוד QuickShare."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Apple डिवाइस के साथ शेयरिंग चालू होने वाले Android डिवाइसों पर, आपका Mac आपके डिवाइस के QuickShare में दिखाई नहीं दे सकता। इसे हल करने के दो विकल्प हैं:\n\n1) Google Play से QuickDrop ऐप डाउनलोड करें। इसमें QuickShare से अधिक सुविधाएं हैं, जैसे नोटिफिकेशन और क्लिपबोर्ड सिंक।\n\n2) अन्यथा, QuickShare पेज पर, ऊपर दाईं ओर तीन बिंदुओं पर क्लिक करें, सेटिंग्स चुनें, फिर \"Apple डिवाइस के साथ शेयर करें\" टॉगल बंद करें। इसके बाद आपका Mac QuickShare पेज पर दिखाई देगा।"
+            "value" : "OneUI 8.5 या उससे नए संस्करण वाले नए Samsung डिवाइसों पर, आपका Mac आपके डिवाइस के QuickShare में दिखाई नहीं दे सकता। इसे हल करने के दो विकल्प हैं:\n\n1) Google Play से QuickDrop ऐप डाउनलोड करें। इसमें QuickShare से अधिक सुविधाएं हैं, जैसे नोटिफिकेशन और क्लिपबोर्ड सिंक।\n\n2) अन्यथा, QuickShare पेज पर, ऊपर दाईं ओर तीन बिंदुओं पर क्लिक करें, सेटिंग्स चुनें, फिर \"Apple डिवाइसों के साथ साझा करें\" टॉगल बंद करें। इसके बाद आपका Mac QuickShare पेज पर दिखाई देगा।"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Na Android uređajima s uključenim dijeljenjem s uređajima Apple vaš Mac možda neće biti vidljiv u QuickShareu na uređaju. Postoje dvije mogućnosti za rješavanje ovoga:\n\n1) Preuzmite aplikaciju QuickDrop s Google Playa. Ima više funkcija od QuickSharea, kao što su sinkronizacija obavijesti i međuspremnika.\n\n2) U suprotnom, na stranici QuickShare kliknite tri točke u gornjem desnom kutu, odaberite postavke, a zatim isključite prekidač \"Dijeli s uređajima Apple\". Nakon toga će se vaš Mac prikazati na stranici QuickShare."
+            "value" : "Na novijim Samsung uređajima s OneUI 8.5 ili novijim, vaš Mac možda neće biti vidljiv u QuickShareu na uređaju. Postoje dvije mogućnosti za rješavanje ovoga:\n\n1) Preuzmite aplikaciju QuickDrop s Google Playa. Ima više funkcija od QuickSharea, kao što su sinkronizacija obavijesti i međuspremnika.\n\n2) U suprotnom, na stranici QuickShare kliknite tri točke u gornjem desnom kutu, odaberite postavke, a zatim isključite prekidač \"Dijeli s Apple uređajima\". Nakon toga će se vaš Mac prikazati na stranici QuickShare."
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Azokon az Android-eszközökön, amelyeken be van kapcsolva az Apple eszközökkel való megosztás, előfordulhat, hogy a Mac nem látható a készülék QuickShare felületén. Két lehetőség van a megoldásra:\n\n1) Töltsd le a QuickDrop alkalmazást a Google Playről. Több funkciót kínál, mint a QuickShare, például értesítés- és vágólap-szinkronizálást.\n\n2) Ellenkező esetben a QuickShare oldalon koppints a jobb felső sarokban lévő három pontra, válaszd a beállításokat, majd kapcsold ki a „Megosztás Apple eszközökkel” kapcsolót. Ezután a Mac meg fog jelenni a QuickShare oldalon."
+            "value" : "Az újabb, OneUI 8.5 vagy újabb rendszert futtató Samsung készülékeken előfordulhat, hogy a Mac nem látható a készülék QuickShare felületén. Két lehetőség van a megoldásra:\n\n1) Töltsd le a QuickDrop alkalmazást a Google Playről. Több funkciót kínál, mint a QuickShare, például értesítés- és vágólap-szinkronizálást.\n\n2) Ellenkező esetben a QuickShare oldalon koppints a jobb felső sarokban lévő három pontra, válaszd a beállításokat, majd kapcsold ki a „Megosztás Apple-eszközökkel” kapcsolót. Ezután a Mac meg fog jelenni a QuickShare oldalon."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pada perangkat Android dengan berbagi dengan perangkat Apple aktif, Mac Anda mungkin tidak terlihat di QuickShare pada perangkat Anda. Ada dua opsi untuk mengatasinya:\n\n1) Unduh aplikasi QuickDrop dari Google Play. Aplikasi ini memiliki lebih banyak fungsi daripada QuickShare, seperti sinkronisasi notifikasi dan clipboard.\n\n2) Jika tidak, di halaman QuickShare, ketuk tiga titik di pojok kanan atas, pilih pengaturan, lalu nonaktifkan tombol \"Bagikan dengan perangkat Apple\". Setelah itu, Mac Anda akan muncul di halaman QuickShare."
+            "value" : "Pada perangkat Samsung yang lebih baru dengan OneUI 8.5 atau lebih tinggi, Mac Anda mungkin tidak terlihat di QuickShare pada perangkat Anda. Ada dua opsi untuk mengatasinya:\n\n1) Unduh aplikasi QuickDrop dari Google Play. Aplikasi ini memiliki lebih banyak fungsi daripada QuickShare, seperti sinkronisasi notifikasi dan clipboard.\n\n2) Jika tidak, di halaman QuickShare, ketuk tiga titik di pojok kanan atas, pilih pengaturan, lalu nonaktifkan tombol \"Bagikan dengan perangkat Apple\". Setelah itu, Mac Anda akan muncul di halaman QuickShare."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sui dispositivi Android con la condivisione con dispositivi Apple attiva, il Mac potrebbe non essere visibile in QuickShare sul dispositivo. Ci sono due opzioni per risolvere il problema:\n\n1) Scarica l’app QuickDrop da Google Play. Offre più funzionalità di QuickShare, come la sincronizzazione delle notifiche e degli appunti.\n\n2) In alternativa, nella pagina QuickShare, tocca i tre puntini nell’angolo in alto a destra, scegli impostazioni, quindi disattiva l’interruttore \"Condividi con dispositivi Apple\". Dopo, il Mac apparirà nella pagina QuickShare."
+            "value" : "Sui dispositivi Samsung più recenti con OneUI 8.5 o superiore, il Mac potrebbe non essere visibile in QuickShare sul dispositivo. Ci sono due opzioni per risolvere il problema:\n\n1) Scarica l’app QuickDrop da Google Play. Offre più funzionalità di QuickShare, come la sincronizzazione delle notifiche e degli appunti.\n\n2) In alternativa, nella pagina QuickShare, tocca i tre puntini nell’angolo in alto a destra, scegli impostazioni, quindi disattiva l’interruttore \"Condividi con dispositivi Apple\". Dopo, il Mac apparirà nella pagina QuickShare."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Appleデバイスとの共有が有効なAndroid端末では、お使いのMacが端末のQuickShareに表示されない場合があります。解決方法は2つあります：\n\n1) Google PlayからQuickDropアプリをダウンロードします。通知同期やクリップボード同期など、QuickShareより多くの機能があります。\n\n2) それ以外の場合は、QuickShareページで右上の3点メニューをタップし、設定を選択してから「Appleデバイスと共有」トグルを無効にします。その後、MacがQuickShareページに表示されます。"
+            "value" : "OneUI 8.5以降を搭載した新しいSamsung端末では、お使いのMacが端末のQuickShareに表示されない場合があります。解決方法は2つあります：\n\n1) Google PlayからQuickDropアプリをダウンロードします。通知同期やクリップボード同期など、QuickShareより多くの機能があります。\n\n2) それ以外の場合は、QuickShareページで右上の3点メニューをタップし、設定を選択してから「Appleデバイスと共有」トグルを無効にします。その後、MacがQuickShareページに表示されます。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Apple 기기와 공유가 켜진 Android 기기에서는 기기의 QuickShare에 Mac이 보이지 않을 수 있습니다. 이를 해결하는 방법은 두 가지입니다:\n\n1) Google Play에서 QuickDrop 앱을 다운로드하세요. 알림 및 클립보드 동기화 등 QuickShare보다 더 많은 기능을 제공합니다.\n\n2) 또는 QuickShare 페이지에서 오른쪽 상단의 점 세 개를 누르고 설정을 선택한 다음 \"Apple 기기와 공유\" 토글을 끄세요. 그러면 Mac이 QuickShare 페이지에 표시됩니다."
+            "value" : "OneUI 8.5 이상이 설치된 최신 Samsung 기기에서는 기기의 QuickShare에 Mac이 보이지 않을 수 있습니다. 이를 해결하는 방법은 두 가지입니다:\n\n1) Google Play에서 QuickDrop 앱을 다운로드하세요. 알림 및 클립보드 동기화 등 QuickShare보다 더 많은 기능을 제공합니다.\n\n2) 또는 QuickShare 페이지에서 오른쪽 상단의 점 세 개를 누르고 설정을 선택한 다음 \"Apple 기기와 공유\" 토글을 끄세요. 그러면 Mac이 QuickShare 페이지에 표시됩니다."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pada peranti Android dengan perkongsian dengan peranti Apple dihidupkan, Mac anda mungkin tidak kelihatan dalam QuickShare pada peranti anda. Terdapat dua pilihan untuk menyelesaikannya:\n\n1) Muat turun apl QuickDrop daripada Google Play. Ia mempunyai lebih banyak fungsi daripada QuickShare, seperti penyegerakan pemberitahuan dan papan klip.\n\n2) Jika tidak, pada halaman QuickShare, ketik tiga titik di penjuru kanan atas, pilih tetapan, kemudian matikan togol \"Kongsi dengan peranti Apple\". Selepas itu, Mac anda akan muncul pada halaman QuickShare."
+            "value" : "Pada peranti Samsung yang lebih baharu dengan OneUI 8.5 atau lebih tinggi, Mac anda mungkin tidak kelihatan dalam QuickShare pada peranti anda. Terdapat dua pilihan untuk menyelesaikannya:\n\n1) Muat turun apl QuickDrop daripada Google Play. Ia mempunyai lebih banyak fungsi daripada QuickShare, seperti penyegerakan pemberitahuan dan papan klip.\n\n2) Jika tidak, pada halaman QuickShare, ketik tiga titik di penjuru kanan atas, pilih tetapan, kemudian matikan togol \"Kongsi dengan peranti Apple\". Selepas itu, Mac anda akan muncul pada halaman QuickShare."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "På Android-enheter med deling med Apple-enheter slått på kan det hende at Macen din ikke er synlig i QuickShare på enheten. Det finnes to måter å løse dette på:\n\n1) Last ned QuickDrop-appen fra Google Play. Den har mer funksjonalitet enn QuickShare, som varslings- og utklippssynk.\n\n2) Hvis ikke, gå til QuickShare-siden, trykk på de tre prikkene øverst til høyre, velg innstillinger, og slå deretter av bryteren \"Del med Apple-enheter\". Etterpå vises Macen din på QuickShare-siden."
+            "value" : "På nyere Samsung-enheter med OneUI 8.5 eller nyere kan det hende at Macen din ikke er synlig i QuickShare på enheten. Det finnes to måter å løse dette på:\n\n1) Last ned QuickDrop-appen fra Google Play. Den har mer funksjonalitet enn QuickShare, som varslings- og utklippssynk.\n\n2) Hvis ikke, gå til QuickShare-siden, trykk på de tre prikkene øverst til høyre, velg innstillinger, og slå deretter av bryteren \"Del med Apple-enheter\". Etterpå vises Macen din på QuickShare-siden."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Op Android-apparaten waarop delen met Apple-apparaten is ingeschakeld, is je Mac mogelijk niet zichtbaar in QuickShare op je apparaat. Er zijn twee opties om dit op te lossen:\n\n1) Download de QuickDrop-app uit Google Play. Die heeft meer functies dan QuickShare, zoals synchronisatie van meldingen en het klembord.\n\n2) Ga anders op de QuickShare-pagina naar de drie puntjes rechtsboven, kies instellingen en schakel daarna de optie \"Delen met Apple-apparaten\" uit. Daarna verschijnt je Mac op de QuickShare-pagina."
+            "value" : "Op nieuwere Samsung-apparaten met OneUI 8.5 of hoger is je Mac mogelijk niet zichtbaar in QuickShare op je apparaat. Er zijn twee opties om dit op te lossen:\n\n1) Download de QuickDrop-app uit Google Play. Die heeft meer functies dan QuickShare, zoals synchronisatie van meldingen en het klembord.\n\n2) Ga anders op de QuickShare-pagina naar de drie puntjes rechtsboven, kies instellingen en schakel daarna de optie \"Delen met Apple-apparaten\" uit. Daarna verschijnt je Mac op de QuickShare-pagina."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Na urządzeniach z Androidem z włączonym udostępnianiem urządzeniom Apple Twój Mac może nie być widoczny w QuickShare na urządzeniu. Są dwie możliwości rozwiązania tego problemu:\n\n1) Pobierz aplikację QuickDrop z Google Play. Ma więcej funkcji niż QuickShare, na przykład synchronizację powiadomień i schowka.\n\n2) W przeciwnym razie na stronie QuickShare stuknij trzy kropki w prawym górnym rogu, wybierz ustawienia, a następnie wyłącz przełącznik „Udostępnij urządzeniom Apple”. Potem Twój Mac pojawi się na stronie QuickShare."
+            "value" : "Na nowszych urządzeniach Samsung z OneUI 8.5 lub nowszym Twój Mac może nie być widoczny w QuickShare na urządzeniu. Są dwie możliwości rozwiązania tego problemu:\n\n1) Pobierz aplikację QuickDrop z Google Play. Ma więcej funkcji niż QuickShare, na przykład synchronizację powiadomień i schowka.\n\n2) W przeciwnym razie na stronie QuickShare stuknij trzy kropki w prawym górnym rogu, wybierz ustawienia, a następnie wyłącz przełącznik „Udostępnij urządzeniom Apple”. Potem Twój Mac pojawi się na stronie QuickShare."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Em dispositivos Android com compartilhamento com aparelhos Apple ativado, talvez o seu Mac não apareça no QuickShare do dispositivo. Há duas opções para resolver isso:\n\n1) Baixe o app QuickDrop no Google Play. Ele vem com mais funcionalidades que o QuickShare, como sincronização de notificações e da área de transferência.\n\n2) Caso contrário, na página do QuickShare, toque nos três pontos no canto superior direito, escolha configurações e desative a opção \"Compart. com aparelhos Apple\". Depois disso, seu Mac aparecerá na página do QuickShare."
+            "value" : "Em dispositivos Samsung mais recentes com OneUI 8.5 ou superior, talvez o seu Mac não apareça no QuickShare do dispositivo. Há duas opções para resolver isso:\n\n1) Baixe o app QuickDrop no Google Play. Ele vem com mais funcionalidades que o QuickShare, como sincronização de notificações e da área de transferência.\n\n2) Caso contrário, na página do QuickShare, toque nos três pontos no canto superior direito, escolha configurações e desative a opção \"Compartilhar com dispositivos Apple\". Depois disso, seu Mac aparecerá na página do QuickShare."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Em dispositivos Android com a partilha com dispositivos Apple ativada, o seu Mac pode não aparecer no QuickShare do dispositivo. Existem duas opções para resolver isto:\n\n1) Transfira a app QuickDrop a partir da Google Play. Tem mais funcionalidades do que o QuickShare, como sincronização de notificações e da área de transferência.\n\n2) Caso contrário, na página do QuickShare, toque nos três pontos no canto superior direito, escolha definições e desative a opção \"Partilhar com dispositivos Apple\". Depois, o seu Mac aparecerá na página do QuickShare."
+            "value" : "Em dispositivos Samsung mais recentes com OneUI 8.5 ou superior, o seu Mac pode não aparecer no QuickShare do dispositivo. Existem duas opções para resolver isto:\n\n1) Transfira a app QuickDrop a partir da Google Play. Tem mais funcionalidades do que o QuickShare, como sincronização de notificações e da área de transferência.\n\n2) Caso contrário, na página do QuickShare, toque nos três pontos no canto superior direito, escolha definições e desative a opção \"Partilhar com dispositivos Apple\". Depois, o seu Mac aparecerá na página do QuickShare."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pe dispozitivele Android cu partajarea cu dispozitive Apple activată, Mac-ul dvs. poate să nu fie vizibil în QuickShare pe dispozitiv. Există două opțiuni pentru a rezolva acest lucru:\n\n1) Descărcați aplicația QuickDrop din Google Play. Are mai multe funcții decât QuickShare, cum ar fi sincronizarea notificărilor și a clipboardului.\n\n2) În caz contrar, pe pagina QuickShare, apăsați pe cele trei puncte din colțul dreapta sus, alegeți setări, apoi dezactivați comutatorul \"Partajați cu dispozitive Apple\". După aceea, Mac-ul dvs. va apărea pe pagina QuickShare."
+            "value" : "Pe dispozitivele Samsung mai noi cu OneUI 8.5 sau o versiune ulterioară, Mac-ul dvs. poate să nu fie vizibil în QuickShare pe dispozitiv. Există două opțiuni pentru a rezolva acest lucru:\n\n1) Descărcați aplicația QuickDrop din Google Play. Are mai multe funcții decât QuickShare, cum ar fi sincronizarea notificărilor și a clipboardului.\n\n2) În caz contrar, pe pagina QuickShare, apăsați pe cele trei puncte din colțul dreapta sus, alegeți setări, apoi dezactivați comutatorul \"Partajare cu dispozitive Apple\". După aceea, Mac-ul dvs. va apărea pe pagina QuickShare."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "На устройствах Android с включенным обменом с устройствами Apple ваш Mac может не отображаться в QuickShare на устройстве. Есть два способа решить это:\n\n1) Скачайте приложение QuickDrop из Google Play. В нем больше возможностей, чем в QuickShare, например синхронизация уведомлений и буфера обмена.\n\n2) Либо на странице QuickShare нажмите на три точки в правом верхнем углу, выберите настройки, затем отключите переключатель «Обмен с устройствами Apple». После этого ваш Mac появится на странице QuickShare."
+            "value" : "На новых устройствах Samsung с OneUI 8.5 или новее ваш Mac может не отображаться в QuickShare на устройстве. Есть два способа решить это:\n\n1) Скачайте приложение QuickDrop из Google Play. В нем больше возможностей, чем в QuickShare, например синхронизация уведомлений и буфера обмена.\n\n2) Либо на странице QuickShare нажмите на три точки в правом верхнем углу, выберите настройки, затем отключите переключатель «Поделиться с устройствами Apple». После этого ваш Mac появится на странице QuickShare."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "På Android-enheter med delning med Apple-enheter aktiverad kanske din Mac inte syns i QuickShare på enheten. Det finns två sätt att lösa detta:\n\n1) Ladda ner QuickDrop-appen från Google Play. Den har fler funktioner än QuickShare, till exempel notifikations- och urklippssynk.\n\n2) Annars går du till QuickShare-sidan, trycker på de tre punkterna uppe till höger, väljer inställningar och stänger sedan av reglaget \"Dela med Apple-enheter\". Därefter visas din Mac på QuickShare-sidan."
+            "value" : "På nyare Samsung-enheter med OneUI 8.5 eller senare kanske din Mac inte syns i QuickShare på enheten. Det finns två sätt att lösa detta:\n\n1) Ladda ner QuickDrop-appen från Google Play. Den har fler funktioner än QuickShare, till exempel notifikations- och urklippssynk.\n\n2) Annars går du till QuickShare-sidan, trycker på de tre punkterna uppe till höger, väljer inställningar och stänger sedan av reglaget \"Dela med Apple-enheter\". Därefter visas din Mac på QuickShare-sidan."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "บนอุปกรณ์ Android ที่เปิดการแชร์ด้วยอุปกรณ์ Apple Mac ของคุณอาจไม่ปรากฏใน QuickShare บนอุปกรณ์ของคุณ มีสองวิธีในการแก้ไขปัญหานี้:\n\n1) ดาวน์โหลดแอป QuickDrop จาก Google Play แอปนี้มีฟังก์ชันมากกว่า QuickShare เช่น การซิงค์การแจ้งเตือนและคลิปบอร์ด\n\n2) มิฉะนั้น ในหน้า QuickShare ให้แตะจุดสามจุดที่มุมขวาบน เลือกการตั้งค่า แล้วปิดสวิตช์ \"แชร์ด้วยอุปกรณ์ Apple\" หลังจากนั้น Mac ของคุณจะปรากฏในหน้า QuickShare"
+            "value" : "บนอุปกรณ์ Samsung รุ่นใหม่ที่ใช้ OneUI 8.5 หรือสูงกว่า Mac ของคุณอาจไม่ปรากฏใน QuickShare บนอุปกรณ์ของคุณ มีสองวิธีในการแก้ไขปัญหานี้:\n\n1) ดาวน์โหลดแอป QuickDrop จาก Google Play แอปนี้มีฟังก์ชันมากกว่า QuickShare เช่น การซิงค์การแจ้งเตือนและคลิปบอร์ด\n\n2) มิฉะนั้น ในหน้า QuickShare ให้แตะจุดสามจุดที่มุมขวาบน เลือกการตั้งค่า แล้วปิดสวิตช์ \"แชร์กับอุปกรณ์ Apple\" หลังจากนั้น Mac ของคุณจะปรากฏในหน้า QuickShare"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Apple cihazlarıyla paylaşım açık olan Android cihazlarda Mac'iniz cihazınızdaki QuickShare'de görünmeyebilir. Bunu çözmek için iki seçenek vardır:\n\n1) QuickDrop uygulamasını Google Play'den indirin. Bildirim ve pano senkronizasyonu gibi QuickShare'den daha fazla işlev sunar.\n\n2) Aksi takdirde, QuickShare sayfasında sağ üst köşedeki üç noktaya dokunun, ayarları seçin, ardından \"Apple cihazlarıyla paylaş\" geçişini devre dışı bırakın. Sonrasında Mac'iniz QuickShare sayfasında görünecektir."
+            "value" : "OneUI 8.5 veya daha yüksek sürüme sahip yeni Samsung cihazlarda Mac'iniz cihazınızdaki QuickShare'de görünmeyebilir. Bunu çözmek için iki seçenek vardır:\n\n1) QuickDrop uygulamasını Google Play'den indirin. Bildirim ve pano senkronizasyonu gibi QuickShare'den daha fazla işlev sunar.\n\n2) Aksi takdirde, QuickShare sayfasında sağ üst köşedeki üç noktaya dokunun, ayarları seçin, ardından \"Apple aygıtlarıyla paylaş\" geçişini devre dışı bırakın. Sonrasında Mac'iniz QuickShare sayfasında görünecektir."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "На пристроях Android з увімкненим обміном із пристроями Apple ваш Mac може не відображатися в QuickShare на пристрої. Є два варіанти вирішення цього:\n\n1) Завантажте застосунок QuickDrop з Google Play. Він має більше можливостей, ніж QuickShare, зокрема синхронізацію сповіщень і буфера обміну.\n\n2) Або на сторінці QuickShare натисніть три крапки у верхньому правому куті, виберіть налаштування, а потім вимкніть перемикач «Обмін із пристроями Apple». Після цього ваш Mac з’явиться на сторінці QuickShare."
+            "value" : "На новіших пристроях Samsung з OneUI 8.5 або новішою версією ваш Mac може не відображатися в QuickShare на пристрої. Є два варіанти вирішення цього:\n\n1) Завантажте застосунок QuickDrop з Google Play. Він має більше можливостей, ніж QuickShare, зокрема синхронізацію сповіщень і буфера обміну.\n\n2) Або на сторінці QuickShare натисніть три крапки у верхньому правому куті, виберіть налаштування, а потім вимкніть перемикач «Ділитися з пристроями Apple». Після цього ваш Mac з’явиться на сторінці QuickShare."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trên các thiết bị Android đã bật chia sẻ với thiết bị Apple, máy Mac của bạn có thể không hiển thị trong QuickShare trên thiết bị. Có hai cách để giải quyết việc này:\n\n1) Tải ứng dụng QuickDrop từ Google Play. Ứng dụng này có nhiều chức năng hơn QuickShare, chẳng hạn như đồng bộ thông báo và bảng ghi tạm.\n\n2) Nếu không, trên trang QuickShare, nhấn vào ba dấu chấm ở góc trên bên phải, chọn cài đặt, rồi tắt công tắc \"Chia sẻ với thiết bị Apple\". Sau đó, máy Mac của bạn sẽ xuất hiện trên trang QuickShare."
+            "value" : "Trên các thiết bị Samsung mới hơn với OneUI 8.5 trở lên, máy Mac của bạn có thể không hiển thị trong QuickShare trên thiết bị. Có hai cách để giải quyết việc này:\n\n1) Tải ứng dụng QuickDrop từ Google Play. Ứng dụng này có nhiều chức năng hơn QuickShare, chẳng hạn như đồng bộ thông báo và bảng ghi tạm.\n\n2) Nếu không, trên trang QuickShare, nhấn vào ba dấu chấm ở góc trên bên phải, chọn cài đặt, rồi tắt công tắc \"Chia sẻ với thiết bị Apple\". Sau đó, máy Mac của bạn sẽ xuất hiện trên trang QuickShare."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在已启用与 Apple 设备分享的 Android 设备上，你的 Mac 可能不会显示在设备的 QuickShare 中。有两种方法可以解决此问题：\n\n1) 从 Google Play 下载 QuickDrop 应用。它比 QuickShare 提供更多功能，例如通知同步和剪贴板同步。\n\n2) 否则，请在 QuickShare 页面点击右上角的三个点，选择设置，然后关闭“与 Apple 设备分享”开关。之后，你的 Mac 就会显示在 QuickShare 页面上。"
+            "value" : "在搭载 OneUI 8.5 或更高版本的较新 Samsung 设备上，你的 Mac 可能不会显示在设备的 QuickShare 中。有两种方法可以解决此问题：\n\n1) 从 Google Play 下载 QuickDrop 应用。它比 QuickShare 提供更多功能，例如通知同步和剪贴板同步。\n\n2) 否则，请在 QuickShare 页面点击右上角的三个点，选择设置，然后关闭“与 Apple 设备共享”开关。之后，你的 Mac 就会显示在 QuickShare 页面上。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在已啟用分享給 Apple 裝置的 Android 裝置上，你的 Mac 可能不會顯示在裝置的 QuickShare 中。有兩種方法可以解決此問題：\n\n1) 從 Google Play 下載 QuickDrop App。它比 QuickShare 提供更多功能，例如通知同步和剪貼簿同步。\n\n2) 否則，請在 QuickShare 頁面點一下右上角的三個點，選擇設定，然後關閉「分享給 Apple 裝置」開關。之後，你的 Mac 就會顯示在 QuickShare 頁面上。"
+            "value" : "在搭載 OneUI 8.5 或更高版本的較新 Samsung 裝置上，你的 Mac 可能不會顯示在裝置的 QuickShare 中。有兩種方法可以解決此問題：\n\n1) 從 Google Play 下載 QuickDrop App。它比 QuickShare 提供更多功能，例如通知同步和剪貼簿同步。\n\n2) 否則，請在 QuickShare 頁面點一下右上角的三個點，選擇設定，然後關閉「與 Apple 裝置分享」開關。之後，你的 Mac 就會顯示在 QuickShare 頁面上。"
           }
         }
       }
@@ -1870,229 +1870,229 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac غير مرئي على جهاز Android مع تمكين المشاركة مع أجهزة Apple؟"
+            "value" : "Mac غير مرئي على جهاز Samsung مع OneUI 8.5؟"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "El Mac no és visible en un dispositiu Android amb la compartició amb dispositius Apple activada?"
+            "value" : "El Mac no és visible en un dispositiu Samsung amb OneUI 8.5?"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac není viditelný na zařízení Android se zapnutým sdílením se zařízeními Apple?"
+            "value" : "Mac není viditelný na zařízení Samsung s OneUI 8.5?"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er Mac ikke synlig på en Android-enhed med deling med Apple-enheder slået til?"
+            "value" : "Er Mac ikke synlig på en Samsung-enhed med OneUI 8.5?"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac auf Android-Gerät mit aktivierter Freigabe für Apple-Geräte nicht sichtbar?"
+            "value" : "Mac auf Samsung-Gerät mit OneUI 8.5 nicht sichtbar?"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Δεν είναι ορατό το Mac σε συσκευή Android με ενεργή την κοινή χρήση με συσκευές Apple;"
+            "value" : "Δεν είναι ορατό το Mac σε συσκευή Samsung με OneUI 8.5;"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac not visible on Android device with Apple device sharing enabled?"
+            "value" : "Mac not visible on Samsung device with OneUI 8.5?"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac not visible on Android device with Apple device sharing enabled?"
+            "value" : "Mac not visible on Samsung device with OneUI 8.5?"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac not visible on Android device with Apple device sharing enabled?"
+            "value" : "Mac not visible on Samsung device with OneUI 8.5?"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac not visible on Android device with Apple device sharing enabled?"
+            "value" : "Mac not visible on Samsung device with OneUI 8.5?"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "¿Mac no visible en un dispositivo Android con la opción para compartir con dispositivos Apple activada?"
+            "value" : "¿Mac no visible en un dispositivo Samsung con OneUI 8.5?"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "¿La Mac no aparece en un dispositivo Android con compartir con dispositivos Apple activado?"
+            "value" : "¿La Mac no aparece en un dispositivo Samsung con OneUI 8.5?"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Eikö Mac näy Android-laitteella, jossa jako Apple-laitteiden kanssa on käytössä?"
+            "value" : "Eikö Mac näy Samsung-laitteella, jossa on OneUI 8.5?"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac non visible sur un appareil Android avec le partage avec les appareils Apple activé ?"
+            "value" : "Mac non visible sur un appareil Samsung avec OneUI 8.5 ?"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac non visible sur un appareil Android avec le partage avec les appareils Apple activé?"
+            "value" : "Mac non visible sur un appareil Samsung avec OneUI 8.5?"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ה-Mac לא גלוי במכשיר Android כשהשיתוף עם מכשירי Apple מופעל?"
+            "value" : "ה-Mac לא גלוי במכשיר Samsung עם OneUI 8.5?"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Apple डिवाइस के साथ शेयरिंग चालू होने पर Android डिवाइस पर Mac दिखाई नहीं दे रहा?"
+            "value" : "OneUI 8.5 वाले Samsung डिवाइस पर Mac दिखाई नहीं दे रहा?"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac nije vidljiv na Android uređaju s uključenim dijeljenjem s uređajima Apple?"
+            "value" : "Mac nije vidljiv na Samsung uređaju s OneUI 8.5?"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nem látható a Mac Android-eszközön, ha az Apple eszközökkel való megosztás be van kapcsolva?"
+            "value" : "Nem látható a Mac OneUI 8.5-öt futtató Samsung készüléken?"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac tidak terlihat di perangkat Android dengan berbagi dengan perangkat Apple aktif?"
+            "value" : "Mac tidak terlihat di perangkat Samsung dengan OneUI 8.5?"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac non visibile su un dispositivo Android con la condivisione con dispositivi Apple attiva?"
+            "value" : "Mac non visibile su un dispositivo Samsung con OneUI 8.5?"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Appleデバイスとの共有が有効なAndroid端末でMacが表示されませんか？"
+            "value" : "OneUI 8.5のSamsung端末でMacが表示されませんか？"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Apple 기기와 공유가 켜진 Android 기기에서 Mac이 보이지 않나요?"
+            "value" : "OneUI 8.5가 설치된 Samsung 기기에서 Mac이 보이지 않나요?"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac tidak kelihatan pada peranti Android dengan perkongsian dengan peranti Apple dihidupkan?"
+            "value" : "Mac tidak kelihatan pada peranti Samsung dengan OneUI 8.5?"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er Macen ikke synlig på en Android-enhet med deling med Apple-enheter slått på?"
+            "value" : "Er Macen ikke synlig på en Samsung-enhet med OneUI 8.5?"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac niet zichtbaar op een Android-apparaat waarop delen met Apple-apparaten is ingeschakeld?"
+            "value" : "Mac niet zichtbaar op een Samsung-apparaat met OneUI 8.5?"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac niewidoczny na urządzeniu z Androidem z włączonym udostępnianiem urządzeniom Apple?"
+            "value" : "Mac niewidoczny na urządzeniu Samsung z OneUI 8.5?"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac não aparece em dispositivo Android com compartilhamento com aparelhos Apple ativado?"
+            "value" : "Mac não aparece em dispositivo Samsung com OneUI 8.5?"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac não aparece num dispositivo Android com a partilha com dispositivos Apple ativada?"
+            "value" : "Mac não aparece num dispositivo Samsung com OneUI 8.5?"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac-ul nu este vizibil pe un dispozitiv Android cu partajarea cu dispozitive Apple activată?"
+            "value" : "Mac-ul nu este vizibil pe un dispozitiv Samsung cu OneUI 8.5?"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac не виден на устройстве Android с включенным обменом с устройствами Apple?"
+            "value" : "Mac не виден на устройстве Samsung с OneUI 8.5?"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Syns inte Macen på en Android-enhet med delning med Apple-enheter aktiverad?"
+            "value" : "Syns inte Macen på en Samsung-enhet med OneUI 8.5?"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac ไม่ปรากฏบนอุปกรณ์ Android ที่เปิดการแชร์ด้วยอุปกรณ์ Apple?"
+            "value" : "Mac ไม่ปรากฏบนอุปกรณ์ Samsung ที่ใช้ OneUI 8.5?"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Apple cihazlarıyla paylaşım açık olan Android cihazda Mac görünmüyor mu?"
+            "value" : "Mac, OneUI 8.5 yüklü Samsung cihazda görünmüyor mu?"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac не видно на пристрої Android з увімкненим обміном із пристроями Apple?"
+            "value" : "Mac не видно на пристрої Samsung з OneUI 8.5?"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Máy Mac không hiển thị trên thiết bị Android đã bật chia sẻ với thiết bị Apple?"
+            "value" : "Máy Mac không hiển thị trên thiết bị Samsung với OneUI 8.5?"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac 在已启用与 Apple 设备分享的 Android 设备上不可见？"
+            "value" : "Mac 在搭载 OneUI 8.5 的 Samsung 设备上不可见？"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mac 在已啟用分享給 Apple 裝置的 Android 裝置上不可見？"
+            "value" : "Mac 在搭載 OneUI 8.5 的 Samsung 裝置上不可見？"
           }
         }
       }
