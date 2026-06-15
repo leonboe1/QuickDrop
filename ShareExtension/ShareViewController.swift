@@ -92,6 +92,9 @@ class ShareViewController: NSViewController, OutboundAppDelegate {
         flowLayout.minimumLineSpacing = 10
         listView!.collectionViewLayout = flowLayout
         listView!.dataSource = self
+        listView!.delegate = self
+        listView!.isSelectable = true
+        listView!.allowsMultipleSelection = false
         
         progressDeviceIconWrap!.wantsLayer = true
         progressDeviceIconWrap!.layer!.masksToBounds = false
@@ -247,6 +250,7 @@ class ShareViewController: NSViewController, OutboundAppDelegate {
     
     
     func selectDevice(device: RemoteDeviceInfo) {
+        guard chosenDevice == nil else { return }
         
         listViewWrapper?.animator().isHidden = true
         dontSeeDeviceButton?.animator().isHidden = true
@@ -392,7 +396,7 @@ extension ShareViewController: NSCollectionViewDataSource {
         
         guard let collectionViewItem = item as? DeviceListCell else { return item }
         
-        let device = foundDevices[indexPath[1]]
+        let device = foundDevices[indexPath.item]
         
         collectionViewItem.configure(
             deviceName: getDeviceName(device: device),
@@ -413,6 +417,20 @@ extension ShareViewController: NSCollectionViewDataSource {
         }
         
         return "AndroidDevice".localized()
+    }
+}
+
+
+extension ShareViewController: NSCollectionViewDelegate {
+
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        guard let indexPath = indexPaths.first else { return }
+
+        let itemIndex = indexPath.item
+        guard foundDevices.indices.contains(itemIndex) else { return }
+
+        collectionView.deselectItems(at: indexPaths)
+        selectDevice(device: foundDevices[itemIndex])
     }
 }
 
