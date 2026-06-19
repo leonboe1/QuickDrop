@@ -18,7 +18,7 @@ import Cocoa
 #endif
 
 class ErrorAlertHandler {
-    
+
     private init() {}
     static let shared = ErrorAlertHandler()
     
@@ -186,7 +186,10 @@ class ErrorAlertHandler {
     }
 
     private func bringAlertWindowToFront(_ window: NSWindow) {
-        _ = NSApp.setActivationPolicy(.regular)
+        // Keep the app a menu-bar (.accessory) app: do NOT switch to .regular,
+        // which would add a dock icon that lingers after the alert closes.
+        // orderFrontRegardless() brings the window to the front even though the
+        // app stays inactive in the background.
         NSApp.activate(ignoringOtherApps: true)
         window.makeKeyAndOrderFront(nil)
         window.orderFrontRegardless()
