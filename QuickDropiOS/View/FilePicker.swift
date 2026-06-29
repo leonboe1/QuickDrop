@@ -70,6 +70,8 @@ struct SendPickerButton<Label: View>: View {
                 selectedPhotoItems = []
             } catch {
                 log("Could not fetch photo URLs: \(error)")
+                onResult(nil, nil)   // let the caller dismiss the "preparing" it opened on `onPrepare`
+                selectedPhotoItems = []
             }
         }
     }

@@ -63,7 +63,7 @@ class SendModel: ObservableObject, OutboundAppDelegate {
         
         if let name = selectedDevice?.name {
             errorVibration()
-            ErrorAlertHandler.shared.showErrorAlert(for: name, error: error)
+            ErrorAlertHandler.shared.showErrorAlert(for: name, error: error, isQuickDropPeer: selectedDevice?.isQuickDropPeer ?? false)
         }
         
         progressValue = nil

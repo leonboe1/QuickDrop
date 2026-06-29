@@ -15609,6 +15609,239 @@
         }
       }
     },
+    "Error.FixInstructionsAppInstalled" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إذا تكرر ذلك، يرجى إعادة تشغيل جهازك الآخر والمحاولة مرة أخرى."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si això passa repetidament, reinicia l'altre dispositiu i torna-ho a provar."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokud se to opakuje, restartujte své druhé zařízení a zkuste to znovu."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis dette sker gentagne gange, genstart venligst din anden enhed og prøv igen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn das wiederholt passiert, starte bitte dein anderes Gerät neu und versuche es erneut."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αν αυτό συμβαίνει επαναλαμβανόμενα, παρακαλώ επανεκκινήστε τη συσκευή σας και δοκιμάστε ξανά."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If this happens repeatedly, please restart your other device and try again."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If this happens repeatedly, please restart your other device and try again."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If this happens repeatedly, please restart your other device and try again."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If this happens repeatedly, please restart your other device and try again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si esto ocurre repetidamente, reinicia tu otro dispositivo e inténtalo de nuevo."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si esto ocurre repetidamente, por favor reinicia tu otro dispositivo e inténtalo de nuevo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jos tämä toistuu, käynnistä toinen laitteesi uudelleen ja yritä uudelleen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si cela se produit à plusieurs reprises, veuillez redémarrer votre autre appareil et réessayer."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si cela se produit souvent, veuillez redémarrer votre autre appareil et réessayer."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אם זה קורה שוב ושוב, נא הפעל מחדש את המכשיר השני ונסה שוב."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अगर यह बार-बार होता है, तो कृपया अपने दूसरे डिवाइस को पुनः प्रारंभ करें और फिर से प्रयास करें।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ako se ovo ponavlja, ponovno pokrenite drugi uređaj i pokušajte ponovno."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ha ez ismétlődően előfordul, indítsa újra a másik eszközt, és próbálja újra."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jika ini terjadi berulang kali, silakan mulai ulang perangkat Anda yang lain dan coba lagi."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se questo accade ripetutamente, riavvia il tuo altro dispositivo e riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この問題が繰り返し発生する場合は、他のデバイスを再起動してからもう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 문제가 반복된다면, 다른 기기를 재시작한 후 다시 시도해 보세요."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jika ini berlaku berulang kali, sila mulakan semula peranti anda yang lain dan cuba lagi."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis dette skjer gjentatte ganger, start den andre enheten på nytt og prøv igjen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als dit herhaaldelijk gebeurt, start dan je andere apparaat opnieuw op en probeer het opnieuw."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeśli to się powtarza, uruchom ponownie inne urządzenie i spróbuj ponownie."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se isso acontecer repetidamente, reinicie seu outro dispositivo e tente novamente."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se isto acontecer repetidamente, reinicie o seu outro dispositivo e tente novamente."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dacă se întâmplă frecvent, repornește celălalt dispozitiv și încearcă din nou."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если это происходит часто, перезагрузите ваше другое устройство и попробуйте снова."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om detta händer upprepade gånger, starta om din andra enhet och försök igen."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หากเกิดเหตุการณ์นี้บ่อยๆ กรุณารีสตาร์ทอุปกรณ์อีกเครื่องแล้วลองอีกครั้ง"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu durum tekrar ederse, lütfen diğer cihazınızı yeniden başlatın ve tekrar deneyin."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Якщо це трапляється часто, перезапустіть інший пристрій і спробуйте ще раз."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nếu điều này xảy ra nhiều lần, vui lòng khởi động lại thiết bị kia và thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果这种情况反复发生，请重启你的另一台设备，然后重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果這種情況反覆發生，請重新啟動您的其他裝置，然後再試一次。"
+          }
+        }
+      }
+    },
     "Error.NetworkDown" : {
       "extractionState" : "manual",
       "localizations" : {

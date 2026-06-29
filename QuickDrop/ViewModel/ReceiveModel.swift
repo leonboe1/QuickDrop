@@ -291,7 +291,7 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
                     controlPlusScreen(false)
                     
                     errorVibration()
-                    ErrorAlertHandler.shared.showErrorAlert(for: name, error: error)
+                    ErrorAlertHandler.shared.showErrorAlert(for: name, error: error, isQuickDropPeer: device?.isQuickDropPeer ?? false)
                 }
             } else {
  
@@ -408,7 +408,7 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
                     controlPlusScreen(false)
 
                     errorVibration()
-                    ErrorAlertHandler.shared.showErrorAlert(for: name, error: error)
+                    ErrorAlertHandler.shared.showErrorAlert(for: name, error: error, isQuickDropPeer: device?.isQuickDropPeer ?? false)
                 }
                 return
             }

@@ -47,7 +47,7 @@ class SendModel: ObservableObject, OutboundAppDelegate {
     
     func connectionFailed(with error: any Error) {
         
-        ErrorAlertHandler.shared.showErrorAlert(for: selectedDevice?.name ?? "?", error: error)
+        ErrorAlertHandler.shared.showErrorAlert(for: selectedDevice?.name ?? "?", error: error, isQuickDropPeer: selectedDevice?.isQuickDropPeer ?? false)
         
         progressValue = nil
         selectedDevice = nil

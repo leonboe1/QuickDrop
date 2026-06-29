@@ -30,13 +30,30 @@ class ErrorAlertHandler {
     private var androidAirDropModeAlertWindow: NSWindow?
     #endif
     
-    func showErrorAlert(for deviceName: String, error: Error) {
+    /// Resource key for the recoverable-error suffix ("if this keeps happening…") appended to most
+    /// transfer errors.
+    ///
+    /// `Error.FixInstructions` suggests downloading the QuickDrop Android app from Google Play, which
+    /// is pointless for a peer that already runs QuickDrop. For such a peer (`isQuickDropPeer == true`)
+    /// the `Error.FixInstructionsAppInstalled` variant — the same advice without the download
+    /// suggestion — is used instead.
+    static func fixInstructionsKey(isQuickDropPeer: Bool) -> String {
+        isQuickDropPeer ? "Error.FixInstructionsAppInstalled" : "Error.FixInstructions"
+    }
+
+    /// Presents the transfer-error alert for `deviceName`.
+    ///
+    /// - Parameter isQuickDropPeer: whether the other device runs the QuickDrop app. When `true`, the
+    ///   "download the app from Google Play" suggestion is omitted from the fix instructions (see
+    ///   `fixInstructionsKey(isQuickDropPeer:)`). Defaults to `false` so callers without device context
+    ///   keep the full hint.
+    func showErrorAlert(for deviceName: String, error: Error, isQuickDropPeer: Bool = false) {
         #if os(macOS)
         NSApp.activate(ignoringOtherApps: true)
         #endif
-        
+
         var description = ""
-        let fixInstructions = " " + "Error.FixInstructions".localized()
+        let fixInstructions = " " + Self.fixInstructionsKey(isQuickDropPeer: isQuickDropPeer).localized()
         if let ne = (error as? NearbyError) {
             switch ne {
             case .inputOutput:
