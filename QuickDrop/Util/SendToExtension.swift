@@ -26,7 +26,7 @@ func sendToSharingService(items: [Any]) {
                 alert.informativeText = "ShareExtensionDisabledDescriptionLegacy".localized()
             }
             alert.addButton(withTitle: "CloseAlert".localized())
-            alert.runModal()
+            ModelessAlertPresenter.present(alert)
         }
     }
 }

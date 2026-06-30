@@ -359,7 +359,7 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
                                 alert.informativeText = error.localizedDescription
                                 alert.addButton(withTitle: "CloseAlert".localized())
                                 
-                                alert.runModal()
+                                ModelessAlertPresenter.present(alert)
                             }
                         }
                     }
@@ -453,7 +453,7 @@ class ReceiveModel: ObservableObject, InboundAppDelegate {
                             alert.informativeText = error.localizedDescription
                             alert.addButton(withTitle: "CloseAlert".localized())
 
-                            alert.runModal()
+                            ModelessAlertPresenter.present(alert)
                         }
                     }
                 }

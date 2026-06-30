@@ -259,6 +259,10 @@
 		EB5C383F2E38C49D0052EFD7 /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C383E2E38C49D0052EFD7 /* LaunchAtLogin.swift */; };
 		EB5C38402E38C49D0052EFD7 /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C383E2E38C49D0052EFD7 /* LaunchAtLogin.swift */; };
 		EB5C38412E38C49D0052EFD7 /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C383E2E38C49D0052EFD7 /* LaunchAtLogin.swift */; };
+		EB63EDB72FF42390000CC61F /* ModelessAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63EDB62FF42390000CC61F /* ModelessAlertPresenter.swift */; };
+		EB63EDB92FF42390000CC61F /* ModelessAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63EDB62FF42390000CC61F /* ModelessAlertPresenter.swift */; };
+		EB63EDBA2FF42390000CC61F /* ModelessAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63EDB62FF42390000CC61F /* ModelessAlertPresenter.swift */; };
+		EB63EDBB2FF42390000CC61F /* ModelessAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63EDB62FF42390000CC61F /* ModelessAlertPresenter.swift */; };
 		EB6E51A52F2F9370006D9812 /* IntroductionSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E51A42F2F9370006D9812 /* IntroductionSheetManager.swift */; };
 		EB6E51A62F2F9370006D9812 /* IntroductionSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E51A42F2F9370006D9812 /* IntroductionSheetManager.swift */; };
 		EB6E51AB2F311ED4006D9812 /* QuickDropIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = EB721F232E75AFA900F2099F /* QuickDropIcon.icon */; };
@@ -575,6 +579,7 @@
 		EB5C37E22E377C2E0052EFD7 /* QuickDropiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickDropiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5C38382E38C1F60052EFD7 /* justMaybe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = justMaybe.mp3; sourceTree = "<group>"; };
 		EB5C383E2E38C49D0052EFD7 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
+		EB63EDB62FF42390000CC61F /* ModelessAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelessAlertPresenter.swift; sourceTree = "<group>"; };
 		EB6E51A42F2F9370006D9812 /* IntroductionSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionSheetManager.swift; sourceTree = "<group>"; };
 		EB6E6B202ECBA95000E71D57 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		EB6F62D62D91F4AC00534EC2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -991,6 +996,7 @@
 				A1C0DE152F4C000100ABC001 /* ClipboardSyncNotificationPresenter.swift */,
 				EB1325F72E70287C00FD749C /* SendToExtension.swift */,
 				EB5C383E2E38C49D0052EFD7 /* LaunchAtLogin.swift */,
+				EB63EDB62FF42390000CC61F /* ModelessAlertPresenter.swift */,
 				EB886E662E4F2F7C0052B7D9 /* License.swift */,
 				EB6FE7D12EFEFB2700FF2BCF /* AllowedWorkMonitor.swift */,
 				EB36435F2D73A29F009CDFF8 /* AudioManager.swift */,
@@ -1389,6 +1395,7 @@
 				A7D000000000000000000103 /* AndroidAirDropModeIssueView.swift in Sources */,
 				EBC05C882E33B58300EECC18 /* FirewallIssueView.swift in Sources */,
 				EBC05C892E33B58300EECC18 /* ApIsolationIssueView.swift in Sources */,
+				EB63EDBB2FF42390000CC61F /* ModelessAlertPresenter.swift in Sources */,
 				699DEBA62AB0573200115D22 /* ShareViewController.swift in Sources */,
 				EB96ED8B2D7F7CF7004B3FF1 /* SmallSheetView.swift in Sources */,
 				EBCC27F92D80C9F90079C478 /* Zip.swift in Sources */,
@@ -1447,6 +1454,7 @@
 				EB5C37C22E377A780052EFD7 /* device_to_device_messages.pb.swift in Sources */,
 				EB5C37C32E377A780052EFD7 /* wire_format.pb.swift in Sources */,
 				EB16B6152E58B4B9007D9792 /* IdentityManager.swift in Sources */,
+				EB63EDB92FF42390000CC61F /* ModelessAlertPresenter.swift in Sources */,
 				EB5C37C42E377A780052EFD7 /* securegcm.pb.swift in Sources */,
 				EB97A0102E51CD13008B8C5C /* ReceiveModel.swift in Sources */,
 				A1F5B3DD2F3A1A0100A1B2C8 /* PairingQrSheetManager.swift in Sources */,
@@ -1519,6 +1527,7 @@
 				EB3B9F0F2EF7150400D6704E /* device_to_device_messages.pb.swift in Sources */,
 				EB3B9F102EF7150400D6704E /* wire_format.pb.swift in Sources */,
 				EB3B9F112EF7150400D6704E /* IdentityManager.swift in Sources */,
+				EB63EDB72FF42390000CC61F /* ModelessAlertPresenter.swift in Sources */,
 				EB3B9F122EF7150400D6704E /* securegcm.pb.swift in Sources */,
 				EB3B9F132EF7150400D6704E /* ReceiveModel.swift in Sources */,
 				A1F5B3DE2F3A1A0100A1B2C9 /* PairingQrSheetManager.swift in Sources */,
@@ -1575,6 +1584,7 @@
 				A7D000000000000000000104 /* AndroidAirDropModeIssueView.swift in Sources */,
 				EB3B9F542EF7151900D6704E /* FirewallIssueView.swift in Sources */,
 				EB3B9F552EF7151900D6704E /* ApIsolationIssueView.swift in Sources */,
+				EB63EDBA2FF42390000CC61F /* ModelessAlertPresenter.swift in Sources */,
 				EB3B9F562EF7151900D6704E /* ShareViewController.swift in Sources */,
 				EB3B9F572EF7151900D6704E /* SmallSheetView.swift in Sources */,
 				EB3B9F582EF7151900D6704E /* Zip.swift in Sources */,

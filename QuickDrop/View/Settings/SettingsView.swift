@@ -150,8 +150,8 @@ struct SettingsView: View {
                     alert.messageText = "FolderSelectionFailedTitle".localized()
                     alert.informativeText = "FolderSelectionFailedMessage".localized()
                     alert.addButton(withTitle: "CloseAlert".localized())
-                    
-                    alert.runModal()
+
+                    ModelessAlertPresenter.present(alert)
                 }
             }
         }

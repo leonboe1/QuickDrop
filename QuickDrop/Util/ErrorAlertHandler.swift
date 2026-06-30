@@ -106,29 +106,11 @@ class ErrorAlertHandler {
             
             #if os(macOS)
             
-            let primaryButtonTitle = "InformDeveloper".localized()
-            let secondaryButtonTitle = "CloseAlert".localized()
-            
+            // Shown modelessly (the native NSAlert panel via makeKeyAndOrderFront) rather than
+            // runModal(), which blocks the main run loop and would freeze the next incoming transfer's
+            // consent prompt until dismissed. Same window runModal() uses, so it looks identical.
             self.isAlertShown = true
-            let alert = NSAlert()
-            alert.alertStyle = .critical
-            alert.messageText = title
-            alert.informativeText = description
-            alert.addButton(withTitle: primaryButtonTitle)
-            alert.addButton(withTitle: secondaryButtonTitle)
-            
-            let result = alert.runModal()
-            self.isAlertShown = false
-            
-            if result == .alertFirstButtonReturn {
-                if Bundle.main.bundlePath.hasSuffix(".appex") {
-                    if let url = URL(string: "quickdrop://sendLog") {
-                        NSWorkspace.shared.open(url)
-                    }
-                } else {
-                    LogExportPresenter.showUploadLogsAlert(openSupportMailAfterUpload: false)
-                }
-            }
+            presentTransferErrorAlert(title: title, description: description)
             #else
             showAlert(title: title, message: description)
             #endif
@@ -210,6 +192,44 @@ class ErrorAlertHandler {
         NSApp.activate(ignoringOtherApps: true)
         window.makeKeyAndOrderFront(nil)
         window.orderFrontRegardless()
+    }
+
+
+    /// Shows the transfer-error alert as the native `NSAlert` panel, but presented modelessly
+    /// (`makeKeyAndOrderFront`) instead of `runModal()`, so it does NOT block the main run loop — an
+    /// incoming transfer's consent prompt can still appear while it's on screen. It's the same
+    /// `_NSAlertPanel` window `runModal()` would show, so it looks identical; we just route the button
+    /// clicks ourselves (there's no modal session to end) and reset state on dismissal.
+    private func presentTransferErrorAlert(title: String, description: String) {
+        let alert = NSAlert()
+        alert.alertStyle = .critical
+        alert.messageText = title
+        alert.informativeText = description
+        alert.addButton(withTitle: "InformDeveloper".localized())   // tag == .alertFirstButtonReturn
+        alert.addButton(withTitle: "CloseAlert".localized())        // tag == .alertSecondButtonReturn
+        alert.buttons.first?.keyEquivalent = "\r"                    // default button: Return
+        if alert.buttons.count > 1 { alert.buttons[1].keyEquivalent = "\u{1b}" }  // Close: Escape
+
+        ModelessAlertPresenter.present(alert) { [weak self] response in
+            self?.isAlertShown = false
+            if response == .alertFirstButtonReturn {
+                Self.presentLogUpload()
+            }
+        }
+    }
+
+
+    /// The "Inform developer" action: from the share extension, hand off to the host app via the
+    /// `quickdrop://sendLog` URL; otherwise upload logs directly. Mirrors the previous alert's primary
+    /// button.
+    private static func presentLogUpload() {
+        if Bundle.main.bundlePath.hasSuffix(".appex") {
+            if let url = URL(string: "quickdrop://sendLog") {
+                NSWorkspace.shared.open(url)
+            }
+        } else {
+            LogExportPresenter.showUploadLogsAlert(openSupportMailAfterUpload: false)
+        }
     }
     #endif
 }

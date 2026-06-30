@@ -71,7 +71,7 @@ func openRouterSettingsPage() async {
             alert.informativeText = "ApIsolationFindRouterFailedDescription".localized()
             alert.addButton(withTitle: "CloseAlert".localized())
 
-            alert.runModal()
+            ModelessAlertPresenter.present(alert)
         }
         return
     }

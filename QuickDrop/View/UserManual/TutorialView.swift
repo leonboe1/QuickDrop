@@ -75,12 +75,7 @@ struct TutorialView: View {
         alert.informativeText = "AndroidAirDropModeAlertMessage".localized()
         alert.addButton(withTitle: "CloseAlert".localized())
 
-        if let window = NSApp.mainWindow ?? NSApp.keyWindow {
-            alert.beginSheetModal(for: window) { _ in }
-        }
-        else {
-            alert.runModal()
-        }
+        ModelessAlertPresenter.present(alert)
     }
 }
 
