@@ -228,8 +228,13 @@ class ShareViewController: NSViewController, OutboundAppDelegate {
         progressProgressBar?.doubleValue = 0
         lastError = error
         
-        ErrorAlertHandler.shared.showErrorAlert(for: chosenDevice?.name ?? "", error: error, isQuickDropPeer: chosenDevice?.isQuickDropPeer ?? false)
-        self.extensionContext!.cancelRequest(withError: error)
+        ErrorAlertHandler.shared.showErrorAlert(
+            for: chosenDevice?.name ?? "",
+            error: error,
+            isQuickDropPeer: chosenDevice?.isQuickDropPeer ?? false
+        ) { [weak self] in
+            self?.extensionContext?.cancelRequest(withError: error)
+        }
     }
     
     

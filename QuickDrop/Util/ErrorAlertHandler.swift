@@ -47,7 +47,9 @@ class ErrorAlertHandler {
     ///   "download the app from Google Play" suggestion is omitted from the fix instructions (see
     ///   `fixInstructionsKey(isQuickDropPeer:)`). Defaults to `false` so callers without device context
     ///   keep the full hint.
-    func showErrorAlert(for deviceName: String, error: Error, isQuickDropPeer: Bool = false) {
+    /// - Parameter completion: called after the macOS transfer alert is dismissed. For issue-specific
+    ///   alerts and iOS alerts, it is called after presentation.
+    func showErrorAlert(for deviceName: String, error: Error, isQuickDropPeer: Bool = false, completion: (() -> Void)? = nil) {
         #if os(macOS)
         NSApp.activate(ignoringOtherApps: true)
         #endif
@@ -63,6 +65,7 @@ class ErrorAlertHandler {
             case .packetFilterError:
                 #if os(macOS)
                 openAlert(type: .NetworkFilter)
+                completion?()
                 return
                 #else
                 description = error.localizedDescription
@@ -70,6 +73,7 @@ class ErrorAlertHandler {
             case .firewallError:
                 #if os(macOS)
                 openAlert(type: .Firewall)
+                completion?()
                 return
                 #else
                 description = error.localizedDescription
@@ -95,6 +99,7 @@ class ErrorAlertHandler {
         // Prevent multiple alerts at the same time
         if self.isAlertShown {
             log("Skipping alert for error \(error.localizedDescription) because one is already shown")
+            completion?()
             return
         }
         else {
@@ -110,9 +115,10 @@ class ErrorAlertHandler {
             // runModal(), which blocks the main run loop and would freeze the next incoming transfer's
             // consent prompt until dismissed. Same window runModal() uses, so it looks identical.
             self.isAlertShown = true
-            presentTransferErrorAlert(title: title, description: description)
+            presentTransferErrorAlert(title: title, description: description, completion: completion)
             #else
             showAlert(title: title, message: description)
+            completion?()
             #endif
         }
     }
@@ -200,7 +206,7 @@ class ErrorAlertHandler {
     /// incoming transfer's consent prompt can still appear while it's on screen. It's the same
     /// `_NSAlertPanel` window `runModal()` would show, so it looks identical; we just route the button
     /// clicks ourselves (there's no modal session to end) and reset state on dismissal.
-    private func presentTransferErrorAlert(title: String, description: String) {
+    private func presentTransferErrorAlert(title: String, description: String, completion: (() -> Void)? = nil) {
         let alert = NSAlert()
         alert.alertStyle = .critical
         alert.messageText = title
@@ -215,6 +221,7 @@ class ErrorAlertHandler {
             if response == .alertFirstButtonReturn {
                 Self.presentLogUpload()
             }
+            completion?()
         }
     }
 
